@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Income Tax Calculator India — New vs Old Regime FY 2025-26 | All Calculator 360</title>
+  <meta name="description" content="Calculate your income tax for FY 2025-26 (AY 2026-27) under the New and Old Regimes. Compare both, see slab-wise breakdown and find which regime saves you more — free, instant, private.">
+  <link rel="canonical" href="https://tauheed-khan-pathan.github.io/AllCalculator360/calculator/income-tax-calculator.html">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Income Tax Calculator India — New vs Old Regime FY 2025-26 | All Calculator 360">
+  <meta property="og:description" content="Calculate your income tax for FY 2025-26 (AY 2026-27) under the New and Old Regimes. Compare both, see slab-wise breakdown and find which regime saves you more — free, instant, private.">
+  <meta property="og:url" content="https://tauheed-khan-pathan.github.io/AllCalculator360/calculator/income-tax-calculator.html">
+  <meta property="og:site_name" content="All Calculator 360">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Income Tax Calculator India — New vs Old Regime FY 2025-26 | All Calculator 360">
+  <meta name="twitter:description" content="Calculate your income tax for FY 2025-26 (AY 2026-27) under the New and Old Regimes. Compare both, see slab-wise breakdown and find which regime saves you more — free, instant, private.">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Which regime is better — New or Old?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "It depends on your income and deductions. The New Regime has lower slab rates and a higher standard deduction (₹75,000), so it usually wins if you claim few deductions. The Old Regime can win if you claim large deductions under Sections 80C, 80D and HRA. This calculator compares both for your exact numbers, so use the regime it shows as better for you."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What is the Section 87A rebate?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Under the New Regime for FY 2025-26, if your taxable income is up to ₹12,00,000, your tax is fully rebated to zero. Under the Old Regime, if your taxable income is up to ₹5,00,000, you get a rebate of up to ₹12,500, which also brings your tax to zero."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What is marginal relief?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Marginal relief protects you just above the rebate limit. Under the New Regime, if your taxable income is just above ₹12,00,000, your tax (before cess) cannot be more than the amount by which your income exceeds ₹12,00,000. For example, at a taxable income of ₹12,10,000, the tax is capped at ₹10,000 instead of ₹61,500."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Is this calculator's result final?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "No — the result is an estimate. It uses the FY 2025-26 slab rates, standard deductions, the Section 87A rebate and marginal relief, and a 4% cess. It does not include surcharge, and your actual tax may differ because of other income, deductions or exemptions. Consult a chartered accountant (CA) before filing your return."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Why is surcharge not included?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Surcharge applies only at higher incomes — above ₹50 lakh — and adds several extra rates and thresholds. It is not included in this version of the calculator, so the result is an estimate, especially for very high incomes."
+        }
+      }
+    ]
+  }
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../styles.css">
+  <script>
+    (function () {
+      try {
+        if (localStorage.getItem('ac360-theme') === 'dark') {
+          document.documentElement.setAttribute('data-theme', 'dark');
+        }
+      } catch (e) {}
+    })();
+  </script>
+  <script src="../app.js" defer></script>
+</head>
+<body>
+  <header class="site-header"><div class="header-inner">
+<a class="brand" href="../index.html"><svg class="brand-logo" viewBox="0 0 40 40" fill="none" aria-hidden="true"><rect width="40" height="40" rx="10" fill="#2563eb"/><rect x="9" y="7" width="22" height="7" rx="2" fill="#ffffff"/><rect x="9" y="18" width="6" height="6" rx="1.5" fill="#ffffff"/><rect x="17" y="18" width="6" height="6" rx="1.5" fill="#ffffff"/><rect x="25" y="18" width="6" height="6" rx="1.5" fill="#ffffff"/><rect x="9" y="26" width="6" height="6" rx="1.5" fill="#ffffff"/><rect x="17" y="26" width="6" height="6" rx="1.5" fill="#ffffff"/><rect x="25" y="26" width="6" height="6" rx="1.5" fill="#ffffff"/></svg><span class="brand-name">All Calculator <span class="brand-360">360</span></span></a>
+<div class="header-search"><input id="headerSearch" type="search" placeholder="Search calculators…" aria-label="Search calculators"></div>
+<nav class="main-nav" aria-label="Categories"><a class="nav-link" href="../index.html#finance">Finance</a><a class="nav-link" href="../index.html#health">Health</a><a class="nav-link" href="../index.html#math">Math</a><a class="nav-link" href="../index.html#everyday">Everyday</a></nav>
+<button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">🌙</button>
+<button class="menu-toggle" id="menuToggle" aria-label="Menu">☰</button>
+</div><nav class="mobile-nav" id="mobileNav" aria-label="Mobile categories"><a class="nav-link" href="../index.html#finance">Finance</a><a class="nav-link" href="../index.html#health">Health</a><a class="nav-link" href="../index.html#math">Math</a><a class="nav-link" href="../index.html#everyday">Everyday</a></nav></header>
+
+  <main class="container">
+    <nav class="breadcrumb"><a href="../index.html">Home</a> / <a href="../index.html#finance">Finance</a> / Income Tax Calculator</nav>
+
+    <div class="calc-head">
+      <h1>Income Tax Calculator</h1>
+      <p>India — FY 2025-26 (AY 2026-27) — compare New vs Old Regime.</p>
+      <p style="font-size:14px; margin-top:8px;">For Indian taxpayers — FY 2025-26. Figures are estimates; consult a CA before filing.</p>
+    </div>
+
+    <div class="calc-layout">
+      <div class="calc-panel calc-inputs">
+        <h2>Your Income &amp; Deductions</h2>
+
+        <div class="input-group">
+          <label class="input-label" for="incomeRange">Gross Annual Income <output id="incomeOut" for="incomeRange">₹15,00,000</output></label>
+          <div class="input-row">
+            <input type="range" class="slider" id="incomeRange" min="0" max="10000000" step="10000" value="1500000" aria-label="Gross annual income">
+            <input type="number" class="num-input" id="incomeNum" min="0" max="10000000" step="10000" value="1500000" aria-label="Gross annual income value">
+          </div>
+          <p class="input-hint">Your total income before any deductions.</p>
+        </div>
+
+        <div class="input-group">
+          <label class="input-label" for="ageGroup">Age Group</label>
+          <select id="ageGroup" class="currency-select">
+            <option value="below60" selected>&lt;60 years</option>
+            <option value="60-80">60–80 years</option>
+            <option value="above80">Above 80 years</option>
+          </select>
+          <p class="input-hint">Age affects the Old Regime slabs only.</p>
+        </div>
+
+        <div class="input-group">
+          <label class="input-label" for="c80Range">Section 80C Investments <output id="c80Out" for="c80Range">₹0</output></label>
+          <div class="input-row">
+            <input type="range" class="slider" id="c80Range" min="0" max="150000" step="5000" value="0" aria-label="Section 80C investments">
+            <input type="number" class="num-input" id="c80Num" min="0" max="150000" step="5000" value="0" aria-label="Section 80C investments value">
+          </div>
+          <p class="input-hint">Old Regime only — max ₹1,50,000.</p>
+        </div>
+
+        <div class="input-group">
+          <label class="input-label" for="d80Range">Health Insurance Premium (80D) <output id="d80Out" for="d80Range">₹0</output></label>
+          <div class="input-row">
+            <input type="range" class="slider" id="d80Range" min="0" max="100000" step="5000" value="0" aria-label="Health insurance premium">
+            <input type="number" class="num-input" id="d80Num" min="0" max="100000" step="5000" value="0" aria-label="Health insurance premium value">
+          </div>
+          <p class="input-hint">Old Regime only.</p>
+        </div>
+
+        <div class="input-group">
+          <label class="input-label" for="hraRange">HRA Exemption <output id="hraOut" for="hraRange">₹0</output></label>
+          <div class="input-row">
+            <input type="range" class="slider" id="hraRange" min="0" max="500000" step="5000" value="0" aria-label="HRA exemption">
+            <input type="number" class="num-input" id="hraNum" min="0" max="500000" step="5000" value="0" aria-label="HRA exemption value">
+          </div>
+          <p class="input-hint">Old Regime only — HRA exemption as per your salary slips.</p>
+        </div>
+      </div>
+
+      <div class="calc-panel calc-results">
+        <h2>Your Results</h2>
+
+        <p class="verdict" id="verdictOut">You save ₹1,59,900 with the New Regime</p>
+
+        <div class="regime-grid">
+          <div class="regime-card" id="newCard">
+            <h3>New Regime <span class="regime-badge" id="newBadge">Better for you</span></h3>
+            <div class="result-breakdown">
+              <div class="break-row"><span class="k">Taxable Income</span><span class="v" id="newTaxable">₹0</span></div>
+              <div class="break-row"><span class="k">Tax (before cess)</span><span class="v" id="newTax">₹0</span></div>
+              <div class="break-row"><span class="k">Cess (4%)</span><span class="v" id="newCess">₹0</span></div>
+              <div class="break-row"><span class="k">Total Tax Payable</span><span class="v green" id="newTotal">₹0</span></div>
+              <div class="break-row"><span class="k">Effective Tax Rate</span><span class="v" id="newRate">0.0%</span></div>
+              <div class="break-row"><span class="k">Take-Home</span><span class="v" id="newTakeHome">₹0</span></div>
+            </div>
+          </div>
+
+          <div class="regime-card" id="oldCard">
+            <h3>Old Regime <span class="regime-badge" id="oldBadge" hidden>Better for you</span></h3>
+            <div class="result-breakdown">
+              <div class="break-row"><span class="k">Taxable Income</span><span class="v" id="oldTaxable">₹0</span></div>
+              <div class="break-row"><span class="k">Tax (before cess)</span><span class="v" id="oldTax">₹0</span></div>
+              <div class="break-row"><span class="k">Cess (4%)</span><span class="v" id="oldCess">₹0</span></div>
+              <div class="break-row"><span class="k">Total Tax Payable</span><span class="v green" id="oldTotal">₹0</span></div>
+              <div class="break-row"><span class="k">Effective Tax Rate</span><span class="v" id="oldRate">0.0%</span></div>
+              <div class="break-row"><span class="k">Take-Home</span><span class="v" id="oldTakeHome">₹0</span></div>
+            </div>
+          </div>
+        </div>
+
+        <h3 id="slabTitle" style="margin-top:4px">New Regime — slab-wise breakdown</h3>
+        <table class="amort-table">
+          <thead>
+            <tr><th>Slab</th><th>Rate</th><th>Tax</th></tr>
+          </thead>
+          <tbody id="slabBody"></tbody>
+        </table>
+
+        <div class="donut-wrap">
+          <svg id="donut" width="160" height="160" viewBox="0 0 160 160" role="img" aria-label="Tax vs take-home chart">
+            <circle class="donut-track" cx="80" cy="80" r="64" fill="none" stroke-width="24"></circle>
+            <g transform="rotate(-90 80 80)">
+              <circle id="donutTax" cx="80" cy="80" r="64" fill="none" stroke="#2563eb" stroke-width="24" stroke-dasharray="402.12 402.12" stroke-dashoffset="0"></circle>
+              <circle id="donutTakeHome" cx="80" cy="80" r="64" fill="none" stroke="#059669" stroke-width="24" stroke-dasharray="0 402.12" stroke-dashoffset="0"></circle>
+            </g>
+            <text id="donutPct" class="donut-pct" x="80" y="76" text-anchor="middle" font-size="20" font-weight="700">0%</text>
+            <text class="donut-sub" x="80" y="96" text-anchor="middle" font-size="12">Tax</text>
+          </svg>
+          <div class="donut-legend">
+            <div class="legend-item"><span class="legend-dot" style="background:#2563eb"></span>Tax <b id="legendTax">₹0</b></div>
+            <div class="legend-item"><span class="legend-dot" style="background:#059669"></span>Take-Home <b id="legendTakeHome">₹0</b></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <section class="content-section">
+      <h2>Income Tax Formula — FY 2025-26</h2>
+      <div class="formula-box">
+        <p><strong>New Regime:</strong> Taxable income = Gross income − ₹75,000 standard deduction. Slabs on taxable income: ₹0 – ₹4,00,000: Nil; ₹4,00,001 – ₹8,00,000: 5%; ₹8,00,001 – ₹12,00,000: 10%; ₹12,00,001 – ₹16,00,000: 15%; ₹16,00,001 – ₹20,00,000: 20%; ₹20,00,001 – ₹24,00,000: 25%; above ₹24,00,000: 30%. Then add 4% cess on the tax. If taxable income is up to ₹12,00,000, the Section 87A rebate makes the tax zero; just above ₹12,00,000, marginal relief caps the tax at the amount by which taxable income exceeds ₹12,00,000.</p>
+        <p><strong>Old Regime:</strong> Taxable income = Gross income − ₹50,000 standard deduction − Section 80C (up to ₹1,50,000) − Section 80D − HRA exemption. Slabs on taxable income — below 60 years: ₹0 – ₹2,50,000: Nil; ₹2,50,001 – ₹5,00,000: 5%; ₹5,00,001 – ₹10,00,000: 20%; above ₹10,00,000: 30%. Age 60–80 years: ₹0 – ₹3,00,000: Nil; ₹3,00,001 – ₹5,00,000: 5%; ₹5,00,001 – ₹10,00,000: 20%; above ₹10,00,000: 30%. Above 80 years: ₹0 – ₹5,00,000: Nil; ₹5,00,001 – ₹10,00,000: 20%; above ₹10,00,000: 30%. Then add 4% cess on the tax. If taxable income is up to ₹5,00,000, the Section 87A rebate (up to ₹12,500) makes the tax zero.</p>
+        <p><strong>Worked example:</strong> Gross income ₹15,00,000, no deductions, age below 60. New Regime: taxable income = 15,00,000 − 75,000 = ₹14,25,000; tax = 5% of ₹4,00,000 + 10% of ₹4,00,000 + 15% of ₹2,25,000 = 20,000 + 40,000 + 33,750 = ₹93,750; cess 4% = ₹3,750; total tax = <strong>₹97,500</strong>. Old Regime: taxable income = 15,00,000 − 50,000 = ₹14,50,000; tax = 5% of ₹2,50,000 + 20% of ₹5,00,000 + 30% of ₹4,50,000 = 12,500 + 1,00,000 + 1,35,000 = ₹2,47,500; cess 4% = ₹9,900; total tax = <strong>₹2,57,400</strong>. The New Regime saves ₹1,59,900.</p>
+      </div>
+    </section>
+
+    <section class="content-section">
+      <h2>Frequently Asked Questions</h2>
+      <details class="faq-item">
+        <summary class="faq-q">Which regime is better — New or Old?</summary>
+        <div class="faq-a"><p>It depends on your income and deductions. The New Regime has lower slab rates and a higher standard deduction (₹75,000), so it usually wins if you claim few deductions. The Old Regime can win if you claim large deductions under Sections 80C, 80D and HRA. This calculator compares both for your exact numbers, so use the regime it shows as better for you.</p></div>
+      </details>
+      <details class="faq-item">
+        <summary class="faq-q">What is the Section 87A rebate?</summary>
+        <div class="faq-a"><p>Under the New Regime for FY 2025-26, if your taxable income is up to ₹12,00,000, your tax is fully rebated to zero. Under the Old Regime, if your taxable income is up to ₹5,00,000, you get a rebate of up to ₹12,500, which also brings your tax to zero.</p></div>
+      </details>
+      <details class="faq-item">
+        <summary class="faq-q">What is marginal relief?</summary>
+        <div class="faq-a"><p>Marginal relief protects you just above the rebate limit. Under the New Regime, if your taxable income is just above ₹12,00,000, your tax (before cess) cannot be more than the amount by which your income exceeds ₹12,00,000. For example, at a taxable income of ₹12,10,000, the tax is capped at ₹10,000 instead of ₹61,500.</p></div>
+      </details>
+      <details class="faq-item">
+        <summary class="faq-q">Is this calculator's result final?</summary>
+        <div class="faq-a"><p>No — the result is an estimate. It uses the FY 2025-26 slab rates, standard deductions, the Section 87A rebate and marginal relief, and a 4% cess. It does not include surcharge, and your actual tax may differ because of other income, deductions or exemptions. Consult a chartered accountant (CA) before filing your return.</p></div>
+      </details>
+      <details class="faq-item">
+        <summary class="faq-q">Why is surcharge not included?</summary>
+        <div class="faq-a"><p>Surcharge applies only at higher incomes — above ₹50 lakh — and adds several extra rates and thresholds. It is not included in this version of the calculator, so the result is an estimate, especially for very high incomes.</p></div>
+      </details>
+    </section>
+
+    <section class="content-section">
+      <h2>Related Calculators</h2>
+      <div class="related-grid">
+        <a class="calc-card" href="emi-calculator.html" data-name="EMI Calculator" data-desc="Calculate your monthly loan EMI with interest breakdown.">
+          <span class="calc-icon">💰</span>
+          <span class="calc-name">EMI Calculator</span>
+          <span class="calc-desc">Calculate your monthly loan EMI with interest breakdown.</span>
+        </a>
+        <a class="calc-card" href="sip-calculator.html" data-name="SIP Calculator" data-desc="Plan your monthly SIP investments and see how your wealth grows.">
+          <span class="calc-icon">📈</span>
+          <span class="calc-name">SIP Calculator</span>
+          <span class="calc-desc">Plan your monthly SIP investments and see how your wealth grows.</span>
+        </a>
+        <a class="calc-card" href="fd-calculator.html" data-name="FD Calculator" data-desc="Calculate your fixed deposit maturity value and interest earned.">
+          <span class="calc-icon">🏦</span>
+          <span class="calc-name">FD Calculator</span>
+          <span class="calc-desc">Calculate your fixed deposit maturity value and interest earned.</span>
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer"><div class="container"><div class="footer-grid">
+<div class="footer-col"><div class="footer-brand"><svg width="32" height="32" viewBox="0 0 40 40" fill="none" aria-hidden="true"><rect width="40" height="40" rx="10" fill="#2563eb"/><rect x="9" y="7" width="22" height="7" rx="2" fill="#ffffff"/><rect x="9" y="18" width="6" height="6" rx="1.5" fill="#ffffff"/><rect x="17" y="18" width="6" height="6" rx="1.5" fill="#ffffff"/><rect x="25" y="18" width="6" height="6" rx="1.5" fill="#ffffff"/><rect x="9" y="26" width="6" height="6" rx="1.5" fill="#ffffff"/><rect x="17" y="26" width="6" height="6" rx="1.5" fill="#ffffff"/><rect x="25" y="26" width="6" height="6" rx="1.5" fill="#ffffff"/></svg><span>All Calculator 360</span></div><p>Every calculator, all in one place. Free, private, and accurate — calculations happen right in your browser.</p></div>
+<div class="footer-col"><h3>Categories</h3><ul><li><a href="../index.html#finance">Finance</a></li><li><a href="../index.html#health">Health</a></li><li><a href="../index.html#math">Math</a></li><li><a href="../index.html#everyday">Everyday</a></li></ul></div>
+<div class="footer-col"><h3>Popular Calculators</h3><ul><li><a href="emi-calculator.html">EMI Calculator</a></li><li><a href="sip-calculator.html">SIP Calculator</a></li><li><a href="fd-calculator.html">FD Calculator</a></li><li><a href="income-tax-calculator.html">Income Tax Calculator</a></li><li><a href="../index.html#health">BMI Calculator</a></li></ul></div>
+<div class="footer-col"><h3>Company</h3><ul><li><a href="../about.html">About</a></li><li><a href="../contact.html">Contact</a></li><li><a href="../privacy.html">Privacy Policy</a></li><li><a href="../terms.html">Terms</a></li></ul></div>
+</div><div class="footer-bottom"><p>© 2026 All Calculator 360. All rights reserved.</p></div></div></footer>
+
+  <script>
+    (function () {
+      'use strict';
+
+      var CIRCUMFERENCE = 402.12;
+
+      var NEW_SLABS = [
+        { upto: 400000, rate: 0, label: '₹0 – ₹4,00,000' },
+        { upto: 800000, rate: 5, label: '₹4,00,001 – ₹8,00,000' },
+        { upto: 1200000, rate: 10, label: '₹8,00,001 – ₹12,00,000' },
+        { upto: 1600000, rate: 15, label: '₹12,00,001 – ₹16,00,000' },
+        { upto: 2000000, rate: 20, label: '₹16,00,001 – ₹20,00,000' },
+        { upto: 2400000, rate: 25, label: '₹20,00,001 – ₹24,00,000' },
+        { upto: Infinity, rate: 30, label: 'Above ₹24,00,000' }
+      ];
+
+      var OLD_SLABS = {
+        'below60': [
+          { upto: 250000, rate: 0, label: '₹0 – ₹2,50,000' },
+          { upto: 500000, rate: 5, label: '₹2,50,001 – ₹5,00,000' },
+          { upto: 1000000, rate: 20, label: '₹5,00,001 – ₹10,00,000' },
+          { upto: Infinity, rate: 30, label: 'Above ₹10,00,000' }
+        ],
+        '60-80': [
+          { upto: 300000, rate: 0, label: '₹0 – ₹3,00,000' },
+          { upto: 500000, rate: 5, label: '₹3,00,001 – ₹5,00,000' },
+          { upto: 1000000, rate: 20, label: '₹5,00,001 – ₹10,00,000' },
+          { upto: Infinity, rate: 30, label: 'Above ₹10,00,000' }
+        ],
+        'above80': [
+          { upto: 500000, rate: 0, label: '₹0 – ₹5,00,000' },
+          { upto: 1000000, rate: 20, label: '₹5,00,001 – ₹10,00,000' },
+          { upto: Infinity, rate: 30, label: 'Above ₹10,00,000' }
+        ]
+      };
+
+      var incomeRange = document.getElementById('incomeRange');
+      var incomeNum = document.getElementById('incomeNum');
+      var incomeOut = document.getElementById('incomeOut');
+      var ageGroupEl = document.getElementById('ageGroup');
+      var c80Range = document.getElementById('c80Range');
+      var c80Num = document.getElementById('c80Num');
+      var c80Out = document.getElementById('c80Out');
+      var d80Range = document.getElementById('d80Range');
+      var d80Num = document.getElementById('d80Num');
+      var d80Out = document.getElementById('d80Out');
+      var hraRange = document.getElementById('hraRange');
+      var hraNum = document.getElementById('hraNum');
+      var hraOut = document.getElementById('hraOut');
+      var verdictOut = document.getElementById('verdictOut');
+      var newCard = document.getElementById('newCard');
+      var oldCard = document.getElementById('oldCard');
+      var newBadge = document.getElementById('newBadge');
+      var oldBadge = document.getElementById('oldBadge');
+      var newTaxable = document.getElementById('newTaxable');
+      var newTax = document.getElementById('newTax');
+      var newCess = document.getElementById('newCess');
+      var newTotal = document.getElementById('newTotal');
+      var newRate = document.getElementById('newRate');
+      var newTakeHome = document.getElementById('newTakeHome');
+      var oldTaxable = document.getElementById('oldTaxable');
+      var oldTax = document.getElementById('oldTax');
+      var oldCess = document.getElementById('oldCess');
+      var oldTotal = document.getElementById('oldTotal');
+      var oldRate = document.getElementById('oldRate');
+      var oldTakeHome = document.getElementById('oldTakeHome');
+      var slabTitle = document.getElementById('slabTitle');
+      var slabBody = document.getElementById('slabBody');
+      var donutTax = document.getElementById('donutTax');
+      var donutTakeHome = document.getElementById('donutTakeHome');
+      var donutPct = document.getElementById('donutPct');
+      var legendTax = document.getElementById('legendTax');
+      var legendTakeHome = document.getElementById('legendTakeHome');
+
+      function fmtMoney(value) {
+        return new Intl.NumberFormat('en-IN', {
+          style: 'currency',
+          currency: 'INR',
+          maximumFractionDigits: 0
+        }).format(value);
+      }
+
+      function clamp(value, min, max) {
+        if (isNaN(value)) return min;
+        return Math.min(max, Math.max(min, value));
+      }
+
+      function getIncome() {
+        return clamp(parseFloat(incomeNum.value), 0, 10000000);
+      }
+
+      function getC80() {
+        return clamp(parseFloat(c80Num.value), 0, 150000);
+      }
+
+      function getD80() {
+        return clamp(parseFloat(d80Num.value), 0, 100000);
+      }
+
+      function getHra() {
+        return clamp(parseFloat(hraNum.value), 0, 500000);
+      }
+
+      function slabBreakdown(taxable, slabs) {
+        var rows = [];
+        var total = 0;
+        var prev = 0;
+        slabs.forEach(function (s) {
+          var portion = Math.max(0, Math.min(taxable, s.upto) - prev);
+          var tax = Math.round(portion * s.rate / 100);
+          rows.push({ label: s.label, rate: s.rate + '%', tax: tax, portion: portion });
+          total += tax;
+          prev = s.upto;
+        });
+        return { rows: rows, total: total };
+      }
+
+      function calcNewRegime(gross) {
+        var taxable = Math.max(0, gross - 75000);
+        var breakdown = slabBreakdown(taxable, NEW_SLABS);
+        var tax = breakdown.total;
+        var rebate = 0;
+        var relief = 0;
+        if (taxable <= 1200000) {
+          rebate = tax;
+          tax = 0;
+        } else if (tax > taxable - 1200000) {
+          relief = tax - (taxable - 1200000);
+          tax = taxable - 1200000;
+        }
+        var cess = Math.round(tax * 0.04);
+        var total = tax + cess;
+        return {
+          taxable: taxable, slabs: breakdown.rows, slabTax: breakdown.total,
+          rebate: rebate, relief: relief, tax: tax, cess: cess, total: total,
+          rate: gross > 0 ? total / gross * 100 : 0,
+          takeHome: gross - total
+        };
+      }
+
+      function calcOldRegime(gross, age, c80, d80, hra) {
+        var taxable = Math.max(0, gross - 50000 - Math.min(c80, 150000) - d80 - hra);
+        var breakdown = slabBreakdown(taxable, OLD_SLABS[age] || OLD_SLABS['below60']);
+        var tax = breakdown.total;
+        var rebate = 0;
+        if (taxable <= 500000) {
+          rebate = Math.min(tax, 12500);
+          tax -= rebate;
+        }
+        var cess = Math.round(tax * 0.04);
+        var total = tax + cess;
+        return {
+          taxable: taxable, slabs: breakdown.rows, slabTax: breakdown.total,
+          rebate: rebate, relief: 0, tax: tax, cess: cess, total: total,
+          rate: gross > 0 ? total / gross * 100 : 0,
+          takeHome: gross - total
+        };
+      }
+
+      function renderSlab(result, regimeName) {
+        slabTitle.textContent = regimeName + ' — slab-wise breakdown';
+        var html = '';
+        result.slabs.forEach(function (row) {
+          if (row.portion > 0) {
+            html += '<tr><td>' + row.label + '</td><td>' + row.rate + '</td><td>' + fmtMoney(row.tax) + '</td></tr>';
+          }
+        });
+        if (result.rebate > 0) {
+          html += '<tr><td>Less: Rebate u/s 87A</td><td>—</td><td>−' + fmtMoney(result.rebate) + '</td></tr>';
+        }
+        if (result.relief > 0) {
+          html += '<tr><td>Less: Marginal relief</td><td>—</td><td>−' + fmtMoney(result.relief) + '</td></tr>';
+        }
+        if (html === '') {
+          html = '<tr><td>' + result.slabs[0].label + '</td><td>' + result.slabs[0].rate + '</td><td>' + fmtMoney(0) + '</td></tr>';
+        }
+        slabBody.innerHTML = html;
+      }
+
+      function recalculate() {
+        var gross = getIncome();
+        var age = ageGroupEl.value;
+        var c80 = getC80();
+        var d80 = getD80();
+        var hra = getHra();
+
+        var n = calcNewRegime(gross);
+        var o = calcOldRegime(gross, age, c80, d80, hra);
+
+        incomeOut.textContent = fmtMoney(gross);
+        c80Out.textContent = fmtMoney(c80);
+        d80Out.textContent = fmtMoney(d80);
+        hraOut.textContent = fmtMoney(hra);
+
+        newTaxable.textContent = fmtMoney(n.taxable);
+        newTax.textContent = fmtMoney(n.tax);
+        newCess.textContent = fmtMoney(n.cess);
+        newTotal.textContent = fmtMoney(n.total);
+        newRate.textContent = n.rate.toFixed(1) + '%';
+        newTakeHome.textContent = fmtMoney(n.takeHome);
+
+        oldTaxable.textContent = fmtMoney(o.taxable);
+        oldTax.textContent = fmtMoney(o.tax);
+        oldCess.textContent = fmtMoney(o.cess);
+        oldTotal.textContent = fmtMoney(o.total);
+        oldRate.textContent = o.rate.toFixed(1) + '%';
+        oldTakeHome.textContent = fmtMoney(o.takeHome);
+
+        var winner;
+        var winnerName;
+        if (n.total < o.total) {
+          verdictOut.textContent = 'You save ' + fmtMoney(o.total - n.total) + ' with the New Regime';
+          winner = n; winnerName = 'New Regime';
+          newCard.classList.add('winner');
+          oldCard.classList.remove('winner');
+          newBadge.hidden = false;
+          oldBadge.hidden = true;
+        } else if (o.total < n.total) {
+          verdictOut.textContent = 'You save ' + fmtMoney(n.total - o.total) + ' with the Old Regime';
+          winner = o; winnerName = 'Old Regime';
+          oldCard.classList.add('winner');
+          newCard.classList.remove('winner');
+          oldBadge.hidden = false;
+          newBadge.hidden = true;
+        } else {
+          verdictOut.textContent = 'Both regimes give the same tax';
+          winner = n; winnerName = 'New Regime';
+          newCard.classList.remove('winner');
+          oldCard.classList.remove('winner');
+          newBadge.hidden = true;
+          oldBadge.hidden = true;
+        }
+
+        renderSlab(winner, winnerName);
+
+        var taxShare = gross > 0 ? winner.total / gross : 0;
+        var takeHomeShare = 1 - taxShare;
+        donutTax.setAttribute('stroke-dasharray', (taxShare * CIRCUMFERENCE).toFixed(2) + ' ' + CIRCUMFERENCE);
+        donutTax.setAttribute('stroke-dashoffset', '0');
+        donutTakeHome.setAttribute('stroke-dasharray', (takeHomeShare * CIRCUMFERENCE).toFixed(2) + ' ' + CIRCUMFERENCE);
+        donutTakeHome.setAttribute('stroke-dashoffset', (-taxShare * CIRCUMFERENCE).toFixed(2));
+        donutPct.textContent = (taxShare * 100).toFixed(1) + '%';
+        legendTax.textContent = fmtMoney(winner.total);
+        legendTakeHome.textContent = fmtMoney(winner.takeHome);
+      }
+
+      function syncPair(rangeEl, numEl, min, max, onChange) {
+        rangeEl.addEventListener('input', function () {
+          numEl.value = rangeEl.value;
+          onChange();
+        });
+        numEl.addEventListener('input', function () {
+          var val = clamp(parseFloat(numEl.value), min, max);
+          rangeEl.value = val;
+          onChange();
+        });
+        numEl.addEventListener('change', function () {
+          var val = clamp(parseFloat(numEl.value), min, max);
+          numEl.value = val;
+          rangeEl.value = val;
+          onChange();
+        });
+      }
+
+      syncPair(incomeRange, incomeNum, 0, 10000000, recalculate);
+      syncPair(c80Range, c80Num, 0, 150000, recalculate);
+      syncPair(d80Range, d80Num, 0, 100000, recalculate);
+      syncPair(hraRange, hraNum, 0, 500000, recalculate);
+
+      ageGroupEl.addEventListener('change', recalculate);
+
+      recalculate();
+    })();
+  </script>
+</body>
+</html>

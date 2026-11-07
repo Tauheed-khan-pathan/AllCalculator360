@@ -346,6 +346,16 @@ select.currency-select {
 .not-found h1 { font-size: 72px; color: var(--primary); }
 .not-found p { color: var(--muted); font-size: 18px; }
 
+/* Income Tax Calculator — two-regime comparison */
+.verdict { text-align: center; font-size: 18px; font-weight: 700; color: var(--text-strong); margin: 0 0 20px; }
+.regime-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-bottom: 20px; }
+.regime-card { border: 1px solid var(--border); border-radius: 12px; padding: 16px; background: var(--surface-2); }
+.regime-card.winner { border: 2px solid var(--success); background: var(--surface); }
+.regime-card h3 { display: flex; align-items: center; justify-content: space-between; gap: 8px; font-size: 16px; margin-bottom: 8px; }
+.regime-badge { font-size: 11px; font-weight: 700; color: #ffffff; background: var(--success); border-radius: 999px; padding: 3px 8px; white-space: nowrap; }
+.regime-card .result-breakdown { padding: 0; }
+@media (max-width: 768px) { .regime-grid { grid-template-columns: 1fr; } }
+
 /* ---------- Responsive ---------- */
 @media (max-width: 900px) {
   .footer-grid { grid-template-columns: 1fr 1fr; }
