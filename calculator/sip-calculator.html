@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SIP Calculator — Calculate SIP Returns | All Calculator 360</title>
+  <meta name="description" content="Plan your monthly SIP investments and see how your wealth grows. Calculate maturity value, invested amount and estimated returns — free, instant, private.">
+  <link rel="canonical" href="https://tauheed-khan-pathan.github.io/AllCalculator360/calculator/sip-calculator.html">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="SIP Calculator — Calculate SIP Returns | All Calculator 360">
+  <meta property="og:description" content="Plan your monthly SIP investments and see how your wealth grows. Calculate maturity value, invested amount and estimated returns — free, instant, private.">
+  <meta property="og:url" content="https://tauheed-khan-pathan.github.io/AllCalculator360/calculator/sip-calculator.html">
+  <meta property="og:site_name" content="All Calculator 360">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="SIP Calculator — Calculate SIP Returns | All Calculator 360">
+  <meta name="twitter:description" content="Plan your monthly SIP investments and see how your wealth grows. Calculate maturity value, invested amount and estimated returns — free, instant, private.">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What is SIP?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "SIP stands for Systematic Investment Plan: you invest a fixed amount every month in a mutual fund, which buys units at the prevailing price — averaging your purchase cost over time."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How are SIP returns calculated?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "This calculator uses the future-value formula FV = P × (((1 + i)^n − 1) ÷ i) × (1 + i), where P is the monthly investment, i is the monthly return rate (annual rate ÷ 12 ÷ 100) and n is the number of months. It assumes a constant return rate."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Are SIP returns guaranteed?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "No. SIP returns depend on the market, so the actual return can be higher or lower than the assumed rate. The figure here is an estimate, not a promise."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "SIP vs lump sum — which is better?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "A lump sum can earn more in a steadily rising market, but a SIP spreads risk across market ups and downs and suits a regular monthly income. The better choice depends on your money and risk comfort."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What happens if I stop my SIP?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "You can stop a SIP any time without penalty; the money already invested stays invested and keeps growing until you withdraw it."
+        }
+      }
+    ]
+  }
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../styles.css">
+  <script>
+    (function () {
+      try {
+        if (localStorage.getItem('ac360-theme') === 'dark') {
+          document.documentElement.setAttribute('data-theme', 'dark');
+        }
+      } catch (e) {}
+    })();
+  </script>
+  <script src="../app.js" defer></script>
+</head>
+<body>
+  <header class="site-header"><div class="header-inner">
+<a class="brand" href="../index.html"><svg class="brand-logo" viewBox="0 0 40 40" fill="none" aria-hidden="true"><rect width="40" height="40" rx="10" fill="#2563eb"/><rect x="9" y="7" width="22" height="7" rx="2" fill="#ffffff"/><rect x="9" y="18" width="6" height="6" rx="1.5" fill="#ffffff"/><rect x="17" y="18" width="6" height="6" rx="1.5" fill="#ffffff"/><rect x="25" y="18" width="6" height="6" rx="1.5" fill="#ffffff"/><rect x="9" y="26" width="6" height="6" rx="1.5" fill="#ffffff"/><rect x="17" y="26" width="6" height="6" rx="1.5" fill="#ffffff"/><rect x="25" y="26" width="6" height="6" rx="1.5" fill="#ffffff"/></svg><span class="brand-name">All Calculator <span class="brand-360">360</span></span></a>
+<div class="header-search"><input id="headerSearch" type="search" placeholder="Search calculators…" aria-label="Search calculators"></div>
+<nav class="main-nav" aria-label="Categories"><a class="nav-link" href="../index.html#finance">Finance</a><a class="nav-link" href="../index.html#health">Health</a><a class="nav-link" href="../index.html#math">Math</a><a class="nav-link" href="../index.html#everyday">Everyday</a></nav>
+<button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">🌙</button>
+<button class="menu-toggle" id="menuToggle" aria-label="Menu">☰</button>
+</div><nav class="mobile-nav" id="mobileNav" aria-label="Mobile categories"><a class="nav-link" href="../index.html#finance">Finance</a><a class="nav-link" href="../index.html#health">Health</a><a class="nav-link" href="../index.html#math">Math</a><a class="nav-link" href="../index.html#everyday">Everyday</a></nav></header>
+
+  <main class="container">
+    <nav class="breadcrumb"><a href="../index.html">Home</a> / <a href="../index.html#finance">Finance</a> / SIP Calculator</nav>
+
+    <div class="calc-head">
+      <h1>SIP Calculator</h1>
+      <p>Plan your monthly SIP investments and see how your wealth can grow — with invested amount, estimated returns and a year-by-year breakdown.</p>
+    </div>
+
+    <div class="calc-layout">
+      <div class="calc-panel calc-inputs">
+        <h2>Investment Details</h2>
+
+        <div class="currency-row">
+          <label for="currency">Currency</label>
+          <select id="currency" class="currency-select">
+            <option value="USD" selected>USD ($) — US Dollar</option>
+            <option value="INR">INR (₹) — Indian Rupee</option>
+            <option value="EUR">EUR (€) — Euro</option>
+            <option value="GBP">GBP (£) — British Pound</option>
+          </select>
+        </div>
+
+        <div class="input-group">
+          <label class="input-label" for="amountRange">Monthly Investment <output id="amountOut" for="amountRange">$10,000</output></label>
+          <div class="input-row">
+            <input type="range" class="slider" id="amountRange" min="500" max="1000000" step="500" value="10000" aria-label="Monthly investment">
+            <input type="number" class="num-input" id="amountNum" min="500" max="1000000" step="500" value="10000" aria-label="Monthly investment value">
+          </div>
+          <p class="input-hint">Monthly investment between 500 and 1,000,000.</p>
+        </div>
+
+        <div class="input-group">
+          <label class="input-label" for="rateRange">Expected Annual Return Rate <output id="rateOut" for="rateRange">12%</output></label>
+          <div class="input-row">
+            <input type="range" class="slider" id="rateRange" min="1" max="30" step="0.1" value="12" aria-label="Expected annual return rate">
+            <input type="number" class="num-input" id="rateNum" min="1" max="30" step="0.1" value="12" aria-label="Expected annual return rate value">
+          </div>
+        </div>
+
+        <div class="input-group">
+          <label class="input-label" for="tenureRange">Time Period <output id="tenureOut" for="tenureRange">10 years</output></label>
+          <div class="input-row">
+            <input type="range" class="slider" id="tenureRange" min="1" max="40" step="1" value="10" aria-label="Time period">
+            <input type="number" class="num-input" id="tenureNum" min="1" max="40" step="1" value="10" aria-label="Time period value">
+          </div>
+        </div>
+      </div>
+
+      <div class="calc-panel calc-results">
+        <h2>Your Results</h2>
+
+        <div class="result-main">
+          <div class="result-label">Total Value at Maturity</div>
+          <div class="result-emi" id="valueOut">$0 <span> total</span></div>
+        </div>
+
+        <div class="result-breakdown">
+          <div class="break-row"><span class="k">Invested Amount</span><span class="v" id="investedOut">$0</span></div>
+          <div class="break-row"><span class="k">Estimated Returns</span><span class="v" id="returnsOut">$0</span></div>
+          <div class="break-row"><span class="k">Total Value</span><span class="v green" id="totalValueOut">$0</span></div>
+        </div>
+
+        <div class="donut-wrap">
+          <svg id="donut" width="160" height="160" viewBox="0 0 160 160" role="img" aria-label="Invested vs returns chart">
+            <circle class="donut-track" cx="80" cy="80" r="64" fill="none" stroke-width="24"></circle>
+            <g transform="rotate(-90 80 80)">
+              <circle id="donutInvested" cx="80" cy="80" r="64" fill="none" stroke="#2563eb" stroke-width="24" stroke-dasharray="402.12 402.12" stroke-dashoffset="0"></circle>
+              <circle id="donutReturns" cx="80" cy="80" r="64" fill="none" stroke="#059669" stroke-width="24" stroke-dasharray="0 402.12" stroke-dashoffset="0"></circle>
+            </g>
+            <text id="donutPct" class="donut-pct" x="80" y="76" text-anchor="middle" font-size="20" font-weight="700">0%</text>
+            <text class="donut-sub" x="80" y="96" text-anchor="middle" font-size="12">Returns</text>
+          </svg>
+          <div class="donut-legend">
+            <div class="legend-item"><span class="legend-dot" style="background:#2563eb"></span>Invested <b id="legendInvested">$0</b></div>
+            <div class="legend-item"><span class="legend-dot" style="background:#059669"></span>Returns <b id="legendReturns">$0</b></div>
+          </div>
+        </div>
+
+        <h3 style="margin-top:24px">Yearly Breakdown</h3>
+        <table class="amort-table">
+          <thead>
+            <tr><th>Year</th><th>Invested</th><th>Returns</th><th>Value</th></tr>
+          </thead>
+          <tbody id="yearlyBody"></tbody>
+        </table>
+        <button class="show-more-btn" id="yearlyToggle" type="button">Show all years</button>
+      </div>
+    </div>
+
+    <section class="content-section">
+      <h2>SIP Formula</h2>
+      <div class="formula-box">
+        <p class="formula">FV = P × (((1 + i)<sup>n</sup> − 1) ÷ i) × (1 + i)</p>
+        <p><strong>P</strong> = Monthly investment &nbsp;•&nbsp; <strong>i</strong> = Monthly return rate (annual rate ÷ 12 ÷ 100) &nbsp;•&nbsp; <strong>n</strong> = Number of months</p>
+        <p><strong>Worked example:</strong> 10,000 invested every month at 12% annual return for 10 years (120 months): i = 0.12 ÷ 12 = 0.01, n = 120, FV = 10,000 × (((1.01)^120 − 1) ÷ 0.01) × 1.01 = <strong>2,323,391</strong>. Invested amount = 10,000 × 120 = 1,200,000; estimated returns = 2,323,391 − 1,200,000 = 1,123,391.</p>
+      </div>
+    </section>
+
+    <section class="content-section">
+      <h2>Frequently Asked Questions</h2>
+      <details class="faq-item">
+        <summary class="faq-q">What is SIP?</summary>
+        <div class="faq-a"><p>SIP stands for Systematic Investment Plan: you invest a fixed amount every month in a mutual fund, which buys units at the prevailing price — averaging your purchase cost over time.</p></div>
+      </details>
+      <details class="faq-item">
+        <summary class="faq-q">How are SIP returns calculated?</summary>
+        <div class="faq-a"><p>This calculator uses the future-value formula FV = P × (((1 + i)^n − 1) ÷ i) × (1 + i), where P is the monthly investment, i is the monthly return rate (annual rate ÷ 12 ÷ 100) and n is the number of months. It assumes a constant return rate.</p></div>
+      </details>
+      <details class="faq-item">
+        <summary class="faq-q">Are SIP returns guaranteed?</summary>
+        <div class="faq-a"><p>No. SIP returns depend on the market, so the actual return can be higher or lower than the assumed rate. The figure here is an estimate, not a promise.</p></div>
+      </details>
+      <details class="faq-item">
+        <summary class="faq-q">SIP vs lump sum — which is better?</summary>
+        <div class="faq-a"><p>A lump sum can earn more in a steadily rising market, but a SIP spreads risk across market ups and downs and suits a regular monthly income. The better choice depends on your money and risk comfort.</p></div>
+      </details>
+      <details class="faq-item">
+        <summary class="faq-q">What happens if I stop my SIP?</summary>
+        <div class="faq-a"><p>You can stop a SIP any time without penalty; the money already invested stays invested and keeps growing until you withdraw it.</p></div>
+      </details>
+    </section>
+
+    <section class="content-section">
+      <h2>Related Calculators</h2>
+      <div class="related-grid">
+        <a class="calc-card" href="emi-calculator.html" data-name="EMI Calculator" data-desc="Calculate your monthly loan EMI with interest breakdown.">
+          <span class="calc-icon">💰</span>
+          <span class="calc-name">EMI Calculator</span>
+          <span class="calc-desc">Calculate your monthly loan EMI with interest breakdown.</span>
+        </a>
+        <span class="calc-card calc-card--soon" data-name="FD Calculator" data-desc="See how your fixed deposit grows over time.">
+          <span class="calc-icon">🏦</span>
+          <span class="calc-name">FD Calculator</span>
+          <span class="calc-desc">See how your fixed deposit grows over time.</span>
+        </span>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer"><div class="container"><div class="footer-grid">
+<div class="footer-col"><div class="footer-brand"><svg width="32" height="32" viewBox="0 0 40 40" fill="none" aria-hidden="true"><rect width="40" height="40" rx="10" fill="#2563eb"/><rect x="9" y="7" width="22" height="7" rx="2" fill="#ffffff"/><rect x="9" y="18" width="6" height="6" rx="1.5" fill="#ffffff"/><rect x="17" y="18" width="6" height="6" rx="1.5" fill="#ffffff"/><rect x="25" y="18" width="6" height="6" rx="1.5" fill="#ffffff"/><rect x="9" y="26" width="6" height="6" rx="1.5" fill="#ffffff"/><rect x="17" y="26" width="6" height="6" rx="1.5" fill="#ffffff"/><rect x="25" y="26" width="6" height="6" rx="1.5" fill="#ffffff"/></svg><span>All Calculator 360</span></div><p>Every calculator, all in one place. Free, private, and accurate — calculations happen right in your browser.</p></div>
+<div class="footer-col"><h3>Categories</h3><ul><li><a href="../index.html#finance">Finance</a></li><li><a href="../index.html#health">Health</a></li><li><a href="../index.html#math">Math</a></li><li><a href="../index.html#everyday">Everyday</a></li></ul></div>
+<div class="footer-col"><h3>Popular Calculators</h3><ul><li><a href="emi-calculator.html">EMI Calculator</a></li><li><a href="sip-calculator.html">SIP Calculator</a></li><li><a href="../index.html#finance">FD Calculator</a></li><li><a href="../index.html#health">BMI Calculator</a></li></ul></div>
+<div class="footer-col"><h3>Company</h3><ul><li><a href="../about.html">About</a></li><li><a href="../contact.html">Contact</a></li><li><a href="../privacy.html">Privacy Policy</a></li><li><a href="../terms.html">Terms</a></li></ul></div>
+</div><div class="footer-bottom"><p>© 2026 All Calculator 360. All rights reserved.</p></div></div></footer>
+
+  <script>
+    (function () {
+      'use strict';
+
+      var CIRCUMFERENCE = 402.12;
+      var SYMBOLS = { USD: '$', INR: '₹', EUR: '€', GBP: '£' };
+
+      var currencyEl = document.getElementById('currency');
+      var amountRange = document.getElementById('amountRange');
+      var amountNum = document.getElementById('amountNum');
+      var amountOut = document.getElementById('amountOut');
+      var rateRange = document.getElementById('rateRange');
+      var rateNum = document.getElementById('rateNum');
+      var rateOut = document.getElementById('rateOut');
+      var tenureRange = document.getElementById('tenureRange');
+      var tenureNum = document.getElementById('tenureNum');
+      var tenureOut = document.getElementById('tenureOut');
+      var valueOut = document.getElementById('valueOut');
+      var investedOut = document.getElementById('investedOut');
+      var returnsOut = document.getElementById('returnsOut');
+      var totalValueOut = document.getElementById('totalValueOut');
+      var legendInvested = document.getElementById('legendInvested');
+      var legendReturns = document.getElementById('legendReturns');
+      var donutInvested = document.getElementById('donutInvested');
+      var donutReturns = document.getElementById('donutReturns');
+      var donutPct = document.getElementById('donutPct');
+      var yearlyBody = document.getElementById('yearlyBody');
+      var yearlyToggle = document.getElementById('yearlyToggle');
+
+      var yearlyExpanded = false;
+
+      function currencyCode() {
+        return currencyEl.value;
+      }
+
+      function fmtMoney(value) {
+        return new Intl.NumberFormat('en-US', {
+          style: 'currency',
+          currency: currencyCode(),
+          maximumFractionDigits: 0
+        }).format(value);
+      }
+
+      function clamp(value, min, max) {
+        if (isNaN(value)) return min;
+        return Math.min(max, Math.max(min, value));
+      }
+
+      function getAmount() {
+        return clamp(parseFloat(amountNum.value), 500, 1000000);
+      }
+
+      function getRate() {
+        return clamp(parseFloat(rateNum.value), 1, 30);
+      }
+
+      function getYears() {
+        return clamp(parseFloat(tenureNum.value), 1, 40);
+      }
+
+      function calcSIP(P, annualRate, months) {
+        var i = annualRate / 12 / 100;
+        if (i === 0) return P * months;
+        return P * ((Math.pow(1 + i, months) - 1) / i) * (1 + i);
+      }
+
+      function buildYearly(P, annualRate, years) {
+        var i = annualRate / 12 / 100;
+        var value = 0;
+        var rows = [];
+        for (var y = 1; y <= years; y++) {
+          for (var m = 0; m < 12; m++) {
+            value = (value + P) * (1 + i);
+          }
+          var invested = P * 12 * y;
+          rows.push({
+            year: y,
+            invested: invested,
+            returns: value - invested,
+            value: value
+          });
+        }
+        return rows;
+      }
+
+      function renderYearly(rows) {
+        var html = '';
+        rows.forEach(function (row, i) {
+          var hidden = (!yearlyExpanded && i >= 5) ? ' style="display:none"' : '';
+          html += '<tr' + hidden + '><td>' + row.year + '</td><td>' + fmtMoney(row.invested) + '</td><td>' + fmtMoney(row.returns) + '</td><td>' + fmtMoney(row.value) + '</td></tr>';
+        });
+        yearlyBody.innerHTML = html;
+        if (rows.length <= 5) {
+          yearlyToggle.style.display = 'none';
+        } else {
+          yearlyToggle.style.display = '';
+          yearlyToggle.textContent = yearlyExpanded ? 'Show less' : 'Show all years';
+        }
+      }
+
+      function recalculate() {
+        var P = getAmount();
+        var annualRate = getRate();
+        var years = getYears();
+        var months = years * 12;
+        var fv = calcSIP(P, annualRate, months);
+        var invested = P * months;
+        var returns = fv - invested;
+
+        amountOut.textContent = fmtMoney(P);
+        rateOut.textContent = (Math.round(annualRate * 10) / 10) + '%';
+        tenureOut.textContent = years + ' years';
+
+        valueOut.innerHTML = fmtMoney(fv) + ' <span> total</span>';
+        investedOut.textContent = fmtMoney(invested);
+        returnsOut.textContent = fmtMoney(returns);
+        totalValueOut.textContent = fmtMoney(fv);
+        legendInvested.textContent = fmtMoney(invested);
+        legendReturns.textContent = fmtMoney(returns);
+
+        var investedShare = fv > 0 ? invested / fv : 1;
+        var returnsShare = 1 - investedShare;
+        donutInvested.setAttribute('stroke-dasharray', (investedShare * CIRCUMFERENCE).toFixed(2) + ' ' + CIRCUMFERENCE);
+        donutInvested.setAttribute('stroke-dashoffset', '0');
+        donutReturns.setAttribute('stroke-dasharray', (returnsShare * CIRCUMFERENCE).toFixed(2) + ' ' + CIRCUMFERENCE);
+        donutReturns.setAttribute('stroke-dashoffset', (-investedShare * CIRCUMFERENCE).toFixed(2));
+        donutPct.textContent = (returnsShare * 100).toFixed(1) + '%';
+
+        renderYearly(buildYearly(P, annualRate, years));
+      }
+
+      function syncPair(rangeEl, numEl, min, max, onChange) {
+        rangeEl.addEventListener('input', function () {
+          numEl.value = rangeEl.value;
+          onChange();
+        });
+        numEl.addEventListener('input', function () {
+          var val = clamp(parseFloat(numEl.value), min, max);
+          rangeEl.value = val;
+          onChange();
+        });
+        numEl.addEventListener('change', function () {
+          var val = clamp(parseFloat(numEl.value), min, max);
+          numEl.value = val;
+          rangeEl.value = val;
+          onChange();
+        });
+      }
+
+      syncPair(amountRange, amountNum, 500, 1000000, recalculate);
+      syncPair(rateRange, rateNum, 1, 30, recalculate);
+      syncPair(tenureRange, tenureNum, 1, 40, recalculate);
+
+      currencyEl.addEventListener('change', recalculate);
+
+      yearlyToggle.addEventListener('click', function () {
+        yearlyExpanded = !yearlyExpanded;
+        recalculate();
+      });
+
+      recalculate();
+    })();
+  </script>
+</body>
+</html>
