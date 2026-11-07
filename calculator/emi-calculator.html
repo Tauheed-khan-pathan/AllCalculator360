@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EMI Calculator — Calculate Your Loan EMI | All Calculator 360</title>
+  <meta name="description" content="Calculate your monthly EMI for home, car or personal loans. See total interest, total payment and a year-by-year amortisation schedule — free, instant, private.">
+  <link rel="canonical" href="https://tauheed-khan-pathan.github.io/AllCalculator360/calculator/emi-calculator.html">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="EMI Calculator — Calculate Your Loan EMI | All Calculator 360">
+  <meta property="og:description" content="Calculate your monthly EMI for home, car or personal loans. See total interest, total payment and a year-by-year amortisation schedule — free, instant, private.">
+  <meta property="og:url" content="https://tauheed-khan-pathan.github.io/AllCalculator360/calculator/emi-calculator.html">
+  <meta property="og:site_name" content="All Calculator 360">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="EMI Calculator — Calculate Your Loan EMI | All Calculator 360">
+  <meta name="twitter:description" content="Calculate your monthly EMI for home, car or personal loans. See total interest, total payment and a year-by-year amortisation schedule — free, instant, private.">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What is EMI?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "EMI stands for Equated Monthly Instalment: the fixed amount you pay every month to repay a loan, covering both principal and interest."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How is EMI calculated?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "EMI is calculated with the formula EMI = P × r × (1 + r)^n ÷ ((1 + r)^n − 1), from the loan amount, the annual interest rate and the tenure. A higher rate or longer tenure raises total interest; a longer tenure lowers the monthly EMI but increases total interest."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Does prepayment reduce my interest?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. Paying extra towards the principal reduces the outstanding balance, so future interest is charged on a smaller amount — this shortens the tenure or lowers the EMI."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What happens if I miss an EMI payment?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "The lender usually charges a late fee, and it can lower your credit score, which makes future loans costlier."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can my EMI change during the loan?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "With a fixed interest rate it stays the same; with a floating rate the EMI (or tenure) changes when the lender revises the rate."
+        }
+      }
+    ]
+  }
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../styles.css">
+  <script>
+    (function () {
+      try {
+        if (localStorage.getItem('ac360-theme') === 'dark') {
+          document.documentElement.setAttribute('data-theme', 'dark');
+        }
+      } catch (e) {}
+    })();
+  </script>
+  <script src="../app.js" defer></script>
+</head>
+<body>
+  <header class="site-header"><div class="header-inner">
+<a class="brand" href="../index.html"><svg class="brand-logo" viewBox="0 0 40 40" fill="none" aria-hidden="true"><rect width="40" height="40" rx="10" fill="#2563eb"/><rect x="9" y="7" width="22" height="7" rx="2" fill="#ffffff"/><rect x="9" y="18" width="6" height="6" rx="1.5" fill="#ffffff"/><rect x="17" y="18" width="6" height="6" rx="1.5" fill="#ffffff"/><rect x="25" y="18" width="6" height="6" rx="1.5" fill="#ffffff"/><rect x="9" y="26" width="6" height="6" rx="1.5" fill="#ffffff"/><rect x="17" y="26" width="6" height="6" rx="1.5" fill="#ffffff"/><rect x="25" y="26" width="6" height="6" rx="1.5" fill="#ffffff"/></svg><span class="brand-name">All Calculator <span class="brand-360">360</span></span></a>
+<div class="header-search"><input id="headerSearch" type="search" placeholder="Search calculators…" aria-label="Search calculators"></div>
+<nav class="main-nav" aria-label="Categories"><a class="nav-link" href="../index.html#finance">Finance</a><a class="nav-link" href="../index.html#health">Health</a><a class="nav-link" href="../index.html#math">Math</a><a class="nav-link" href="../index.html#everyday">Everyday</a></nav>
+<button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">🌙</button>
+<button class="menu-toggle" id="menuToggle" aria-label="Menu">☰</button>
+</div><nav class="mobile-nav" id="mobileNav" aria-label="Mobile categories"><a class="nav-link" href="../index.html#finance">Finance</a><a class="nav-link" href="../index.html#health">Health</a><a class="nav-link" href="../index.html#math">Math</a><a class="nav-link" href="../index.html#everyday">Everyday</a></nav></header>
+
+  <main class="container">
+    <nav class="breadcrumb"><a href="../index.html">Home</a> / <a href="../index.html#finance">Finance</a> / EMI Calculator</nav>
+
+    <div class="calc-head">
+      <h1>EMI Calculator</h1>
+      <p>Calculate your monthly EMI for a home, car or personal loan — with total interest, total payment and a full year-by-year schedule.</p>
+    </div>
+
+    <div class="calc-layout">
+      <div class="calc-panel calc-inputs">
+        <h2>Loan Details</h2>
+
+        <div class="currency-row">
+          <label for="currency">Currency</label>
+          <select id="currency" class="currency-select">
+            <option value="USD" selected>USD ($) — US Dollar</option>
+            <option value="INR">INR (₹) — Indian Rupee</option>
+            <option value="EUR">EUR (€) — Euro</option>
+            <option value="GBP">GBP (£) — British Pound</option>
+          </select>
+        </div>
+
+        <div class="input-group">
+          <label class="input-label" for="amountRange">Loan Amount <output id="amountOut" for="amountRange">$100,000</output></label>
+          <div class="input-row">
+            <input type="range" class="slider" id="amountRange" min="1000" max="10000000" step="1000" value="100000" aria-label="Loan amount">
+            <input type="number" class="num-input" id="amountNum" min="1000" max="10000000" step="1000" value="100000" aria-label="Loan amount value">
+          </div>
+          <p class="input-hint">Loan amount between 1,000 and 10,000,000.</p>
+        </div>
+
+        <div class="input-group">
+          <label class="input-label" for="rateRange">Annual Interest Rate <output id="rateOut" for="rateRange">9%</output></label>
+          <div class="input-row">
+            <input type="range" class="slider" id="rateRange" min="1" max="30" step="0.1" value="9" aria-label="Annual interest rate">
+            <input type="number" class="num-input" id="rateNum" min="1" max="30" step="0.1" value="9" aria-label="Annual interest rate value">
+          </div>
+        </div>
+
+        <div class="input-group">
+          <label class="input-label" for="tenureRange">Loan Tenure <output id="tenureOut" for="tenureRange">20 years</output></label>
+          <div class="input-row">
+            <input type="range" class="slider" id="tenureRange" min="1" max="30" step="1" value="20" aria-label="Loan tenure">
+            <input type="number" class="num-input" id="tenureNum" min="1" max="30" step="1" value="20" aria-label="Loan tenure value">
+          </div>
+          <div class="tenure-toggle" style="margin-top:12px" role="group" aria-label="Tenure unit">
+            <button type="button" class="toggle-btn active" id="tenureYears">Years</button>
+            <button type="button" class="toggle-btn" id="tenureMonths">Months</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="calc-panel calc-results">
+        <h2>Your Results</h2>
+
+        <div class="result-main">
+          <div class="result-label">Monthly EMI</div>
+          <div class="result-emi" id="emiOut">$0 <span>/ month</span></div>
+        </div>
+
+        <div class="result-breakdown">
+          <div class="break-row"><span class="k">Loan Amount (Principal)</span><span class="v" id="principalOut">$0</span></div>
+          <div class="break-row"><span class="k">Total Interest Payable</span><span class="v" id="interestOut">$0</span></div>
+          <div class="break-row"><span class="k">Total Payment (Principal + Interest)</span><span class="v green" id="totalOut">$0</span></div>
+        </div>
+
+        <div class="donut-wrap">
+          <svg id="donut" width="160" height="160" viewBox="0 0 160 160" role="img" aria-label="Principal vs interest chart">
+            <circle class="donut-track" cx="80" cy="80" r="64" fill="none" stroke-width="24"></circle>
+            <g transform="rotate(-90 80 80)">
+              <circle id="donutPrincipal" cx="80" cy="80" r="64" fill="none" stroke="#2563eb" stroke-width="24" stroke-dasharray="402.12 402.12" stroke-dashoffset="0"></circle>
+              <circle id="donutInterest" cx="80" cy="80" r="64" fill="none" stroke="#059669" stroke-width="24" stroke-dasharray="0 402.12" stroke-dashoffset="0"></circle>
+            </g>
+            <text id="donutPct" class="donut-pct" x="80" y="76" text-anchor="middle" font-size="20" font-weight="700">0%</text>
+            <text class="donut-sub" x="80" y="96" text-anchor="middle" font-size="12">Interest</text>
+          </svg>
+          <div class="donut-legend">
+            <div class="legend-item"><span class="legend-dot" style="background:#2563eb"></span>Principal <b id="legendPrincipal">$0</b></div>
+            <div class="legend-item"><span class="legend-dot" style="background:#059669"></span>Interest <b id="legendInterest">$0</b></div>
+          </div>
+        </div>
+
+        <h3 style="margin-top:24px">Yearly Amortisation Schedule</h3>
+        <table class="amort-table">
+          <thead>
+            <tr><th>Year</th><th>Principal</th><th>Interest</th><th>Balance</th></tr>
+          </thead>
+          <tbody id="amortBody"></tbody>
+        </table>
+        <button class="show-more-btn" id="amortToggle" type="button">Show all years</button>
+      </div>
+    </div>
+
+    <section class="content-section">
+      <h2>EMI Formula</h2>
+      <div class="formula-box">
+        <p class="formula">EMI = P × r × (1 + r)<sup>n</sup> ÷ ((1 + r)<sup>n</sup> − 1)</p>
+        <p><strong>P</strong> = Loan amount (principal) &nbsp;•&nbsp; <strong>r</strong> = Monthly interest rate (annual rate ÷ 12 ÷ 100) &nbsp;•&nbsp; <strong>n</strong> = Number of monthly instalments (tenure in months)</p>
+        <p><strong>Worked example:</strong> Loan of 1,000,000 at 9% annual interest for 20 years (240 months): r = 0.09 ÷ 12 = 0.0075, n = 240, EMI = 1,000,000 × 0.0075 × (1.0075)<sup>240</sup> ÷ ((1.0075)<sup>240</sup> − 1) = <strong>8,997 per month</strong> (8,997.26 exact). Total payment = 8,997.26 × 240 = 2,159,342; total interest = 2,159,342 − 1,000,000 = 1,159,342.</p>
+      </div>
+    </section>
+
+    <section class="content-section">
+      <h2>Frequently Asked Questions</h2>
+      <details class="faq-item">
+        <summary class="faq-q">What is EMI?</summary>
+        <div class="faq-a"><p>EMI stands for Equated Monthly Instalment: the fixed amount you pay every month to repay a loan, covering both principal and interest.</p></div>
+      </details>
+      <details class="faq-item">
+        <summary class="faq-q">How is EMI calculated?</summary>
+        <div class="faq-a"><p>With the formula above, from loan amount, annual interest rate and tenure. A higher rate or longer tenure raises total interest; a longer tenure lowers the monthly EMI but increases total interest.</p></div>
+      </details>
+      <details class="faq-item">
+        <summary class="faq-q">Does prepayment reduce my interest?</summary>
+        <div class="faq-a"><p>Yes. Paying extra towards the principal reduces the outstanding balance, so future interest is charged on a smaller amount — this shortens the tenure or lowers the EMI.</p></div>
+      </details>
+      <details class="faq-item">
+        <summary class="faq-q">What happens if I miss an EMI payment?</summary>
+        <div class="faq-a"><p>The lender usually charges a late fee, and it can lower your credit score, which makes future loans costlier.</p></div>
+      </details>
+      <details class="faq-item">
+        <summary class="faq-q">Can my EMI change during the loan?</summary>
+        <div class="faq-a"><p>With a fixed interest rate it stays the same; with a floating rate the EMI (or tenure) changes when the lender revises the rate.</p></div>
+      </details>
+    </section>
+
+    <section class="content-section">
+      <h2>Related Calculators</h2>
+      <div class="related-grid">
+        <span class="calc-card calc-card--soon" data-name="SIP Calculator" data-desc="Grow your wealth with monthly SIP investments.">
+          <span class="calc-icon">📈</span>
+          <span class="calc-name">SIP Calculator</span>
+          <span class="calc-desc">Grow your wealth with monthly SIP investments.</span>
+        </span>
+        <span class="calc-card calc-card--soon" data-name="FD Calculator" data-desc="See how your fixed deposit grows over time.">
+          <span class="calc-icon">🏦</span>
+          <span class="calc-name">FD Calculator</span>
+          <span class="calc-desc">See how your fixed deposit grows over time.</span>
+        </span>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer"><div class="container"><div class="footer-grid">
+<div class="footer-col"><div class="footer-brand"><svg width="32" height="32" viewBox="0 0 40 40" fill="none" aria-hidden="true"><rect width="40" height="40" rx="10" fill="#2563eb"/><rect x="9" y="7" width="22" height="7" rx="2" fill="#ffffff"/><rect x="9" y="18" width="6" height="6" rx="1.5" fill="#ffffff"/><rect x="17" y="18" width="6" height="6" rx="1.5" fill="#ffffff"/><rect x="25" y="18" width="6" height="6" rx="1.5" fill="#ffffff"/><rect x="9" y="26" width="6" height="6" rx="1.5" fill="#ffffff"/><rect x="17" y="26" width="6" height="6" rx="1.5" fill="#ffffff"/><rect x="25" y="26" width="6" height="6" rx="1.5" fill="#ffffff"/></svg><span>All Calculator 360</span></div><p>Every calculator, all in one place. Free, private, and accurate — calculations happen right in your browser.</p></div>
+<div class="footer-col"><h3>Categories</h3><ul><li><a href="../index.html#finance">Finance</a></li><li><a href="../index.html#health">Health</a></li><li><a href="../index.html#math">Math</a></li><li><a href="../index.html#everyday">Everyday</a></li></ul></div>
+<div class="footer-col"><h3>Popular Calculators</h3><ul><li><a href="emi-calculator.html">EMI Calculator</a></li><li><a href="../index.html#finance">SIP Calculator</a></li><li><a href="../index.html#finance">FD Calculator</a></li><li><a href="../index.html#health">BMI Calculator</a></li></ul></div>
+<div class="footer-col"><h3>Company</h3><ul><li><a href="../about.html">About</a></li><li><a href="../contact.html">Contact</a></li><li><a href="../privacy.html">Privacy Policy</a></li><li><a href="../terms.html">Terms</a></li></ul></div>
+</div><div class="footer-bottom"><p>© 2026 All Calculator 360. All rights reserved.</p></div></div></footer>
+
+  <script>
+    (function () {
+      'use strict';
+
+      var CIRCUMFERENCE = 402.12;
+      var SYMBOLS = { USD: '$', INR: '₹', EUR: '€', GBP: '£' };
+
+      var currencyEl = document.getElementById('currency');
+      var amountRange = document.getElementById('amountRange');
+      var amountNum = document.getElementById('amountNum');
+      var amountOut = document.getElementById('amountOut');
+      var rateRange = document.getElementById('rateRange');
+      var rateNum = document.getElementById('rateNum');
+      var rateOut = document.getElementById('rateOut');
+      var tenureRange = document.getElementById('tenureRange');
+      var tenureNum = document.getElementById('tenureNum');
+      var tenureOut = document.getElementById('tenureOut');
+      var tenureYearsBtn = document.getElementById('tenureYears');
+      var tenureMonthsBtn = document.getElementById('tenureMonths');
+      var emiOut = document.getElementById('emiOut');
+      var principalOut = document.getElementById('principalOut');
+      var interestOut = document.getElementById('interestOut');
+      var totalOut = document.getElementById('totalOut');
+      var legendPrincipal = document.getElementById('legendPrincipal');
+      var legendInterest = document.getElementById('legendInterest');
+      var donutPrincipal = document.getElementById('donutPrincipal');
+      var donutInterest = document.getElementById('donutInterest');
+      var donutPct = document.getElementById('donutPct');
+      var amortBody = document.getElementById('amortBody');
+      var amortToggle = document.getElementById('amortToggle');
+
+      var tenureMode = 'years'; // 'years' | 'months'
+      var amortExpanded = false;
+
+      function currencyCode() {
+        return currencyEl.value;
+      }
+
+      function fmtMoney(value) {
+        return new Intl.NumberFormat('en-US', {
+          style: 'currency',
+          currency: currencyCode(),
+          maximumFractionDigits: 0
+        }).format(value);
+      }
+
+      function clamp(value, min, max) {
+        if (isNaN(value)) return min;
+        return Math.min(max, Math.max(min, value));
+      }
+
+      function getAmount() {
+        return clamp(parseFloat(amountNum.value), 1000, 10000000);
+      }
+
+      function getRate() {
+        return clamp(parseFloat(rateNum.value), 1, 30);
+      }
+
+      function getMonths() {
+        var val = parseFloat(tenureNum.value);
+        if (tenureMode === 'years') {
+          return clamp(val, 1, 30) * 12;
+        }
+        return clamp(val, 6, 360);
+      }
+
+      function calcEMI(P, annualRate, months) {
+        var r = annualRate / 12 / 100;
+        if (r === 0) return P / months;
+        var factor = Math.pow(1 + r, months);
+        return P * r * factor / (factor - 1);
+      }
+
+      function buildSchedule(P, annualRate, months, emi) {
+        var r = annualRate / 12 / 100;
+        var balance = P;
+        var years = Math.ceil(months / 12);
+        var rows = [];
+        for (var y = 1; y <= years; y++) {
+          var yearPrincipal = 0;
+          var yearInterest = 0;
+          var monthsInYear = Math.min(12, months - (y - 1) * 12);
+          for (var m = 0; m < monthsInYear; m++) {
+            var interestPart = balance * r;
+            var principalPart = emi - interestPart;
+            if (principalPart > balance) principalPart = balance;
+            balance -= principalPart;
+            yearPrincipal += principalPart;
+            yearInterest += interestPart;
+          }
+          if (y === years) balance = 0;
+          rows.push({
+            year: y,
+            principal: yearPrincipal,
+            interest: yearInterest,
+            balance: Math.max(0, balance)
+          });
+        }
+        return rows;
+      }
+
+      function renderSchedule(rows) {
+        var html = '';
+        rows.forEach(function (row, i) {
+          var hidden = (!amortExpanded && i >= 5) ? ' style="display:none"' : '';
+          html += '<tr' + hidden + '><td>' + row.year + '</td><td>' + fmtMoney(row.principal) + '</td><td>' + fmtMoney(row.interest) + '</td><td>' + fmtMoney(row.balance) + '</td></tr>';
+        });
+        amortBody.innerHTML = html;
+        if (rows.length <= 5) {
+          amortToggle.style.display = 'none';
+        } else {
+          amortToggle.style.display = '';
+          amortToggle.textContent = amortExpanded ? 'Show less' : 'Show all years';
+        }
+      }
+
+      function recalculate() {
+        var P = getAmount();
+        var annualRate = getRate();
+        var months = getMonths();
+        var emi = calcEMI(P, annualRate, months);
+        var totalPayment = emi * months;
+        var totalInterest = totalPayment - P;
+
+        amountOut.textContent = fmtMoney(P);
+        rateOut.textContent = (Math.round(annualRate * 10) / 10) + '%';
+        tenureOut.textContent = tenureMode === 'years'
+          ? (Math.round(months / 12)) + ' years'
+          : months + ' months';
+
+        emiOut.innerHTML = fmtMoney(emi) + ' <span>/ month</span>';
+        principalOut.textContent = fmtMoney(P);
+        interestOut.textContent = fmtMoney(totalInterest);
+        totalOut.textContent = fmtMoney(totalPayment);
+        legendPrincipal.textContent = fmtMoney(P);
+        legendInterest.textContent = fmtMoney(totalInterest);
+
+        var principalShare = totalPayment > 0 ? P / totalPayment : 1;
+        var interestShare = 1 - principalShare;
+        donutPrincipal.setAttribute('stroke-dasharray', (principalShare * CIRCUMFERENCE).toFixed(2) + ' ' + CIRCUMFERENCE);
+        donutPrincipal.setAttribute('stroke-dashoffset', '0');
+        donutInterest.setAttribute('stroke-dasharray', (interestShare * CIRCUMFERENCE).toFixed(2) + ' ' + CIRCUMFERENCE);
+        donutInterest.setAttribute('stroke-dashoffset', (-principalShare * CIRCUMFERENCE).toFixed(2));
+        donutPct.textContent = (interestShare * 100).toFixed(1) + '%';
+
+        renderSchedule(buildSchedule(P, annualRate, months, emi));
+      }
+
+      function syncPair(rangeEl, numEl, min, max, onChange) {
+        rangeEl.addEventListener('input', function () {
+          numEl.value = rangeEl.value;
+          onChange();
+        });
+        numEl.addEventListener('input', function () {
+          var val = clamp(parseFloat(numEl.value), min, max);
+          rangeEl.value = val;
+          onChange();
+        });
+        numEl.addEventListener('change', function () {
+          var val = clamp(parseFloat(numEl.value), min, max);
+          numEl.value = val;
+          rangeEl.value = val;
+          onChange();
+        });
+      }
+
+      syncPair(amountRange, amountNum, 1000, 10000000, recalculate);
+      syncPair(rateRange, rateNum, 1, 30, recalculate);
+
+      tenureRange.addEventListener('input', function () {
+        tenureNum.value = tenureRange.value;
+        recalculate();
+      });
+      tenureNum.addEventListener('input', function () {
+        var min = tenureMode === 'years' ? 1 : 6;
+        var max = tenureMode === 'years' ? 30 : 360;
+        tenureRange.value = clamp(parseFloat(tenureNum.value), min, max);
+        recalculate();
+      });
+      tenureNum.addEventListener('change', function () {
+        var min = tenureMode === 'years' ? 1 : 6;
+        var max = tenureMode === 'years' ? 30 : 360;
+        var val = clamp(parseFloat(tenureNum.value), min, max);
+        tenureNum.value = val;
+        tenureRange.value = val;
+        recalculate();
+      });
+
+      function setTenureMode(mode) {
+        if (mode === tenureMode) return;
+        var months = getMonths();
+        tenureMode = mode;
+        if (mode === 'months') {
+          tenureRange.min = 6; tenureRange.max = 360; tenureRange.step = 6;
+          tenureNum.min = 6; tenureNum.max = 360; tenureNum.step = 6;
+          tenureRange.value = months;
+          tenureNum.value = months;
+          tenureYearsBtn.classList.remove('active');
+          tenureMonthsBtn.classList.add('active');
+        } else {
+          var years = Math.round(months / 12);
+          tenureRange.min = 1; tenureRange.max = 30; tenureRange.step = 1;
+          tenureNum.min = 1; tenureNum.max = 30; tenureNum.step = 1;
+          tenureRange.value = years;
+          tenureNum.value = years;
+          tenureMonthsBtn.classList.remove('active');
+          tenureYearsBtn.classList.add('active');
+        }
+        recalculate();
+      }
+
+      tenureYearsBtn.addEventListener('click', function () { setTenureMode('years'); });
+      tenureMonthsBtn.addEventListener('click', function () { setTenureMode('months'); });
+
+      currencyEl.addEventListener('change', recalculate);
+
+      amortToggle.addEventListener('click', function () {
+        amortExpanded = !amortExpanded;
+        recalculate();
+      });
+
+      recalculate();
+    })();
+  </script>
+</body>
+</html>
