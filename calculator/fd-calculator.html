@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FD Calculator — Calculate Fixed Deposit Maturity Value | All Calculator 360</title>
+  <meta name="description" content="Calculate your fixed deposit maturity value and interest earned. Try different deposit amounts, rates and compounding frequencies — free, instant, private.">
+  <link rel="canonical" href="https://tauheed-khan-pathan.github.io/AllCalculator360/calculator/fd-calculator.html">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="FD Calculator — Calculate Fixed Deposit Maturity Value | All Calculator 360">
+  <meta property="og:description" content="Calculate your fixed deposit maturity value and interest earned. Try different deposit amounts, rates and compounding frequencies — free, instant, private.">
+  <meta property="og:url" content="https://tauheed-khan-pathan.github.io/AllCalculator360/calculator/fd-calculator.html">
+  <meta property="og:site_name" content="All Calculator 360">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="FD Calculator — Calculate Fixed Deposit Maturity Value | All Calculator 360">
+  <meta name="twitter:description" content="Calculate your fixed deposit maturity value and interest earned. Try different deposit amounts, rates and compounding frequencies — free, instant, private.">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What is an FD?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "A fixed deposit (FD) is a savings account where you deposit a lump sum with a bank for a fixed period at a fixed interest rate. Your money stays locked in until maturity, when you get back your deposit plus the interest it earned."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How is FD interest calculated?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "This calculator uses the compound-interest formula FV = P × (1 + r/n)^(n×t), where P is the deposit, r is the annual rate divided by 100, n is the number of compounding periods per year and t is the number of years. Interest is added to your balance at each compounding period, so it earns interest on interest."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Quarterly vs yearly compounding — which is better?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Quarterly compounding is slightly better, because interest is added four times a year and starts earning interest sooner. For example, 100,000 at 7% for 5 years grows to 141,478 with quarterly compounding and 140,255 with yearly compounding."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Is FD interest taxable?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, in most countries FD interest is taxable income and is added to your total income for the year. In India, for example, banks deduct TDS if the interest in a year crosses the set limit. Tax rules vary by country, so check your local rules."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "FD vs savings account — which is better?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "An FD usually pays a higher interest rate than a savings account, but your money is locked in for the chosen period. A savings account pays less but lets you withdraw any time. Choose an FD for money you will not need soon, and a savings account for money you may need at short notice."
+        }
+      }
+    ]
+  }
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../styles.css">
+  <script>
+    (function () {
+      try {
+        if (localStorage.getItem('ac360-theme') === 'dark') {
+          document.documentElement.setAttribute('data-theme', 'dark');
+        }
+      } catch (e) {}
+    })();
+  </script>
+  <script src="../app.js" defer></script>
+</head>
+<body>
+  <header class="site-header"><div class="header-inner">
+<a class="brand" href="../index.html"><svg class="brand-logo" viewBox="0 0 40 40" fill="none" aria-hidden="true"><rect width="40" height="40" rx="10" fill="#2563eb"/><rect x="9" y="7" width="22" height="7" rx="2" fill="#ffffff"/><rect x="9" y="18" width="6" height="6" rx="1.5" fill="#ffffff"/><rect x="17" y="18" width="6" height="6" rx="1.5" fill="#ffffff"/><rect x="25" y="18" width="6" height="6" rx="1.5" fill="#ffffff"/><rect x="9" y="26" width="6" height="6" rx="1.5" fill="#ffffff"/><rect x="17" y="26" width="6" height="6" rx="1.5" fill="#ffffff"/><rect x="25" y="26" width="6" height="6" rx="1.5" fill="#ffffff"/></svg><span class="brand-name">All Calculator <span class="brand-360">360</span></span></a>
+<div class="header-search"><input id="headerSearch" type="search" placeholder="Search calculators…" aria-label="Search calculators"></div>
+<nav class="main-nav" aria-label="Categories"><a class="nav-link" href="../index.html#finance">Finance</a><a class="nav-link" href="../index.html#health">Health</a><a class="nav-link" href="../index.html#math">Math</a><a class="nav-link" href="../index.html#everyday">Everyday</a></nav>
+<button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">🌙</button>
+<button class="menu-toggle" id="menuToggle" aria-label="Menu">☰</button>
+</div><nav class="mobile-nav" id="mobileNav" aria-label="Mobile categories"><a class="nav-link" href="../index.html#finance">Finance</a><a class="nav-link" href="../index.html#health">Health</a><a class="nav-link" href="../index.html#math">Math</a><a class="nav-link" href="../index.html#everyday">Everyday</a></nav></header>
+
+  <main class="container">
+    <nav class="breadcrumb"><a href="../index.html">Home</a> / <a href="../index.html#finance">Finance</a> / FD Calculator</nav>
+
+    <div class="calc-head">
+      <h1>FD Calculator</h1>
+      <p>See how your fixed deposit grows over time — maturity value, interest earned and a year-by-year breakdown.</p>
+    </div>
+
+    <div class="calc-layout">
+      <div class="calc-panel calc-inputs">
+        <h2>Deposit Details</h2>
+
+        <div class="currency-row">
+          <label for="currency">Currency</label>
+          <select id="currency" class="currency-select">
+            <option value="USD" selected>USD ($) — US Dollar</option>
+            <option value="INR">INR (₹) — Indian Rupee</option>
+            <option value="EUR">EUR (€) — Euro</option>
+            <option value="GBP">GBP (£) — British Pound</option>
+          </select>
+        </div>
+
+        <div class="input-group">
+          <label class="input-label" for="amountRange">Deposit Amount <output id="amountOut" for="amountRange">$100,000</output></label>
+          <div class="input-row">
+            <input type="range" class="slider" id="amountRange" min="1000" max="10000000" step="1000" value="100000" aria-label="Deposit amount">
+            <input type="number" class="num-input" id="amountNum" min="1000" max="10000000" step="1000" value="100000" aria-label="Deposit amount value">
+          </div>
+          <p class="input-hint">Deposit amount between 1,000 and 10,000,000.</p>
+        </div>
+
+        <div class="input-group">
+          <label class="input-label" for="rateRange">Annual Interest Rate <output id="rateOut" for="rateRange">7%</output></label>
+          <div class="input-row">
+            <input type="range" class="slider" id="rateRange" min="1" max="15" step="0.1" value="7" aria-label="Annual interest rate">
+            <input type="number" class="num-input" id="rateNum" min="1" max="15" step="0.1" value="7" aria-label="Annual interest rate value">
+          </div>
+        </div>
+
+        <div class="input-group">
+          <label class="input-label" for="tenureRange">Time Period <output id="tenureOut" for="tenureRange">5 years</output></label>
+          <div class="input-row">
+            <input type="range" class="slider" id="tenureRange" min="1" max="30" step="1" value="5" aria-label="Time period">
+            <input type="number" class="num-input" id="tenureNum" min="1" max="30" step="1" value="5" aria-label="Time period value">
+          </div>
+        </div>
+
+        <div class="input-group">
+          <label class="input-label" for="compounding">Compounding Frequency</label>
+          <select id="compounding" class="currency-select">
+            <option value="4" selected>Quarterly</option>
+            <option value="12">Monthly</option>
+            <option value="2">Half-Yearly</option>
+            <option value="1">Yearly</option>
+          </select>
+          <p class="input-hint">How often the interest is added to your deposit.</p>
+        </div>
+      </div>
+
+      <div class="calc-panel calc-results">
+        <h2>Your Results</h2>
+
+        <div class="result-main">
+          <div class="result-label">Maturity Value</div>
+          <div class="result-emi" id="valueOut">$0 <span> total</span></div>
+        </div>
+
+        <div class="result-breakdown">
+          <div class="break-row"><span class="k">Deposit</span><span class="v" id="principalOut">$0</span></div>
+          <div class="break-row"><span class="k">Interest Earned</span><span class="v" id="interestOut">$0</span></div>
+          <div class="break-row"><span class="k">Maturity Value</span><span class="v green" id="totalValueOut">$0</span></div>
+        </div>
+
+        <div class="donut-wrap">
+          <svg id="donut" width="160" height="160" viewBox="0 0 160 160" role="img" aria-label="Deposit vs interest chart">
+            <circle class="donut-track" cx="80" cy="80" r="64" fill="none" stroke-width="24"></circle>
+            <g transform="rotate(-90 80 80)">
+              <circle id="donutPrincipal" cx="80" cy="80" r="64" fill="none" stroke="#2563eb" stroke-width="24" stroke-dasharray="402.12 402.12" stroke-dashoffset="0"></circle>
+              <circle id="donutInterest" cx="80" cy="80" r="64" fill="none" stroke="#059669" stroke-width="24" stroke-dasharray="0 402.12" stroke-dashoffset="0"></circle>
+            </g>
+            <text id="donutPct" class="donut-pct" x="80" y="76" text-anchor="middle" font-size="20" font-weight="700">0%</text>
+            <text class="donut-sub" x="80" y="96" text-anchor="middle" font-size="12">Interest</text>
+          </svg>
+          <div class="donut-legend">
+            <div class="legend-item"><span class="legend-dot" style="background:#2563eb"></span>Deposit <b id="legendPrincipal">$0</b></div>
+            <div class="legend-item"><span class="legend-dot" style="background:#059669"></span>Interest <b id="legendInterest">$0</b></div>
+          </div>
+        </div>
+
+        <h3 style="margin-top:24px">Yearly Breakdown</h3>
+        <table class="amort-table">
+          <thead>
+            <tr><th>Year</th><th>Interest</th><th>Value</th></tr>
+          </thead>
+          <tbody id="yearlyBody"></tbody>
+        </table>
+        <button class="show-more-btn" id="yearlyToggle" type="button">Show all years</button>
+      </div>
+    </div>
+
+    <section class="content-section">
+      <h2>FD Formula</h2>
+      <div class="formula-box">
+        <p class="formula">FV = P × (1 + r/n)<sup>(n×t)</sup></p>
+        <p><strong>P</strong> = Deposit &nbsp;•&nbsp; <strong>r</strong> = Annual interest rate ÷ 100 &nbsp;•&nbsp; <strong>n</strong> = Compounding periods per year &nbsp;•&nbsp; <strong>t</strong> = Time period in years</p>
+        <p><strong>Worked example:</strong> 100,000 deposited at 7% annual interest, compounded quarterly, for 5 years: r = 0.07, n = 4, t = 5, FV = 100,000 × (1 + 0.07/4)<sup>20</sup> = <strong>141,478</strong>. Interest earned = 141,478 − 100,000 = 41,478.</p>
+      </div>
+    </section>
+
+    <section class="content-section">
+      <h2>Frequently Asked Questions</h2>
+      <details class="faq-item">
+        <summary class="faq-q">What is an FD?</summary>
+        <div class="faq-a"><p>A fixed deposit (FD) is a savings account where you deposit a lump sum with a bank for a fixed period at a fixed interest rate. Your money stays locked in until maturity, when you get back your deposit plus the interest it earned.</p></div>
+      </details>
+      <details class="faq-item">
+        <summary class="faq-q">How is FD interest calculated?</summary>
+        <div class="faq-a"><p>This calculator uses the compound-interest formula FV = P × (1 + r/n)^(n×t), where P is the deposit, r is the annual rate divided by 100, n is the number of compounding periods per year and t is the number of years. Interest is added to your balance at each compounding period, so it earns interest on interest.</p></div>
+      </details>
+      <details class="faq-item">
+        <summary class="faq-q">Quarterly vs yearly compounding — which is better?</summary>
+        <div class="faq-a"><p>Quarterly compounding is slightly better, because interest is added four times a year and starts earning interest sooner. For example, 100,000 at 7% for 5 years grows to 141,478 with quarterly compounding and 140,255 with yearly compounding.</p></div>
+      </details>
+      <details class="faq-item">
+        <summary class="faq-q">Is FD interest taxable?</summary>
+        <div class="faq-a"><p>Yes, in most countries FD interest is taxable income and is added to your total income for the year. In India, for example, banks deduct TDS if the interest in a year crosses the set limit. Tax rules vary by country, so check your local rules.</p></div>
+      </details>
+      <details class="faq-item">
+        <summary class="faq-q">FD vs savings account — which is better?</summary>
+        <div class="faq-a"><p>An FD usually pays a higher interest rate than a savings account, but your money is locked in for the chosen period. A savings account pays less but lets you withdraw any time. Choose an FD for money you will not need soon, and a savings account for money you may need at short notice.</p></div>
+      </details>
+    </section>
+
+    <section class="content-section">
+      <h2>Related Calculators</h2>
+      <div class="related-grid">
+        <a class="calc-card" href="emi-calculator.html" data-name="EMI Calculator" data-desc="Calculate your monthly loan EMI with interest breakdown.">
+          <span class="calc-icon">💰</span>
+          <span class="calc-name">EMI Calculator</span>
+          <span class="calc-desc">Calculate your monthly loan EMI with interest breakdown.</span>
+        </a>
+        <a class="calc-card" href="sip-calculator.html" data-name="SIP Calculator" data-desc="Plan your monthly SIP investments and see how your wealth grows.">
+          <span class="calc-icon">📈</span>
+          <span class="calc-name">SIP Calculator</span>
+          <span class="calc-desc">Plan your monthly SIP investments and see how your wealth grows.</span>
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer"><div class="container"><div class="footer-grid">
+<div class="footer-col"><div class="footer-brand"><svg width="32" height="32" viewBox="0 0 40 40" fill="none" aria-hidden="true"><rect width="40" height="40" rx="10" fill="#2563eb"/><rect x="9" y="7" width="22" height="7" rx="2" fill="#ffffff"/><rect x="9" y="18" width="6" height="6" rx="1.5" fill="#ffffff"/><rect x="17" y="18" width="6" height="6" rx="1.5" fill="#ffffff"/><rect x="25" y="18" width="6" height="6" rx="1.5" fill="#ffffff"/><rect x="9" y="26" width="6" height="6" rx="1.5" fill="#ffffff"/><rect x="17" y="26" width="6" height="6" rx="1.5" fill="#ffffff"/><rect x="25" y="26" width="6" height="6" rx="1.5" fill="#ffffff"/></svg><span>All Calculator 360</span></div><p>Every calculator, all in one place. Free, private, and accurate — calculations happen right in your browser.</p></div>
+<div class="footer-col"><h3>Categories</h3><ul><li><a href="../index.html#finance">Finance</a></li><li><a href="../index.html#health">Health</a></li><li><a href="../index.html#math">Math</a></li><li><a href="../index.html#everyday">Everyday</a></li></ul></div>
+<div class="footer-col"><h3>Popular Calculators</h3><ul><li><a href="emi-calculator.html">EMI Calculator</a></li><li><a href="sip-calculator.html">SIP Calculator</a></li><li><a href="fd-calculator.html">FD Calculator</a></li><li><a href="../index.html#health">BMI Calculator</a></li></ul></div>
+<div class="footer-col"><h3>Company</h3><ul><li><a href="../about.html">About</a></li><li><a href="../contact.html">Contact</a></li><li><a href="../privacy.html">Privacy Policy</a></li><li><a href="../terms.html">Terms</a></li></ul></div>
+</div><div class="footer-bottom"><p>© 2026 All Calculator 360. All rights reserved.</p></div></div></footer>
+
+  <script>
+    (function () {
+      'use strict';
+
+      var CIRCUMFERENCE = 402.12;
+      var SYMBOLS = { USD: '$', INR: '₹', EUR: '€', GBP: '£' };
+
+      var currencyEl = document.getElementById('currency');
+      var amountRange = document.getElementById('amountRange');
+      var amountNum = document.getElementById('amountNum');
+      var amountOut = document.getElementById('amountOut');
+      var rateRange = document.getElementById('rateRange');
+      var rateNum = document.getElementById('rateNum');
+      var rateOut = document.getElementById('rateOut');
+      var tenureRange = document.getElementById('tenureRange');
+      var tenureNum = document.getElementById('tenureNum');
+      var tenureOut = document.getElementById('tenureOut');
+      var compoundingEl = document.getElementById('compounding');
+      var valueOut = document.getElementById('valueOut');
+      var principalOut = document.getElementById('principalOut');
+      var interestOut = document.getElementById('interestOut');
+      var totalValueOut = document.getElementById('totalValueOut');
+      var legendPrincipal = document.getElementById('legendPrincipal');
+      var legendInterest = document.getElementById('legendInterest');
+      var donutPrincipal = document.getElementById('donutPrincipal');
+      var donutInterest = document.getElementById('donutInterest');
+      var donutPct = document.getElementById('donutPct');
+      var yearlyBody = document.getElementById('yearlyBody');
+      var yearlyToggle = document.getElementById('yearlyToggle');
+
+      var yearlyExpanded = false;
+
+      function currencyCode() {
+        return currencyEl.value;
+      }
+
+      function fmtMoney(value) {
+        return new Intl.NumberFormat('en-US', {
+          style: 'currency',
+          currency: currencyCode(),
+          maximumFractionDigits: 0
+        }).format(value);
+      }
+
+      function clamp(value, min, max) {
+        if (isNaN(value)) return min;
+        return Math.min(max, Math.max(min, value));
+      }
+
+      function getAmount() {
+        return clamp(parseFloat(amountNum.value), 1000, 10000000);
+      }
+
+      function getRate() {
+        return clamp(parseFloat(rateNum.value), 1, 15);
+      }
+
+      function getYears() {
+        return clamp(parseFloat(tenureNum.value), 1, 30);
+      }
+
+      function getCompounding() {
+        return clamp(parseFloat(compoundingEl.value), 1, 12);
+      }
+
+      function calcFD(P, annualRate, n, t) {
+        var r = annualRate / 100;
+        return P * Math.pow(1 + r / n, n * t);
+      }
+
+      function buildYearly(P, annualRate, n, years) {
+        var r = annualRate / 100;
+        var prevValue = P;
+        var rows = [];
+        for (var y = 1; y <= years; y++) {
+          var value = P * Math.pow(1 + r / n, n * y);
+          rows.push({
+            year: y,
+            interest: value - prevValue,
+            value: value
+          });
+          prevValue = value;
+        }
+        return rows;
+      }
+
+      function renderYearly(rows) {
+        var html = '';
+        rows.forEach(function (row, i) {
+          var hidden = (!yearlyExpanded && i >= 5) ? ' style="display:none"' : '';
+          html += '<tr' + hidden + '><td>' + row.year + '</td><td>' + fmtMoney(row.interest) + '</td><td>' + fmtMoney(row.value) + '</td></tr>';
+        });
+        yearlyBody.innerHTML = html;
+        if (rows.length <= 5) {
+          yearlyToggle.style.display = 'none';
+        } else {
+          yearlyToggle.style.display = '';
+          yearlyToggle.textContent = yearlyExpanded ? 'Show less' : 'Show all years';
+        }
+      }
+
+      function recalculate() {
+        var P = getAmount();
+        var annualRate = getRate();
+        var years = getYears();
+        var n = getCompounding();
+        var fv = calcFD(P, annualRate, n, years);
+        var interest = fv - P;
+
+        amountOut.textContent = fmtMoney(P);
+        rateOut.textContent = (Math.round(annualRate * 10) / 10) + '%';
+        tenureOut.textContent = years + ' years';
+
+        valueOut.innerHTML = fmtMoney(fv) + ' <span> total</span>';
+        principalOut.textContent = fmtMoney(P);
+        interestOut.textContent = fmtMoney(interest);
+        totalValueOut.textContent = fmtMoney(fv);
+        legendPrincipal.textContent = fmtMoney(P);
+        legendInterest.textContent = fmtMoney(interest);
+
+        var principalShare = fv > 0 ? P / fv : 1;
+        var interestShare = 1 - principalShare;
+        donutPrincipal.setAttribute('stroke-dasharray', (principalShare * CIRCUMFERENCE).toFixed(2) + ' ' + CIRCUMFERENCE);
+        donutPrincipal.setAttribute('stroke-dashoffset', '0');
+        donutInterest.setAttribute('stroke-dasharray', (interestShare * CIRCUMFERENCE).toFixed(2) + ' ' + CIRCUMFERENCE);
+        donutInterest.setAttribute('stroke-dashoffset', (-principalShare * CIRCUMFERENCE).toFixed(2));
+        donutPct.textContent = (interestShare * 100).toFixed(1) + '%';
+
+        renderYearly(buildYearly(P, annualRate, n, years));
+      }
+
+      function syncPair(rangeEl, numEl, min, max, onChange) {
+        rangeEl.addEventListener('input', function () {
+          numEl.value = rangeEl.value;
+          onChange();
+        });
+        numEl.addEventListener('input', function () {
+          var val = clamp(parseFloat(numEl.value), min, max);
+          rangeEl.value = val;
+          onChange();
+        });
+        numEl.addEventListener('change', function () {
+          var val = clamp(parseFloat(numEl.value), min, max);
+          numEl.value = val;
+          rangeEl.value = val;
+          onChange();
+        });
+      }
+
+      syncPair(amountRange, amountNum, 1000, 10000000, recalculate);
+      syncPair(rateRange, rateNum, 1, 15, recalculate);
+      syncPair(tenureRange, tenureNum, 1, 30, recalculate);
+
+      currencyEl.addEventListener('change', recalculate);
+      compoundingEl.addEventListener('change', recalculate);
+
+      yearlyToggle.addEventListener('click', function () {
+        yearlyExpanded = !yearlyExpanded;
+        recalculate();
+      });
+
+      recalculate();
+    })();
+  </script>
+</body>
+</html>
