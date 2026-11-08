@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GST Calculator — Add or Remove GST, CGST &amp; SGST | All Calculator 360</title>
+  <meta name="description" content="Calculate GST instantly — add GST to a price or remove GST from an inclusive price, with CGST and SGST split. Rates 0%, 5%, 18%, 40% and custom.">
+  <link rel="canonical" href="https://tauheed-khan-pathan.github.io/AllCalculator360/calculator/gst-calculator.html">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="GST Calculator — Add or Remove GST, CGST &amp; SGST | All Calculator 360">
+  <meta property="og:description" content="Calculate GST instantly — add GST to a price or remove GST from an inclusive price, with CGST and SGST split. Rates 0%, 5%, 18%, 40% and custom.">
+  <meta property="og:url" content="https://tauheed-khan-pathan.github.io/AllCalculator360/calculator/gst-calculator.html">
+  <meta property="og:site_name" content="All Calculator 360">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="GST Calculator — Add or Remove GST, CGST &amp; SGST | All Calculator 360">
+  <meta name="twitter:description" content="Calculate GST instantly — add GST to a price or remove GST from an inclusive price, with CGST and SGST split. Rates 0%, 5%, 18%, 40% and custom.">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What is GST?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "GST (Goods and Services Tax) is a single indirect tax levied on the supply of goods and services in India. It replaced most earlier indirect taxes such as excise duty, service tax and VAT, and applies to almost every product and service you buy."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What are CGST and SGST?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "CGST (Central GST) and SGST (State GST) are the two parts of GST charged on sales within the same state. Each is half of the total GST rate — for example, at 18% GST, CGST is 9% and SGST is 9%. IGST (Integrated GST) applies instead on interstate sales: it equals the full rate with no split."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How do I add GST to a price?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Multiply the price by the GST rate and divide by 100 to get the GST amount, then add it to the price. For example, on a price of ₹10,000 at 18% GST, the GST is 10,000 × 18 ÷ 100 = ₹1,800, so the total is ₹11,800."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How do I remove GST from a price?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Divide the inclusive price by (1 + rate ÷ 100) to get the base price, then subtract it from the inclusive price to get the GST. For example, ₹11,800 inclusive at 18% GST gives a base price of 11,800 ÷ 1.18 = ₹10,000, so the GST is ₹1,800."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What happened to the 12% and 28% GST slabs?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "The 12% and 28% slabs were merged under GST 2.0 in September 2025. Most goods now fall under 5% or 18%, and a 40% demerit rate applies to a small list of luxury and sin goods such as tobacco and high-end cars."
+        }
+      }
+    ]
+  }
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../styles.css">
+  <script>
+    (function () {
+      try {
+        if (localStorage.getItem('ac360-theme') === 'dark') {
+          document.documentElement.setAttribute('data-theme', 'dark');
+        }
+      } catch (e) {}
+    })();
+  </script>
+  <script src="../app.js" defer></script>
+</head>
+<body>
+  <header class="site-header"><div class="header-inner">
+<a class="brand" href="../index.html"><svg class="brand-logo" viewBox="0 0 40 40" fill="none" aria-hidden="true"><rect width="40" height="40" rx="10" fill="#2563eb"/><rect x="9" y="7" width="22" height="7" rx="2" fill="#ffffff"/><rect x="9" y="18" width="6" height="6" rx="1.5" fill="#ffffff"/><rect x="17" y="18" width="6" height="6" rx="1.5" fill="#ffffff"/><rect x="25" y="18" width="6" height="6" rx="1.5" fill="#ffffff"/><rect x="9" y="26" width="6" height="6" rx="1.5" fill="#ffffff"/><rect x="17" y="26" width="6" height="6" rx="1.5" fill="#ffffff"/><rect x="25" y="26" width="6" height="6" rx="1.5" fill="#ffffff"/></svg><span class="brand-name">All Calculator <span class="brand-360">360</span></span></a>
+<div class="header-search"><input id="headerSearch" type="search" placeholder="Search calculators…" aria-label="Search calculators"></div>
+<nav class="main-nav" aria-label="Categories"><a class="nav-link" href="../index.html#finance">Finance</a><a class="nav-link" href="../index.html#health">Health</a><a class="nav-link" href="../index.html#math">Math</a><a class="nav-link" href="../index.html#everyday">Everyday</a></nav>
+<button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">🌙</button>
+<button class="menu-toggle" id="menuToggle" aria-label="Menu">☰</button>
+</div><nav class="mobile-nav" id="mobileNav" aria-label="Mobile categories"><a class="nav-link" href="../index.html#finance">Finance</a><a class="nav-link" href="../index.html#health">Health</a><a class="nav-link" href="../index.html#math">Math</a><a class="nav-link" href="../index.html#everyday">Everyday</a></nav></header>
+
+  <main class="container">
+    <nav class="breadcrumb"><a href="../index.html">Home</a> / <a href="../index.html#finance">Finance</a> / GST Calculator</nav>
+
+    <div class="calc-head">
+      <h1>GST Calculator</h1>
+      <p>Add GST to a price or remove GST from an inclusive price — with CGST and SGST split.</p>
+    </div>
+
+    <div class="calc-layout">
+      <div class="calc-panel calc-inputs">
+        <h2>GST Details</h2>
+
+        <div class="input-group">
+          <label class="input-label">Mode</label>
+          <div class="tenure-toggle" role="group" aria-label="GST mode">
+            <button type="button" class="toggle-btn active" id="modeAdd">Add GST</button>
+            <button type="button" class="toggle-btn" id="modeRemove">Remove GST</button>
+          </div>
+          <p class="input-hint" id="modeHint">Add GST to a price that does not include tax yet.</p>
+        </div>
+
+        <div class="input-group">
+          <label class="input-label" for="amountRange">Amount <output id="amountOut" for="amountRange">₹10,000</output></label>
+          <div class="input-row">
+            <input type="range" class="slider" id="amountRange" min="100" max="1000000" step="100" value="10000" aria-label="Amount">
+            <input type="number" class="num-input" id="amountNum" min="100" max="1000000" step="100" value="10000" aria-label="Amount value">
+          </div>
+          <p class="input-hint" id="amountHint">Price without GST (Add mode) — between ₹100 and ₹10,00,000.</p>
+        </div>
+
+        <div class="input-group">
+          <label class="input-label" for="rateSelect">GST Rate <output id="rateOut" for="rateSelect">18%</output></label>
+          <select id="rateSelect" class="currency-select">
+            <option value="0">0% — Exempt</option>
+            <option value="5">5%</option>
+            <option value="18" selected>18%</option>
+            <option value="40">40% — Demerit rate</option>
+            <option value="custom">Custom rate</option>
+          </select>
+          <p class="input-hint">12% and 28% slabs were merged under GST 2.0 (September 2025).</p>
+        </div>
+
+        <div class="input-group" id="customRateWrap" style="display:none">
+          <label class="input-label" for="customRateNum">Custom GST Rate <output id="customRateOut" for="customRateNum">18%</output></label>
+          <div class="input-row">
+            <input type="number" class="num-input" id="customRateNum" min="0" max="40" step="0.1" value="18" aria-label="Custom GST rate">
+          </div>
+          <p class="input-hint">Enter a rate between 0% and 40%.</p>
+        </div>
+      </div>
+
+      <div class="calc-panel calc-results">
+        <h2>Your Results</h2>
+
+        <div class="result-main">
+          <div class="result-label" id="bigLabel">Total Amount</div>
+          <div class="result-emi" id="bigOut">₹0</div>
+        </div>
+
+        <div class="result-breakdown">
+          <div class="break-row"><span class="k">Base Amount</span><span class="v" id="baseOut">₹0</span></div>
+          <div class="break-row"><span class="k">GST Amount</span><span class="v" id="gstOut">₹0</span></div>
+          <div class="break-row"><span class="k">CGST (half of GST)</span><span class="v" id="cgstOut">₹0</span></div>
+          <div class="break-row"><span class="k">SGST (half of GST)</span><span class="v" id="sgstOut">₹0</span></div>
+          <div class="break-row"><span class="k" id="totalLabel">Total Amount</span><span class="v green" id="totalOut">₹0</span></div>
+        </div>
+
+        <div class="donut-wrap">
+          <svg id="donut" width="160" height="160" viewBox="0 0 160 160" role="img" aria-label="Base amount vs GST chart">
+            <circle class="donut-track" cx="80" cy="80" r="64" fill="none" stroke-width="24"></circle>
+            <g transform="rotate(-90 80 80)">
+              <circle id="donutBase" cx="80" cy="80" r="64" fill="none" stroke="#2563eb" stroke-width="24" stroke-dasharray="402.12 402.12" stroke-dashoffset="0"></circle>
+              <circle id="donutGst" cx="80" cy="80" r="64" fill="none" stroke="#059669" stroke-width="24" stroke-dasharray="0 402.12" stroke-dashoffset="0"></circle>
+            </g>
+            <text id="donutPct" class="donut-pct" x="80" y="76" text-anchor="middle" font-size="20" font-weight="700">0%</text>
+            <text class="donut-sub" x="80" y="96" text-anchor="middle" font-size="12">GST</text>
+          </svg>
+          <div class="donut-legend">
+            <div class="legend-item"><span class="legend-dot" style="background:#2563eb"></span>Base Amount <b id="legendBase">₹0</b></div>
+            <div class="legend-item"><span class="legend-dot" style="background:#059669"></span>GST <b id="legendGst">₹0</b></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <section class="content-section">
+      <h2>GST Formula</h2>
+      <div class="formula-box">
+        <p class="formula">Add GST: GST = Amount × rate ÷ 100 &nbsp;•&nbsp; Total = Amount + GST</p>
+        <p class="formula">Remove GST: Base = Inclusive Price ÷ (1 + rate ÷ 100) &nbsp;•&nbsp; GST = Inclusive Price − Base</p>
+        <p>CGST and SGST are each half of the GST amount on sales within the same state. On interstate sales, IGST applies instead at the full rate with no split.</p>
+        <p><strong>Worked example — Add GST:</strong> ₹10,000 at 18% GST: GST = 10,000 × 18 ÷ 100 = ₹1,800 (CGST ₹900 + SGST ₹900), Total = 10,000 + 1,800 = <strong>₹11,800</strong>.</p>
+        <p><strong>Worked example — Remove GST:</strong> ₹11,800 inclusive at 18% GST: Base = 11,800 ÷ 1.18 = ₹10,000, GST = 11,800 − 10,000 = <strong>₹1,800</strong>.</p>
+      </div>
+    </section>
+
+    <section class="content-section">
+      <h2>Frequently Asked Questions</h2>
+      <details class="faq-item">
+        <summary class="faq-q">What is GST?</summary>
+        <div class="faq-a"><p>GST (Goods and Services Tax) is a single indirect tax levied on the supply of goods and services in India. It replaced most earlier indirect taxes such as excise duty, service tax and VAT, and applies to almost every product and service you buy.</p></div>
+      </details>
+      <details class="faq-item">
+        <summary class="faq-q">What are CGST and SGST?</summary>
+        <div class="faq-a"><p>CGST (Central GST) and SGST (State GST) are the two parts of GST charged on sales within the same state. Each is half of the total GST rate — for example, at 18% GST, CGST is 9% and SGST is 9%. IGST (Integrated GST) applies instead on interstate sales: it equals the full rate with no split.</p></div>
+      </details>
+      <details class="faq-item">
+        <summary class="faq-q">How do I add GST to a price?</summary>
+        <div class="faq-a"><p>Multiply the price by the GST rate and divide by 100 to get the GST amount, then add it to the price. For example, on a price of ₹10,000 at 18% GST, the GST is 10,000 × 18 ÷ 100 = ₹1,800, so the total is ₹11,800.</p></div>
+      </details>
+      <details class="faq-item">
+        <summary class="faq-q">How do I remove GST from a price?</summary>
+        <div class="faq-a"><p>Divide the inclusive price by (1 + rate ÷ 100) to get the base price, then subtract it from the inclusive price to get the GST. For example, ₹11,800 inclusive at 18% GST gives a base price of 11,800 ÷ 1.18 = ₹10,000, so the GST is ₹1,800.</p></div>
+      </details>
+      <details class="faq-item">
+        <summary class="faq-q">What happened to the 12% and 28% GST slabs?</summary>
+        <div class="faq-a"><p>The 12% and 28% slabs were merged under GST 2.0 in September 2025. Most goods now fall under 5% or 18%, and a 40% demerit rate applies to a small list of luxury and sin goods such as tobacco and high-end cars.</p></div>
+      </details>
+    </section>
+
+    <section class="content-section">
+      <h2>Related Calculators</h2>
+      <div class="related-grid">
+        <a class="calc-card" href="income-tax-calculator.html" data-name="Income Tax Calculator" data-desc="Compare New vs Old Regime tax for FY 2025-26 and find which saves you more.">
+          <span class="calc-icon">🧾</span>
+          <span class="calc-name">Income Tax Calculator</span>
+          <span class="calc-desc">Compare New vs Old Regime tax for FY 2025-26 and find which saves you more.</span>
+        </a>
+        <a class="calc-card" href="emi-calculator.html" data-name="EMI Calculator" data-desc="Calculate your monthly loan EMI with interest breakdown.">
+          <span class="calc-icon">💰</span>
+          <span class="calc-name">EMI Calculator</span>
+          <span class="calc-desc">Calculate your monthly loan EMI with interest breakdown.</span>
+        </a>
+        <a class="calc-card" href="fd-calculator.html" data-name="FD Calculator" data-desc="See how your fixed deposit grows over time.">
+          <span class="calc-icon">🏦</span>
+          <span class="calc-name">FD Calculator</span>
+          <span class="calc-desc">See how your fixed deposit grows over time.</span>
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer"><div class="container"><div class="footer-grid">
+<div class="footer-col"><div class="footer-brand"><svg width="32" height="32" viewBox="0 0 40 40" fill="none" aria-hidden="true"><rect width="40" height="40" rx="10" fill="#2563eb"/><rect x="9" y="7" width="22" height="7" rx="2" fill="#ffffff"/><rect x="9" y="18" width="6" height="6" rx="1.5" fill="#ffffff"/><rect x="17" y="18" width="6" height="6" rx="1.5" fill="#ffffff"/><rect x="25" y="18" width="6" height="6" rx="1.5" fill="#ffffff"/><rect x="9" y="26" width="6" height="6" rx="1.5" fill="#ffffff"/><rect x="17" y="26" width="6" height="6" rx="1.5" fill="#ffffff"/><rect x="25" y="26" width="6" height="6" rx="1.5" fill="#ffffff"/></svg><span>All Calculator 360</span></div><p>Every calculator, all in one place. Free, private, and accurate — calculations happen right in your browser.</p></div>
+<div class="footer-col"><h3>Categories</h3><ul><li><a href="../index.html#finance">Finance</a></li><li><a href="../index.html#health">Health</a></li><li><a href="../index.html#math">Math</a></li><li><a href="../index.html#everyday">Everyday</a></li></ul></div>
+<div class="footer-col"><h3>Popular Calculators</h3><ul><li><a href="emi-calculator.html">EMI Calculator</a></li><li><a href="sip-calculator.html">SIP Calculator</a></li><li><a href="fd-calculator.html">FD Calculator</a></li><li><a href="income-tax-calculator.html">Income Tax Calculator</a></li><li><a href="gst-calculator.html">GST Calculator</a></li><li><a href="bmi-calculator.html">BMI Calculator</a></li><li><a href="age-calculator.html">Age Calculator</a></li><li><a href="percentage-calculator.html">Percentage Calculator</a></li></ul></div>
+<div class="footer-col"><h3>Company</h3><ul><li><a href="../about.html">About</a></li><li><a href="../contact.html">Contact</a></li><li><a href="../privacy.html">Privacy Policy</a></li><li><a href="../terms.html">Terms</a></li></ul></div>
+</div><div class="footer-bottom"><p>© 2026 All Calculator 360. All rights reserved.</p></div></div></footer>
+
+  <script>
+    (function () {
+      'use strict';
+
+      var CIRCUMFERENCE = 402.12;
+
+      var amountRange = document.getElementById('amountRange');
+      var amountNum = document.getElementById('amountNum');
+      var amountOut = document.getElementById('amountOut');
+      var amountHint = document.getElementById('amountHint');
+      var rateSelect = document.getElementById('rateSelect');
+      var rateOut = document.getElementById('rateOut');
+      var customRateWrap = document.getElementById('customRateWrap');
+      var customRateNum = document.getElementById('customRateNum');
+      var customRateOut = document.getElementById('customRateOut');
+      var modeAddBtn = document.getElementById('modeAdd');
+      var modeRemoveBtn = document.getElementById('modeRemove');
+      var modeHint = document.getElementById('modeHint');
+      var bigLabel = document.getElementById('bigLabel');
+      var bigOut = document.getElementById('bigOut');
+      var baseOut = document.getElementById('baseOut');
+      var gstOut = document.getElementById('gstOut');
+      var cgstOut = document.getElementById('cgstOut');
+      var sgstOut = document.getElementById('sgstOut');
+      var totalLabel = document.getElementById('totalLabel');
+      var totalOut = document.getElementById('totalOut');
+      var donutBase = document.getElementById('donutBase');
+      var donutGst = document.getElementById('donutGst');
+      var donutPct = document.getElementById('donutPct');
+      var legendBase = document.getElementById('legendBase');
+      var legendGst = document.getElementById('legendGst');
+
+      var mode = 'add'; // 'add' | 'remove'
+
+      function fmtMoney(value) {
+        return new Intl.NumberFormat('en-IN', {
+          style: 'currency',
+          currency: 'INR',
+          maximumFractionDigits: 0
+        }).format(value);
+      }
+
+      function clamp(value, min, max) {
+        if (isNaN(value)) return min;
+        return Math.min(max, Math.max(min, value));
+      }
+
+      function getAmount() {
+        return clamp(parseFloat(amountNum.value), 100, 1000000);
+      }
+
+      function getRate() {
+        if (rateSelect.value === 'custom') {
+          return clamp(parseFloat(customRateNum.value), 0, 40);
+        }
+        return parseFloat(rateSelect.value);
+      }
+
+      function calcGST(amount, rate, mode) {
+        var base;
+        var gst;
+        var total;
+        if (mode === 'add') {
+          base = amount;
+          gst = amount * rate / 100;
+          total = amount + gst;
+        } else {
+          total = amount;
+          base = amount / (1 + rate / 100);
+          gst = amount - base;
+        }
+        return {
+          base: Math.round(base),
+          gst: Math.round(gst),
+          cgst: Math.round(gst / 2),
+          sgst: Math.round(gst / 2),
+          total: Math.round(total)
+        };
+      }
+
+      function recalculate() {
+        var amount = getAmount();
+        var rate = getRate();
+        var result = calcGST(amount, rate, mode);
+
+        amountOut.textContent = fmtMoney(amount);
+        rateOut.textContent = (Math.round(rate * 10) / 10) + '%';
+        customRateOut.textContent = (Math.round(rate * 10) / 10) + '%';
+
+        if (mode === 'add') {
+          bigLabel.textContent = 'Total Amount';
+          totalLabel.textContent = 'Total Amount';
+          bigOut.textContent = fmtMoney(result.total);
+          amountHint.textContent = 'Price without GST (Add mode) — between ₹100 and ₹10,00,000.';
+          modeHint.textContent = 'Add GST to a price that does not include tax yet.';
+        } else {
+          bigLabel.textContent = 'Base Amount';
+          totalLabel.textContent = 'Price incl. GST';
+          bigOut.textContent = fmtMoney(result.base);
+          amountHint.textContent = 'Price including GST (Remove mode) — between ₹100 and ₹10,00,000.';
+          modeHint.textContent = 'Remove GST from a price that already includes tax.';
+        }
+
+        baseOut.textContent = fmtMoney(result.base);
+        gstOut.textContent = fmtMoney(result.gst);
+        cgstOut.textContent = fmtMoney(result.cgst);
+        sgstOut.textContent = fmtMoney(result.sgst);
+        totalOut.textContent = fmtMoney(result.total);
+        legendBase.textContent = fmtMoney(result.base);
+        legendGst.textContent = fmtMoney(result.gst);
+
+        var total = result.total > 0 ? result.total : 1;
+        var baseShare = result.base / total;
+        var gstShare = 1 - baseShare;
+        donutBase.setAttribute('stroke-dasharray', (baseShare * CIRCUMFERENCE).toFixed(2) + ' ' + CIRCUMFERENCE);
+        donutBase.setAttribute('stroke-dashoffset', '0');
+        donutGst.setAttribute('stroke-dasharray', (gstShare * CIRCUMFERENCE).toFixed(2) + ' ' + CIRCUMFERENCE);
+        donutGst.setAttribute('stroke-dashoffset', (-baseShare * CIRCUMFERENCE).toFixed(2));
+        donutPct.textContent = (gstShare * 100).toFixed(1) + '%';
+      }
+
+      function syncPair(rangeEl, numEl, min, max, onChange) {
+        rangeEl.addEventListener('input', function () {
+          numEl.value = rangeEl.value;
+          onChange();
+        });
+        numEl.addEventListener('input', function () {
+          var val = clamp(parseFloat(numEl.value), min, max);
+          rangeEl.value = val;
+          onChange();
+        });
+        numEl.addEventListener('change', function () {
+          var val = clamp(parseFloat(numEl.value), min, max);
+          numEl.value = val;
+          rangeEl.value = val;
+          onChange();
+        });
+      }
+
+      syncPair(amountRange, amountNum, 100, 1000000, recalculate);
+
+      function setMode(newMode) {
+        if (newMode === mode) return;
+        mode = newMode;
+        if (mode === 'add') {
+          modeAddBtn.classList.add('active');
+          modeRemoveBtn.classList.remove('active');
+        } else {
+          modeRemoveBtn.classList.add('active');
+          modeAddBtn.classList.remove('active');
+        }
+        recalculate();
+      }
+
+      modeAddBtn.addEventListener('click', function () { setMode('add'); });
+      modeRemoveBtn.addEventListener('click', function () { setMode('remove'); });
+
+      rateSelect.addEventListener('change', function () {
+        customRateWrap.style.display = rateSelect.value === 'custom' ? '' : 'none';
+        recalculate();
+      });
+
+      customRateNum.addEventListener('input', recalculate);
+      customRateNum.addEventListener('change', function () {
+        var val = clamp(parseFloat(customRateNum.value), 0, 40);
+        customRateNum.value = val;
+        recalculate();
+      });
+
+      recalculate();
+    })();
+  </script>
+</body>
+</html>

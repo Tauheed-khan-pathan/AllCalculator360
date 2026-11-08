@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Percentage Calculator — Percent of, What Percent &amp; Change | All Calculator 360</title>
+  <meta name="description" content="Work out percentages fast — what is X% of Y, X is what percent of Y, and percentage increase or decrease. Free, instant and private.">
+  <link rel="canonical" href="https://tauheed-khan-pathan.github.io/AllCalculator360/calculator/percentage-calculator.html">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Percentage Calculator — Percent of, What Percent &amp; Change | All Calculator 360">
+  <meta property="og:description" content="Work out percentages fast — what is X% of Y, X is what percent of Y, and percentage increase or decrease. Free, instant and private.">
+  <meta property="og:url" content="https://tauheed-khan-pathan.github.io/AllCalculator360/calculator/percentage-calculator.html">
+  <meta property="og:site_name" content="All Calculator 360">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Percentage Calculator — Percent of, What Percent &amp; Change | All Calculator 360">
+  <meta name="twitter:description" content="Work out percentages fast — what is X% of Y, X is what percent of Y, and percentage increase or decrease. Free, instant and private.">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What is a percentage?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "A percentage is a way of expressing a number as a fraction of 100. For example, 20% means 20 out of every 100, or 20 ÷ 100 = 0.2. The word comes from the Latin 'per centum', meaning 'by the hundred'."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How do I find X% of a number?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Multiply the number by the percentage and divide by 100. For example, to find 20% of 500: (20 ÷ 100) × 500 = 100. You can also convert the percentage to a decimal first — 20% = 0.2 — and multiply: 0.2 × 500 = 100."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How do I calculate percentage increase?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Subtract the old value from the new value, divide the result by the old value, and multiply by 100. For example, a price rising from 50 to 75 is an increase of (75 − 50) ÷ 50 × 100 = 50%."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How do I calculate percentage decrease?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Subtract the new value from the old value, divide the result by the old value, and multiply by 100. For example, a price falling from 80 to 60 is a decrease of (80 − 60) ÷ 80 × 100 = 25%."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What is the difference between a percent and a percentage point?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "A percent is a relative change, while a percentage point is the simple difference between two percentages. For example, if an interest rate rises from 5% to 7%, it has risen by 2 percentage points, but by 40% in relative terms ((7 − 5) ÷ 5 × 100)."
+        }
+      }
+    ]
+  }
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../styles.css">
+  <script>
+    (function () {
+      try {
+        if (localStorage.getItem('ac360-theme') === 'dark') {
+          document.documentElement.setAttribute('data-theme', 'dark');
+        }
+      } catch (e) {}
+    })();
+  </script>
+  <script src="../app.js" defer></script>
+</head>
+<body>
+  <header class="site-header"><div class="header-inner">
+<a class="brand" href="../index.html"><svg class="brand-logo" viewBox="0 0 40 40" fill="none" aria-hidden="true"><rect width="40" height="40" rx="10" fill="#2563eb"/><rect x="9" y="7" width="22" height="7" rx="2" fill="#ffffff"/><rect x="9" y="18" width="6" height="6" rx="1.5" fill="#ffffff"/><rect x="17" y="18" width="6" height="6" rx="1.5" fill="#ffffff"/><rect x="25" y="18" width="6" height="6" rx="1.5" fill="#ffffff"/><rect x="9" y="26" width="6" height="6" rx="1.5" fill="#ffffff"/><rect x="17" y="26" width="6" height="6" rx="1.5" fill="#ffffff"/><rect x="25" y="26" width="6" height="6" rx="1.5" fill="#ffffff"/></svg><span class="brand-name">All Calculator <span class="brand-360">360</span></span></a>
+<div class="header-search"><input id="headerSearch" type="search" placeholder="Search calculators…" aria-label="Search calculators"></div>
+<nav class="main-nav" aria-label="Categories"><a class="nav-link" href="../index.html#finance">Finance</a><a class="nav-link" href="../index.html#health">Health</a><a class="nav-link" href="../index.html#math">Math</a><a class="nav-link" href="../index.html#everyday">Everyday</a></nav>
+<button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">🌙</button>
+<button class="menu-toggle" id="menuToggle" aria-label="Menu">☰</button>
+</div><nav class="mobile-nav" id="mobileNav" aria-label="Mobile categories"><a class="nav-link" href="../index.html#finance">Finance</a><a class="nav-link" href="../index.html#health">Health</a><a class="nav-link" href="../index.html#math">Math</a><a class="nav-link" href="../index.html#everyday">Everyday</a></nav></header>
+
+  <main class="container">
+    <nav class="breadcrumb"><a href="../index.html">Home</a> / <a href="../index.html#math">Math</a> / Percentage Calculator</nav>
+
+    <div class="calc-head">
+      <h1>Percentage Calculator</h1>
+      <p>Work out percentages, increases, decreases and tips in seconds.</p>
+    </div>
+
+    <div class="calc-layout">
+      <div class="calc-panel calc-inputs">
+        <h2>What is X% of Y?</h2>
+
+        <div class="input-group">
+          <label class="input-label" for="pctARange">Percentage (X) <output id="pctAOut" for="pctARange">20%</output></label>
+          <div class="input-row">
+            <input type="range" class="slider" id="pctARange" min="0" max="100" step="0.1" value="20" aria-label="Percentage">
+            <input type="number" class="num-input" id="pctANum" min="0" max="100000" step="any" value="20" aria-label="Percentage value">
+          </div>
+        </div>
+
+        <div class="input-group">
+          <label class="input-label" for="valARange">Number (Y) <output id="valAOut" for="valARange">500</output></label>
+          <div class="input-row">
+            <input type="range" class="slider" id="valARange" min="0" max="10000" step="1" value="500" aria-label="Number">
+            <input type="number" class="num-input" id="valANum" min="0" max="10000000" step="any" value="500" aria-label="Number value">
+          </div>
+        </div>
+      </div>
+
+      <div class="calc-panel calc-results">
+        <h2>Result</h2>
+
+        <div class="result-main">
+          <div class="result-label" id="labelA">20% of 500 is 100</div>
+          <div class="result-emi" id="resA">100</div>
+        </div>
+
+        <div class="result-breakdown">
+          <div class="break-row"><span class="k">Percentage (X)</span><span class="v" id="breakAPct">20%</span></div>
+          <div class="break-row"><span class="k">Number (Y)</span><span class="v" id="breakAVal">500</span></div>
+          <div class="break-row"><span class="k">X% of Y</span><span class="v green" id="breakARes">100</span></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="calc-layout" style="margin-top:24px">
+      <div class="calc-panel calc-inputs">
+        <h2>X is what % of Y?</h2>
+
+        <div class="input-group">
+          <label class="input-label" for="xBRange">Part (X) <output id="xBOut" for="xBRange">25</output></label>
+          <div class="input-row">
+            <input type="range" class="slider" id="xBRange" min="0" max="1000" step="1" value="25" aria-label="Part">
+            <input type="number" class="num-input" id="xBNum" min="0" max="10000000" step="any" value="25" aria-label="Part value">
+          </div>
+        </div>
+
+        <div class="input-group">
+          <label class="input-label" for="yBRange">Whole (Y) <output id="yBOut" for="yBRange">200</output></label>
+          <div class="input-row">
+            <input type="range" class="slider" id="yBRange" min="0" max="1000" step="1" value="200" aria-label="Whole">
+            <input type="number" class="num-input" id="yBNum" min="0" max="10000000" step="any" value="200" aria-label="Whole value">
+          </div>
+        </div>
+      </div>
+
+      <div class="calc-panel calc-results">
+        <h2>Result</h2>
+
+        <div class="result-main">
+          <div class="result-label" id="labelB">25 is 12.5% of 200</div>
+          <div class="result-emi" id="resB">12.5%</div>
+        </div>
+
+        <div class="result-breakdown">
+          <div class="break-row"><span class="k">Part (X)</span><span class="v" id="breakBX">25</span></div>
+          <div class="break-row"><span class="k">Whole (Y)</span><span class="v" id="breakBY">200</span></div>
+          <div class="break-row"><span class="k">X as % of Y</span><span class="v green" id="breakBRes">12.5%</span></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="calc-layout" style="margin-top:24px">
+      <div class="calc-panel calc-inputs">
+        <h2>Percentage change from X to Y</h2>
+
+        <div class="input-group">
+          <label class="input-label" for="fromCRange">From (X) <output id="fromCOut" for="fromCRange">50</output></label>
+          <div class="input-row">
+            <input type="range" class="slider" id="fromCRange" min="0" max="1000" step="1" value="50" aria-label="Starting value">
+            <input type="number" class="num-input" id="fromCNum" min="0" max="10000000" step="any" value="50" aria-label="Starting value">
+          </div>
+          <p class="input-hint">The starting value must not be zero.</p>
+        </div>
+
+        <div class="input-group">
+          <label class="input-label" for="toCRange">To (Y) <output id="toCOut" for="toCRange">75</output></label>
+          <div class="input-row">
+            <input type="range" class="slider" id="toCRange" min="0" max="1000" step="1" value="75" aria-label="New value">
+            <input type="number" class="num-input" id="toCNum" min="0" max="10000000" step="any" value="75" aria-label="New value">
+          </div>
+        </div>
+      </div>
+
+      <div class="calc-panel calc-results">
+        <h2>Result</h2>
+
+        <div class="result-main">
+          <div class="result-label" id="labelC">Increase of 50%</div>
+          <div class="result-emi" id="resC">+50%</div>
+        </div>
+
+        <div class="result-breakdown">
+          <div class="break-row"><span class="k">From (X)</span><span class="v" id="breakCFrom">50</span></div>
+          <div class="break-row"><span class="k">To (Y)</span><span class="v" id="breakCTo">75</span></div>
+          <div class="break-row"><span class="k">Change</span><span class="v green" id="breakCRes">+25</span></div>
+        </div>
+      </div>
+    </div>
+
+    <section class="content-section">
+      <h2>Percentage Formulas</h2>
+      <div class="formula-box">
+        <p class="formula">X% of Y = (X ÷ 100) × Y</p>
+        <p><strong>Worked example:</strong> 20% of 500 = (20 ÷ 100) × 500 = 0.2 × 500 = <strong>100</strong>.</p>
+        <p class="formula" style="margin-top:16px">X as % of Y = (X ÷ Y) × 100</p>
+        <p><strong>Worked example:</strong> 25 as a percentage of 200 = (25 ÷ 200) × 100 = <strong>12.5%</strong>.</p>
+        <p class="formula" style="margin-top:16px">% change = ((Y − X) ÷ X) × 100</p>
+        <p><strong>Worked examples:</strong> 50 → 75 = ((75 − 50) ÷ 50) × 100 = <strong>+50% increase</strong>. 80 → 60 = ((60 − 80) ÷ 80) × 100 = <strong>−25% decrease</strong>.</p>
+      </div>
+    </section>
+
+    <section class="content-section">
+      <h2>Frequently Asked Questions</h2>
+      <details class="faq-item">
+        <summary class="faq-q">What is a percentage?</summary>
+        <div class="faq-a"><p>A percentage is a way of expressing a number as a fraction of 100. For example, 20% means 20 out of every 100, or 20 ÷ 100 = 0.2. The word comes from the Latin 'per centum', meaning 'by the hundred'.</p></div>
+      </details>
+      <details class="faq-item">
+        <summary class="faq-q">How do I find X% of a number?</summary>
+        <div class="faq-a"><p>Multiply the number by the percentage and divide by 100. For example, to find 20% of 500: (20 ÷ 100) × 500 = 100. You can also convert the percentage to a decimal first — 20% = 0.2 — and multiply: 0.2 × 500 = 100.</p></div>
+      </details>
+      <details class="faq-item">
+        <summary class="faq-q">How do I calculate percentage increase?</summary>
+        <div class="faq-a"><p>Subtract the old value from the new value, divide the result by the old value, and multiply by 100. For example, a price rising from 50 to 75 is an increase of (75 − 50) ÷ 50 × 100 = 50%.</p></div>
+      </details>
+      <details class="faq-item">
+        <summary class="faq-q">How do I calculate percentage decrease?</summary>
+        <div class="faq-a"><p>Subtract the new value from the old value, divide the result by the old value, and multiply by 100. For example, a price falling from 80 to 60 is a decrease of (80 − 60) ÷ 80 × 100 = 25%.</p></div>
+      </details>
+      <details class="faq-item">
+        <summary class="faq-q">What is the difference between a percent and a percentage point?</summary>
+        <div class="faq-a"><p>A percent is a relative change, while a percentage point is the simple difference between two percentages. For example, if an interest rate rises from 5% to 7%, it has risen by 2 percentage points, but by 40% in relative terms ((7 − 5) ÷ 5 × 100).</p></div>
+      </details>
+    </section>
+
+    <section class="content-section">
+      <h2>Related Calculators</h2>
+      <div class="related-grid">
+        <a class="calc-card" href="age-calculator.html" data-name="Age Calculator" data-desc="Find your exact age in years, months and days from your birth date.">
+          <span class="calc-icon">🎂</span>
+          <span class="calc-name">Age Calculator</span>
+          <span class="calc-desc">Find your exact age in years, months and days from your birth date.</span>
+        </a>
+        <a class="calc-card" href="bmi-calculator.html" data-name="BMI Calculator" data-desc="Check your Body Mass Index and see if your weight is healthy.">
+          <span class="calc-icon">⚖️</span>
+          <span class="calc-name">BMI Calculator</span>
+          <span class="calc-desc">Check your Body Mass Index and see if your weight is healthy.</span>
+        </a>
+        <a class="calc-card" href="emi-calculator.html" data-name="EMI Calculator" data-desc="Calculate your monthly loan EMI with interest breakdown.">
+          <span class="calc-icon">💰</span>
+          <span class="calc-name">EMI Calculator</span>
+          <span class="calc-desc">Calculate your monthly loan EMI with interest breakdown.</span>
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer"><div class="container"><div class="footer-grid">
+<div class="footer-col"><div class="footer-brand"><svg width="32" height="32" viewBox="0 0 40 40" fill="none" aria-hidden="true"><rect width="40" height="40" rx="10" fill="#2563eb"/><rect x="9" y="7" width="22" height="7" rx="2" fill="#ffffff"/><rect x="9" y="18" width="6" height="6" rx="1.5" fill="#ffffff"/><rect x="17" y="18" width="6" height="6" rx="1.5" fill="#ffffff"/><rect x="25" y="18" width="6" height="6" rx="1.5" fill="#ffffff"/><rect x="9" y="26" width="6" height="6" rx="1.5" fill="#ffffff"/><rect x="17" y="26" width="6" height="6" rx="1.5" fill="#ffffff"/><rect x="25" y="26" width="6" height="6" rx="1.5" fill="#ffffff"/></svg><span>All Calculator 360</span></div><p>Every calculator, all in one place. Free, private, and accurate — calculations happen right in your browser.</p></div>
+<div class="footer-col"><h3>Categories</h3><ul><li><a href="../index.html#finance">Finance</a></li><li><a href="../index.html#health">Health</a></li><li><a href="../index.html#math">Math</a></li><li><a href="../index.html#everyday">Everyday</a></li></ul></div>
+<div class="footer-col"><h3>Popular Calculators</h3><ul><li><a href="emi-calculator.html">EMI Calculator</a></li><li><a href="sip-calculator.html">SIP Calculator</a></li><li><a href="fd-calculator.html">FD Calculator</a></li><li><a href="income-tax-calculator.html">Income Tax Calculator</a></li><li><a href="gst-calculator.html">GST Calculator</a></li><li><a href="bmi-calculator.html">BMI Calculator</a></li><li><a href="age-calculator.html">Age Calculator</a></li><li><a href="percentage-calculator.html">Percentage Calculator</a></li></ul></div>
+<div class="footer-col"><h3>Company</h3><ul><li><a href="../about.html">About</a></li><li><a href="../contact.html">Contact</a></li><li><a href="../privacy.html">Privacy Policy</a></li><li><a href="../terms.html">Terms</a></li></ul></div>
+</div><div class="footer-bottom"><p>© 2026 All Calculator 360. All rights reserved.</p></div></div></footer>
+
+  <script>
+    (function () {
+      'use strict';
+
+      var MINUS = '\u2212';
+
+      function fmtNum(value) {
+        var rounded = Math.round(value * 100) / 100;
+        return rounded.toLocaleString('en-US', { maximumFractionDigits: 2 });
+      }
+
+      function fmtSignedPct(value) {
+        var rounded = Math.round(value * 100) / 100;
+        if (rounded > 0) return '+' + fmtNum(rounded) + '%';
+        if (rounded < 0) return MINUS + fmtNum(Math.abs(rounded)) + '%';
+        return '0%';
+      }
+
+      function readNum(el) {
+        var v = parseFloat(el.value);
+        return isNaN(v) ? null : v;
+      }
+
+      // --- Tool A: What is X% of Y? ---
+      var pctARange = document.getElementById('pctARange');
+      var pctANum = document.getElementById('pctANum');
+      var pctAOut = document.getElementById('pctAOut');
+      var valARange = document.getElementById('valARange');
+      var valANum = document.getElementById('valANum');
+      var valAOut = document.getElementById('valAOut');
+      var labelA = document.getElementById('labelA');
+      var resA = document.getElementById('resA');
+      var breakAPct = document.getElementById('breakAPct');
+      var breakAVal = document.getElementById('breakAVal');
+      var breakARes = document.getElementById('breakARes');
+
+      function recalcA() {
+        var x = readNum(pctANum);
+        var y = readNum(valANum);
+        if (x === null || y === null) {
+          labelA.textContent = 'Enter both values.';
+          resA.textContent = '\u2014';
+          return;
+        }
+        var result = (x / 100) * y;
+        pctAOut.textContent = fmtNum(x) + '%';
+        valAOut.textContent = fmtNum(y);
+        labelA.textContent = fmtNum(x) + '% of ' + fmtNum(y) + ' is ' + fmtNum(result);
+        resA.textContent = fmtNum(result);
+        breakAPct.textContent = fmtNum(x) + '%';
+        breakAVal.textContent = fmtNum(y);
+        breakARes.textContent = fmtNum(result);
+      }
+
+      // --- Tool B: X is what % of Y? ---
+      var xBRange = document.getElementById('xBRange');
+      var xBNum = document.getElementById('xBNum');
+      var xBOut = document.getElementById('xBOut');
+      var yBRange = document.getElementById('yBRange');
+      var yBNum = document.getElementById('yBNum');
+      var yBOut = document.getElementById('yBOut');
+      var labelB = document.getElementById('labelB');
+      var resB = document.getElementById('resB');
+      var breakBX = document.getElementById('breakBX');
+      var breakBY = document.getElementById('breakBY');
+      var breakBRes = document.getElementById('breakBRes');
+
+      function recalcB() {
+        var x = readNum(xBNum);
+        var y = readNum(yBNum);
+        if (x === null || y === null) {
+          labelB.textContent = 'Enter both values.';
+          resB.textContent = '\u2014';
+          return;
+        }
+        if (y === 0) {
+          labelB.textContent = 'Enter a non-zero second value.';
+          resB.textContent = '\u2014';
+          return;
+        }
+        var result = (x / y) * 100;
+        xBOut.textContent = fmtNum(x);
+        yBOut.textContent = fmtNum(y);
+        labelB.textContent = fmtNum(x) + ' is ' + fmtNum(result) + '% of ' + fmtNum(y);
+        resB.textContent = fmtNum(result) + '%';
+        breakBX.textContent = fmtNum(x);
+        breakBY.textContent = fmtNum(y);
+        breakBRes.textContent = fmtNum(result) + '%';
+      }
+
+      // --- Tool C: Percentage change from X to Y ---
+      var fromCRange = document.getElementById('fromCRange');
+      var fromCNum = document.getElementById('fromCNum');
+      var fromCOut = document.getElementById('fromCOut');
+      var toCRange = document.getElementById('toCRange');
+      var toCNum = document.getElementById('toCNum');
+      var toCOut = document.getElementById('toCOut');
+      var labelC = document.getElementById('labelC');
+      var resC = document.getElementById('resC');
+      var breakCFrom = document.getElementById('breakCFrom');
+      var breakCTo = document.getElementById('breakCTo');
+      var breakCRes = document.getElementById('breakCRes');
+
+      function recalcC() {
+        var x = readNum(fromCNum);
+        var y = readNum(toCNum);
+        if (x === null || y === null) {
+          labelC.textContent = 'Enter both values.';
+          resC.textContent = '\u2014';
+          return;
+        }
+        if (x === 0) {
+          labelC.textContent = 'Enter a non-zero starting value.';
+          resC.textContent = '\u2014';
+          return;
+        }
+        var change = ((y - x) / x) * 100;
+        var rounded = Math.round(change * 100) / 100;
+        fromCOut.textContent = fmtNum(x);
+        toCOut.textContent = fmtNum(y);
+        if (rounded > 0) {
+          labelC.textContent = 'Increase of ' + fmtNum(rounded) + '%';
+        } else if (rounded < 0) {
+          labelC.textContent = 'Decrease of ' + fmtNum(Math.abs(rounded)) + '%';
+        } else {
+          labelC.textContent = 'No change';
+        }
+        resC.textContent = fmtSignedPct(change);
+        breakCFrom.textContent = fmtNum(x);
+        breakCTo.textContent = fmtNum(y);
+        breakCRes.textContent = (y - x) >= 0 ? '+' + fmtNum(y - x) : MINUS + fmtNum(Math.abs(y - x));
+      }
+
+      function syncPair(rangeEl, numEl, min, max, onChange) {
+        rangeEl.addEventListener('input', function () {
+          numEl.value = rangeEl.value;
+          onChange();
+        });
+        numEl.addEventListener('input', function () {
+          var val = parseFloat(numEl.value);
+          if (!isNaN(val)) rangeEl.value = Math.min(max, Math.max(min, val));
+          onChange();
+        });
+        numEl.addEventListener('change', function () {
+          var val = parseFloat(numEl.value);
+          if (isNaN(val)) { numEl.value = min; rangeEl.value = min; }
+          else {
+            val = Math.min(max, Math.max(min, val));
+            numEl.value = val;
+            rangeEl.value = val;
+          }
+          onChange();
+        });
+      }
+
+      syncPair(pctARange, pctANum, 0, 100000, recalcA);
+      syncPair(valARange, valANum, 0, 10000000, recalcA);
+      syncPair(xBRange, xBNum, 0, 10000000, recalcB);
+      syncPair(yBRange, yBNum, 0, 10000000, recalcB);
+      syncPair(fromCRange, fromCNum, 0, 10000000, recalcC);
+      syncPair(toCRange, toCNum, 0, 10000000, recalcC);
+
+      recalcA();
+      recalcB();
+      recalcC();
+    })();
+  </script>
+</body>
+</html>

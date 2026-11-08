@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Age Calculator — Calculate Your Exact Age in Years, Months &amp; Days | All Calculator 360</title>
+  <meta name="description" content="Find your exact age in years, months and days from your date of birth. See total days lived, day of the week you were born, and days to your next birthday.">
+  <link rel="canonical" href="https://tauheed-khan-pathan.github.io/AllCalculator360/calculator/age-calculator.html">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Age Calculator — Calculate Your Exact Age in Years, Months &amp; Days | All Calculator 360">
+  <meta property="og:description" content="Find your exact age in years, months and days from your date of birth. See total days lived, day of the week you were born, and days to your next birthday.">
+  <meta property="og:url" content="https://tauheed-khan-pathan.github.io/AllCalculator360/calculator/age-calculator.html">
+  <meta property="og:site_name" content="All Calculator 360">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Age Calculator — Calculate Your Exact Age in Years, Months &amp; Days | All Calculator 360">
+  <meta name="twitter:description" content="Find your exact age in years, months and days from your date of birth. See total days lived, day of the week you were born, and days to your next birthday.">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "How is age calculated?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Your age is calculated by comparing your date of birth with the 'Age at' date, counting full years first, then full months, then the remaining days. If the day of the month has not been reached yet, days are borrowed from the previous month, and if the birth month has not been reached yet, months are borrowed from the previous year."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Does the calculator count leap years?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. Leap years are counted automatically because the calculation uses real calendar dates, so 29 February and the extra day in leap years are included in your total days lived."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What if I was born on 29 February?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "If you were born on 29 February, your birthday falls on 29 February in leap years. In non-leap years it is commonly celebrated on 28 February or 1 March; this calculator uses 1 March for your next birthday in non-leap years."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can I calculate my age at a past or future date?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. Change the 'Age at' date to any past or future date to see how old you were, or will be, on that date — as long as it is on or after your date of birth."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Is my date of birth stored anywhere?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "No. All calculation happens in your browser, and your date of birth is never sent to a server or stored anywhere."
+        }
+      }
+    ]
+  }
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../styles.css">
+  <script>
+    (function () {
+      try {
+        if (localStorage.getItem('ac360-theme') === 'dark') {
+          document.documentElement.setAttribute('data-theme', 'dark');
+        }
+      } catch (e) {}
+    })();
+  </script>
+  <script src="../app.js" defer></script>
+</head>
+<body>
+  <header class="site-header"><div class="header-inner">
+<a class="brand" href="../index.html"><svg class="brand-logo" viewBox="0 0 40 40" fill="none" aria-hidden="true"><rect width="40" height="40" rx="10" fill="#2563eb"/><rect x="9" y="7" width="22" height="7" rx="2" fill="#ffffff"/><rect x="9" y="18" width="6" height="6" rx="1.5" fill="#ffffff"/><rect x="17" y="18" width="6" height="6" rx="1.5" fill="#ffffff"/><rect x="25" y="18" width="6" height="6" rx="1.5" fill="#ffffff"/><rect x="9" y="26" width="6" height="6" rx="1.5" fill="#ffffff"/><rect x="17" y="26" width="6" height="6" rx="1.5" fill="#ffffff"/><rect x="25" y="26" width="6" height="6" rx="1.5" fill="#ffffff"/></svg><span class="brand-name">All Calculator <span class="brand-360">360</span></span></a>
+<div class="header-search"><input id="headerSearch" type="search" placeholder="Search calculators…" aria-label="Search calculators"></div>
+<nav class="main-nav" aria-label="Categories"><a class="nav-link" href="../index.html#finance">Finance</a><a class="nav-link" href="../index.html#health">Health</a><a class="nav-link" href="../index.html#math">Math</a><a class="nav-link" href="../index.html#everyday">Everyday</a></nav>
+<button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">🌙</button>
+<button class="menu-toggle" id="menuToggle" aria-label="Menu">☰</button>
+</div><nav class="mobile-nav" id="mobileNav" aria-label="Mobile categories"><a class="nav-link" href="../index.html#finance">Finance</a><a class="nav-link" href="../index.html#health">Health</a><a class="nav-link" href="../index.html#math">Math</a><a class="nav-link" href="../index.html#everyday">Everyday</a></nav></header>
+
+  <main class="container">
+    <nav class="breadcrumb"><a href="../index.html">Home</a> / <a href="../index.html#everyday">Everyday</a> / Age Calculator</nav>
+
+    <div class="calc-head">
+      <h1>Age Calculator</h1>
+      <p>Find your exact age in years, months and days from your date of birth.</p>
+    </div>
+
+    <div class="calc-layout">
+      <div class="calc-panel calc-inputs">
+        <h2>Your Dates</h2>
+
+        <div class="input-group">
+          <label class="input-label" for="dob">Date of Birth</label>
+          <input type="date" class="num-input" id="dob" value="2000-01-01" style="width:100%" aria-label="Date of birth">
+          <p class="input-hint">Enter the date you were born.</p>
+        </div>
+
+        <div class="input-group">
+          <label class="input-label" for="ageAt">Age at</label>
+          <input type="date" class="num-input" id="ageAt" style="width:100%" aria-label="Age at date">
+          <p class="input-hint">Defaults to today. Change it to see your age on any past or future date.</p>
+        </div>
+
+        <p id="errorMsg" style="display:none;color:#dc2626;font-weight:600;margin:0">Date of birth must be on or before the 'Age at' date.</p>
+      </div>
+
+      <div class="calc-panel calc-results">
+        <h2>Your Results</h2>
+
+        <div class="result-main">
+          <div class="result-label">Your Exact Age</div>
+          <div class="result-emi" id="ageOut">—</div>
+        </div>
+
+        <div class="result-breakdown">
+          <div class="break-row"><span class="k">Total months</span><span class="v" id="monthsOut">—</span></div>
+          <div class="break-row"><span class="k">Total weeks</span><span class="v" id="weeksOut">—</span></div>
+          <div class="break-row"><span class="k">Total days lived</span><span class="v" id="daysOut">—</span></div>
+          <div class="break-row"><span class="k">Day of the week born</span><span class="v" id="weekdayOut">—</span></div>
+          <div class="break-row"><span class="k">Next birthday</span><span class="v" id="nextBirthdayOut">—</span></div>
+          <div class="break-row"><span class="k">Days until next birthday</span><span class="v green" id="daysUntilOut">—</span></div>
+        </div>
+      </div>
+    </div>
+
+    <section class="content-section">
+      <h2>How Age Is Calculated</h2>
+      <div class="formula-box">
+        <p>Your age is found by comparing your date of birth with the chosen date, counting full years first, then full months, then the remaining days. If the day of the month has not been reached yet, days are borrowed from the previous month — for example, if you were born on the 29th and today is the 8th, the days are borrowed from the previous month and one month is taken away. If the birth month has not been reached yet, 12 months are borrowed and one year is taken away.</p>
+        <p><strong>Worked example:</strong> Date of birth 1 January 2000, as of 8 November 2026 → <strong>26 years, 10 months, 7 days</strong>; 9,808 days lived; born on a Saturday.</p>
+        <p>Leap years are counted automatically, because the calculation uses real calendar dates — so 29 February and every extra leap day are included in your total days lived.</p>
+      </div>
+    </section>
+
+    <section class="content-section">
+      <h2>Frequently Asked Questions</h2>
+      <details class="faq-item">
+        <summary class="faq-q">How is age calculated?</summary>
+        <div class="faq-a"><p>Your age is calculated by comparing your date of birth with the 'Age at' date, counting full years first, then full months, then the remaining days. If the day of the month has not been reached yet, days are borrowed from the previous month, and if the birth month has not been reached yet, months are borrowed from the previous year.</p></div>
+      </details>
+      <details class="faq-item">
+        <summary class="faq-q">Does the calculator count leap years?</summary>
+        <div class="faq-a"><p>Yes. Leap years are counted automatically because the calculation uses real calendar dates, so 29 February and the extra day in leap years are included in your total days lived.</p></div>
+      </details>
+      <details class="faq-item">
+        <summary class="faq-q">What if I was born on 29 February?</summary>
+        <div class="faq-a"><p>If you were born on 29 February, your birthday falls on 29 February in leap years. In non-leap years it is commonly celebrated on 28 February or 1 March; this calculator uses 1 March for your next birthday in non-leap years.</p></div>
+      </details>
+      <details class="faq-item">
+        <summary class="faq-q">Can I calculate my age at a past or future date?</summary>
+        <div class="faq-a"><p>Yes. Change the 'Age at' date to any past or future date to see how old you were, or will be, on that date — as long as it is on or after your date of birth.</p></div>
+      </details>
+      <details class="faq-item">
+        <summary class="faq-q">Is my date of birth stored anywhere?</summary>
+        <div class="faq-a"><p>No. All calculation happens in your browser, and your date of birth is never sent to a server or stored anywhere.</p></div>
+      </details>
+    </section>
+
+    <section class="content-section">
+      <h2>Related Calculators</h2>
+      <div class="related-grid">
+        <a class="calc-card" href="bmi-calculator.html" data-name="BMI Calculator" data-desc="Check your Body Mass Index and see if your weight is healthy.">
+          <span class="calc-icon">⚖️</span>
+          <span class="calc-name">BMI Calculator</span>
+          <span class="calc-desc">Check your Body Mass Index and see if your weight is healthy.</span>
+        </a>
+        <a class="calc-card" href="percentage-calculator.html" data-name="Percentage Calculator" data-desc="Work out percentages, increases, decreases and tips in seconds.">
+          <span class="calc-icon">📊</span>
+          <span class="calc-name">Percentage Calculator</span>
+          <span class="calc-desc">Work out percentages, increases, decreases and tips in seconds.</span>
+        </a>
+        <a class="calc-card" href="emi-calculator.html" data-name="EMI Calculator" data-desc="Calculate your monthly loan EMI with interest breakdown.">
+          <span class="calc-icon">💰</span>
+          <span class="calc-name">EMI Calculator</span>
+          <span class="calc-desc">Calculate your monthly loan EMI with interest breakdown.</span>
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer"><div class="container"><div class="footer-grid">
+<div class="footer-col"><div class="footer-brand"><svg width="32" height="32" viewBox="0 0 40 40" fill="none" aria-hidden="true"><rect width="40" height="40" rx="10" fill="#2563eb"/><rect x="9" y="7" width="22" height="7" rx="2" fill="#ffffff"/><rect x="9" y="18" width="6" height="6" rx="1.5" fill="#ffffff"/><rect x="17" y="18" width="6" height="6" rx="1.5" fill="#ffffff"/><rect x="25" y="18" width="6" height="6" rx="1.5" fill="#ffffff"/><rect x="9" y="26" width="6" height="6" rx="1.5" fill="#ffffff"/><rect x="17" y="26" width="6" height="6" rx="1.5" fill="#ffffff"/><rect x="25" y="26" width="6" height="6" rx="1.5" fill="#ffffff"/></svg><span>All Calculator 360</span></div><p>Every calculator, all in one place. Free, private, and accurate — calculations happen right in your browser.</p></div>
+<div class="footer-col"><h3>Categories</h3><ul><li><a href="../index.html#finance">Finance</a></li><li><a href="../index.html#health">Health</a></li><li><a href="../index.html#math">Math</a></li><li><a href="../index.html#everyday">Everyday</a></li></ul></div>
+<div class="footer-col"><h3>Popular Calculators</h3><ul><li><a href="emi-calculator.html">EMI Calculator</a></li><li><a href="sip-calculator.html">SIP Calculator</a></li><li><a href="fd-calculator.html">FD Calculator</a></li><li><a href="income-tax-calculator.html">Income Tax Calculator</a></li><li><a href="gst-calculator.html">GST Calculator</a></li><li><a href="bmi-calculator.html">BMI Calculator</a></li><li><a href="age-calculator.html">Age Calculator</a></li><li><a href="percentage-calculator.html">Percentage Calculator</a></li></ul></div>
+<div class="footer-col"><h3>Company</h3><ul><li><a href="../about.html">About</a></li><li><a href="../contact.html">Contact</a></li><li><a href="../privacy.html">Privacy Policy</a></li><li><a href="../terms.html">Terms</a></li></ul></div>
+</div><div class="footer-bottom"><p>© 2026 All Calculator 360. All rights reserved.</p></div></div></footer>
+
+  <script>
+    (function () {
+      'use strict';
+
+      var MONTH_NAMES = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+
+      var dobEl = document.getElementById('dob');
+      var ageAtEl = document.getElementById('ageAt');
+      var errorMsg = document.getElementById('errorMsg');
+      var ageOut = document.getElementById('ageOut');
+      var monthsOut = document.getElementById('monthsOut');
+      var weeksOut = document.getElementById('weeksOut');
+      var daysOut = document.getElementById('daysOut');
+      var weekdayOut = document.getElementById('weekdayOut');
+      var nextBirthdayOut = document.getElementById('nextBirthdayOut');
+      var daysUntilOut = document.getElementById('daysUntilOut');
+
+      function parseDate(value) {
+        var parts = value.split('-');
+        return new Date(parseInt(parts[0], 10), parseInt(parts[1], 10) - 1, parseInt(parts[2], 10));
+      }
+
+      function toISODate(d) {
+        var m = d.getMonth() + 1;
+        var day = d.getDate();
+        return d.getFullYear() + '-' + (m < 10 ? '0' + m : m) + '-' + (day < 10 ? '0' + day : day);
+      }
+
+      function daysInMonth(year, month) {
+        return new Date(year, month + 1, 0).getDate();
+      }
+
+      function formatLong(d) {
+        return d.getDate() + ' ' + MONTH_NAMES[d.getMonth()] + ' ' + d.getFullYear();
+      }
+
+      function fmtNum(n) {
+        return n.toLocaleString('en-US');
+      }
+
+      function showDashes() {
+        ageOut.textContent = '—';
+        monthsOut.textContent = '—';
+        weeksOut.textContent = '—';
+        daysOut.textContent = '—';
+        weekdayOut.textContent = '—';
+        nextBirthdayOut.textContent = '—';
+        daysUntilOut.textContent = '—';
+      }
+
+      function calcAge(dob, at) {
+        var years = at.getFullYear() - dob.getFullYear();
+        var months = at.getMonth() - dob.getMonth();
+        var days = at.getDate() - dob.getDate();
+        if (days < 0) {
+          months -= 1;
+          days += daysInMonth(at.getFullYear(), at.getMonth() - 1);
+        }
+        if (months < 0) {
+          years -= 1;
+          months += 12;
+        }
+        var totalDays = Math.round((at - dob) / 86400000);
+        var totalMonths = years * 12 + months;
+        var totalWeeks = Math.floor(totalDays / 7);
+        var weekday = dob.toLocaleDateString('en-US', { weekday: 'long' });
+        var nextBirthday = new Date(at.getFullYear(), dob.getMonth(), dob.getDate());
+        if (nextBirthday < at) {
+          nextBirthday = new Date(at.getFullYear() + 1, dob.getMonth(), dob.getDate());
+        }
+        var daysUntil = Math.ceil((nextBirthday - at) / 86400000);
+        return {
+          years: years,
+          months: months,
+          days: days,
+          totalDays: totalDays,
+          totalMonths: totalMonths,
+          totalWeeks: totalWeeks,
+          weekday: weekday,
+          nextBirthday: nextBirthday,
+          daysUntil: daysUntil
+        };
+      }
+
+      function recalculate() {
+        if (!dobEl.value || !ageAtEl.value) {
+          errorMsg.style.display = 'none';
+          showDashes();
+          return;
+        }
+        var dob = parseDate(dobEl.value);
+        var at = parseDate(ageAtEl.value);
+        if (isNaN(dob.getTime()) || isNaN(at.getTime())) {
+          errorMsg.style.display = 'none';
+          showDashes();
+          return;
+        }
+        if (dob > at) {
+          errorMsg.style.display = 'block';
+          showDashes();
+          return;
+        }
+        errorMsg.style.display = 'none';
+        var r = calcAge(dob, at);
+        ageOut.textContent = r.years + ' years, ' + r.months + ' months, ' + r.days + ' days';
+        monthsOut.textContent = fmtNum(r.totalMonths) + ' months';
+        weeksOut.textContent = fmtNum(r.totalWeeks) + ' weeks';
+        daysOut.textContent = fmtNum(r.totalDays) + ' days';
+        weekdayOut.textContent = r.weekday;
+        nextBirthdayOut.textContent = formatLong(r.nextBirthday);
+        daysUntilOut.textContent = fmtNum(r.daysUntil) + ' days';
+      }
+
+      dobEl.addEventListener('input', recalculate);
+      ageAtEl.addEventListener('input', recalculate);
+      dobEl.addEventListener('change', recalculate);
+      ageAtEl.addEventListener('change', recalculate);
+
+      ageAtEl.value = toISODate(new Date());
+      recalculate();
+    })();
+  </script>
+</body>
+</html>

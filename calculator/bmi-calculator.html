@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BMI Calculator — Check Your Body Mass Index | All Calculator 360</title>
+  <meta name="description" content="Check your Body Mass Index (BMI) from your height and weight. See your category — underweight, normal, overweight or obese — and your healthy weight range.">
+  <link rel="canonical" href="https://tauheed-khan-pathan.github.io/AllCalculator360/calculator/bmi-calculator.html">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="BMI Calculator — Check Your Body Mass Index | All Calculator 360">
+  <meta property="og:description" content="Check your Body Mass Index (BMI) from your height and weight. See your category — underweight, normal, overweight or obese — and your healthy weight range.">
+  <meta property="og:url" content="https://tauheed-khan-pathan.github.io/AllCalculator360/calculator/bmi-calculator.html">
+  <meta property="og:site_name" content="All Calculator 360">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="BMI Calculator — Check Your Body Mass Index | All Calculator 360">
+  <meta name="twitter:description" content="Check your Body Mass Index (BMI) from your height and weight. See your category — underweight, normal, overweight or obese — and your healthy weight range.">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What is BMI?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "BMI (Body Mass Index) is a simple number calculated from your height and weight that shows whether your weight is in a healthy range for your height."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What is a healthy BMI?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "A healthy BMI for most adults is between 18.5 and 24.9. Below 18.5 is underweight, 25 to 29.9 is overweight, and 30 or above is obese."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Is BMI accurate for athletes or very muscular people?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Not always. Muscle weighs more than fat, so a very muscular person can have a high BMI even with little body fat. BMI is a screening tool, not a direct measure of body fat."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Is BMI different for children?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. Children and teenagers use age-and-sex percentile charts to interpret BMI, not the adult cut-offs of 18.5, 25 and 30."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How can I reach a healthy weight range?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "A balanced diet and regular physical activity are the usual starting points. Small, steady changes work better than crash diets. This calculator is for information only and is not medical advice."
+        }
+      }
+    ]
+  }
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../styles.css">
+  <script>
+    (function () {
+      try {
+        if (localStorage.getItem('ac360-theme') === 'dark') {
+          document.documentElement.setAttribute('data-theme', 'dark');
+        }
+      } catch (e) {}
+    })();
+  </script>
+  <script src="../app.js" defer></script>
+</head>
+<body>
+  <header class="site-header"><div class="header-inner">
+<a class="brand" href="../index.html"><svg class="brand-logo" viewBox="0 0 40 40" fill="none" aria-hidden="true"><rect width="40" height="40" rx="10" fill="#2563eb"/><rect x="9" y="7" width="22" height="7" rx="2" fill="#ffffff"/><rect x="9" y="18" width="6" height="6" rx="1.5" fill="#ffffff"/><rect x="17" y="18" width="6" height="6" rx="1.5" fill="#ffffff"/><rect x="25" y="18" width="6" height="6" rx="1.5" fill="#ffffff"/><rect x="9" y="26" width="6" height="6" rx="1.5" fill="#ffffff"/><rect x="17" y="26" width="6" height="6" rx="1.5" fill="#ffffff"/><rect x="25" y="26" width="6" height="6" rx="1.5" fill="#ffffff"/></svg><span class="brand-name">All Calculator <span class="brand-360">360</span></span></a>
+<div class="header-search"><input id="headerSearch" type="search" placeholder="Search calculators…" aria-label="Search calculators"></div>
+<nav class="main-nav" aria-label="Categories"><a class="nav-link" href="../index.html#finance">Finance</a><a class="nav-link" href="../index.html#health">Health</a><a class="nav-link" href="../index.html#math">Math</a><a class="nav-link" href="../index.html#everyday">Everyday</a></nav>
+<button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">🌙</button>
+<button class="menu-toggle" id="menuToggle" aria-label="Menu">☰</button>
+</div><nav class="mobile-nav" id="mobileNav" aria-label="Mobile categories"><a class="nav-link" href="../index.html#finance">Finance</a><a class="nav-link" href="../index.html#health">Health</a><a class="nav-link" href="../index.html#math">Math</a><a class="nav-link" href="../index.html#everyday">Everyday</a></nav></header>
+
+  <main class="container">
+    <nav class="breadcrumb"><a href="../index.html">Home</a> / <a href="../index.html#health">Health</a> / BMI Calculator</nav>
+
+    <div class="calc-head">
+      <h1>BMI Calculator</h1>
+      <p>Check your Body Mass Index and see if your weight is healthy.</p>
+    </div>
+
+    <div class="calc-layout">
+      <div class="calc-panel calc-inputs">
+        <h2>Your Measurements</h2>
+
+        <div class="input-group">
+          <label class="input-label" for="heightRange">Height <output id="heightOut" for="heightRange">175 cm</output></label>
+          <div class="input-row">
+            <input type="range" class="slider" id="heightRange" min="120" max="220" step="1" value="175" aria-label="Height">
+            <input type="number" class="num-input" id="heightNum" min="120" max="220" step="1" value="175" aria-label="Height value">
+          </div>
+          <div class="tenure-toggle" style="margin-top:12px" role="group" aria-label="Height unit">
+            <button type="button" class="toggle-btn active" id="unitCm">cm</button>
+            <button type="button" class="toggle-btn" id="unitFtIn">ft + in</button>
+          </div>
+          <div class="input-row" id="ftInRow" style="display:none; margin-top:12px">
+            <input type="number" class="num-input" id="feetNum" min="0" max="7" step="1" value="5" aria-label="Feet" style="width:90px">
+            <span style="font-weight:600">ft</span>
+            <input type="number" class="num-input" id="inchesNum" min="0" max="11" step="1" value="9" aria-label="Inches" style="width:90px">
+            <span style="font-weight:600">in</span>
+          </div>
+        </div>
+
+        <div class="input-group">
+          <label class="input-label" for="weightRange">Weight (kg) <output id="weightOut" for="weightRange">70 kg</output></label>
+          <div class="input-row">
+            <input type="range" class="slider" id="weightRange" min="30" max="200" step="0.5" value="70" aria-label="Weight">
+            <input type="number" class="num-input" id="weightNum" min="30" max="200" step="0.5" value="70" aria-label="Weight value">
+          </div>
+          <p class="input-hint">1 kg ≈ 2.2 lb.</p>
+        </div>
+      </div>
+
+      <div class="calc-panel calc-results">
+        <h2>Your Results</h2>
+
+        <div class="result-main">
+          <div class="result-label">Your BMI</div>
+          <div class="result-emi" id="bmiOut">0</div>
+          <div id="categoryOut" style="font-size:20px; font-weight:700; margin-top:4px">—</div>
+        </div>
+
+        <div style="margin:20px 0 8px">
+          <div style="position:relative; height:14px; border-radius:999px; background:linear-gradient(to right, #2563eb 0% 18%, #059669 18% 42%, #d97706 42% 58%, #dc2626 58% 100%)">
+            <div id="scaleMarker" style="position:absolute; top:50%; left:31.4%; transform:translate(-50%, -50%); width:20px; height:20px; border-radius:50%; background:#ffffff; border:3px solid #0f172a; box-shadow:0 1px 4px rgba(0,0,0,0.35)"></div>
+          </div>
+          <div style="display:flex; justify-content:space-between; font-size:12px; color:#64748b; margin-top:6px">
+            <span>Underweight &lt;18.5</span>
+            <span>Normal 18.5–24.9</span>
+            <span>Overweight 25–29.9</span>
+            <span>Obese 30+</span>
+          </div>
+        </div>
+
+        <div class="result-breakdown">
+          <div class="break-row"><span class="k">Height</span><span class="v" id="heightBreakOut">175 cm</span></div>
+          <div class="break-row"><span class="k">Weight</span><span class="v" id="weightBreakOut">70 kg</span></div>
+          <div class="break-row"><span class="k">Healthy Weight Range</span><span class="v green" id="rangeOut">—</span></div>
+        </div>
+      </div>
+    </div>
+
+    <section class="content-section">
+      <h2>BMI Formula</h2>
+      <div class="formula-box">
+        <p class="formula">BMI = weight (kg) ÷ height (m)<sup>2</sup></p>
+        <p>Divide your weight in kilograms by your height in metres squared. For example, a person who weighs 70 kg and is 1.75 m tall: BMI = 70 ÷ (1.75 × 1.75) = 70 ÷ 3.0625 = <strong>22.86 — Normal</strong>.</p>
+        <p><strong>Healthy weight range for 1.75 m:</strong> 18.5 × (1.75 × 1.75) = 56.7 kg up to 24.9 × (1.75 × 1.75) = 76.3 kg, so <strong>56.7–76.3 kg</strong>.</p>
+      </div>
+    </section>
+
+    <section class="content-section">
+      <h2>Frequently Asked Questions</h2>
+      <details class="faq-item">
+        <summary class="faq-q">What is BMI?</summary>
+        <div class="faq-a"><p>BMI (Body Mass Index) is a simple number calculated from your height and weight that shows whether your weight is in a healthy range for your height.</p></div>
+      </details>
+      <details class="faq-item">
+        <summary class="faq-q">What is a healthy BMI?</summary>
+        <div class="faq-a"><p>A healthy BMI for most adults is between 18.5 and 24.9. Below 18.5 is underweight, 25 to 29.9 is overweight, and 30 or above is obese.</p></div>
+      </details>
+      <details class="faq-item">
+        <summary class="faq-q">Is BMI accurate for athletes or very muscular people?</summary>
+        <div class="faq-a"><p>Not always. Muscle weighs more than fat, so a very muscular person can have a high BMI even with little body fat. BMI is a screening tool, not a direct measure of body fat.</p></div>
+      </details>
+      <details class="faq-item">
+        <summary class="faq-q">Is BMI different for children?</summary>
+        <div class="faq-a"><p>Yes. Children and teenagers use age-and-sex percentile charts to interpret BMI, not the adult cut-offs of 18.5, 25 and 30.</p></div>
+      </details>
+      <details class="faq-item">
+        <summary class="faq-q">How can I reach a healthy weight range?</summary>
+        <div class="faq-a"><p>A balanced diet and regular physical activity are the usual starting points. Small, steady changes work better than crash diets. This calculator is for information only and is not medical advice.</p></div>
+      </details>
+    </section>
+
+    <section class="content-section">
+      <h2>Related Calculators</h2>
+      <div class="related-grid">
+        <a class="calc-card" href="age-calculator.html" data-name="Age Calculator" data-desc="Find your exact age in years, months and days from your birth date.">
+          <span class="calc-icon">🎂</span>
+          <span class="calc-name">Age Calculator</span>
+          <span class="calc-desc">Find your exact age in years, months and days from your birth date.</span>
+        </a>
+        <a class="calc-card" href="percentage-calculator.html" data-name="Percentage Calculator" data-desc="Work out percentages, increases, decreases and tips in seconds.">
+          <span class="calc-icon">📊</span>
+          <span class="calc-name">Percentage Calculator</span>
+          <span class="calc-desc">Work out percentages, increases, decreases and tips in seconds.</span>
+        </a>
+        <a class="calc-card" href="sip-calculator.html" data-name="SIP Calculator" data-desc="Plan your monthly SIP investments and see how your wealth grows.">
+          <span class="calc-icon">📈</span>
+          <span class="calc-name">SIP Calculator</span>
+          <span class="calc-desc">Plan your monthly SIP investments and see how your wealth grows.</span>
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer"><div class="container"><div class="footer-grid">
+<div class="footer-col"><div class="footer-brand"><svg width="32" height="32" viewBox="0 0 40 40" fill="none" aria-hidden="true"><rect width="40" height="40" rx="10" fill="#2563eb"/><rect x="9" y="7" width="22" height="7" rx="2" fill="#ffffff"/><rect x="9" y="18" width="6" height="6" rx="1.5" fill="#ffffff"/><rect x="17" y="18" width="6" height="6" rx="1.5" fill="#ffffff"/><rect x="25" y="18" width="6" height="6" rx="1.5" fill="#ffffff"/><rect x="9" y="26" width="6" height="6" rx="1.5" fill="#ffffff"/><rect x="17" y="26" width="6" height="6" rx="1.5" fill="#ffffff"/><rect x="25" y="26" width="6" height="6" rx="1.5" fill="#ffffff"/></svg><span>All Calculator 360</span></div><p>Every calculator, all in one place. Free, private, and accurate — calculations happen right in your browser.</p></div>
+<div class="footer-col"><h3>Categories</h3><ul><li><a href="../index.html#finance">Finance</a></li><li><a href="../index.html#health">Health</a></li><li><a href="../index.html#math">Math</a></li><li><a href="../index.html#everyday">Everyday</a></li></ul></div>
+<div class="footer-col"><h3>Popular Calculators</h3><ul><li><a href="emi-calculator.html">EMI Calculator</a></li><li><a href="sip-calculator.html">SIP Calculator</a></li><li><a href="fd-calculator.html">FD Calculator</a></li><li><a href="income-tax-calculator.html">Income Tax Calculator</a></li><li><a href="gst-calculator.html">GST Calculator</a></li><li><a href="bmi-calculator.html">BMI Calculator</a></li><li><a href="age-calculator.html">Age Calculator</a></li><li><a href="percentage-calculator.html">Percentage Calculator</a></li></ul></div>
+<div class="footer-col"><h3>Company</h3><ul><li><a href="../about.html">About</a></li><li><a href="../contact.html">Contact</a></li><li><a href="../privacy.html">Privacy Policy</a></li><li><a href="../terms.html">Terms</a></li></ul></div>
+</div><div class="footer-bottom"><p>© 2026 All Calculator 360. All rights reserved.</p></div></div></footer>
+
+  <script>
+    (function () {
+      'use strict';
+
+      var CATEGORY_COLORS = {
+        underweight: '#2563eb',
+        normal: '#059669',
+        overweight: '#d97706',
+        obese: '#dc2626'
+      };
+
+      var heightRange = document.getElementById('heightRange');
+      var heightNum = document.getElementById('heightNum');
+      var heightOut = document.getElementById('heightOut');
+      var unitCmBtn = document.getElementById('unitCm');
+      var unitFtInBtn = document.getElementById('unitFtIn');
+      var ftInRow = document.getElementById('ftInRow');
+      var feetNum = document.getElementById('feetNum');
+      var inchesNum = document.getElementById('inchesNum');
+      var weightRange = document.getElementById('weightRange');
+      var weightNum = document.getElementById('weightNum');
+      var weightOut = document.getElementById('weightOut');
+      var bmiOut = document.getElementById('bmiOut');
+      var categoryOut = document.getElementById('categoryOut');
+      var scaleMarker = document.getElementById('scaleMarker');
+      var heightBreakOut = document.getElementById('heightBreakOut');
+      var weightBreakOut = document.getElementById('weightBreakOut');
+      var rangeOut = document.getElementById('rangeOut');
+
+      var heightMode = 'cm'; // 'cm' | 'ftin'
+      var heightCm = 175;
+
+      function clamp(value, min, max) {
+        if (isNaN(value)) return min;
+        return Math.min(max, Math.max(min, value));
+      }
+
+      function calcBMI(weightKg, heightCmValue) {
+        var h = heightCmValue / 100;
+        return weightKg / (h * h);
+      }
+
+      function getCategory(bmi) {
+        if (bmi < 18.5) return { key: 'underweight', label: 'Underweight' };
+        if (bmi < 25) return { key: 'normal', label: 'Normal' };
+        if (bmi < 30) return { key: 'overweight', label: 'Overweight' };
+        return { key: 'obese', label: 'Obese' };
+      }
+
+      function healthyRange(heightCmValue) {
+        var h = heightCmValue / 100;
+        var h2 = h * h;
+        return { low: 18.5 * h2, high: 24.9 * h2 };
+      }
+
+      function formatHeight(heightCmValue) {
+        var totalInches = heightCmValue / 2.54;
+        var ft = Math.floor(totalInches / 12);
+        var inch = Math.round(totalInches - ft * 12);
+        if (inch === 12) { ft += 1; inch = 0; }
+        return Math.round(heightCmValue) + ' cm (' + ft + ' ft ' + inch + ' in)';
+      }
+
+      function getWeight() {
+        return clamp(parseFloat(weightNum.value), 30, 200);
+      }
+
+      function syncHeightInputs() {
+        heightRange.value = Math.round(heightCm);
+        heightNum.value = Math.round(heightCm);
+        heightOut.textContent = Math.round(heightCm) + ' cm';
+      }
+
+      function syncFtInInputs() {
+        var totalInches = heightCm / 2.54;
+        var ft = Math.floor(totalInches / 12);
+        var inch = Math.round(totalInches - ft * 12);
+        if (inch === 12) { ft += 1; inch = 0; }
+        feetNum.value = ft;
+        inchesNum.value = inch;
+      }
+
+      function recalculate() {
+        var weight = getWeight();
+        var bmi = calcBMI(weight, heightCm);
+        var category = getCategory(bmi);
+        var range = healthyRange(heightCm);
+        var position = clamp((bmi - 15) / (40 - 15) * 100, 0, 100);
+
+        weightOut.textContent = (Math.round(weight * 10) / 10) + ' kg';
+        bmiOut.textContent = bmi.toFixed(1);
+        categoryOut.textContent = category.label;
+        categoryOut.style.color = CATEGORY_COLORS[category.key];
+        scaleMarker.style.left = position.toFixed(1) + '%';
+        heightBreakOut.textContent = formatHeight(heightCm);
+        weightBreakOut.textContent = (Math.round(weight * 10) / 10) + ' kg';
+        rangeOut.textContent = range.low.toFixed(1) + '–' + range.high.toFixed(1) + ' kg';
+      }
+
+      function setHeightMode(mode) {
+        if (mode === heightMode) return;
+        heightMode = mode;
+        if (mode === 'ftin') {
+          syncFtInInputs();
+          ftInRow.style.display = '';
+          unitCmBtn.classList.remove('active');
+          unitFtInBtn.classList.add('active');
+        } else {
+          ftInRow.style.display = 'none';
+          unitFtInBtn.classList.remove('active');
+          unitCmBtn.classList.add('active');
+        }
+        recalculate();
+      }
+
+      function setHeightFromCm(cm) {
+        heightCm = clamp(cm, 120, 220);
+        syncHeightInputs();
+        if (heightMode === 'ftin') syncFtInInputs();
+        recalculate();
+      }
+
+      heightRange.addEventListener('input', function () {
+        setHeightFromCm(parseFloat(heightRange.value));
+      });
+      heightNum.addEventListener('input', function () {
+        setHeightFromCm(parseFloat(heightNum.value));
+      });
+      heightNum.addEventListener('change', function () {
+        setHeightFromCm(parseFloat(heightNum.value));
+      });
+
+      function setHeightFromFtIn() {
+        var ft = clamp(parseFloat(feetNum.value), 0, 7);
+        var inch = clamp(parseFloat(inchesNum.value), 0, 11);
+        heightCm = clamp((ft * 12 + inch) * 2.54, 120, 220);
+        syncHeightInputs();
+        recalculate();
+      }
+
+      feetNum.addEventListener('input', setHeightFromFtIn);
+      inchesNum.addEventListener('input', setHeightFromFtIn);
+      feetNum.addEventListener('change', function () {
+        feetNum.value = clamp(parseFloat(feetNum.value), 0, 7);
+        setHeightFromFtIn();
+      });
+      inchesNum.addEventListener('change', function () {
+        inchesNum.value = clamp(parseFloat(inchesNum.value), 0, 11);
+        setHeightFromFtIn();
+      });
+
+      unitCmBtn.addEventListener('click', function () { setHeightMode('cm'); });
+      unitFtInBtn.addEventListener('click', function () { setHeightMode('ftin'); });
+
+      weightRange.addEventListener('input', function () {
+        weightNum.value = weightRange.value;
+        recalculate();
+      });
+      weightNum.addEventListener('input', function () {
+        var val = clamp(parseFloat(weightNum.value), 30, 200);
+        weightRange.value = val;
+        recalculate();
+      });
+      weightNum.addEventListener('change', function () {
+        var val = clamp(parseFloat(weightNum.value), 30, 200);
+        weightNum.value = val;
+        weightRange.value = val;
+        recalculate();
+      });
+
+      recalculate();
+    })();
+  </script>
+</body>
+</html>
