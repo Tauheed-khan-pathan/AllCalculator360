@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calorie Calculator — Daily Calories & Weight Goals | All Calculator 360</title>
+  <meta name="description" content="Estimate your daily calorie needs (TDEE) from your BMR and activity level, and see calorie targets for losing, maintaining or gaining weight.">
+  <link rel="canonical" href="https://tauheed-khan-pathan.github.io/AllCalculator360/calculator/calorie-calculator.html">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Calorie Calculator — Daily Calories & Weight Goals | All Calculator 360">
+  <meta property="og:description" content="Estimate your daily calorie needs (TDEE) from your BMR and activity level, and see calorie targets for losing, maintaining or gaining weight.">
+  <meta property="og:url" content="https://tauheed-khan-pathan.github.io/AllCalculator360/calculator/calorie-calculator.html">
+  <meta property="og:site_name" content="All Calculator 360">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Calorie Calculator — Daily Calories & Weight Goals | All Calculator 360">
+  <meta name="twitter:description" content="Estimate your daily calorie needs (TDEE) from your BMR and activity level, and see calorie targets for losing, maintaining or gaining weight.">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What is TDEE?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "TDEE (Total Daily Energy Expenditure) is the total number of calories you burn in a day, including your BMR plus the calories burned through daily activity and exercise."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How is TDEE calculated?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "TDEE is your BMR multiplied by an activity factor: 1.2 for sedentary, 1.375 for lightly active, 1.55 for moderately active, 1.725 for very active, and 1.9 for extra active."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How many calories should I eat to lose weight?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "A deficit of about 500 calories per day below your maintenance level usually leads to around 0.5 kg of weight loss per week. A smaller deficit of 250 calories per day is a gentler option."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How many calories should I eat to gain weight?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "A surplus of about 250 to 500 calories per day above your maintenance level supports gradual, healthy weight gain, ideally combined with strength training."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Are these calorie numbers exact?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "No. They are estimates based on averages, and your real needs can differ by a few hundred calories depending on muscle mass, hormones, and daily routine. Adjust your intake if your weight does not move as expected over two to three weeks."
+        }
+      }
+    ]
+  }
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../styles.css">
+  <script>
+    (function () {
+      try {
+        if (localStorage.getItem('ac360-theme') === 'dark') {
+          document.documentElement.setAttribute('data-theme', 'dark');
+        }
+      } catch (e) {}
+    })();
+  </script>
+  <script src="../app.js" defer></script>
+</head>
+<body>
+  <header class="site-header"><div class="header-inner">
+<a class="brand" href="../index.html"><svg class="brand-logo" viewBox="0 0 40 40" fill="none" aria-hidden="true"><rect width="40" height="40" rx="10" fill="#2563eb"/><rect x="9" y="7" width="22" height="7" rx="2" fill="#ffffff"/><rect x="9" y="18" width="6" height="6" rx="1.5" fill="#ffffff"/><rect x="17" y="18" width="6" height="6" rx="1.5" fill="#ffffff"/><rect x="25" y="18" width="6" height="6" rx="1.5" fill="#ffffff"/><rect x="9" y="26" width="6" height="6" rx="1.5" fill="#ffffff"/><rect x="17" y="26" width="6" height="6" rx="1.5" fill="#ffffff"/><rect x="25" y="26" width="6" height="6" rx="1.5" fill="#ffffff"/></svg><span class="brand-name">All Calculator <span class="brand-360">360</span></span></a>
+<div class="header-search"><input id="headerSearch" type="search" placeholder="Search calculators…" aria-label="Search calculators"></div>
+<nav class="main-nav" aria-label="Categories"><a class="nav-link" href="../index.html#finance">Finance</a><a class="nav-link" href="../index.html#health">Health</a><a class="nav-link" href="../index.html#math">Math</a><a class="nav-link" href="../index.html#everyday">Everyday</a></nav>
+<button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">🌙</button>
+<button class="menu-toggle" id="menuToggle" aria-label="Menu">☰</button>
+</div><nav class="mobile-nav" id="mobileNav" aria-label="Mobile categories"><a class="nav-link" href="../index.html#finance">Finance</a><a class="nav-link" href="../index.html#health">Health</a><a class="nav-link" href="../index.html#math">Math</a><a class="nav-link" href="../index.html#everyday">Everyday</a></nav></header>
+
+  <main class="container">
+    <nav class="breadcrumb"><a href="../index.html">Home</a> / <a href="../index.html#health">Health</a> / Calorie Calculator</nav>
+
+    <div class="calc-head">
+      <h1>Calorie Calculator</h1>
+      <p>Estimate calories burned and your daily calorie intake for your goals.</p>
+    </div>
+
+    <div class="calc-layout">
+      <div class="calc-panel calc-inputs">
+        <h2>Your Details</h2>
+
+        <div class="input-group">
+          <label class="input-label">Gender</label>
+          <div class="tenure-toggle" role="group" aria-label="Gender">
+            <button type="button" class="toggle-btn active" id="genderMale">Male</button>
+            <button type="button" class="toggle-btn" id="genderFemale">Female</button>
+          </div>
+        </div>
+        <div class="input-group">
+          <label class="input-label" for="ageRange">Age <output id="ageOut" for="ageRange">30 years</output></label>
+          <div class="input-row">
+            <input type="range" class="slider" id="ageRange" min="10" max="90" step="1" value="30" aria-label="Age">
+            <input type="number" class="num-input" id="ageNum" min="10" max="90" step="1" value="30" aria-label="Age value">
+          </div>
+        </div>
+        <div class="input-group">
+          <label class="input-label" for="heightRange">Height <output id="heightOut" for="heightRange">175 cm</output></label>
+          <div class="input-row">
+            <input type="range" class="slider" id="heightRange" min="120" max="220" step="1" value="175" aria-label="Height">
+            <input type="number" class="num-input" id="heightNum" min="120" max="220" step="1" value="175" aria-label="Height value">
+          </div>
+          <div class="tenure-toggle" style="margin-top:12px" role="group" aria-label="Height unit">
+            <button type="button" class="toggle-btn active" id="unitCm">cm</button>
+            <button type="button" class="toggle-btn" id="unitFtIn">ft + in</button>
+          </div>
+          <div class="input-row" id="ftInRow" style="display:none; margin-top:12px">
+            <input type="number" class="num-input" id="feetNum" min="0" max="7" step="1" value="5" aria-label="Feet" style="width:90px">
+            <span style="font-weight:600">ft</span>
+            <input type="number" class="num-input" id="inchesNum" min="0" max="11" step="1" value="9" aria-label="Inches" style="width:90px">
+            <span style="font-weight:600">in</span>
+          </div>
+        </div>
+        <div class="input-group">
+          <label class="input-label" for="weightRange">Weight (kg) <output id="weightOut" for="weightRange">70 kg</output></label>
+          <div class="input-row">
+            <input type="range" class="slider" id="weightRange" min="30" max="200" step="0.5" value="70" aria-label="Weight">
+            <input type="number" class="num-input" id="weightNum" min="30" max="200" step="0.5" value="70" aria-label="Weight value">
+          </div>
+          <p class="input-hint">1 kg ≈ 2.2 lb.</p>
+        </div>
+        <div class="input-group">
+          <label class="input-label" for="activity">Activity Level</label>
+          <select id="activity" class="currency-select">
+            <option value="1.2">Sedentary — little or no exercise</option>
+            <option value="1.375">Lightly active — light exercise 1–3 days/week</option>
+            <option value="1.55" selected>Moderately active — moderate exercise 3–5 days/week</option>
+            <option value="1.725">Very active — hard exercise 6–7 days/week</option>
+            <option value="1.9">Extra active — very hard exercise &amp; physical job</option>
+          </select>
+          <p class="input-hint">Your activity level multiplies your BMR to give your total daily calorie burn.</p>
+        </div>
+      </div>
+
+      <div class="calc-panel calc-results">
+        <h2>Your Results</h2>
+
+        <div class="result-main">
+          <div class="result-label">Maintenance Calories</div>
+          <div class="result-emi" id="tdeeOut">0</div>
+          <div style="font-size:20px; font-weight:700; margin-top:4px">kcal per day</div>
+        </div>
+
+        <div class="result-breakdown">
+          <div class="break-row"><span class="k">BMR</span><span class="v" id="bmrBreakOut">—</span></div>
+          <div class="break-row"><span class="k">Activity Level</span><span class="v" id="activityBreakOut">—</span></div>
+          <div class="break-row"><span class="k">Maintenance Calories</span><span class="v green" id="tdeeBreakOut">—</span></div>
+        </div>
+
+        <div class="donut-wrap">
+          <svg id="donut" width="160" height="160" viewBox="0 0 160 160" role="img" aria-label="BMR vs activity calories chart">
+            <circle class="donut-track" cx="80" cy="80" r="64" fill="none" stroke-width="24"></circle>
+            <g transform="rotate(-90 80 80)">
+              <circle id="donutBmr" cx="80" cy="80" r="64" fill="none" stroke="#2563eb" stroke-width="24" stroke-dasharray="402.12 402.12" stroke-dashoffset="0"></circle>
+              <circle id="donutActivity" cx="80" cy="80" r="64" fill="none" stroke="#059669" stroke-width="24" stroke-dasharray="0 402.12" stroke-dashoffset="0"></circle>
+            </g>
+            <text id="donutPct" class="donut-pct" x="80" y="76" text-anchor="middle" font-size="20" font-weight="700">0%</text>
+            <text class="donut-sub" x="80" y="96" text-anchor="middle" font-size="12">Activity</text>
+          </svg>
+          <div class="donut-legend">
+            <div class="legend-item"><span class="legend-dot" style="background:#2563eb"></span>BMR <b id="legendBmr">0 kcal</b></div>
+            <div class="legend-item"><span class="legend-dot" style="background:#059669"></span>Activity <b id="legendActivity">0 kcal</b></div>
+          </div>
+        </div>
+
+        <h3 style="margin-top:24px">Daily Calorie Targets</h3>
+        <table class="amort-table">
+          <thead>
+            <tr><th>Goal</th><th>Calories / day</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Lose weight (−500)</td><td id="loseOut">—</td></tr>
+            <tr><td>Mild weight loss (−250)</td><td id="mildLoseOut">—</td></tr>
+            <tr><td>Maintain weight</td><td id="maintainOut">—</td></tr>
+            <tr><td>Mild weight gain (+250)</td><td id="mildGainOut">—</td></tr>
+            <tr><td>Gain weight (+500)</td><td id="gainOut">—</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <section class="content-section">
+      <h2>Calorie Formula</h2>
+      <div class="formula-box">
+        <p class="formula">TDEE = BMR × Activity Factor</p>
+        <p>First find your BMR with the Mifflin-St Jeor equation: men 10 × weight (kg) + 6.25 × height (cm) − 5 × age + 5; women the same formula ending in − 161. Then multiply by your activity factor — 1.2 sedentary, 1.375 lightly active, 1.55 moderately active, 1.725 very active, or 1.9 extra active.</p>
+        <p><strong>Worked example:</strong> a 30-year-old man, 175 cm, 70 kg, moderately active. BMR = 10 × 70 + 6.25 × 175 − 5 × 30 + 5 = 700 + 1093.75 − 150 + 5 = <strong>1648.75 ≈ 1649 kcal/day</strong>. TDEE = 1648.75 × 1.55 = 2555.56 ≈ <strong>2556 kcal/day</strong>. His targets: lose weight 2056, mild loss 2306, maintain 2556, mild gain 2806, gain 3056 kcal/day.</p>
+      </div>
+    </section>
+
+    <section class="content-section">
+      <h2>Frequently Asked Questions</h2>
+      <details class="faq-item">
+        <summary class="faq-q">What is TDEE?</summary>
+        <div class="faq-a"><p>TDEE (Total Daily Energy Expenditure) is the total number of calories you burn in a day, including your BMR plus the calories burned through daily activity and exercise.</p></div>
+      </details>
+      <details class="faq-item">
+        <summary class="faq-q">How is TDEE calculated?</summary>
+        <div class="faq-a"><p>TDEE is your BMR multiplied by an activity factor: 1.2 for sedentary, 1.375 for lightly active, 1.55 for moderately active, 1.725 for very active, and 1.9 for extra active.</p></div>
+      </details>
+      <details class="faq-item">
+        <summary class="faq-q">How many calories should I eat to lose weight?</summary>
+        <div class="faq-a"><p>A deficit of about 500 calories per day below your maintenance level usually leads to around 0.5 kg of weight loss per week. A smaller deficit of 250 calories per day is a gentler option.</p></div>
+      </details>
+      <details class="faq-item">
+        <summary class="faq-q">How many calories should I eat to gain weight?</summary>
+        <div class="faq-a"><p>A surplus of about 250 to 500 calories per day above your maintenance level supports gradual, healthy weight gain, ideally combined with strength training.</p></div>
+      </details>
+      <details class="faq-item">
+        <summary class="faq-q">Are these calorie numbers exact?</summary>
+        <div class="faq-a"><p>No. They are estimates based on averages, and your real needs can differ by a few hundred calories depending on muscle mass, hormones, and daily routine. Adjust your intake if your weight does not move as expected over two to three weeks.</p></div>
+      </details>
+    </section>
+
+    <section class="content-section">
+      <h2>Related Calculators</h2>
+      <div class="related-grid">
+        <a class="calc-card" href="bmr-calculator.html" data-name="BMR Calculator" data-desc="Calculate your Basal Metabolic Rate and daily calorie needs.">
+          <span class="calc-icon">🔥</span>
+          <span class="calc-name">BMR Calculator</span>
+          <span class="calc-desc">Calculate your Basal Metabolic Rate and daily calorie needs.</span>
+        </a>
+        <a class="calc-card" href="bmi-calculator.html" data-name="BMI Calculator" data-desc="Check your Body Mass Index and see if your weight is healthy.">
+          <span class="calc-icon">⚖️</span>
+          <span class="calc-name">BMI Calculator</span>
+          <span class="calc-desc">Check your Body Mass Index and see if your weight is healthy.</span>
+        </a>
+        <a class="calc-card" href="age-calculator.html" data-name="Age Calculator" data-desc="Find your exact age in years, months and days from your birth date.">
+          <span class="calc-icon">🎂</span>
+          <span class="calc-name">Age Calculator</span>
+          <span class="calc-desc">Find your exact age in years, months and days from your birth date.</span>
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer"><div class="container"><div class="footer-grid">
+<div class="footer-col"><div class="footer-brand"><svg width="32" height="32" viewBox="0 0 40 40" fill="none" aria-hidden="true"><rect width="40" height="40" rx="10" fill="#2563eb"/><rect x="9" y="7" width="22" height="7" rx="2" fill="#ffffff"/><rect x="9" y="18" width="6" height="6" rx="1.5" fill="#ffffff"/><rect x="17" y="18" width="6" height="6" rx="1.5" fill="#ffffff"/><rect x="25" y="18" width="6" height="6" rx="1.5" fill="#ffffff"/><rect x="9" y="26" width="6" height="6" rx="1.5" fill="#ffffff"/><rect x="17" y="26" width="6" height="6" rx="1.5" fill="#ffffff"/><rect x="25" y="26" width="6" height="6" rx="1.5" fill="#ffffff"/></svg><span>All Calculator 360</span></div><p>Every calculator, all in one place. Free, private, and accurate — calculations happen right in your browser.</p></div>
+<div class="footer-col"><h3>Categories</h3><ul><li><a href="../index.html#finance">Finance</a></li><li><a href="../index.html#health">Health</a></li><li><a href="../index.html#math">Math</a></li><li><a href="../index.html#everyday">Everyday</a></li></ul></div>
+<div class="footer-col"><h3>Popular Calculators</h3><ul><li><a href="emi-calculator.html">EMI Calculator</a></li><li><a href="sip-calculator.html">SIP Calculator</a></li><li><a href="fd-calculator.html">FD Calculator</a></li><li><a href="income-tax-calculator.html">Income Tax Calculator</a></li><li><a href="gst-calculator.html">GST Calculator</a></li><li><a href="bmi-calculator.html">BMI Calculator</a></li><li><a href="age-calculator.html">Age Calculator</a></li><li><a href="percentage-calculator.html">Percentage Calculator</a></li></ul></div>
+<div class="footer-col"><h3>Company</h3><ul><li><a href="../about.html">About</a></li><li><a href="../contact.html">Contact</a></li><li><a href="../privacy.html">Privacy Policy</a></li><li><a href="../terms.html">Terms</a></li></ul></div>
+</div><div class="footer-bottom"><p>© 2026 All Calculator 360. All rights reserved.</p></div></div></footer>
+  <script>
+    (function () {
+      'use strict';
+
+      var CIRCUMFERENCE = 402.12;
+
+      var genderMaleBtn = document.getElementById('genderMale');
+      var genderFemaleBtn = document.getElementById('genderFemale');
+      var ageRange = document.getElementById('ageRange');
+      var ageNum = document.getElementById('ageNum');
+      var ageOut = document.getElementById('ageOut');
+      var heightRange = document.getElementById('heightRange');
+      var heightNum = document.getElementById('heightNum');
+      var heightOut = document.getElementById('heightOut');
+      var unitCmBtn = document.getElementById('unitCm');
+      var unitFtInBtn = document.getElementById('unitFtIn');
+      var ftInRow = document.getElementById('ftInRow');
+      var feetNum = document.getElementById('feetNum');
+      var inchesNum = document.getElementById('inchesNum');
+      var weightRange = document.getElementById('weightRange');
+      var weightNum = document.getElementById('weightNum');
+      var weightOut = document.getElementById('weightOut');
+      var activitySelect = document.getElementById('activity');
+      var tdeeOut = document.getElementById('tdeeOut');
+      var bmrBreakOut = document.getElementById('bmrBreakOut');
+      var activityBreakOut = document.getElementById('activityBreakOut');
+      var tdeeBreakOut = document.getElementById('tdeeBreakOut');
+      var donutBmr = document.getElementById('donutBmr');
+      var donutActivity = document.getElementById('donutActivity');
+      var donutPct = document.getElementById('donutPct');
+      var legendBmr = document.getElementById('legendBmr');
+      var legendActivity = document.getElementById('legendActivity');
+      var loseOut = document.getElementById('loseOut');
+      var mildLoseOut = document.getElementById('mildLoseOut');
+      var maintainOut = document.getElementById('maintainOut');
+      var mildGainOut = document.getElementById('mildGainOut');
+      var gainOut = document.getElementById('gainOut');
+
+      var gender = 'male'; // 'male' | 'female'
+      var heightMode = 'cm'; // 'cm' | 'ftin'
+      var heightCm = 175;
+
+      function clamp(value, min, max) {
+        if (isNaN(value)) return min;
+        return Math.min(max, Math.max(min, value));
+      }
+
+      function calcBMR(genderValue, weightKg, heightCmValue, ageYears) {
+        var base = 10 * weightKg + 6.25 * heightCmValue - 5 * ageYears;
+        return genderValue === 'male' ? base + 5 : base - 161;
+      }
+
+      function calcTDEE(bmr, activityFactor) {
+        return bmr * activityFactor;
+      }
+
+      function activityLabel(factor) {
+        if (factor === 1.2) return 'Sedentary';
+        if (factor === 1.375) return 'Lightly active';
+        if (factor === 1.55) return 'Moderately active';
+        if (factor === 1.725) return 'Very active';
+        return 'Extra active';
+      }
+
+      function formatHeight(heightCmValue) {
+        var totalInches = heightCmValue / 2.54;
+        var ft = Math.floor(totalInches / 12);
+        var inch = Math.round(totalInches - ft * 12);
+        if (inch === 12) { ft += 1; inch = 0; }
+        return Math.round(heightCmValue) + ' cm (' + ft + ' ft ' + inch + ' in)';
+      }
+
+      function getAge() {
+        return clamp(parseInt(ageNum.value, 10), 10, 90);
+      }
+
+      function getWeight() {
+        return clamp(parseFloat(weightNum.value), 30, 200);
+      }
+
+      function syncHeightInputs() {
+        heightRange.value = Math.round(heightCm);
+        heightNum.value = Math.round(heightCm);
+        heightOut.textContent = Math.round(heightCm) + ' cm';
+      }
+
+      function syncFtInInputs() {
+        var totalInches = heightCm / 2.54;
+        var ft = Math.floor(totalInches / 12);
+        var inch = Math.round(totalInches - ft * 12);
+        if (inch === 12) { ft += 1; inch = 0; }
+        feetNum.value = ft;
+        inchesNum.value = inch;
+      }
+
+      function recalculate() {
+        var age = getAge();
+        var weight = getWeight();
+        var factor = parseFloat(activitySelect.value);
+        var bmr = calcBMR(gender, weight, heightCm, age);
+        var tdee = calcTDEE(bmr, factor);
+        var bmrRounded = Math.round(bmr);
+        var tdeeRounded = Math.round(tdee);
+        var activityCal = Math.max(0, tdee - bmr);
+        var activityCalRounded = Math.round(activityCal);
+        var bmrShare = tdee > 0 ? bmr / tdee : 0;
+        var activityShare = 1 - bmrShare;
+
+        ageOut.textContent = age + ' years';
+        weightOut.textContent = (Math.round(weight * 10) / 10) + ' kg';
+        tdeeOut.textContent = tdeeRounded.toLocaleString('en-US');
+        bmrBreakOut.textContent = bmrRounded.toLocaleString('en-US') + ' kcal/day';
+        activityBreakOut.textContent = activityLabel(factor) + ' (\u00d7' + factor + ')';
+        tdeeBreakOut.textContent = tdeeRounded.toLocaleString('en-US') + ' kcal/day';
+
+        donutBmr.setAttribute('stroke-dasharray', (bmrShare * CIRCUMFERENCE).toFixed(2) + ' ' + CIRCUMFERENCE);
+        donutBmr.setAttribute('stroke-dashoffset', '0');
+        donutActivity.setAttribute('stroke-dasharray', (activityShare * CIRCUMFERENCE).toFixed(2) + ' ' + CIRCUMFERENCE);
+        donutActivity.setAttribute('stroke-dashoffset', (-bmrShare * CIRCUMFERENCE).toFixed(2));
+        donutPct.textContent = (activityShare * 100).toFixed(1) + '%';
+        legendBmr.textContent = bmrRounded.toLocaleString('en-US') + ' kcal';
+        legendActivity.textContent = activityCalRounded.toLocaleString('en-US') + ' kcal';
+
+        loseOut.textContent = Math.max(0, tdeeRounded - 500).toLocaleString('en-US') + ' kcal';
+        mildLoseOut.textContent = Math.max(0, tdeeRounded - 250).toLocaleString('en-US') + ' kcal';
+        maintainOut.textContent = tdeeRounded.toLocaleString('en-US') + ' kcal';
+        mildGainOut.textContent = (tdeeRounded + 250).toLocaleString('en-US') + ' kcal';
+        gainOut.textContent = (tdeeRounded + 500).toLocaleString('en-US') + ' kcal';
+      }
+
+      function setGender(next) {
+        gender = next;
+        genderMaleBtn.classList.toggle('active', gender === 'male');
+        genderFemaleBtn.classList.toggle('active', gender === 'female');
+        recalculate();
+      }
+
+      function setHeightMode(mode) {
+        if (mode === heightMode) return;
+        heightMode = mode;
+        if (mode === 'ftin') {
+          syncFtInInputs();
+          ftInRow.style.display = '';
+          unitCmBtn.classList.remove('active');
+          unitFtInBtn.classList.add('active');
+        } else {
+          ftInRow.style.display = 'none';
+          unitFtInBtn.classList.remove('active');
+          unitCmBtn.classList.add('active');
+        }
+        recalculate();
+      }
+
+      function setHeightFromCm(cm) {
+        heightCm = clamp(cm, 120, 220);
+        syncHeightInputs();
+        if (heightMode === 'ftin') syncFtInInputs();
+        recalculate();
+      }
+
+      genderMaleBtn.addEventListener('click', function () { setGender('male'); });
+      genderFemaleBtn.addEventListener('click', function () { setGender('female'); });
+
+      ageRange.addEventListener('input', function () {
+        ageNum.value = ageRange.value;
+        recalculate();
+      });
+      ageNum.addEventListener('input', function () {
+        var val = clamp(parseInt(ageNum.value, 10), 10, 90);
+        ageRange.value = val;
+        recalculate();
+      });
+      ageNum.addEventListener('change', function () {
+        var val = clamp(parseInt(ageNum.value, 10), 10, 90);
+        ageNum.value = val;
+        ageRange.value = val;
+        recalculate();
+      });
+
+      heightRange.addEventListener('input', function () {
+        setHeightFromCm(parseFloat(heightRange.value));
+      });
+      heightNum.addEventListener('input', function () {
+        setHeightFromCm(parseFloat(heightNum.value));
+      });
+      heightNum.addEventListener('change', function () {
+        setHeightFromCm(parseFloat(heightNum.value));
+      });
+
+      function setHeightFromFtIn() {
+        var ft = clamp(parseFloat(feetNum.value), 0, 7);
+        var inch = clamp(parseFloat(inchesNum.value), 0, 11);
+        heightCm = clamp((ft * 12 + inch) * 2.54, 120, 220);
+        syncHeightInputs();
+        recalculate();
+      }
+
+      feetNum.addEventListener('input', setHeightFromFtIn);
+      inchesNum.addEventListener('input', setHeightFromFtIn);
+      feetNum.addEventListener('change', function () {
+        feetNum.value = clamp(parseFloat(feetNum.value), 0, 7);
+        setHeightFromFtIn();
+      });
+      inchesNum.addEventListener('change', function () {
+        inchesNum.value = clamp(parseFloat(inchesNum.value), 0, 11);
+        setHeightFromFtIn();
+      });
+
+      unitCmBtn.addEventListener('click', function () { setHeightMode('cm'); });
+      unitFtInBtn.addEventListener('click', function () { setHeightMode('ftin'); });
+
+      weightRange.addEventListener('input', function () {
+        weightNum.value = weightRange.value;
+        recalculate();
+      });
+      weightNum.addEventListener('input', function () {
+        var val = clamp(parseFloat(weightNum.value), 30, 200);
+        weightRange.value = val;
+        recalculate();
+      });
+      weightNum.addEventListener('change', function () {
+        var val = clamp(parseFloat(weightNum.value), 30, 200);
+        weightNum.value = val;
+        weightRange.value = val;
+        recalculate();
+      });
+
+      activitySelect.addEventListener('change', recalculate);
+
+      recalculate();
+    })();
+  </script>
+</body>
+</html>

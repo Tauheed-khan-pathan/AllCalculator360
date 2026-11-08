@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fraction Calculator — Add, Subtract, Multiply & Divide Fractions | All Calculator 360</title>
+  <meta name="description" content="Add, subtract, multiply and divide fractions with step-by-step results.">
+  <link rel="canonical" href="https://tauheed-khan-pathan.github.io/AllCalculator360/calculator/fraction-calculator.html">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Fraction Calculator — Add, Subtract, Multiply & Divide Fractions | All Calculator 360">
+  <meta property="og:description" content="Add, subtract, multiply and divide fractions with step-by-step results.">
+  <meta property="og:url" content="https://tauheed-khan-pathan.github.io/AllCalculator360/calculator/fraction-calculator.html">
+  <meta property="og:site_name" content="All Calculator 360">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Fraction Calculator — Add, Subtract, Multiply & Divide Fractions | All Calculator 360">
+  <meta name="twitter:description" content="Add, subtract, multiply and divide fractions with step-by-step results.">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What is a fraction?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "A fraction is a part of a whole, written as one number over another — for example 1/2 means one part out of two equal parts. The top number is the numerator and the bottom number is the denominator."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How do you add fractions with different denominators?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "First find a common denominator, usually the lowest common multiple of the two denominators. Rewrite each fraction with that denominator, then add the numerators and keep the denominator the same. For example, 1/2 + 1/3 = 3/6 + 2/6 = 5/6."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How do you simplify a fraction?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Divide the numerator and the denominator by their greatest common divisor (GCD) — the largest number that divides both exactly. For example, 6/8 simplifies to 3/4 because both 6 and 8 divide by 2."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How do you divide fractions?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Flip the second fraction (swap its numerator and denominator) and multiply instead. For example, 3/4 ÷ 2/5 = 3/4 × 5/2 = 15/8 = 1 7/8."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What is a mixed number?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "A mixed number combines a whole number with a fraction, such as 1 7/8. It is another way of writing an improper fraction — one whose numerator is larger than its denominator, like 15/8. Divide the numerator by the denominator to get the whole part, and the remainder becomes the new numerator."
+        }
+      }
+    ]
+  }
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../styles.css">
+  <script>
+    (function () {
+      try {
+        if (localStorage.getItem('ac360-theme') === 'dark') {
+          document.documentElement.setAttribute('data-theme', 'dark');
+        }
+      } catch (e) {}
+    })();
+  </script>
+  <script src="../app.js" defer></script>
+</head>
+<body>
+  <header class="site-header"><div class="header-inner">
+<a class="brand" href="../index.html"><svg class="brand-logo" viewBox="0 0 40 40" fill="none" aria-hidden="true"><rect width="40" height="40" rx="10" fill="#2563eb"/><rect x="9" y="7" width="22" height="7" rx="2" fill="#ffffff"/><rect x="9" y="18" width="6" height="6" rx="1.5" fill="#ffffff"/><rect x="17" y="18" width="6" height="6" rx="1.5" fill="#ffffff"/><rect x="25" y="18" width="6" height="6" rx="1.5" fill="#ffffff"/><rect x="9" y="26" width="6" height="6" rx="1.5" fill="#ffffff"/><rect x="17" y="26" width="6" height="6" rx="1.5" fill="#ffffff"/><rect x="25" y="26" width="6" height="6" rx="1.5" fill="#ffffff"/></svg><span class="brand-name">All Calculator <span class="brand-360">360</span></span></a>
+<div class="header-search"><input id="headerSearch" type="search" placeholder="Search calculators…" aria-label="Search calculators"></div>
+<nav class="main-nav" aria-label="Categories"><a class="nav-link" href="../index.html#finance">Finance</a><a class="nav-link" href="../index.html#health">Health</a><a class="nav-link" href="../index.html#math">Math</a><a class="nav-link" href="../index.html#everyday">Everyday</a></nav>
+<button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">🌙</button>
+<button class="menu-toggle" id="menuToggle" aria-label="Menu">☰</button>
+</div><nav class="mobile-nav" id="mobileNav" aria-label="Mobile categories"><a class="nav-link" href="../index.html#finance">Finance</a><a class="nav-link" href="../index.html#health">Health</a><a class="nav-link" href="../index.html#math">Math</a><a class="nav-link" href="../index.html#everyday">Everyday</a></nav></header>
+
+  <main class="container">
+    <nav class="breadcrumb"><a href="../index.html">Home</a> / <a href="../index.html#math">Math</a> / Fraction Calculator</nav>
+
+    <div class="calc-head">
+      <h1>Fraction Calculator</h1>
+      <p>Add, subtract, multiply and divide fractions with step-by-step results.</p>
+    </div>
+
+    <div class="calc-layout">
+      <div class="calc-panel calc-inputs">
+        <h2>Your Fractions</h2>
+
+        <div class="input-group">
+          <label class="input-label" for="aNum">Fraction A</label>
+          <div class="input-row">
+            <input type="number" class="num-input" id="aNum" step="1" value="1" aria-label="Fraction A numerator">
+            <span style="font-weight:700; font-size:20px">/</span>
+            <input type="number" class="num-input" id="aDen" step="1" value="2" aria-label="Fraction A denominator">
+          </div>
+          <p class="input-hint">Top number (numerator) over bottom number (denominator).</p>
+        </div>
+
+        <div class="input-group">
+          <label class="input-label" for="opSelect">Operation</label>
+          <div class="input-row">
+            <select class="currency-select" id="opSelect" aria-label="Operation">
+              <option value="+" selected>Add (+)</option>
+              <option value="&minus;">Subtract (&minus;)</option>
+              <option value="&times;">Multiply (&times;)</option>
+              <option value="&divide;">Divide (&divide;)</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="input-group">
+          <label class="input-label" for="bNum">Fraction B</label>
+          <div class="input-row">
+            <input type="number" class="num-input" id="bNum" step="1" value="1" aria-label="Fraction B numerator">
+            <span style="font-weight:700; font-size:20px">/</span>
+            <input type="number" class="num-input" id="bDen" step="1" value="3" aria-label="Fraction B denominator">
+          </div>
+          <p class="input-hint">The denominator cannot be 0.</p>
+        </div>
+
+        <p id="fracError" style="display:none; color:#dc2626; font-weight:600; margin:16px 0 0" role="alert"></p>
+      </div>
+
+      <div class="calc-panel calc-results" id="fracResults">
+        <h2>Your Results</h2>
+
+        <div class="result-main">
+          <div class="result-label">Simplified Result</div>
+          <div class="result-emi" id="fracResult">5/6</div>
+          <div id="fracDecimal" style="font-size:18px; font-weight:600; margin-top:4px">&asymp; 0.8333</div>
+        </div>
+
+        <div class="result-breakdown">
+          <div class="break-row"><span class="k">Fraction A</span><span class="v" id="brA">1/2</span></div>
+          <div class="break-row"><span class="k">Operation</span><span class="v" id="brOp">Add (+)</span></div>
+          <div class="break-row"><span class="k">Fraction B</span><span class="v" id="brB">1/3</span></div>
+          <div class="break-row"><span class="k">Result (fraction)</span><span class="v green" id="brFrac">5/6</span></div>
+          <div class="break-row"><span class="k">Result (decimal)</span><span class="v" id="brDec">0.8333</span></div>
+          <div class="break-row"><span class="k">Result (mixed number)</span><span class="v" id="brMixed">&mdash;</span></div>
+        </div>
+
+        <div class="formula-box" style="margin-top:8px">
+          <p class="formula" style="text-align:left">Step by step</p>
+          <div id="fracSteps"></div>
+        </div>
+      </div>
+    </div>
+
+    <section class="content-section">
+      <h2>Fraction Formula</h2>
+      <div class="formula-box">
+        <p class="formula">a/b + c/d = (a &times; d + c &times; b) &divide; (b &times; d), then simplify</p>
+        <p>To add or subtract fractions, first rewrite them with a common denominator, then add or subtract the numerators. To multiply, multiply straight across &mdash; numerator &times; numerator over denominator &times; denominator. To divide, flip the second fraction and multiply. Always finish by simplifying with the greatest common divisor.</p>
+        <p><strong>Worked example:</strong> 1/2 + 1/3. The common denominator of 2 and 3 is 6, so 1/2 = 3/6 and 1/3 = 2/6. Then 3/6 + 2/6 = 5/6, which is already simplified, and 5 &divide; 6 = <strong>0.8333</strong>.</p>
+      </div>
+    </section>
+
+    <section class="content-section">
+      <h2>Frequently Asked Questions</h2>
+      <details class="faq-item">
+        <summary class="faq-q">What is a fraction?</summary>
+        <div class="faq-a"><p>A fraction is a part of a whole, written as one number over another — for example 1/2 means one part out of two equal parts. The top number is the numerator and the bottom number is the denominator.</p></div>
+      </details>
+      <details class="faq-item">
+        <summary class="faq-q">How do you add fractions with different denominators?</summary>
+        <div class="faq-a"><p>First find a common denominator, usually the lowest common multiple of the two denominators. Rewrite each fraction with that denominator, then add the numerators and keep the denominator the same. For example, 1/2 + 1/3 = 3/6 + 2/6 = 5/6.</p></div>
+      </details>
+      <details class="faq-item">
+        <summary class="faq-q">How do you simplify a fraction?</summary>
+        <div class="faq-a"><p>Divide the numerator and the denominator by their greatest common divisor (GCD) — the largest number that divides both exactly. For example, 6/8 simplifies to 3/4 because both 6 and 8 divide by 2.</p></div>
+      </details>
+      <details class="faq-item">
+        <summary class="faq-q">How do you divide fractions?</summary>
+        <div class="faq-a"><p>Flip the second fraction (swap its numerator and denominator) and multiply instead. For example, 3/4 ÷ 2/5 = 3/4 × 5/2 = 15/8 = 1 7/8.</p></div>
+      </details>
+      <details class="faq-item">
+        <summary class="faq-q">What is a mixed number?</summary>
+        <div class="faq-a"><p>A mixed number combines a whole number with a fraction, such as 1 7/8. It is another way of writing an improper fraction — one whose numerator is larger than its denominator, like 15/8. Divide the numerator by the denominator to get the whole part, and the remainder becomes the new numerator.</p></div>
+      </details>
+    </section>
+
+    <section class="content-section">
+      <h2>Related Calculators</h2>
+      <div class="related-grid">
+        <a class="calc-card" href="percentage-calculator.html" data-name="Percentage Calculator" data-desc="Work out percentages, increases, decreases and tips in seconds.">
+          <span class="calc-icon">📊</span>
+          <span class="calc-name">Percentage Calculator</span>
+          <span class="calc-desc">Work out percentages, increases, decreases and tips in seconds.</span>
+        </a>
+        <a class="calc-card" href="age-calculator.html" data-name="Age Calculator" data-desc="Find your exact age in years, months and days from your birth date.">
+          <span class="calc-icon">🎂</span>
+          <span class="calc-name">Age Calculator</span>
+          <span class="calc-desc">Find your exact age in years, months and days from your birth date.</span>
+        </a>
+        <a class="calc-card" href="bmi-calculator.html" data-name="BMI Calculator" data-desc="Check your Body Mass Index (BMI) from your height and weight.">
+          <span class="calc-icon">⚖️</span>
+          <span class="calc-name">BMI Calculator</span>
+          <span class="calc-desc">Check your Body Mass Index (BMI) from your height and weight.</span>
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer"><div class="container"><div class="footer-grid">
+<div class="footer-col"><div class="footer-brand"><svg width="32" height="32" viewBox="0 0 40 40" fill="none" aria-hidden="true"><rect width="40" height="40" rx="10" fill="#2563eb"/><rect x="9" y="7" width="22" height="7" rx="2" fill="#ffffff"/><rect x="9" y="18" width="6" height="6" rx="1.5" fill="#ffffff"/><rect x="17" y="18" width="6" height="6" rx="1.5" fill="#ffffff"/><rect x="25" y="18" width="6" height="6" rx="1.5" fill="#ffffff"/><rect x="9" y="26" width="6" height="6" rx="1.5" fill="#ffffff"/><rect x="17" y="26" width="6" height="6" rx="1.5" fill="#ffffff"/><rect x="25" y="26" width="6" height="6" rx="1.5" fill="#ffffff"/></svg><span>All Calculator 360</span></div><p>Every calculator, all in one place. Free, private, and accurate — calculations happen right in your browser.</p></div>
+<div class="footer-col"><h3>Categories</h3><ul><li><a href="../index.html#finance">Finance</a></li><li><a href="../index.html#health">Health</a></li><li><a href="../index.html#math">Math</a></li><li><a href="../index.html#everyday">Everyday</a></li></ul></div>
+<div class="footer-col"><h3>Popular Calculators</h3><ul><li><a href="emi-calculator.html">EMI Calculator</a></li><li><a href="sip-calculator.html">SIP Calculator</a></li><li><a href="fd-calculator.html">FD Calculator</a></li><li><a href="income-tax-calculator.html">Income Tax Calculator</a></li><li><a href="gst-calculator.html">GST Calculator</a></li><li><a href="bmi-calculator.html">BMI Calculator</a></li><li><a href="age-calculator.html">Age Calculator</a></li><li><a href="percentage-calculator.html">Percentage Calculator</a></li></ul></div>
+<div class="footer-col"><h3>Company</h3><ul><li><a href="../about.html">About</a></li><li><a href="../contact.html">Contact</a></li><li><a href="../privacy.html">Privacy Policy</a></li><li><a href="../terms.html">Terms</a></li></ul></div>
+</div><div class="footer-bottom"><p>© 2026 All Calculator 360. All rights reserved.</p></div></div></footer>
+
+  <script>
+    (function () {
+      'use strict';
+
+      var aNumEl = document.getElementById('aNum');
+      var aDenEl = document.getElementById('aDen');
+      var opEl = document.getElementById('opSelect');
+      var bNumEl = document.getElementById('bNum');
+      var bDenEl = document.getElementById('bDen');
+      var errorEl = document.getElementById('fracError');
+      var resultsEl = document.getElementById('fracResults');
+      var resultOut = document.getElementById('fracResult');
+      var decimalOut = document.getElementById('fracDecimal');
+      var stepsOut = document.getElementById('fracSteps');
+      var brA = document.getElementById('brA');
+      var brOp = document.getElementById('brOp');
+      var brB = document.getElementById('brB');
+      var brFrac = document.getElementById('brFrac');
+      var brDec = document.getElementById('brDec');
+      var brMixed = document.getElementById('brMixed');
+
+      function gcd(a, b) {
+        a = Math.abs(a);
+        b = Math.abs(b);
+        while (b !== 0) {
+          var t = a % b;
+          a = b;
+          b = t;
+        }
+        return a || 1;
+      }
+
+      function simplify(num, den) {
+        if (den < 0) { num = -num; den = -den; }
+        var g = gcd(num, den);
+        return { num: num / g, den: den / g };
+      }
+
+      function fmt(f) { return f.num + '/' + f.den; }
+
+      function mixedString(f) {
+        if (Math.abs(f.num) < f.den) return null;
+        var whole = Math.trunc(f.num / f.den);
+        var rem = Math.abs(f.num % f.den);
+        if (rem === 0) return String(whole);
+        return whole + ' ' + rem + '/' + f.den;
+      }
+
+      function operate(aNum, aDen, op, bNum, bDen) {
+        var a = { num: aNum, den: aDen };
+        var b = { num: bNum, den: bDen };
+        var raw, steps = [];
+        if (op === '+' || op === '\u2212') {
+          var g = gcd(aDen, bDen);
+          var lcm = Math.abs(aDen * bDen) / g;
+          var aScaled = aNum * (lcm / aDen);
+          var bScaled = bNum * (lcm / bDen);
+          var top = op === '+' ? aScaled + bScaled : aScaled - bScaled;
+          raw = { num: top, den: lcm };
+          steps.push('Common denominator of ' + aDen + ' and ' + bDen + ' is ' + lcm + '.');
+          steps.push(fmt(a) + ' = ' + aScaled + '/' + lcm + ' and ' + fmt(b) + ' = ' + bScaled + '/' + lcm + '.');
+          steps.push(aScaled + '/' + lcm + ' ' + op + ' ' + bScaled + '/' + lcm + ' = ' + fmt(raw) + '.');
+        } else if (op === '\u00d7') {
+          raw = { num: aNum * bNum, den: aDen * bDen };
+          steps.push('Multiply the numerators: ' + aNum + ' \u00d7 ' + bNum + ' = ' + raw.num + '.');
+          steps.push('Multiply the denominators: ' + aDen + ' \u00d7 ' + bDen + ' = ' + raw.den + '.');
+          steps.push('That gives ' + fmt(raw) + ' before simplifying.');
+        } else {
+          raw = { num: aNum * bDen, den: aDen * bNum };
+          steps.push('Flip the second fraction: ' + fmt(b) + ' becomes ' + bDen + '/' + bNum + ' (its reciprocal).');
+          steps.push('Multiply instead: ' + fmt(a) + ' \u00d7 ' + bDen + '/' + bNum + ' = ' + fmt(raw) + '.');
+        }
+        var simp = simplify(raw.num, raw.den);
+        if (fmt(raw) !== fmt(simp)) {
+          steps.push('Simplify ' + fmt(raw) + ' by dividing top and bottom by ' + gcd(raw.num, raw.den) + ' to get ' + fmt(simp) + '.');
+        } else {
+          steps.push(fmt(simp) + ' is already in its simplest form.');
+        }
+        return { result: simp, decimal: simp.num / simp.den, mixed: mixedString(simp), steps: steps };
+      }
+
+      function showError(msg) {
+        errorEl.textContent = msg;
+        errorEl.style.display = '';
+        resultsEl.style.display = 'none';
+      }
+
+      function recalculate() {
+        var aNum = parseInt(aNumEl.value, 10);
+        var aDen = parseInt(aDenEl.value, 10);
+        var bNum = parseInt(bNumEl.value, 10);
+        var bDen = parseInt(bDenEl.value, 10);
+        var op = opEl.value;
+        if (isNaN(aNum) || isNaN(aDen) || isNaN(bNum) || isNaN(bDen)) {
+          showError('Please enter whole numbers for both fractions.');
+          return;
+        }
+        if (aDen === 0 || bDen === 0) {
+          showError('A denominator cannot be 0 \u2014 a fraction with 0 on the bottom is not defined. Please change it to a non-zero number.');
+          return;
+        }
+        if (op === '\u00f7' && bNum === 0) {
+          showError('You cannot divide by 0 \u2014 the second fraction is zero, so division is not possible. Please change the second fraction.');
+          return;
+        }
+        var out = operate(aNum, aDen, op, bNum, bDen);
+        errorEl.style.display = 'none';
+        resultsEl.style.display = '';
+        resultOut.textContent = fmt(out.result);
+        decimalOut.textContent = '\u2248 ' + out.decimal.toFixed(4) + (out.mixed ? '  \u2022  Mixed number: ' + out.mixed : '');
+        stepsOut.innerHTML = '';
+        out.steps.forEach(function (s, i) {
+          var p = document.createElement('p');
+          p.textContent = (i + 1) + '. ' + s;
+          stepsOut.appendChild(p);
+        });
+        brA.textContent = fmt({ num: aNum, den: aDen });
+        brOp.textContent = op === '\u00d7' ? 'Multiply (\u00d7)' : op === '\u00f7' ? 'Divide (\u00f7)' : op === '+' ? 'Add (+)' : 'Subtract (\u2212)';
+        brB.textContent = fmt({ num: bNum, den: bDen });
+        brFrac.textContent = fmt(out.result);
+        brDec.textContent = out.decimal.toFixed(4);
+        brMixed.textContent = out.mixed || '\u2014';
+      }
+
+      [aNumEl, aDenEl, bNumEl, bDenEl].forEach(function (el) {
+        el.addEventListener('input', recalculate);
+        el.addEventListener('change', recalculate);
+      });
+      opEl.addEventListener('change', recalculate);
+
+      recalculate();
+    })();
+  </script>
+</body>
+</html>

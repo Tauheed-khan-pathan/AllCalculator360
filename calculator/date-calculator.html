@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Date Calculator — Days Between Dates & Add Days | All Calculator 360</title>
+  <meta name="description" content="Add or subtract days from a date, or count days between two dates.">
+  <link rel="canonical" href="https://tauheed-khan-pathan.github.io/AllCalculator360/calculator/date-calculator.html">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Date Calculator — Days Between Dates & Add Days | All Calculator 360">
+  <meta property="og:description" content="Add or subtract days from a date, or count days between two dates.">
+  <meta property="og:url" content="https://tauheed-khan-pathan.github.io/AllCalculator360/calculator/date-calculator.html">
+  <meta property="og:site_name" content="All Calculator 360">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Date Calculator — Days Between Dates & Add Days | All Calculator 360">
+  <meta name="twitter:description" content="Add or subtract days from a date, or count days between two dates.">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "How do I count the days between two dates?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Subtract the earlier date from the later date. For example, 1 January 2026 to 8 November 2026 is 311 days. This calculator counts the days in between and does not count the start date itself, so two dates one day apart are 1 day apart."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Does the calculator count leap years?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. Leap years are counted automatically because the calculation uses real calendar dates, so 29 February is included whenever it falls between the two dates."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How do I add days to a date?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Enter a start date and the number of days, then choose Add. For example, 1 January 2026 plus 100 days is 11 April 2026, a Saturday."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What happens if the end date is before the start date?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "The calculator shows the absolute number of days between the two dates, and notes that the end date is before the start date. Swap the dates if you want the order to run the other way."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Is my date stored anywhere?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "No. All calculation happens in your browser, and your dates are never sent to a server or stored anywhere."
+        }
+      }
+    ]
+  }
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../styles.css">
+  <script>
+    (function () {
+      try {
+        if (localStorage.getItem('ac360-theme') === 'dark') {
+          document.documentElement.setAttribute('data-theme', 'dark');
+        }
+      } catch (e) {}
+    })();
+  </script>
+  <script src="../app.js" defer></script>
+</head>
+<body>
+  <header class="site-header"><div class="header-inner">
+<a class="brand" href="../index.html"><svg class="brand-logo" viewBox="0 0 40 40" fill="none" aria-hidden="true"><rect width="40" height="40" rx="10" fill="#2563eb"/><rect x="9" y="7" width="22" height="7" rx="2" fill="#ffffff"/><rect x="9" y="18" width="6" height="6" rx="1.5" fill="#ffffff"/><rect x="17" y="18" width="6" height="6" rx="1.5" fill="#ffffff"/><rect x="25" y="18" width="6" height="6" rx="1.5" fill="#ffffff"/><rect x="9" y="26" width="6" height="6" rx="1.5" fill="#ffffff"/><rect x="17" y="26" width="6" height="6" rx="1.5" fill="#ffffff"/><rect x="25" y="26" width="6" height="6" rx="1.5" fill="#ffffff"/></svg><span class="brand-name">All Calculator <span class="brand-360">360</span></span></a>
+<div class="header-search"><input id="headerSearch" type="search" placeholder="Search calculators…" aria-label="Search calculators"></div>
+<nav class="main-nav" aria-label="Categories"><a class="nav-link" href="../index.html#finance">Finance</a><a class="nav-link" href="../index.html#health">Health</a><a class="nav-link" href="../index.html#math">Math</a><a class="nav-link" href="../index.html#everyday">Everyday</a></nav>
+<button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">🌙</button>
+<button class="menu-toggle" id="menuToggle" aria-label="Menu">☰</button>
+</div><nav class="mobile-nav" id="mobileNav" aria-label="Mobile categories"><a class="nav-link" href="../index.html#finance">Finance</a><a class="nav-link" href="../index.html#health">Health</a><a class="nav-link" href="../index.html#math">Math</a><a class="nav-link" href="../index.html#everyday">Everyday</a></nav></header>
+  <main class="container">
+    <nav class="breadcrumb"><a href="../index.html">Home</a> / <a href="../index.html#everyday">Everyday</a> / Date Calculator</nav>
+
+    <div class="calc-head">
+      <h1>Date Calculator</h1>
+      <p>Add or subtract days from a date, or count days between two dates.</p>
+    </div>
+
+    <div class="calc-layout">
+      <div class="calc-panel calc-inputs">
+        <h2>Days between two dates</h2>
+
+        <div class="input-group">
+          <label class="input-label" for="startDate">Start date</label>
+          <input type="date" class="num-input" id="startDate" value="2026-01-01" style="width:100%" aria-label="Start date">
+        </div>
+
+        <div class="input-group">
+          <label class="input-label" for="endDate">End date</label>
+          <input type="date" class="num-input" id="endDate" value="2026-11-08" style="width:100%" aria-label="End date">
+        </div>
+
+        <p class="input-hint" id="orderNote" style="display:none">The end date is before the start date — showing the number of days between them.</p>
+      </div>
+
+      <div class="calc-panel calc-results">
+        <h2>Result</h2>
+
+        <div class="result-main">
+          <div class="result-label">Days between the dates</div>
+          <div class="result-emi" id="daysOut">311 <span>days</span></div>
+        </div>
+
+        <div class="result-breakdown">
+          <div class="break-row"><span class="k">Weeks + days</span><span class="v" id="weeksOut">44 weeks, 3 days</span></div>
+          <div class="break-row"><span class="k">Months + days</span><span class="v" id="monthsOut">10 months, 7 days</span></div>
+          <div class="break-row"><span class="k">Start date</span><span class="v" id="startBreakOut">1 January 2026</span></div>
+          <div class="break-row"><span class="k">End date</span><span class="v green" id="endBreakOut">8 November 2026</span></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="calc-layout" style="margin-top:24px">
+      <div class="calc-panel calc-inputs">
+        <h2>Add or subtract days</h2>
+
+        <div class="input-group">
+          <label class="input-label" for="baseDate">Date</label>
+          <input type="date" class="num-input" id="baseDate" value="2026-01-01" style="width:100%" aria-label="Date">
+        </div>
+
+        <div class="input-group">
+          <label class="input-label" for="daysNum">Days</label>
+          <input type="number" class="num-input" id="daysNum" min="0" max="100000" step="1" value="100" style="width:100%" aria-label="Number of days">
+        </div>
+
+        <div class="input-group">
+          <div class="tenure-toggle" role="group" aria-label="Add or subtract">
+            <button type="button" class="toggle-btn active" id="addBtn">Add</button>
+            <button type="button" class="toggle-btn" id="subtractBtn">Subtract</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="calc-panel calc-results">
+        <h2>Result</h2>
+
+        <div class="result-main">
+          <div class="result-label" id="addLabel">1 January 2026 + 100 days</div>
+          <div class="result-emi" id="resultDateOut" style="font-size:32px">Saturday, 11 April 2026</div>
+        </div>
+
+        <div class="result-breakdown">
+          <div class="break-row"><span class="k">Starting date</span><span class="v" id="baseBreakOut">1 January 2026</span></div>
+          <div class="break-row"><span class="k">Days</span><span class="v" id="daysBreakOut">+100 days</span></div>
+          <div class="break-row"><span class="k">Resulting date</span><span class="v green" id="resultIsoOut">2026-04-11</span></div>
+        </div>
+      </div>
+    </div>
+
+    <section class="content-section">
+      <h2>How Dates Are Calculated</h2>
+      <div class="formula-box">
+        <p class="formula">Days between = End date − Start date</p>
+        <p><strong>Worked example:</strong> 8 November 2026 − 1 January 2026 = <strong>311 days</strong> — that is 44 weeks and 3 days, or 10 months and 7 days.</p>
+        <p class="formula" style="margin-top:16px">New date = Start date ± Number of days</p>
+        <p><strong>Worked example:</strong> 1 January 2026 + 100 days = <strong>11 April 2026 (Saturday)</strong>. January has 31 days, February 28 days in 2026, and March 31 days — 31 + 28 + 31 = 90 days takes you to 1 April, and 10 more days takes you to 11 April.</p>
+        <p>Leap years are counted automatically: 28 February 2024 + 1 day = 29 February 2024, because 2024 is a leap year.</p>
+      </div>
+    </section>
+
+    <section class="content-section">
+      <h2>Frequently Asked Questions</h2>
+      <details class="faq-item">
+        <summary class="faq-q">How do I count the days between two dates?</summary>
+        <div class="faq-a"><p>Subtract the earlier date from the later date. For example, 1 January 2026 to 8 November 2026 is 311 days. This calculator counts the days in between and does not count the start date itself, so two dates one day apart are 1 day apart.</p></div>
+      </details>
+      <details class="faq-item">
+        <summary class="faq-q">Does the calculator count leap years?</summary>
+        <div class="faq-a"><p>Yes. Leap years are counted automatically because the calculation uses real calendar dates, so 29 February is included whenever it falls between the two dates.</p></div>
+      </details>
+      <details class="faq-item">
+        <summary class="faq-q">How do I add days to a date?</summary>
+        <div class="faq-a"><p>Enter a start date and the number of days, then choose Add. For example, 1 January 2026 plus 100 days is 11 April 2026, a Saturday.</p></div>
+      </details>
+      <details class="faq-item">
+        <summary class="faq-q">What happens if the end date is before the start date?</summary>
+        <div class="faq-a"><p>The calculator shows the absolute number of days between the two dates, and notes that the end date is before the start date. Swap the dates if you want the order to run the other way.</p></div>
+      </details>
+      <details class="faq-item">
+        <summary class="faq-q">Is my date stored anywhere?</summary>
+        <div class="faq-a"><p>No. All calculation happens in your browser, and your dates are never sent to a server or stored anywhere.</p></div>
+      </details>
+    </section>
+
+    <section class="content-section">
+      <h2>Related Calculators</h2>
+      <div class="related-grid">
+        <a class="calc-card" href="age-calculator.html" data-name="Age Calculator" data-desc="Find your exact age in years, months and days from your birth date.">
+          <span class="calc-icon">🎂</span>
+          <span class="calc-name">Age Calculator</span>
+          <span class="calc-desc">Find your exact age in years, months and days from your birth date.</span>
+        </a>
+        <a class="calc-card" href="percentage-calculator.html" data-name="Percentage Calculator" data-desc="Work out percentages, increases, decreases and tips in seconds.">
+          <span class="calc-icon">📊</span>
+          <span class="calc-name">Percentage Calculator</span>
+          <span class="calc-desc">Work out percentages, increases, decreases and tips in seconds.</span>
+        </a>
+        <a class="calc-card" href="bmi-calculator.html" data-name="BMI Calculator" data-desc="Check your Body Mass Index and see if your weight is healthy.">
+          <span class="calc-icon">⚖️</span>
+          <span class="calc-name">BMI Calculator</span>
+          <span class="calc-desc">Check your Body Mass Index and see if your weight is healthy.</span>
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer"><div class="container"><div class="footer-grid">
+<div class="footer-col"><div class="footer-brand"><svg width="32" height="32" viewBox="0 0 40 40" fill="none" aria-hidden="true"><rect width="40" height="40" rx="10" fill="#2563eb"/><rect x="9" y="7" width="22" height="7" rx="2" fill="#ffffff"/><rect x="9" y="18" width="6" height="6" rx="1.5" fill="#ffffff"/><rect x="17" y="18" width="6" height="6" rx="1.5" fill="#ffffff"/><rect x="25" y="18" width="6" height="6" rx="1.5" fill="#ffffff"/><rect x="9" y="26" width="6" height="6" rx="1.5" fill="#ffffff"/><rect x="17" y="26" width="6" height="6" rx="1.5" fill="#ffffff"/><rect x="25" y="26" width="6" height="6" rx="1.5" fill="#ffffff"/></svg><span>All Calculator 360</span></div><p>Every calculator, all in one place. Free, private, and accurate — calculations happen right in your browser.</p></div>
+<div class="footer-col"><h3>Categories</h3><ul><li><a href="../index.html#finance">Finance</a></li><li><a href="../index.html#health">Health</a></li><li><a href="../index.html#math">Math</a></li><li><a href="../index.html#everyday">Everyday</a></li></ul></div>
+<div class="footer-col"><h3>Popular Calculators</h3><ul><li><a href="emi-calculator.html">EMI Calculator</a></li><li><a href="sip-calculator.html">SIP Calculator</a></li><li><a href="fd-calculator.html">FD Calculator</a></li><li><a href="income-tax-calculator.html">Income Tax Calculator</a></li><li><a href="gst-calculator.html">GST Calculator</a></li><li><a href="bmi-calculator.html">BMI Calculator</a></li><li><a href="age-calculator.html">Age Calculator</a></li><li><a href="percentage-calculator.html">Percentage Calculator</a></li></ul></div>
+<div class="footer-col"><h3>Company</h3><ul><li><a href="../about.html">About</a></li><li><a href="../contact.html">Contact</a></li><li><a href="../privacy.html">Privacy Policy</a></li><li><a href="../terms.html">Terms</a></li></ul></div>
+</div><div class="footer-bottom"><p>© 2026 All Calculator 360. All rights reserved.</p></div></div></footer>
+  <script>
+    (function () {
+      'use strict';
+
+      var WEEKDAYS = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+      var MONTHS = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+      var DAY_MS = 24 * 60 * 60 * 1000;
+
+      function parseDate(value) {
+        if (!value) return null;
+        var parts = value.split('-');
+        if (parts.length !== 3) return null;
+        var y = parseInt(parts[0], 10);
+        var m = parseInt(parts[1], 10) - 1;
+        var d = parseInt(parts[2], 10);
+        if (isNaN(y) || isNaN(m) || isNaN(d)) return null;
+        return new Date(Date.UTC(y, m, d, 12, 0, 0));
+      }
+
+      function formatDate(date) {
+        return date.getUTCDate() + ' ' + MONTHS[date.getUTCMonth()] + ' ' + date.getUTCFullYear();
+      }
+
+      function formatDateLong(date) {
+        return WEEKDAYS[date.getUTCDay()] + ', ' + formatDate(date);
+      }
+
+      function isoDate(date) {
+        var y = date.getUTCFullYear();
+        var m = ('0' + (date.getUTCMonth() + 1)).slice(-2);
+        var d = ('0' + date.getUTCDate()).slice(-2);
+        return y + '-' + m + '-' + d;
+      }
+
+      function daysBetween(start, end) {
+        return Math.round((end.getTime() - start.getTime()) / DAY_MS);
+      }
+
+      function monthsAndDays(start, end) {
+        var months = (end.getUTCFullYear() - start.getUTCFullYear()) * 12 + (end.getUTCMonth() - start.getUTCMonth());
+        var anchor = new Date(Date.UTC(start.getUTCFullYear(), start.getUTCMonth() + months, start.getUTCDate(), 12, 0, 0));
+        var days = Math.round((end.getTime() - anchor.getTime()) / DAY_MS);
+        if (days < 0) {
+          months -= 1;
+          anchor = new Date(Date.UTC(start.getUTCFullYear(), start.getUTCMonth() + months, start.getUTCDate(), 12, 0, 0));
+          days = Math.round((end.getTime() - anchor.getTime()) / DAY_MS);
+        }
+        return { months: months, days: days };
+      }
+
+      function addDays(date, n) {
+        return new Date(date.getTime() + n * DAY_MS);
+      }
+
+      // --- Tool A: Days between two dates ---
+      var startDateEl = document.getElementById('startDate');
+      var endDateEl = document.getElementById('endDate');
+      var orderNote = document.getElementById('orderNote');
+      var daysOut = document.getElementById('daysOut');
+      var weeksOut = document.getElementById('weeksOut');
+      var monthsOut = document.getElementById('monthsOut');
+      var startBreakOut = document.getElementById('startBreakOut');
+      var endBreakOut = document.getElementById('endBreakOut');
+
+      function recalcBetween() {
+        var start = parseDate(startDateEl.value);
+        var end = parseDate(endDateEl.value);
+        if (!start || !end) {
+          daysOut.innerHTML = '—';
+          return;
+        }
+        var signed = daysBetween(start, end);
+        var total = Math.abs(signed);
+        var weeks = Math.floor(total / 7);
+        var remDays = total % 7;
+        var earlier = signed < 0 ? end : start;
+        var later = signed < 0 ? start : end;
+        var md = monthsAndDays(earlier, later);
+        orderNote.style.display = signed < 0 ? '' : 'none';
+        daysOut.innerHTML = total.toLocaleString('en-US') + ' <span>' + (total === 1 ? 'day' : 'days') + '</span>';
+        weeksOut.textContent = weeks + (weeks === 1 ? ' week' : ' weeks') + ', ' + remDays + (remDays === 1 ? ' day' : ' days');
+        monthsOut.textContent = md.months + (md.months === 1 ? ' month' : ' months') + ', ' + md.days + (md.days === 1 ? ' day' : ' days');
+        startBreakOut.textContent = formatDate(start);
+        endBreakOut.textContent = formatDate(end);
+      }
+
+      // --- Tool B: Add or subtract days ---
+      var baseDateEl = document.getElementById('baseDate');
+      var daysNumEl = document.getElementById('daysNum');
+      var addBtn = document.getElementById('addBtn');
+      var subtractBtn = document.getElementById('subtractBtn');
+      var addLabel = document.getElementById('addLabel');
+      var resultDateOut = document.getElementById('resultDateOut');
+      var baseBreakOut = document.getElementById('baseBreakOut');
+      var daysBreakOut = document.getElementById('daysBreakOut');
+      var resultIsoOut = document.getElementById('resultIsoOut');
+      var mode = 'add'; // 'add' | 'subtract'
+
+      function setMode(next) {
+        mode = next;
+        addBtn.classList.toggle('active', mode === 'add');
+        subtractBtn.classList.toggle('active', mode === 'subtract');
+        recalcAdd();
+      }
+
+      function recalcAdd() {
+        var base = parseDate(baseDateEl.value);
+        var n = parseInt(daysNumEl.value, 10);
+        if (!base || isNaN(n)) {
+          resultDateOut.textContent = '—';
+          return;
+        }
+        n = Math.max(0, n);
+        var result = addDays(base, mode === 'add' ? n : -n);
+        var sign = mode === 'add' ? '+' : '−';
+        addLabel.textContent = formatDate(base) + ' ' + sign + ' ' + n + (n === 1 ? ' day' : ' days');
+        resultDateOut.textContent = formatDateLong(result);
+        baseBreakOut.textContent = formatDate(base);
+        daysBreakOut.textContent = sign + n + (n === 1 ? ' day' : ' days');
+        resultIsoOut.textContent = isoDate(result);
+      }
+
+      startDateEl.addEventListener('change', recalcBetween);
+      startDateEl.addEventListener('input', recalcBetween);
+      endDateEl.addEventListener('change', recalcBetween);
+      endDateEl.addEventListener('input', recalcBetween);
+      baseDateEl.addEventListener('change', recalcAdd);
+      baseDateEl.addEventListener('input', recalcAdd);
+      daysNumEl.addEventListener('input', recalcAdd);
+      daysNumEl.addEventListener('change', function () {
+        var v = parseInt(daysNumEl.value, 10);
+        if (isNaN(v) || v < 0) { daysNumEl.value = 0; }
+        recalcAdd();
+      });
+      addBtn.addEventListener('click', function () { setMode('add'); });
+      subtractBtn.addEventListener('click', function () { setMode('subtract'); });
+
+      recalcBetween();
+      recalcAdd();
+    })();
+  </script>
+</body>
+</html>

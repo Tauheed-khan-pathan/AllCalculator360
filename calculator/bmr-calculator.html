@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BMR Calculator — Basal Metabolic Rate & Daily Calories | All Calculator 360</title>
+  <meta name="description" content="Calculate your Basal Metabolic Rate (BMR) with the Mifflin-St Jeor equation and see how many calories you burn per day, week and month at rest.">
+  <link rel="canonical" href="https://tauheed-khan-pathan.github.io/AllCalculator360/calculator/bmr-calculator.html">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="BMR Calculator — Basal Metabolic Rate & Daily Calories | All Calculator 360">
+  <meta property="og:description" content="Calculate your Basal Metabolic Rate (BMR) with the Mifflin-St Jeor equation and see how many calories you burn per day, week and month at rest.">
+  <meta property="og:url" content="https://tauheed-khan-pathan.github.io/AllCalculator360/calculator/bmr-calculator.html">
+  <meta property="og:site_name" content="All Calculator 360">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="BMR Calculator — Basal Metabolic Rate & Daily Calories | All Calculator 360">
+  <meta name="twitter:description" content="Calculate your Basal Metabolic Rate (BMR) with the Mifflin-St Jeor equation and see how many calories you burn per day, week and month at rest.">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What is BMR?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "BMR (Basal Metabolic Rate) is the number of calories your body burns at complete rest in a day, just to keep you alive — breathing, keeping your heart beating, and maintaining your body temperature."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What is the Mifflin-St Jeor equation?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "The Mifflin-St Jeor equation is the most widely used formula for estimating BMR. For men it is 10 × weight (kg) + 6.25 × height (cm) − 5 × age + 5, and for women the same formula ends in − 161 instead of + 5."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Is BMR the same as my daily calorie needs?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "No. BMR is only the calories you burn at rest. Your total daily calorie needs (TDEE) are higher, because they also include the calories you burn through daily activity and exercise."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Why is BMR higher for men than women?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "On average men have more muscle mass, and muscle burns more calories at rest than fat. That is why the Mifflin-St Jeor equation adds 5 for men and subtracts 161 for women."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can I use my BMR to lose weight?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. Eating fewer calories than your total daily needs creates a calorie deficit, which leads to weight loss over time. Use the Calorie Calculator to find your daily target. This calculator is for information only and is not medical advice."
+        }
+      }
+    ]
+  }
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../styles.css">
+  <script>
+    (function () {
+      try {
+        if (localStorage.getItem('ac360-theme') === 'dark') {
+          document.documentElement.setAttribute('data-theme', 'dark');
+        }
+      } catch (e) {}
+    })();
+  </script>
+  <script src="../app.js" defer></script>
+</head>
+<body>
+  <header class="site-header"><div class="header-inner">
+<a class="brand" href="../index.html"><svg class="brand-logo" viewBox="0 0 40 40" fill="none" aria-hidden="true"><rect width="40" height="40" rx="10" fill="#2563eb"/><rect x="9" y="7" width="22" height="7" rx="2" fill="#ffffff"/><rect x="9" y="18" width="6" height="6" rx="1.5" fill="#ffffff"/><rect x="17" y="18" width="6" height="6" rx="1.5" fill="#ffffff"/><rect x="25" y="18" width="6" height="6" rx="1.5" fill="#ffffff"/><rect x="9" y="26" width="6" height="6" rx="1.5" fill="#ffffff"/><rect x="17" y="26" width="6" height="6" rx="1.5" fill="#ffffff"/><rect x="25" y="26" width="6" height="6" rx="1.5" fill="#ffffff"/></svg><span class="brand-name">All Calculator <span class="brand-360">360</span></span></a>
+<div class="header-search"><input id="headerSearch" type="search" placeholder="Search calculators…" aria-label="Search calculators"></div>
+<nav class="main-nav" aria-label="Categories"><a class="nav-link" href="../index.html#finance">Finance</a><a class="nav-link" href="../index.html#health">Health</a><a class="nav-link" href="../index.html#math">Math</a><a class="nav-link" href="../index.html#everyday">Everyday</a></nav>
+<button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">🌙</button>
+<button class="menu-toggle" id="menuToggle" aria-label="Menu">☰</button>
+</div><nav class="mobile-nav" id="mobileNav" aria-label="Mobile categories"><a class="nav-link" href="../index.html#finance">Finance</a><a class="nav-link" href="../index.html#health">Health</a><a class="nav-link" href="../index.html#math">Math</a><a class="nav-link" href="../index.html#everyday">Everyday</a></nav></header>
+
+  <main class="container">
+    <nav class="breadcrumb"><a href="../index.html">Home</a> / <a href="../index.html#health">Health</a> / BMR Calculator</nav>
+
+    <div class="calc-head">
+      <h1>BMR Calculator</h1>
+      <p>Calculate your Basal Metabolic Rate and daily calorie needs.</p>
+    </div>
+
+    <div class="calc-layout">
+      <div class="calc-panel calc-inputs">
+        <h2>Your Details</h2>
+
+        <div class="input-group">
+          <label class="input-label">Gender</label>
+          <div class="tenure-toggle" role="group" aria-label="Gender">
+            <button type="button" class="toggle-btn active" id="genderMale">Male</button>
+            <button type="button" class="toggle-btn" id="genderFemale">Female</button>
+          </div>
+        </div>
+        <div class="input-group">
+          <label class="input-label" for="ageRange">Age <output id="ageOut" for="ageRange">30 years</output></label>
+          <div class="input-row">
+            <input type="range" class="slider" id="ageRange" min="10" max="90" step="1" value="30" aria-label="Age">
+            <input type="number" class="num-input" id="ageNum" min="10" max="90" step="1" value="30" aria-label="Age value">
+          </div>
+        </div>
+        <div class="input-group">
+          <label class="input-label" for="heightRange">Height <output id="heightOut" for="heightRange">175 cm</output></label>
+          <div class="input-row">
+            <input type="range" class="slider" id="heightRange" min="120" max="220" step="1" value="175" aria-label="Height">
+            <input type="number" class="num-input" id="heightNum" min="120" max="220" step="1" value="175" aria-label="Height value">
+          </div>
+          <div class="tenure-toggle" style="margin-top:12px" role="group" aria-label="Height unit">
+            <button type="button" class="toggle-btn active" id="unitCm">cm</button>
+            <button type="button" class="toggle-btn" id="unitFtIn">ft + in</button>
+          </div>
+          <div class="input-row" id="ftInRow" style="display:none; margin-top:12px">
+            <input type="number" class="num-input" id="feetNum" min="0" max="7" step="1" value="5" aria-label="Feet" style="width:90px">
+            <span style="font-weight:600">ft</span>
+            <input type="number" class="num-input" id="inchesNum" min="0" max="11" step="1" value="9" aria-label="Inches" style="width:90px">
+            <span style="font-weight:600">in</span>
+          </div>
+        </div>
+        <div class="input-group">
+          <label class="input-label" for="weightRange">Weight (kg) <output id="weightOut" for="weightRange">70 kg</output></label>
+          <div class="input-row">
+            <input type="range" class="slider" id="weightRange" min="30" max="200" step="0.5" value="70" aria-label="Weight">
+            <input type="number" class="num-input" id="weightNum" min="30" max="200" step="0.5" value="70" aria-label="Weight value">
+          </div>
+          <p class="input-hint">1 kg ≈ 2.2 lb.</p>
+        </div>
+      </div>
+
+      <div class="calc-panel calc-results">
+        <h2>Your Results</h2>
+
+        <div class="result-main">
+          <div class="result-label">Your BMR</div>
+          <div class="result-emi" id="bmrOut">0</div>
+          <div style="font-size:20px; font-weight:700; margin-top:4px">kcal per day</div>
+        </div>
+
+        <div class="result-breakdown">
+          <div class="break-row"><span class="k">Gender</span><span class="v" id="genderBreakOut">Male</span></div>
+          <div class="break-row"><span class="k">Age</span><span class="v" id="ageBreakOut">30 years</span></div>
+          <div class="break-row"><span class="k">Height</span><span class="v" id="heightBreakOut">175 cm</span></div>
+          <div class="break-row"><span class="k">Weight</span><span class="v" id="weightBreakOut">70 kg</span></div>
+        </div>
+
+        <h3 style="margin-top:24px">BMR Over Time</h3>
+        <table class="amort-table">
+          <thead>
+            <tr><th>Period</th><th>Calories</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Per day</td><td id="bmrDayOut">—</td></tr>
+            <tr><td>Per week (×7)</td><td id="bmrWeekOut">—</td></tr>
+            <tr><td>Per month (×30)</td><td id="bmrMonthOut">—</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <section class="content-section">
+      <h2>BMR Formula</h2>
+      <div class="formula-box">
+        <p class="formula">Men: BMR = 10 × weight (kg) + 6.25 × height (cm) − 5 × age + 5</p>
+        <p class="formula">Women: BMR = 10 × weight (kg) + 6.25 × height (cm) − 5 × age − 161</p>
+        <p>This is the Mifflin-St Jeor equation, the most widely used formula for estimating Basal Metabolic Rate — the calories your body burns at complete rest in a day.</p>
+        <p><strong>Worked example:</strong> a 30-year-old man, 175 cm tall, weighing 70 kg: BMR = 10 × 70 + 6.25 × 175 − 5 × 30 + 5 = 700 + 1093.75 − 150 + 5 = 1648.75 ≈ <strong>1649 kcal/day</strong>. That is about 11,541 kcal per week and 49,463 kcal per month at rest.</p>
+      </div>
+    </section>
+
+    <section class="content-section">
+      <h2>Frequently Asked Questions</h2>
+      <details class="faq-item">
+        <summary class="faq-q">What is BMR?</summary>
+        <div class="faq-a"><p>BMR (Basal Metabolic Rate) is the number of calories your body burns at complete rest in a day, just to keep you alive — breathing, keeping your heart beating, and maintaining your body temperature.</p></div>
+      </details>
+      <details class="faq-item">
+        <summary class="faq-q">What is the Mifflin-St Jeor equation?</summary>
+        <div class="faq-a"><p>The Mifflin-St Jeor equation is the most widely used formula for estimating BMR. For men it is 10 × weight (kg) + 6.25 × height (cm) − 5 × age + 5, and for women the same formula ends in − 161 instead of + 5.</p></div>
+      </details>
+      <details class="faq-item">
+        <summary class="faq-q">Is BMR the same as my daily calorie needs?</summary>
+        <div class="faq-a"><p>No. BMR is only the calories you burn at rest. Your total daily calorie needs (TDEE) are higher, because they also include the calories you burn through daily activity and exercise.</p></div>
+      </details>
+      <details class="faq-item">
+        <summary class="faq-q">Why is BMR higher for men than women?</summary>
+        <div class="faq-a"><p>On average men have more muscle mass, and muscle burns more calories at rest than fat. That is why the Mifflin-St Jeor equation adds 5 for men and subtracts 161 for women.</p></div>
+      </details>
+      <details class="faq-item">
+        <summary class="faq-q">Can I use my BMR to lose weight?</summary>
+        <div class="faq-a"><p>Yes. Eating fewer calories than your total daily needs creates a calorie deficit, which leads to weight loss over time. Use the Calorie Calculator to find your daily target. This calculator is for information only and is not medical advice.</p></div>
+      </details>
+    </section>
+
+    <section class="content-section">
+      <h2>Related Calculators</h2>
+      <div class="related-grid">
+        <a class="calc-card" href="bmi-calculator.html" data-name="BMI Calculator" data-desc="Check your Body Mass Index and see if your weight is healthy.">
+          <span class="calc-icon">⚖️</span>
+          <span class="calc-name">BMI Calculator</span>
+          <span class="calc-desc">Check your Body Mass Index and see if your weight is healthy.</span>
+        </a>
+        <a class="calc-card" href="age-calculator.html" data-name="Age Calculator" data-desc="Find your exact age in years, months and days from your birth date.">
+          <span class="calc-icon">🎂</span>
+          <span class="calc-name">Age Calculator</span>
+          <span class="calc-desc">Find your exact age in years, months and days from your birth date.</span>
+        </a>
+        <a class="calc-card" href="percentage-calculator.html" data-name="Percentage Calculator" data-desc="Work out percentages, increases, decreases and tips in seconds.">
+          <span class="calc-icon">📊</span>
+          <span class="calc-name">Percentage Calculator</span>
+          <span class="calc-desc">Work out percentages, increases, decreases and tips in seconds.</span>
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer"><div class="container"><div class="footer-grid">
+<div class="footer-col"><div class="footer-brand"><svg width="32" height="32" viewBox="0 0 40 40" fill="none" aria-hidden="true"><rect width="40" height="40" rx="10" fill="#2563eb"/><rect x="9" y="7" width="22" height="7" rx="2" fill="#ffffff"/><rect x="9" y="18" width="6" height="6" rx="1.5" fill="#ffffff"/><rect x="17" y="18" width="6" height="6" rx="1.5" fill="#ffffff"/><rect x="25" y="18" width="6" height="6" rx="1.5" fill="#ffffff"/><rect x="9" y="26" width="6" height="6" rx="1.5" fill="#ffffff"/><rect x="17" y="26" width="6" height="6" rx="1.5" fill="#ffffff"/><rect x="25" y="26" width="6" height="6" rx="1.5" fill="#ffffff"/></svg><span>All Calculator 360</span></div><p>Every calculator, all in one place. Free, private, and accurate — calculations happen right in your browser.</p></div>
+<div class="footer-col"><h3>Categories</h3><ul><li><a href="../index.html#finance">Finance</a></li><li><a href="../index.html#health">Health</a></li><li><a href="../index.html#math">Math</a></li><li><a href="../index.html#everyday">Everyday</a></li></ul></div>
+<div class="footer-col"><h3>Popular Calculators</h3><ul><li><a href="emi-calculator.html">EMI Calculator</a></li><li><a href="sip-calculator.html">SIP Calculator</a></li><li><a href="fd-calculator.html">FD Calculator</a></li><li><a href="income-tax-calculator.html">Income Tax Calculator</a></li><li><a href="gst-calculator.html">GST Calculator</a></li><li><a href="bmi-calculator.html">BMI Calculator</a></li><li><a href="age-calculator.html">Age Calculator</a></li><li><a href="percentage-calculator.html">Percentage Calculator</a></li></ul></div>
+<div class="footer-col"><h3>Company</h3><ul><li><a href="../about.html">About</a></li><li><a href="../contact.html">Contact</a></li><li><a href="../privacy.html">Privacy Policy</a></li><li><a href="../terms.html">Terms</a></li></ul></div>
+</div><div class="footer-bottom"><p>© 2026 All Calculator 360. All rights reserved.</p></div></div></footer>
+  <script>
+    (function () {
+      'use strict';
+
+      var genderMaleBtn = document.getElementById('genderMale');
+      var genderFemaleBtn = document.getElementById('genderFemale');
+      var ageRange = document.getElementById('ageRange');
+      var ageNum = document.getElementById('ageNum');
+      var ageOut = document.getElementById('ageOut');
+      var heightRange = document.getElementById('heightRange');
+      var heightNum = document.getElementById('heightNum');
+      var heightOut = document.getElementById('heightOut');
+      var unitCmBtn = document.getElementById('unitCm');
+      var unitFtInBtn = document.getElementById('unitFtIn');
+      var ftInRow = document.getElementById('ftInRow');
+      var feetNum = document.getElementById('feetNum');
+      var inchesNum = document.getElementById('inchesNum');
+      var weightRange = document.getElementById('weightRange');
+      var weightNum = document.getElementById('weightNum');
+      var weightOut = document.getElementById('weightOut');
+      var bmrOut = document.getElementById('bmrOut');
+      var genderBreakOut = document.getElementById('genderBreakOut');
+      var ageBreakOut = document.getElementById('ageBreakOut');
+      var heightBreakOut = document.getElementById('heightBreakOut');
+      var weightBreakOut = document.getElementById('weightBreakOut');
+      var bmrDayOut = document.getElementById('bmrDayOut');
+      var bmrWeekOut = document.getElementById('bmrWeekOut');
+      var bmrMonthOut = document.getElementById('bmrMonthOut');
+
+      var gender = 'male'; // 'male' | 'female'
+      var heightMode = 'cm'; // 'cm' | 'ftin'
+      var heightCm = 175;
+
+      function clamp(value, min, max) {
+        if (isNaN(value)) return min;
+        return Math.min(max, Math.max(min, value));
+      }
+
+      function calcBMR(genderValue, weightKg, heightCmValue, ageYears) {
+        var base = 10 * weightKg + 6.25 * heightCmValue - 5 * ageYears;
+        return genderValue === 'male' ? base + 5 : base - 161;
+      }
+
+      function formatHeight(heightCmValue) {
+        var totalInches = heightCmValue / 2.54;
+        var ft = Math.floor(totalInches / 12);
+        var inch = Math.round(totalInches - ft * 12);
+        if (inch === 12) { ft += 1; inch = 0; }
+        return Math.round(heightCmValue) + ' cm (' + ft + ' ft ' + inch + ' in)';
+      }
+
+      function getAge() {
+        return clamp(parseInt(ageNum.value, 10), 10, 90);
+      }
+
+      function getWeight() {
+        return clamp(parseFloat(weightNum.value), 30, 200);
+      }
+
+      function syncHeightInputs() {
+        heightRange.value = Math.round(heightCm);
+        heightNum.value = Math.round(heightCm);
+        heightOut.textContent = Math.round(heightCm) + ' cm';
+      }
+
+      function syncFtInInputs() {
+        var totalInches = heightCm / 2.54;
+        var ft = Math.floor(totalInches / 12);
+        var inch = Math.round(totalInches - ft * 12);
+        if (inch === 12) { ft += 1; inch = 0; }
+        feetNum.value = ft;
+        inchesNum.value = inch;
+      }
+
+      function recalculate() {
+        var age = getAge();
+        var weight = getWeight();
+        var bmr = calcBMR(gender, weight, heightCm, age);
+        var bmrRounded = Math.round(bmr);
+
+        ageOut.textContent = age + ' years';
+        weightOut.textContent = (Math.round(weight * 10) / 10) + ' kg';
+        bmrOut.textContent = bmrRounded.toLocaleString('en-US');
+        genderBreakOut.textContent = gender === 'male' ? 'Male' : 'Female';
+        ageBreakOut.textContent = age + ' years';
+        heightBreakOut.textContent = formatHeight(heightCm);
+        weightBreakOut.textContent = (Math.round(weight * 10) / 10) + ' kg';
+        bmrDayOut.textContent = bmrRounded.toLocaleString('en-US') + ' kcal';
+        bmrWeekOut.textContent = Math.round(bmr * 7).toLocaleString('en-US') + ' kcal';
+        bmrMonthOut.textContent = Math.round(bmr * 30).toLocaleString('en-US') + ' kcal';
+      }
+
+      function setGender(next) {
+        gender = next;
+        genderMaleBtn.classList.toggle('active', gender === 'male');
+        genderFemaleBtn.classList.toggle('active', gender === 'female');
+        recalculate();
+      }
+
+      function setHeightMode(mode) {
+        if (mode === heightMode) return;
+        heightMode = mode;
+        if (mode === 'ftin') {
+          syncFtInInputs();
+          ftInRow.style.display = '';
+          unitCmBtn.classList.remove('active');
+          unitFtInBtn.classList.add('active');
+        } else {
+          ftInRow.style.display = 'none';
+          unitFtInBtn.classList.remove('active');
+          unitCmBtn.classList.add('active');
+        }
+        recalculate();
+      }
+
+      function setHeightFromCm(cm) {
+        heightCm = clamp(cm, 120, 220);
+        syncHeightInputs();
+        if (heightMode === 'ftin') syncFtInInputs();
+        recalculate();
+      }
+
+      genderMaleBtn.addEventListener('click', function () { setGender('male'); });
+      genderFemaleBtn.addEventListener('click', function () { setGender('female'); });
+
+      ageRange.addEventListener('input', function () {
+        ageNum.value = ageRange.value;
+        recalculate();
+      });
+      ageNum.addEventListener('input', function () {
+        var val = clamp(parseInt(ageNum.value, 10), 10, 90);
+        ageRange.value = val;
+        recalculate();
+      });
+      ageNum.addEventListener('change', function () {
+        var val = clamp(parseInt(ageNum.value, 10), 10, 90);
+        ageNum.value = val;
+        ageRange.value = val;
+        recalculate();
+      });
+
+      heightRange.addEventListener('input', function () {
+        setHeightFromCm(parseFloat(heightRange.value));
+      });
+      heightNum.addEventListener('input', function () {
+        setHeightFromCm(parseFloat(heightNum.value));
+      });
+      heightNum.addEventListener('change', function () {
+        setHeightFromCm(parseFloat(heightNum.value));
+      });
+
+      function setHeightFromFtIn() {
+        var ft = clamp(parseFloat(feetNum.value), 0, 7);
+        var inch = clamp(parseFloat(inchesNum.value), 0, 11);
+        heightCm = clamp((ft * 12 + inch) * 2.54, 120, 220);
+        syncHeightInputs();
+        recalculate();
+      }
+
+      feetNum.addEventListener('input', setHeightFromFtIn);
+      inchesNum.addEventListener('input', setHeightFromFtIn);
+      feetNum.addEventListener('change', function () {
+        feetNum.value = clamp(parseFloat(feetNum.value), 0, 7);
+        setHeightFromFtIn();
+      });
+      inchesNum.addEventListener('change', function () {
+        inchesNum.value = clamp(parseFloat(inchesNum.value), 0, 11);
+        setHeightFromFtIn();
+      });
+
+      unitCmBtn.addEventListener('click', function () { setHeightMode('cm'); });
+      unitFtInBtn.addEventListener('click', function () { setHeightMode('ftin'); });
+
+      weightRange.addEventListener('input', function () {
+        weightNum.value = weightRange.value;
+        recalculate();
+      });
+      weightNum.addEventListener('input', function () {
+        var val = clamp(parseFloat(weightNum.value), 30, 200);
+        weightRange.value = val;
+        recalculate();
+      });
+      weightNum.addEventListener('change', function () {
+        var val = clamp(parseFloat(weightNum.value), 30, 200);
+        weightNum.value = val;
+        weightRange.value = val;
+        recalculate();
+      });
+
+      recalculate();
+    })();
+  </script>
+</body>
+</html>

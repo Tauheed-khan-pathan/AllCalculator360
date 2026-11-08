@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Average Calculator — Mean, Median & Mode | All Calculator 360</title>
+  <meta name="description" content="Find the mean, median and mode of any set of numbers.">
+  <link rel="canonical" href="https://tauheed-khan-pathan.github.io/AllCalculator360/calculator/average-calculator.html">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Average Calculator — Mean, Median & Mode | All Calculator 360">
+  <meta property="og:description" content="Find the mean, median and mode of any set of numbers.">
+  <meta property="og:url" content="https://tauheed-khan-pathan.github.io/AllCalculator360/calculator/average-calculator.html">
+  <meta property="og:site_name" content="All Calculator 360">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Average Calculator — Mean, Median & Mode | All Calculator 360">
+  <meta name="twitter:description" content="Find the mean, median and mode of any set of numbers.">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What is the average of a set of numbers?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "The average — also called the mean — is the sum of all the numbers divided by how many numbers there are. For example, the average of 10, 20, 30, 40 and 50 is (10 + 20 + 30 + 40 + 50) ÷ 5 = 150 ÷ 5 = 30."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How is the median different from the mean?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "The median is the middle value when the numbers are sorted in order, while the mean is the total divided by the count. For 10, 20, 30, 40 and 50 the median is 30, the same as the mean here — but a very large or very small value pulls the mean away while the median stays in the middle."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What is the mode?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "The mode is the number that appears most often in a set. For 5, 5, 10 and 15 the mode is 5, because it appears twice. If every number appears only once, there is no mode. A set can also have more than one mode."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "When should I use the median instead of the mean?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Use the median when a few very large or very small values would distort the mean — for example with incomes or house prices, where a handful of huge values can make the average misleading. The median shows the typical value better in those cases."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can I average negative or decimal numbers?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. The same rules apply: add all the numbers (including negatives and decimals) and divide by how many there are. Just type the numbers separated by commas, spaces or new lines — for example, -5, 2.5, 10."
+        }
+      }
+    ]
+  }
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../styles.css">
+  <script>
+    (function () {
+      try {
+        if (localStorage.getItem('ac360-theme') === 'dark') {
+          document.documentElement.setAttribute('data-theme', 'dark');
+        }
+      } catch (e) {}
+    })();
+  </script>
+  <script src="../app.js" defer></script>
+</head>
+<body>
+  <header class="site-header"><div class="header-inner">
+<a class="brand" href="../index.html"><svg class="brand-logo" viewBox="0 0 40 40" fill="none" aria-hidden="true"><rect width="40" height="40" rx="10" fill="#2563eb"/><rect x="9" y="7" width="22" height="7" rx="2" fill="#ffffff"/><rect x="9" y="18" width="6" height="6" rx="1.5" fill="#ffffff"/><rect x="17" y="18" width="6" height="6" rx="1.5" fill="#ffffff"/><rect x="25" y="18" width="6" height="6" rx="1.5" fill="#ffffff"/><rect x="9" y="26" width="6" height="6" rx="1.5" fill="#ffffff"/><rect x="17" y="26" width="6" height="6" rx="1.5" fill="#ffffff"/><rect x="25" y="26" width="6" height="6" rx="1.5" fill="#ffffff"/></svg><span class="brand-name">All Calculator <span class="brand-360">360</span></span></a>
+<div class="header-search"><input id="headerSearch" type="search" placeholder="Search calculators…" aria-label="Search calculators"></div>
+<nav class="main-nav" aria-label="Categories"><a class="nav-link" href="../index.html#finance">Finance</a><a class="nav-link" href="../index.html#health">Health</a><a class="nav-link" href="../index.html#math">Math</a><a class="nav-link" href="../index.html#everyday">Everyday</a></nav>
+<button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">🌙</button>
+<button class="menu-toggle" id="menuToggle" aria-label="Menu">☰</button>
+</div><nav class="mobile-nav" id="mobileNav" aria-label="Mobile categories"><a class="nav-link" href="../index.html#finance">Finance</a><a class="nav-link" href="../index.html#health">Health</a><a class="nav-link" href="../index.html#math">Math</a><a class="nav-link" href="../index.html#everyday">Everyday</a></nav></header>
+
+  <main class="container">
+    <nav class="breadcrumb"><a href="../index.html">Home</a> / <a href="../index.html#math">Math</a> / Average Calculator</nav>
+
+    <div class="calc-head">
+      <h1>Average Calculator</h1>
+      <p>Find the mean, median and mode of any set of numbers.</p>
+    </div>
+
+    <div class="calc-layout">
+      <div class="calc-panel calc-inputs">
+        <h2>Your Numbers</h2>
+
+        <div class="input-group">
+          <label class="input-label" for="numbersInput">Numbers</label>
+          <textarea id="numbersInput" rows="5" style="width:100%; min-height:132px; padding:12px; border:1px solid var(--border); border-radius:12px; background:var(--surface); color:var(--text-strong); font-family:Inter, sans-serif; font-size:16px; resize:vertical" aria-label="Numbers to average">10, 20, 30, 40, 50</textarea>
+          <p class="input-hint">Separate numbers with commas, spaces or new lines. Empty entries are ignored.</p>
+        </div>
+
+        <p id="avgError" style="display:none; color:#dc2626; font-weight:600; margin:16px 0 0" role="alert"></p>
+      </div>
+
+      <div class="calc-panel calc-results" id="avgResults">
+        <h2>Your Results</h2>
+
+        <div class="result-main">
+          <div class="result-label">Mean (Average)</div>
+          <div class="result-emi" id="avgMean">30.00</div>
+          <div id="avgSorted" style="font-size:15px; font-weight:600; margin-top:4px">Sorted: 10, 20, 30, 40, 50</div>
+        </div>
+
+        <div class="result-breakdown">
+          <div class="break-row"><span class="k">Count</span><span class="v" id="brCount">5</span></div>
+          <div class="break-row"><span class="k">Sum</span><span class="v" id="brSum">150</span></div>
+          <div class="break-row"><span class="k">Mean</span><span class="v green" id="brMean">30.00</span></div>
+          <div class="break-row"><span class="k">Median</span><span class="v" id="brMedian">30</span></div>
+          <div class="break-row"><span class="k">Mode</span><span class="v" id="brMode">No mode</span></div>
+          <div class="break-row"><span class="k">Range</span><span class="v" id="brRange">40</span></div>
+          <div class="break-row"><span class="k">Minimum</span><span class="v" id="brMin">10</span></div>
+          <div class="break-row"><span class="k">Maximum</span><span class="v" id="brMax">50</span></div>
+        </div>
+      </div>
+    </div>
+
+    <section class="content-section">
+      <h2>Average Formula</h2>
+      <div class="formula-box">
+        <p class="formula">Mean = sum of all numbers &divide; count of numbers</p>
+        <p>Add up every number in the set, then divide by how many numbers there are. The median is the middle value of the sorted set (or the average of the two middle values when there is an even count), and the mode is the value that appears most often.</p>
+        <p><strong>Worked example:</strong> 10, 20, 30, 40, 50. Sum = 150, count = 5, so mean = 150 &divide; 5 = <strong>30</strong>. Sorted, the middle value is 30, so the median is also <strong>30</strong>. Every value appears once, so there is no mode. Range = 50 &minus; 10 = <strong>40</strong>.</p>
+      </div>
+    </section>
+
+    <section class="content-section">
+      <h2>Frequently Asked Questions</h2>
+      <details class="faq-item">
+        <summary class="faq-q">What is the average of a set of numbers?</summary>
+        <div class="faq-a"><p>The average — also called the mean — is the sum of all the numbers divided by how many numbers there are. For example, the average of 10, 20, 30, 40 and 50 is (10 + 20 + 30 + 40 + 50) ÷ 5 = 150 ÷ 5 = 30.</p></div>
+      </details>
+      <details class="faq-item">
+        <summary class="faq-q">How is the median different from the mean?</summary>
+        <div class="faq-a"><p>The median is the middle value when the numbers are sorted in order, while the mean is the total divided by the count. For 10, 20, 30, 40 and 50 the median is 30, the same as the mean here — but a very large or very small value pulls the mean away while the median stays in the middle.</p></div>
+      </details>
+      <details class="faq-item">
+        <summary class="faq-q">What is the mode?</summary>
+        <div class="faq-a"><p>The mode is the number that appears most often in a set. For 5, 5, 10 and 15 the mode is 5, because it appears twice. If every number appears only once, there is no mode. A set can also have more than one mode.</p></div>
+      </details>
+      <details class="faq-item">
+        <summary class="faq-q">When should I use the median instead of the mean?</summary>
+        <div class="faq-a"><p>Use the median when a few very large or very small values would distort the mean — for example with incomes or house prices, where a handful of huge values can make the average misleading. The median shows the typical value better in those cases.</p></div>
+      </details>
+      <details class="faq-item">
+        <summary class="faq-q">Can I average negative or decimal numbers?</summary>
+        <div class="faq-a"><p>Yes. The same rules apply: add all the numbers (including negatives and decimals) and divide by how many there are. Just type the numbers separated by commas, spaces or new lines — for example, -5, 2.5, 10.</p></div>
+      </details>
+    </section>
+
+    <section class="content-section">
+      <h2>Related Calculators</h2>
+      <div class="related-grid">
+        <a class="calc-card" href="percentage-calculator.html" data-name="Percentage Calculator" data-desc="Work out percentages, increases, decreases and tips in seconds.">
+          <span class="calc-icon">📊</span>
+          <span class="calc-name">Percentage Calculator</span>
+          <span class="calc-desc">Work out percentages, increases, decreases and tips in seconds.</span>
+        </a>
+        <a class="calc-card" href="age-calculator.html" data-name="Age Calculator" data-desc="Find your exact age in years, months and days from your birth date.">
+          <span class="calc-icon">🎂</span>
+          <span class="calc-name">Age Calculator</span>
+          <span class="calc-desc">Find your exact age in years, months and days from your birth date.</span>
+        </a>
+        <a class="calc-card" href="bmi-calculator.html" data-name="BMI Calculator" data-desc="Check your Body Mass Index (BMI) from your height and weight.">
+          <span class="calc-icon">⚖️</span>
+          <span class="calc-name">BMI Calculator</span>
+          <span class="calc-desc">Check your Body Mass Index (BMI) from your height and weight.</span>
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer"><div class="container"><div class="footer-grid">
+<div class="footer-col"><div class="footer-brand"><svg width="32" height="32" viewBox="0 0 40 40" fill="none" aria-hidden="true"><rect width="40" height="40" rx="10" fill="#2563eb"/><rect x="9" y="7" width="22" height="7" rx="2" fill="#ffffff"/><rect x="9" y="18" width="6" height="6" rx="1.5" fill="#ffffff"/><rect x="17" y="18" width="6" height="6" rx="1.5" fill="#ffffff"/><rect x="25" y="18" width="6" height="6" rx="1.5" fill="#ffffff"/><rect x="9" y="26" width="6" height="6" rx="1.5" fill="#ffffff"/><rect x="17" y="26" width="6" height="6" rx="1.5" fill="#ffffff"/><rect x="25" y="26" width="6" height="6" rx="1.5" fill="#ffffff"/></svg><span>All Calculator 360</span></div><p>Every calculator, all in one place. Free, private, and accurate — calculations happen right in your browser.</p></div>
+<div class="footer-col"><h3>Categories</h3><ul><li><a href="../index.html#finance">Finance</a></li><li><a href="../index.html#health">Health</a></li><li><a href="../index.html#math">Math</a></li><li><a href="../index.html#everyday">Everyday</a></li></ul></div>
+<div class="footer-col"><h3>Popular Calculators</h3><ul><li><a href="emi-calculator.html">EMI Calculator</a></li><li><a href="sip-calculator.html">SIP Calculator</a></li><li><a href="fd-calculator.html">FD Calculator</a></li><li><a href="income-tax-calculator.html">Income Tax Calculator</a></li><li><a href="gst-calculator.html">GST Calculator</a></li><li><a href="bmi-calculator.html">BMI Calculator</a></li><li><a href="age-calculator.html">Age Calculator</a></li><li><a href="percentage-calculator.html">Percentage Calculator</a></li></ul></div>
+<div class="footer-col"><h3>Company</h3><ul><li><a href="../about.html">About</a></li><li><a href="../contact.html">Contact</a></li><li><a href="../privacy.html">Privacy Policy</a></li><li><a href="../terms.html">Terms</a></li></ul></div>
+</div><div class="footer-bottom"><p>© 2026 All Calculator 360. All rights reserved.</p></div></div></footer>
+
+  <script>
+    (function () {
+      'use strict';
+
+      var inputEl = document.getElementById('numbersInput');
+      var errorEl = document.getElementById('avgError');
+      var resultsEl = document.getElementById('avgResults');
+      var meanOut = document.getElementById('avgMean');
+      var sortedOut = document.getElementById('avgSorted');
+      var brCount = document.getElementById('brCount');
+      var brSum = document.getElementById('brSum');
+      var brMean = document.getElementById('brMean');
+      var brMedian = document.getElementById('brMedian');
+      var brMode = document.getElementById('brMode');
+      var brRange = document.getElementById('brRange');
+      var brMin = document.getElementById('brMin');
+      var brMax = document.getElementById('brMax');
+
+      function parseNumbers(text) {
+        return text.split(/[,\s]+/).filter(function (s) { return s.length > 0; })
+          .map(function (s) { return Number(s); })
+          .filter(function (n) { return isFinite(n); });
+      }
+
+      function fmtSmart(n) {
+        return String(Math.round(n * 100) / 100);
+      }
+
+      function computeStats(values) {
+        var sorted = values.slice().sort(function (a, b) { return a - b; });
+        var count = sorted.length;
+        var sum = sorted.reduce(function (t, v) { return t + v; }, 0);
+        var mean = sum / count;
+        var mid = Math.floor(count / 2);
+        var median = count % 2 === 1 ? sorted[mid] : (sorted[mid - 1] + sorted[mid]) / 2;
+        var freq = {};
+        sorted.forEach(function (v) { freq[v] = (freq[v] || 0) + 1; });
+        var maxFreq = 0;
+        Object.keys(freq).forEach(function (k) { if (freq[k] > maxFreq) maxFreq = freq[k]; });
+        var modes = maxFreq > 1 ? Object.keys(freq).filter(function (k) { return freq[k] === maxFreq; }).map(Number).sort(function (a, b) { return a - b; }) : [];
+        var min = sorted[0];
+        var max = sorted[count - 1];
+        return { sorted: sorted, count: count, sum: sum, mean: mean, median: median, modes: modes, range: max - min, min: min, max: max };
+      }
+
+      function recalculate() {
+        var values = parseNumbers(inputEl.value);
+        if (values.length < 1) {
+          errorEl.textContent = 'Please enter at least one number, separated by commas, spaces or new lines.';
+          errorEl.style.display = '';
+          resultsEl.style.display = 'none';
+          return;
+        }
+        var s = computeStats(values);
+        errorEl.style.display = 'none';
+        resultsEl.style.display = '';
+        meanOut.textContent = s.mean.toFixed(2);
+        sortedOut.textContent = 'Sorted: ' + s.sorted.map(fmtSmart).join(', ');
+        brCount.textContent = s.count;
+        brSum.textContent = fmtSmart(s.sum);
+        brMean.textContent = s.mean.toFixed(2);
+        brMedian.textContent = s.median % 1 === 0 ? String(s.median) : s.median.toFixed(2);
+        brMode.textContent = s.modes.length === 0 ? 'No mode' : s.modes.map(fmtSmart).join(', ');
+        brRange.textContent = fmtSmart(s.range);
+        brMin.textContent = fmtSmart(s.min);
+        brMax.textContent = fmtSmart(s.max);
+      }
+
+      inputEl.addEventListener('input', recalculate);
+      inputEl.addEventListener('change', recalculate);
+
+      recalculate();
+    })();
+  </script>
+</body>
+</html>

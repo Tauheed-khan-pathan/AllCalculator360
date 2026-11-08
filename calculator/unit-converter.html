@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Unit Converter — Length, Weight, Temperature & Volume | All Calculator 360</title>
+  <meta name="description" content="Convert length, weight, temperature, volume and more instantly.">
+  <link rel="canonical" href="https://tauheed-khan-pathan.github.io/AllCalculator360/calculator/unit-converter.html">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Unit Converter — Length, Weight, Temperature & Volume | All Calculator 360">
+  <meta property="og:description" content="Convert length, weight, temperature, volume and more instantly.">
+  <meta property="og:url" content="https://tauheed-khan-pathan.github.io/AllCalculator360/calculator/unit-converter.html">
+  <meta property="og:site_name" content="All Calculator 360">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Unit Converter — Length, Weight, Temperature & Volume | All Calculator 360">
+  <meta name="twitter:description" content="Convert length, weight, temperature, volume and more instantly.">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "How does the unit converter work?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Pick a category, enter a value, and choose the units to convert from and to. The value is converted through a standard base unit — metres for length, kilograms for weight, and litres for volume — except temperature, which uses the Celsius, Fahrenheit and Kelvin formulas directly."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How do I convert miles to kilometres?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Multiply miles by 1.609344. For example, 5 miles × 1.609344 = 8.04672 km. One mile is exactly 1,609.344 metres."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How do I convert Celsius to Fahrenheit?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Multiply by 9, divide by 5, then add 32. For example, 100 °C × 9 ÷ 5 + 32 = 212 °F. To go back, subtract 32, then multiply by 5 and divide by 9."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How many pounds are in a kilogram?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "One kilogram is 2.20462 pounds. One pound is exactly 0.45359237 kilograms."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Is my converted value stored anywhere?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "No. All conversion happens in your browser, and your values are never sent to a server or stored anywhere."
+        }
+      }
+    ]
+  }
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../styles.css">
+  <script>
+    (function () {
+      try {
+        if (localStorage.getItem('ac360-theme') === 'dark') {
+          document.documentElement.setAttribute('data-theme', 'dark');
+        }
+      } catch (e) {}
+    })();
+  </script>
+  <script src="../app.js" defer></script>
+</head>
+<body>
+  <header class="site-header"><div class="header-inner">
+<a class="brand" href="../index.html"><svg class="brand-logo" viewBox="0 0 40 40" fill="none" aria-hidden="true"><rect width="40" height="40" rx="10" fill="#2563eb"/><rect x="9" y="7" width="22" height="7" rx="2" fill="#ffffff"/><rect x="9" y="18" width="6" height="6" rx="1.5" fill="#ffffff"/><rect x="17" y="18" width="6" height="6" rx="1.5" fill="#ffffff"/><rect x="25" y="18" width="6" height="6" rx="1.5" fill="#ffffff"/><rect x="9" y="26" width="6" height="6" rx="1.5" fill="#ffffff"/><rect x="17" y="26" width="6" height="6" rx="1.5" fill="#ffffff"/><rect x="25" y="26" width="6" height="6" rx="1.5" fill="#ffffff"/></svg><span class="brand-name">All Calculator <span class="brand-360">360</span></span></a>
+<div class="header-search"><input id="headerSearch" type="search" placeholder="Search calculators…" aria-label="Search calculators"></div>
+<nav class="main-nav" aria-label="Categories"><a class="nav-link" href="../index.html#finance">Finance</a><a class="nav-link" href="../index.html#health">Health</a><a class="nav-link" href="../index.html#math">Math</a><a class="nav-link" href="../index.html#everyday">Everyday</a></nav>
+<button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">🌙</button>
+<button class="menu-toggle" id="menuToggle" aria-label="Menu">☰</button>
+</div><nav class="mobile-nav" id="mobileNav" aria-label="Mobile categories"><a class="nav-link" href="../index.html#finance">Finance</a><a class="nav-link" href="../index.html#health">Health</a><a class="nav-link" href="../index.html#math">Math</a><a class="nav-link" href="../index.html#everyday">Everyday</a></nav></header>
+  <main class="container">
+    <nav class="breadcrumb"><a href="../index.html">Home</a> / <a href="../index.html#everyday">Everyday</a> / Unit Converter</nav>
+
+    <div class="calc-head">
+      <h1>Unit Converter</h1>
+      <p>Convert length, weight, temperature, volume and more instantly.</p>
+    </div>
+
+    <div class="calc-layout">
+      <div class="calc-panel calc-inputs">
+        <h2>Convert</h2>
+
+        <div class="input-group">
+          <label class="input-label" for="categorySelect">Category</label>
+          <select class="currency-select" id="categorySelect" style="width:100%" aria-label="Category">
+            <option value="length" selected>Length</option>
+            <option value="weight">Weight</option>
+            <option value="temperature">Temperature</option>
+            <option value="volume">Volume</option>
+          </select>
+        </div>
+
+        <div class="input-group">
+          <label class="input-label" for="valueNum">Value</label>
+          <input type="number" class="num-input" id="valueNum" step="any" value="1" style="width:100%" aria-label="Value to convert">
+        </div>
+
+        <div class="input-group">
+          <label class="input-label" for="fromSelect">From</label>
+          <select class="currency-select" id="fromSelect" style="width:100%" aria-label="Convert from"></select>
+        </div>
+
+        <div class="input-group">
+          <label class="input-label" for="toSelect">To</label>
+          <select class="currency-select" id="toSelect" style="width:100%" aria-label="Convert to"></select>
+          <p class="input-hint">Swap the units to convert the other way round.</p>
+        </div>
+      </div>
+
+      <div class="calc-panel calc-results">
+        <h2>Result</h2>
+
+        <div class="result-main">
+          <div class="result-label" id="conversionLine">1 km = 1,000 m</div>
+          <div class="result-emi" id="resultOut">1,000 <span>m</span></div>
+        </div>
+
+        <div style="overflow-x:auto">
+          <table class="amort-table" id="allUnitsTable">
+            <thead><tr><th>Unit</th><th>Value</th></tr></thead>
+            <tbody id="allUnitsBody"></tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
+    <section class="content-section">
+      <h2>Conversion Formulas</h2>
+      <div class="formula-box">
+        <p class="formula">Length: value in metres = value × factor &nbsp;•&nbsp; Weight: value in kg = value × factor &nbsp;•&nbsp; Volume: value in litres = value × factor</p>
+        <p><strong>Worked example — length:</strong> 5 miles = 5 × 1,609.344 m = 8,046.72 m = <strong>8.04672 km</strong>.</p>
+        <p><strong>Worked example — temperature:</strong> 100 °C = 100 × 9 ÷ 5 + 32 = <strong>212 °F</strong>. 32 °F = (32 − 32) × 5 ÷ 9 = <strong>0 °C</strong>, and 0 °C = 0 + 273.15 = <strong>273.15 K</strong>.</p>
+        <p><strong>Worked example — weight:</strong> 1 kg = 1 ÷ 0.45359237 = <strong>2.20462 lb</strong>. <strong>Worked example — volume:</strong> 1 US gallon = <strong>3.78541 L</strong>, and 2 L = <strong>2,000 mL</strong>.</p>
+        <p>Exact factors used: 1 mile = 1,609.344 m; 1 yard = 0.9144 m; 1 foot = 0.3048 m; 1 inch = 0.0254 m; 1 pound = 0.45359237 kg; 1 ounce = 0.028349523125 kg; 1 US gallon = 3.785411784 L; 1 US cup = 0.2365882365 L.</p>
+      </div>
+    </section>
+
+    <section class="content-section">
+      <h2>Frequently Asked Questions</h2>
+      <details class="faq-item">
+        <summary class="faq-q">How does the unit converter work?</summary>
+        <div class="faq-a"><p>Pick a category, enter a value, and choose the units to convert from and to. The value is converted through a standard base unit — metres for length, kilograms for weight, and litres for volume — except temperature, which uses the Celsius, Fahrenheit and Kelvin formulas directly.</p></div>
+      </details>
+      <details class="faq-item">
+        <summary class="faq-q">How do I convert miles to kilometres?</summary>
+        <div class="faq-a"><p>Multiply miles by 1.609344. For example, 5 miles × 1.609344 = 8.04672 km. One mile is exactly 1,609.344 metres.</p></div>
+      </details>
+      <details class="faq-item">
+        <summary class="faq-q">How do I convert Celsius to Fahrenheit?</summary>
+        <div class="faq-a"><p>Multiply by 9, divide by 5, then add 32. For example, 100 °C × 9 ÷ 5 + 32 = 212 °F. To go back, subtract 32, then multiply by 5 and divide by 9.</p></div>
+      </details>
+      <details class="faq-item">
+        <summary class="faq-q">How many pounds are in a kilogram?</summary>
+        <div class="faq-a"><p>One kilogram is 2.20462 pounds. One pound is exactly 0.45359237 kilograms.</p></div>
+      </details>
+      <details class="faq-item">
+        <summary class="faq-q">Is my converted value stored anywhere?</summary>
+        <div class="faq-a"><p>No. All conversion happens in your browser, and your values are never sent to a server or stored anywhere.</p></div>
+      </details>
+    </section>
+
+    <section class="content-section">
+      <h2>Related Calculators</h2>
+      <div class="related-grid">
+        <a class="calc-card" href="age-calculator.html" data-name="Age Calculator" data-desc="Find your exact age in years, months and days from your birth date.">
+          <span class="calc-icon">🎂</span>
+          <span class="calc-name">Age Calculator</span>
+          <span class="calc-desc">Find your exact age in years, months and days from your birth date.</span>
+        </a>
+        <a class="calc-card" href="bmi-calculator.html" data-name="BMI Calculator" data-desc="Check your Body Mass Index and see if your weight is healthy.">
+          <span class="calc-icon">⚖️</span>
+          <span class="calc-name">BMI Calculator</span>
+          <span class="calc-desc">Check your Body Mass Index and see if your weight is healthy.</span>
+        </a>
+        <a class="calc-card" href="percentage-calculator.html" data-name="Percentage Calculator" data-desc="Work out percentages, increases, decreases and tips in seconds.">
+          <span class="calc-icon">📊</span>
+          <span class="calc-name">Percentage Calculator</span>
+          <span class="calc-desc">Work out percentages, increases, decreases and tips in seconds.</span>
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer"><div class="container"><div class="footer-grid">
+<div class="footer-col"><div class="footer-brand"><svg width="32" height="32" viewBox="0 0 40 40" fill="none" aria-hidden="true"><rect width="40" height="40" rx="10" fill="#2563eb"/><rect x="9" y="7" width="22" height="7" rx="2" fill="#ffffff"/><rect x="9" y="18" width="6" height="6" rx="1.5" fill="#ffffff"/><rect x="17" y="18" width="6" height="6" rx="1.5" fill="#ffffff"/><rect x="25" y="18" width="6" height="6" rx="1.5" fill="#ffffff"/><rect x="9" y="26" width="6" height="6" rx="1.5" fill="#ffffff"/><rect x="17" y="26" width="6" height="6" rx="1.5" fill="#ffffff"/><rect x="25" y="26" width="6" height="6" rx="1.5" fill="#ffffff"/></svg><span>All Calculator 360</span></div><p>Every calculator, all in one place. Free, private, and accurate — calculations happen right in your browser.</p></div>
+<div class="footer-col"><h3>Categories</h3><ul><li><a href="../index.html#finance">Finance</a></li><li><a href="../index.html#health">Health</a></li><li><a href="../index.html#math">Math</a></li><li><a href="../index.html#everyday">Everyday</a></li></ul></div>
+<div class="footer-col"><h3>Popular Calculators</h3><ul><li><a href="emi-calculator.html">EMI Calculator</a></li><li><a href="sip-calculator.html">SIP Calculator</a></li><li><a href="fd-calculator.html">FD Calculator</a></li><li><a href="income-tax-calculator.html">Income Tax Calculator</a></li><li><a href="gst-calculator.html">GST Calculator</a></li><li><a href="bmi-calculator.html">BMI Calculator</a></li><li><a href="age-calculator.html">Age Calculator</a></li><li><a href="percentage-calculator.html">Percentage Calculator</a></li></ul></div>
+<div class="footer-col"><h3>Company</h3><ul><li><a href="../about.html">About</a></li><li><a href="../contact.html">Contact</a></li><li><a href="../privacy.html">Privacy Policy</a></li><li><a href="../terms.html">Terms</a></li></ul></div>
+</div><div class="footer-bottom"><p>© 2026 All Calculator 360. All rights reserved.</p></div></div></footer>
+  <script>
+    (function () {
+      'use strict';
+
+      var CATEGORIES = {
+        length: {
+          label: 'Length',
+          units: [
+            { id: 'km', label: 'Kilometre (km)', factor: 1000 },
+            { id: 'm', label: 'Metre (m)', factor: 1 },
+            { id: 'cm', label: 'Centimetre (cm)', factor: 0.01 },
+            { id: 'mm', label: 'Millimetre (mm)', factor: 0.001 },
+            { id: 'mile', label: 'Mile (mi)', factor: 1609.344 },
+            { id: 'yard', label: 'Yard (yd)', factor: 0.9144 },
+            { id: 'foot', label: 'Foot (ft)', factor: 0.3048 },
+            { id: 'inch', label: 'Inch (in)', factor: 0.0254 }
+          ],
+          defaults: { from: 'km', to: 'm' }
+        },
+        weight: {
+          label: 'Weight',
+          units: [
+            { id: 'tonne', label: 'Tonne (t)', factor: 1000 },
+            { id: 'kg', label: 'Kilogram (kg)', factor: 1 },
+            { id: 'gram', label: 'Gram (g)', factor: 0.001 },
+            { id: 'pound', label: 'Pound (lb)', factor: 0.45359237 },
+            { id: 'ounce', label: 'Ounce (oz)', factor: 0.028349523125 }
+          ],
+          defaults: { from: 'kg', to: 'pound' }
+        },
+        temperature: {
+          label: 'Temperature',
+          units: [
+            { id: 'c', label: 'Celsius (°C)' },
+            { id: 'f', label: 'Fahrenheit (°F)' },
+            { id: 'k', label: 'Kelvin (K)' }
+          ],
+          defaults: { from: 'c', to: 'f' }
+        },
+        volume: {
+          label: 'Volume',
+          units: [
+            { id: 'm3', label: 'Cubic metre (m³)', factor: 1000 },
+            { id: 'l', label: 'Litre (L)', factor: 1 },
+            { id: 'ml', label: 'Millilitre (mL)', factor: 0.001 },
+            { id: 'gallon', label: 'US gallon (gal)', factor: 3.785411784 },
+            { id: 'cup', label: 'US cup (cup)', factor: 0.2365882365 }
+          ],
+          defaults: { from: 'l', to: 'ml' }
+        }
+      };
+
+      var categorySelect = document.getElementById('categorySelect');
+      var valueNum = document.getElementById('valueNum');
+      var fromSelect = document.getElementById('fromSelect');
+      var toSelect = document.getElementById('toSelect');
+      var conversionLine = document.getElementById('conversionLine');
+      var resultOut = document.getElementById('resultOut');
+      var allUnitsBody = document.getElementById('allUnitsBody');
+
+      function unitById(cat, id) {
+        var units = CATEGORIES[cat].units;
+        for (var i = 0; i < units.length; i++) {
+          if (units[i].id === id) return units[i];
+        }
+        return units[0];
+      }
+
+      function unitSymbol(cat, id) {
+        var m = unitById(cat, id).label.match(/\(([^)]+)\)$/);
+        return m ? m[1] : id;
+      }
+
+      function formatValue(value) {
+        if (!isFinite(value)) return '—';
+        var rounded = Math.round(value * 100000) / 100000;
+        if (rounded === 0) return '0';
+        var abs = Math.abs(rounded);
+        if (abs >= 1000000 || (abs < 0.00001 && abs > 0)) {
+          return rounded.toExponential(4).replace('e+', ' × 10^');
+        }
+        return rounded.toLocaleString('en-US', { maximumFractionDigits: 5 });
+      }
+
+      function toCelsius(value, from) {
+        if (from === 'c') return value;
+        if (from === 'f') return (value - 32) * 5 / 9;
+        return value - 273.15; // kelvin
+      }
+
+      function fromCelsius(celsius, to) {
+        if (to === 'c') return celsius;
+        if (to === 'f') return celsius * 9 / 5 + 32;
+        return celsius + 273.15; // kelvin
+      }
+
+      function convert(value, cat, from, to) {
+        if (from === to) return value;
+        if (cat === 'temperature') {
+          return fromCelsius(toCelsius(value, from), to);
+        }
+        var base = value * unitById(cat, from).factor;
+        return base / unitById(cat, to).factor;
+      }
+
+      function fillUnitSelects(cat) {
+        var units = CATEGORIES[cat].units;
+        var d = CATEGORIES[cat].defaults;
+        fromSelect.innerHTML = '';
+        toSelect.innerHTML = '';
+        units.forEach(function (u) {
+          var o1 = document.createElement('option');
+          o1.value = u.id; o1.textContent = u.label;
+          fromSelect.appendChild(o1);
+          var o2 = document.createElement('option');
+          o2.value = u.id; o2.textContent = u.label;
+          toSelect.appendChild(o2);
+        });
+        fromSelect.value = d.from;
+        toSelect.value = d.to;
+      }
+
+      function recalculate() {
+        var cat = categorySelect.value;
+        var value = parseFloat(valueNum.value);
+        if (isNaN(value)) {
+          conversionLine.textContent = 'Enter a value to convert.';
+          resultOut.innerHTML = '—';
+          allUnitsBody.innerHTML = '';
+          return;
+        }
+        var from = fromSelect.value;
+        var to = toSelect.value;
+        var result = convert(value, cat, from, to);
+        conversionLine.textContent = formatValue(value) + ' ' + unitSymbol(cat, from) + ' = ' + formatValue(result) + ' ' + unitSymbol(cat, to);
+        resultOut.innerHTML = formatValue(result) + ' <span>' + unitSymbol(cat, to) + '</span>';
+        var rows = '';
+        CATEGORIES[cat].units.forEach(function (u) {
+          var v = convert(value, cat, from, u.id);
+          rows += '<tr><td>' + u.label + '</td><td>' + formatValue(v) + '</td></tr>';
+        });
+        allUnitsBody.innerHTML = rows;
+      }
+
+      categorySelect.addEventListener('change', function () {
+        fillUnitSelects(categorySelect.value);
+        recalculate();
+      });
+      valueNum.addEventListener('input', recalculate);
+      fromSelect.addEventListener('change', recalculate);
+      toSelect.addEventListener('change', recalculate);
+
+      fillUnitSelects('length');
+      recalculate();
+    })();
+  </script>
+</body>
+</html>
