@@ -380,3 +380,26 @@ select.currency-select {
   .input-row { flex-wrap: wrap; }
   input.num-input { width: 100%; }
 }
+
+/* ---------- Module 19: E-commerce Profit Calculator ---------- */
+.platform-chips { display: flex; flex-wrap: wrap; gap: 8px; }
+.chip { display: inline-flex; align-items: center; gap: 6px; padding: 8px 12px; border: 1px solid var(--border); border-radius: 999px; background: var(--surface); font-size: 14px; font-weight: 600; cursor: pointer; min-height: 44px; }
+.chip input { width: 18px; height: 18px; accent-color: var(--primary); margin: 0; }
+.chip:has(input:checked) { border-color: var(--primary); background: var(--primary-light); }
+.check-row { display: flex; align-items: flex-start; gap: 8px; font-size: 14px; font-weight: 600; cursor: pointer; }
+.check-row input { width: 18px; height: 18px; margin: 2px 0 0; accent-color: var(--primary); flex-shrink: 0; }
+.result-sub { font-size: 14px; color: var(--muted); margin-top: 4px; }
+.profit-bars { margin-top: 16px; display: grid; gap: 10px; }
+.bar-row { display: grid; grid-template-columns: 110px 1fr auto; gap: 10px; align-items: center; font-size: 14px; }
+.bar-name { font-weight: 600; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.bar-track { height: 10px; background: var(--surface-2); border-radius: 999px; overflow: hidden; }
+.bar-fill { height: 100%; background: var(--success); border-radius: 999px; }
+.bar-fill.neg { background: #dc2626; }
+.bar-val { font-weight: 700; font-variant-numeric: tabular-nums; white-space: nowrap; }
+.compare-wrap { overflow-x: auto; -webkit-overflow-scrolling: touch; }
+.compare-table { min-width: 560px; }
+.compare-table td.strong { font-weight: 700; }
+.compare-table td.green { color: var(--success); }
+.cell-note { display: block; font-size: 12px; color: var(--muted); font-weight: 400; }
+.rates-details { margin-top: 16px; border-top: 1px solid var(--border); padding-top: 12px; }
+@media (max-width: 480px) { .bar-row { grid-template-columns: 84px 1fr auto; } }

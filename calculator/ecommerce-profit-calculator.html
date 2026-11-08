@@ -1,0 +1,1165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>E-commerce Profit Calculator — Amazon, Flipkart, Meesho, eBay, Etsy Profit | All Calculator 360</title>
+  <meta name="description" content="Compare selling profit across Amazon, Flipkart, Meesho, eBay, Etsy and Walmart — marketplace fees, GST, returns and break-even price, side by side. Free, instant, private.">
+  <link rel="canonical" href="https://tauheed-khan-pathan.github.io/AllCalculator360/calculator/ecommerce-profit-calculator.html">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="E-commerce Profit Calculator — Amazon, Flipkart, Meesho, eBay, Etsy Profit | All Calculator 360">
+  <meta property="og:description" content="Compare selling profit across Amazon, Flipkart, Meesho, eBay, Etsy and Walmart — marketplace fees, GST, returns and break-even price, side by side. Free, instant, private.">
+  <meta property="og:url" content="https://tauheed-khan-pathan.github.io/AllCalculator360/calculator/ecommerce-profit-calculator.html">
+  <meta property="og:site_name" content="All Calculator 360">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="E-commerce Profit Calculator — Amazon, Flipkart, Meesho, eBay, Etsy Profit | All Calculator 360">
+  <meta name="twitter:description" content="Compare selling profit across Amazon, Flipkart, Meesho, eBay, Etsy and Walmart — marketplace fees, GST, returns and break-even price, side by side. Free, instant, private.">
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "All Calculator 360",
+  "alternateName": "AllCalculator360",
+  "url": "https://tauheed-khan-pathan.github.io/AllCalculator360/",
+  "description": "Free online calculators for finance, health, math and everyday life. EMI, SIP, FD, BMI and 200+ calculators — no sign-up, 100% private."
+}
+  </script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Why do US profit calculators give wrong answers for Indian sellers?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Because they use the US fee stack. Indian marketplaces add 18% GST on every fee, a 0.5% TCS deduction, closing and fixed fees, zone-based shipping and returns/RTO losses of 15–20%. A calculator that ignores those can show a 40% margin where the real margin is under 20%. This calculator models GST on fees, TCS, TDS, closing fees, zone shipping and RTO for India — and switches to the US or UK fee stack when you change the country."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the difference between headline margin and real margin?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Headline margin is (selling price − product cost) ÷ selling price — it ignores the marketplace. Real margin is net profit ÷ selling price, after referral or commission, closing fees, shipping, GST on fees and returns. On the worked example below, the headline margin is 53.9% but the real margin on Amazon India is 36.4% — the fees take the rest. Always judge a listing by its real margin."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How is the break-even price calculated?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "It is the lowest selling price at which the profit per order is zero or more, found by testing prices one rupee (or dollar) at a time from your product cost upwards. That step-by-step search matters in India because fees jump at price slabs — the closing fee changes at ₹300, ₹500 and ₹1,000, and the referral fee switches on above ₹1,000 — so the break-even price is found exactly, not from a smoothed formula."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I claim GST input tax credit on marketplace fees?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "If your business is GST-registered and you file returns, the 18% GST charged on marketplace fees is usually available as input tax credit — it is a recoverable tax, not a cost. Tick 'I can claim GST input tax credit (ITC)' and the calculator removes GST on fees from your costs (it still shows in the bank settlement, because the marketplace deducts it and you claim it back later). If you cannot claim ITC, leave it unticked and GST on fees counts as a cost."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Are the fee rates live? How often are they updated?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No — this page is a static calculator, so it cannot fetch live rates from Amazon, Flipkart or eBay. The fee rates are built into the page and stamped with their date (9 Nov 2026). Every rate is editable in the 'Fee rates' section below the results, so you can correct a rate the day a marketplace changes it, and the results update instantly. Always double-check a rate against the marketplace's official fee page before a big pricing decision."
+      }
+    }
+  ]
+}
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../styles.css">
+  <script>
+    (function () {
+      try {
+        if (localStorage.getItem('ac360-theme') === 'dark') {
+          document.documentElement.setAttribute('data-theme', 'dark');
+        }
+      } catch (e) {}
+    })();
+  </script>
+  <script src="../app.js" defer></script>
+</head>
+<body>
+  <header class="site-header"><div class="header-inner">
+<a class="brand" href="../index.html"><svg class="brand-logo" viewBox="0 0 40 40" fill="none" aria-hidden="true"><rect width="40" height="40" rx="10" fill="#2563eb"/><rect x="9" y="7" width="22" height="7" rx="2" fill="#ffffff"/><rect x="9" y="18" width="6" height="6" rx="1.5" fill="#ffffff"/><rect x="17" y="18" width="6" height="6" rx="1.5" fill="#ffffff"/><rect x="25" y="18" width="6" height="6" rx="1.5" fill="#ffffff"/><rect x="9" y="26" width="6" height="6" rx="1.5" fill="#ffffff"/><rect x="17" y="26" width="6" height="6" rx="1.5" fill="#ffffff"/><rect x="25" y="26" width="6" height="6" rx="1.5" fill="#ffffff"/></svg><span class="brand-name">All Calculator <span class="brand-360">360</span></span></a>
+<div class="header-search"><input id="headerSearch" type="search" placeholder="Search calculators…" aria-label="Search calculators"></div>
+<nav class="main-nav" aria-label="Categories"><a class="nav-link" href="../index.html#finance">Finance</a><a class="nav-link" href="../index.html#health">Health</a><a class="nav-link" href="../index.html#math">Math</a><a class="nav-link" href="../index.html#everyday">Everyday</a></nav>
+<button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">🌙</button>
+<button class="menu-toggle" id="menuToggle" aria-label="Menu">☰</button>
+</div><nav class="mobile-nav" id="mobileNav" aria-label="Mobile categories"><a class="nav-link" href="../index.html#finance">Finance</a><a class="nav-link" href="../index.html#health">Health</a><a class="nav-link" href="../index.html#math">Math</a><a class="nav-link" href="../index.html#everyday">Everyday</a></nav></header>
+
+  <main class="container">
+    <nav class="breadcrumb"><a href="../index.html">Home</a> / <a href="../index.html#finance">Finance</a> / E-commerce Profit Calculator</nav>
+
+    <div class="calc-head">
+      <h1>E-commerce Profit Calculator</h1>
+      <p>Compare your real profit across Amazon, Flipkart, Meesho, eBay, Etsy and Walmart — every fee shown, GST and returns included, break-even price and reverse pricing built in.</p>
+    </div>
+
+    <div class="calc-layout">
+      <div class="calc-panel calc-inputs">
+        <h2>Your Product &amp; Marketplaces</h2>
+
+        <div class="input-group">
+          <label class="input-label" for="countrySel">Country</label>
+          <select id="countrySel" class="currency-select" aria-label="Country">
+            <option value="IN" selected>India (₹)</option>
+            <option value="US">United States ($)</option>
+            <option value="UK">United Kingdom (£)</option>
+          </select>
+        </div>
+
+        <div class="input-group">
+          <label class="input-label">Platforms to compare <span class="input-hint" style="display:inline">(pick up to 3)</span></label>
+          <div class="platform-chips" id="platformBox"></div>
+          <p class="input-hint" id="platformHint"></p>
+        </div>
+
+        <div class="input-group">
+          <label class="input-label" for="categorySel">Product Category</label>
+          <select id="categorySel" class="currency-select" aria-label="Product category">
+            <option value="Home &amp; Kitchen" selected>Home &amp; Kitchen</option>
+            <option value="Apparel &amp; Fashion">Apparel &amp; Fashion</option>
+            <option value="Electronics">Electronics</option>
+            <option value="Beauty">Beauty</option>
+            <option value="Grocery &amp; Food">Grocery &amp; Food</option>
+            <option value="Books">Books</option>
+            <option value="Toys">Toys</option>
+            <option value="Other">Other</option>
+          </select>
+          <p class="input-hint">Referral and commission rates change by category — pick the closest one.</p>
+        </div>
+
+        <div class="input-group">
+          <label class="input-label" for="weightNum">Product Weight (packed)</label>
+          <div class="input-row">
+            <input type="number" class="num-input" id="weightNum" min="1" max="100000" step="1" value="500" aria-label="Product weight">
+            <select id="weightUnit" class="currency-select" aria-label="Weight unit" style="max-width:90px">
+              <option value="g" selected>g</option>
+              <option value="kg">kg</option>
+              <option value="lb">lb</option>
+              <option value="oz">oz</option>
+            </select>
+          </div>
+          <p class="input-hint">Shipping fees are charged on packed weight, in 500 g slabs (India) or weight tiers (FBA).</p>
+        </div>
+
+        <div class="input-group" id="zoneRow">
+          <label class="input-label" for="zoneSel">Delivery Zone (India)</label>
+          <select id="zoneSel" class="currency-select" aria-label="Delivery zone">
+            <option value="Local">Local (same city / state)</option>
+            <option value="Regional">Regional (nearby states)</option>
+            <option value="National" selected>National (across India)</option>
+          </select>
+        </div>
+
+        <div class="input-group">
+          <label class="input-label">Product Cost</label>
+          <div class="tenure-toggle" role="group" aria-label="Cost input mode">
+            <button type="button" class="toggle-btn active" id="costModeBreakdown">Cost breakdown</button>
+            <button type="button" class="toggle-btn" id="costModeFinal">I know my final cost</button>
+          </div>
+        </div>
+
+        <div id="costBreakdown">
+          <div class="input-group">
+            <label class="input-label" for="productNum">Product Cost (maal)</label>
+            <div class="input-row">
+              <input type="number" class="num-input" id="productNum" min="0" max="10000000" step="1" value="200" aria-label="Product cost">
+            </div>
+          </div>
+          <div class="input-group">
+            <label class="input-label" for="packNum">Packaging Cost</label>
+            <div class="input-row">
+              <input type="number" class="num-input" id="packNum" min="0" max="100000" step="1" value="10" aria-label="Packaging cost">
+            </div>
+          </div>
+          <div class="input-group">
+            <label class="input-label" for="transportNum">Transport Cost (to you / warehouse)</label>
+            <div class="input-row">
+              <input type="number" class="num-input" id="transportNum" min="0" max="100000" step="1" value="20" aria-label="Transport cost">
+            </div>
+          </div>
+        </div>
+
+        <div class="input-group" id="finalCostRow" style="display:none">
+          <label class="input-label" for="finalCostNum">Final Product Cost (all-in)</label>
+          <div class="input-row">
+            <input type="number" class="num-input" id="finalCostNum" min="0" max="10000000" step="1" value="230" aria-label="Final product cost">
+          </div>
+        </div>
+
+        <div class="input-group">
+          <label class="input-label">What do you want to know?</label>
+          <div class="tenure-toggle" role="group" aria-label="Calculation mode">
+            <button type="button" class="toggle-btn active" id="modeProfit">Find my profit</button>
+            <button type="button" class="toggle-btn" id="modeReverse">Find my listing price</button>
+          </div>
+        </div>
+
+        <div class="input-group" id="priceRow">
+          <label class="input-label" for="priceNum">Selling / Listing Price</label>
+          <div class="input-row">
+            <input type="number" class="num-input" id="priceNum" min="1" max="10000000" step="1" value="499" aria-label="Selling price">
+          </div>
+          <p class="input-hint">The price the customer pays, including GST (India) or tax (US/UK).</p>
+        </div>
+
+        <div id="targetRow" style="display:none">
+          <div class="input-group">
+            <label class="input-label" for="targetTypeSel">Target</label>
+            <select id="targetTypeSel" class="currency-select" aria-label="Target type">
+              <option value="profit" selected>Target profit (amount) per order</option>
+              <option value="margin">Target margin (%)</option>
+            </select>
+          </div>
+          <div class="input-group">
+            <label class="input-label" for="targetNum">Target Value</label>
+            <div class="input-row">
+              <input type="number" class="num-input" id="targetNum" min="0" max="10000000" step="1" value="100" aria-label="Target value">
+            </div>
+            <p class="input-hint" id="targetHint">The profit you want to keep on every order, after all fees.</p>
+          </div>
+        </div>
+
+        <div class="input-group">
+          <label class="input-label" for="rtoNum">Returns / RTO % <output id="rtoOut" for="rtoNum">15%</output></label>
+          <div class="input-row">
+            <input type="range" class="slider" id="rtoRange" min="0" max="50" step="1" value="15" aria-label="Returns / RTO percentage">
+            <input type="number" class="num-input" id="rtoNum" min="0" max="50" step="1" value="15" aria-label="Returns / RTO percentage value">
+          </div>
+          <p class="input-hint">Share of orders that come back. Each return costs you the return shipping. India typically 15–20%.</p>
+        </div>
+
+        <div class="input-group" id="itcRow">
+          <label class="check-row"><input type="checkbox" id="itcCheck"> I can claim GST input tax credit (ITC) on marketplace fees</label>
+          <p class="input-hint">Tick this if your business is GST-registered and claims ITC — the 18% GST on fees then stops being a cost (it still shows in your bank settlement).</p>
+        </div>
+
+        <div id="shipRow" style="display:none">
+          <div class="input-group">
+            <label class="input-label" for="shipCostNum">Shipping Cost You Pay (per order)</label>
+            <div class="input-row">
+              <input type="number" class="num-input" id="shipCostNum" min="0" max="100000" step="0.01" value="4" aria-label="Shipping cost you pay">
+            </div>
+            <p class="input-hint">What you pay the courier for eBay, Etsy and Walmart orders (Amazon FBA shipping is in the FBA fee).</p>
+          </div>
+          <div class="input-group">
+            <label class="input-label" for="shipChargedNum">Shipping Charged to Buyer (per order)</label>
+            <div class="input-row">
+              <input type="number" class="num-input" id="shipChargedNum" min="0" max="100000" step="0.01" value="0" aria-label="Shipping charged to buyer">
+            </div>
+            <p class="input-hint">eBay and Etsy charge their percentage fee on the price + shipping charged, so this matters.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="calc-panel calc-results">
+        <h2>Your Results</h2>
+
+        <div class="result-main">
+          <div class="result-label" id="bestLabel">Best profit per order</div>
+          <div class="result-emi" id="bestOut">$0</div>
+          <div class="result-sub" id="bestSub"></div>
+        </div>
+
+        <div class="result-breakdown">
+          <div class="break-row"><span class="k">Final product cost</span><span class="v" id="finalCostOut">$0</span></div>
+          <div class="break-row"><span class="k">Headline margin (price − cost)</span><span class="v" id="headlineOut">0%</span></div>
+        </div>
+
+        <div class="profit-bars" id="profitBars"></div>
+
+        <h3 style="margin-top:24px">Platform Comparison</h3>
+        <div class="compare-wrap">
+          <table class="amort-table compare-table">
+            <thead id="compareHead"></thead>
+            <tbody id="compareBody"></tbody>
+          </table>
+        </div>
+        <p class="input-hint" id="compareNote"></p>
+
+        <div style="margin-top:20px">
+          <button class="btn btn-primary" id="copyBtn" type="button">Copy summary</button>
+          <span class="input-hint" id="copyMsg" style="margin-left:8px"></span>
+        </div>
+
+        <p class="input-hint" style="margin-top:16px">Fee rates as of <strong id="ratesDate">9 Nov 2026</strong>. A static page cannot fetch live rates — if a marketplace changed a fee, correct it below and the results update instantly.</p>
+        <details class="rates-details">
+          <summary class="faq-q">Fee rates — edit if a marketplace changed its fees</summary>
+          <div id="ratesEditor"></div>
+          <button class="show-more-btn" id="resetRatesBtn" type="button" style="margin-top:12px">Reset rates to 9 Nov 2026</button>
+        </details>
+      </div>
+    </div>
+
+    <section class="content-section">
+      <h2>E-commerce Profit Formula</h2>
+      <div class="formula-box">
+        <p class="formula">Net profit = Selling price − Final product cost − Marketplace fees − Returns cost</p>
+        <p class="formula" style="font-size:16px">Marketplace fees = Referral / commission + Closing or fixed fee + Logistics + GST on fees (India, 18%)</p>
+        <p><strong>Final product cost</strong> = Product cost + Packaging cost + Transport cost &nbsp;•&nbsp; <strong>Real margin</strong> = Net profit ÷ Selling price &nbsp;•&nbsp; <strong>ROI</strong> = Net profit ÷ Final product cost &nbsp;•&nbsp; <strong>Break-even price</strong> = the lowest price at which profit is ₹0 or more &nbsp;•&nbsp; <strong>Max CPA</strong> = the most you can spend on ads per order before losing money (equal to your profit per order) &nbsp;•&nbsp; <strong>Break-even ROAS</strong> = Selling price ÷ Max CPA</p>
+        <p><strong>Worked example (India):</strong> Product cost ₹200 + packaging ₹10 + transport ₹20 = final cost ₹230. Selling price ₹499, Home &amp; Kitchen, 500 g, National zone, 15% returns, no ITC. <strong>Amazon India</strong> — referral ₹0 (price ≤ ₹1,000), closing fee ₹10, shipping ₹57, GST on fees ₹12.06: total fees ₹79.06, returns cost ₹8.55, profit <strong>₹181.39</strong>, real margin 36.4%, break-even price ₹318. <strong>Flipkart</strong> — commission ₹0 (price ≤ ₹1,000), fixed fee ₹10, shipping ₹55, GST ₹11.70: total fees ₹76.70, returns ₹8.25, profit <strong>₹184.05</strong>, margin 36.9%, break-even ₹315. <strong>Meesho</strong> — commission ₹0, shipping ₹45, GST ₹8.10: total fees ₹53.10, returns ₹6.75, profit <strong>₹209.15</strong>, margin 41.9%, break-even ₹290. Meesho wins this order by ₹25.10 over Flipkart. Headline margin is 53.9% on all three — the real margin is what the fees leave you.</p>
+        <p><strong>Worked example (US):</strong> Product cost $20, selling price $29.99, Home &amp; Kitchen, 1 lb, no shipping charged, $4.00 shipping cost, 5% returns. <strong>Amazon.com</strong> — referral 15% = $4.50, FBA fulfilment $3.66, returns $0.18: profit <strong>$1.65</strong>, margin 5.5%. <strong>eBay</strong> — final value fee 13.6% = $4.08, per-order fee $0.40, shipping $4.00, returns $0.20: profit <strong>$1.31</strong>, margin 4.4%.</p>
+      </div>
+    </section>
+
+    <section class="content-section">
+      <h2>Frequently Asked Questions</h2>
+      <details class="faq-item">
+        <summary class="faq-q">Why do US profit calculators give wrong answers for Indian sellers?</summary>
+        <div class="faq-a"><p>Because they use the US fee stack. Indian marketplaces add 18% GST on every fee, a 0.5% TCS deduction, closing and fixed fees, zone-based shipping and returns/RTO losses of 15–20%. A calculator that ignores those can show a 40% margin where the real margin is under 20%. This calculator models GST on fees, TCS, TDS, closing fees, zone shipping and RTO for India — and switches to the US or UK fee stack when you change the country.</p></div>
+      </details>
+      <details class="faq-item">
+        <summary class="faq-q">What is the difference between headline margin and real margin?</summary>
+        <div class="faq-a"><p>Headline margin is (selling price − product cost) ÷ selling price — it ignores the marketplace. Real margin is net profit ÷ selling price, after referral or commission, closing fees, shipping, GST on fees and returns. On the worked example below, the headline margin is 53.9% but the real margin on Amazon India is 36.4% — the fees take the rest. Always judge a listing by its real margin.</p></div>
+      </details>
+      <details class="faq-item">
+        <summary class="faq-q">How is the break-even price calculated?</summary>
+        <div class="faq-a"><p>It is the lowest selling price at which the profit per order is zero or more, found by testing prices one rupee (or dollar) at a time from your product cost upwards. That step-by-step search matters in India because fees jump at price slabs — the closing fee changes at ₹300, ₹500 and ₹1,000, and the referral fee switches on above ₹1,000 — so the break-even price is found exactly, not from a smoothed formula.</p></div>
+      </details>
+      <details class="faq-item">
+        <summary class="faq-q">Can I claim GST input tax credit on marketplace fees?</summary>
+        <div class="faq-a"><p>If your business is GST-registered and you file returns, the 18% GST charged on marketplace fees is usually available as input tax credit — it is a recoverable tax, not a cost. Tick 'I can claim GST input tax credit (ITC)' and the calculator removes GST on fees from your costs (it still shows in the bank settlement, because the marketplace deducts it and you claim it back later). If you cannot claim ITC, leave it unticked and GST on fees counts as a cost.</p></div>
+      </details>
+      <details class="faq-item">
+        <summary class="faq-q">Are the fee rates live? How often are they updated?</summary>
+        <div class="faq-a"><p>No — this page is a static calculator, so it cannot fetch live rates from Amazon, Flipkart or eBay. The fee rates are built into the page and stamped with their date (9 Nov 2026). Every rate is editable in the 'Fee rates' section below the results, so you can correct a rate the day a marketplace changes it, and the results update instantly. Always double-check a rate against the marketplace's official fee page before a big pricing decision.</p></div>
+      </details>
+    </section>
+
+    <section class="content-section">
+      <h2>Related Calculators</h2>
+      <div class="related-grid">
+        <a class="calc-card" href="gst-calculator.html" data-name="GST Calculator" data-desc="Add or remove GST and split it into CGST and SGST.">
+          <span class="calc-icon">🏷️</span>
+          <span class="calc-name">GST Calculator</span>
+          <span class="calc-desc">Add or remove GST and split it into CGST and SGST.</span>
+        </a>
+        <a class="calc-card" href="emi-calculator.html" data-name="EMI Calculator" data-desc="Calculate your monthly loan EMI with interest breakdown.">
+          <span class="calc-icon">💰</span>
+          <span class="calc-name">EMI Calculator</span>
+          <span class="calc-desc">Calculate your monthly loan EMI with interest breakdown.</span>
+        </a>
+        <a class="calc-card" href="compound-interest-calculator.html" data-name="Compound Interest Calculator" data-desc="See how compound interest grows your savings over time.">
+          <span class="calc-icon">💹</span>
+          <span class="calc-name">Compound Interest Calculator</span>
+          <span class="calc-desc">See how compound interest grows your savings over time.</span>
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer"><div class="container"><div class="footer-grid">
+<div class="footer-col"><div class="footer-brand"><svg width="32" height="32" viewBox="0 0 40 40" fill="none" aria-hidden="true"><rect width="40" height="40" rx="10" fill="#2563eb"/><rect x="9" y="7" width="22" height="7" rx="2" fill="#ffffff"/><rect x="9" y="18" width="6" height="6" rx="1.5" fill="#ffffff"/><rect x="17" y="18" width="6" height="6" rx="1.5" fill="#ffffff"/><rect x="25" y="18" width="6" height="6" rx="1.5" fill="#ffffff"/><rect x="9" y="26" width="6" height="6" rx="1.5" fill="#ffffff"/><rect x="17" y="26" width="6" height="6" rx="1.5" fill="#ffffff"/><rect x="25" y="26" width="6" height="6" rx="1.5" fill="#ffffff"/></svg><span>All Calculator 360</span></div><p>Every calculator, all in one place. Free, private, and accurate — calculations happen right in your browser.</p></div>
+<div class="footer-col"><h3>Categories</h3><ul><li><a href="../index.html#finance">Finance</a></li><li><a href="../index.html#health">Health</a></li><li><a href="../index.html#math">Math</a></li><li><a href="../index.html#everyday">Everyday</a></li></ul></div>
+<div class="footer-col"><h3>Popular Calculators</h3><ul><li><a href="emi-calculator.html">EMI Calculator</a></li><li><a href="sip-calculator.html">SIP Calculator</a></li><li><a href="fd-calculator.html">FD Calculator</a></li><li><a href="income-tax-calculator.html">Income Tax Calculator</a></li><li><a href="gst-calculator.html">GST Calculator</a></li><li><a href="bmi-calculator.html">BMI Calculator</a></li><li><a href="age-calculator.html">Age Calculator</a></li><li><a href="percentage-calculator.html">Percentage Calculator</a></li></ul></div>
+<div class="footer-col"><h3>Company</h3><ul><li><a href="../about.html">About</a></li><li><a href="../contact.html">Contact</a></li><li><a href="../privacy.html">Privacy Policy</a></li><li><a href="../terms.html">Terms</a></li></ul></div>
+</div><div class="footer-bottom"><p>© 2026 All Calculator 360. All rights reserved.</p></div></div></footer>
+
+  <script>
+    (function () {
+      'use strict';
+
+      /* ------------------------------------------------------------------
+         Fee rates — one place, easy to update.
+         Date: 9 Nov 2026. These are the published 2026 rate cards as
+         reported by the research (Amazon.in zero referral ≤ ₹1,000 since
+         Mar 2026; Flipkart zero commission ≤ ₹1,000 since Nov 2025 and 0%
+         fashion since Jul 2026; Meesho 0% commission; eBay US 13.6% since
+         Feb 2025; Etsy 6.5% + 3% + $0.25 + $0.20 listing).
+         Per-category referral rates and India closing/shipping figures are
+         indicative published-card values — every one is editable in the
+         "Fee rates" panel on the page.
+      ------------------------------------------------------------------ */
+      var RATES_ORIG = {
+        date: '9 Nov 2026',
+        IN: {
+          currency: 'INR', locale: 'en-IN', gst: 18, tcs: 0.5, tds: 0.1, defaultRto: 15,
+          platforms: {
+            amazon: {
+              name: 'Amazon India', type: 'referral',
+              referral: { 'Home & Kitchen': 8, 'Apparel & Fashion': 16, 'Electronics': 6, 'Beauty': 6, 'Grocery & Food': 5, 'Books': 10, 'Toys': 10, 'Other': 10 },
+              zeroBelow: 1000,
+              closing: [[300, 5], [500, 10], [1000, 15], [1000000000000, 30]],
+              ship: { Local: { base: 36, per500: 13 }, Regional: { base: 44, per500: 16 }, National: { base: 57, per500: 19 } }
+            },
+            flipkart: {
+              name: 'Flipkart', type: 'commission',
+              referral: { 'Home & Kitchen': 10, 'Apparel & Fashion': 0, 'Electronics': 6, 'Beauty': 8, 'Grocery & Food': 5, 'Books': 10, 'Toys': 10, 'Other': 10 },
+              zeroBelow: 1000,
+              closing: [[500, 10], [1000, 20], [1000000000000, 35]],
+              ship: { Local: { base: 35, per500: 12 }, Regional: { base: 42, per500: 15 }, National: { base: 55, per500: 18 } }
+            },
+            meesho: {
+              name: 'Meesho', type: 'commission',
+              referral: 0,
+              closing: 0,
+              ship: { Local: { base: 25, per500: 10 }, Regional: { base: 35, per500: 10 }, National: { base: 45, per500: 10 } }
+            }
+          }
+        },
+        US: {
+          currency: 'USD', locale: 'en-US', defaultRto: 5,
+          platforms: {
+            amazon: {
+              name: 'Amazon.com', type: 'referral',
+              referral: { 'Home & Kitchen': 15, 'Apparel & Fashion': 17, 'Electronics': 8, 'Beauty': 8, 'Grocery & Food': 15, 'Books': 15, 'Toys': 15, 'Other': 15 },
+              fba: [[0.5, 3.40], [1, 3.66], [2, 4.50], [3, 5.50]], fbaExtraPerLb: 0.60
+            },
+            ebay: {
+              name: 'eBay', type: 'fvf', fvfPct: 13.6,
+              perOrder: { over10: 0.40, under10: 0.30 }, shipCostInput: true
+            },
+            etsy: {
+              name: 'Etsy', type: 'etsy', listingFee: 0.20, txnPct: 6.5, payPct: 3, payFixed: 0.25, shipCostInput: true
+            },
+            walmart: {
+              name: 'Walmart', type: 'referral', referral: 15, shipCostInput: true
+            }
+          }
+        },
+        UK: {
+          currency: 'GBP', locale: 'en-GB', defaultRto: 5,
+          platforms: {
+            amazon: {
+              name: 'Amazon UK', type: 'referral',
+              referral: { 'Home & Kitchen': 15, 'Apparel & Fashion': 15, 'Electronics': 7, 'Beauty': 8, 'Grocery & Food': 15, 'Books': 15, 'Toys': 15, 'Other': 15 },
+              fba: [[0.5, 3.00], [1, 3.30], [2, 4.00], [3, 4.80]], fbaExtraPerLb: 0.50
+            },
+            ebay: {
+              name: 'eBay UK', type: 'fvf', fvfPct: 12.8,
+              perOrder: { flat: 0.30 }, shipCostInput: true
+            }
+          }
+        }
+      };
+
+      var RATES = JSON.parse(JSON.stringify(RATES_ORIG));
+
+      var CATEGORIES = ['Home & Kitchen', 'Apparel & Fashion', 'Electronics', 'Beauty', 'Grocery & Food', 'Books', 'Toys', 'Other'];
+
+      var DEFAULTS = {
+        IN: { product: 200, pack: 10, transport: 20, price: 499, weight: 500, weightUnit: 'g', zone: 'National', rto: 15, shipCost: 4, shipCharged: 0, platforms: ['amazon', 'flipkart', 'meesho'] },
+        US: { product: 20, pack: 0, transport: 0, price: 29.99, weight: 1, weightUnit: 'lb', zone: 'National', rto: 5, shipCost: 4, shipCharged: 0, platforms: ['amazon', 'ebay', 'etsy'] },
+        UK: { product: 20, pack: 0, transport: 0, price: 29.99, weight: 1, weightUnit: 'lb', zone: 'National', rto: 5, shipCost: 3, shipCharged: 0, platforms: ['amazon', 'ebay'] }
+      };
+
+      var countrySel = document.getElementById('countrySel');
+      var platformBox = document.getElementById('platformBox');
+      var platformHint = document.getElementById('platformHint');
+      var categorySel = document.getElementById('categorySel');
+      var weightNum = document.getElementById('weightNum');
+      var weightUnit = document.getElementById('weightUnit');
+      var zoneRow = document.getElementById('zoneRow');
+      var zoneSel = document.getElementById('zoneSel');
+      var costModeBreakdown = document.getElementById('costModeBreakdown');
+      var costModeFinal = document.getElementById('costModeFinal');
+      var costBreakdown = document.getElementById('costBreakdown');
+      var finalCostRow = document.getElementById('finalCostRow');
+      var productNum = document.getElementById('productNum');
+      var packNum = document.getElementById('packNum');
+      var transportNum = document.getElementById('transportNum');
+      var finalCostNum = document.getElementById('finalCostNum');
+      var modeProfit = document.getElementById('modeProfit');
+      var modeReverse = document.getElementById('modeReverse');
+      var priceRow = document.getElementById('priceRow');
+      var priceNum = document.getElementById('priceNum');
+      var targetRow = document.getElementById('targetRow');
+      var targetTypeSel = document.getElementById('targetTypeSel');
+      var targetNum = document.getElementById('targetNum');
+      var targetHint = document.getElementById('targetHint');
+      var rtoRange = document.getElementById('rtoRange');
+      var rtoNum = document.getElementById('rtoNum');
+      var rtoOut = document.getElementById('rtoOut');
+      var itcRow = document.getElementById('itcRow');
+      var itcCheck = document.getElementById('itcCheck');
+      var shipRow = document.getElementById('shipRow');
+      var shipCostNum = document.getElementById('shipCostNum');
+      var shipChargedNum = document.getElementById('shipChargedNum');
+      var bestLabel = document.getElementById('bestLabel');
+      var bestOut = document.getElementById('bestOut');
+      var bestSub = document.getElementById('bestSub');
+      var finalCostOut = document.getElementById('finalCostOut');
+      var headlineOut = document.getElementById('headlineOut');
+      var profitBars = document.getElementById('profitBars');
+      var compareHead = document.getElementById('compareHead');
+      var compareBody = document.getElementById('compareBody');
+      var compareNote = document.getElementById('compareNote');
+      var copyBtn = document.getElementById('copyBtn');
+      var copyMsg = document.getElementById('copyMsg');
+      var ratesDate = document.getElementById('ratesDate');
+      var ratesEditor = document.getElementById('ratesEditor');
+      var resetRatesBtn = document.getElementById('resetRatesBtn');
+
+      var costMode = 'breakdown';
+      var mode = 'profit';
+      var selectedPlatforms = DEFAULTS.IN.platforms.slice();
+
+      function clamp(value, min, max) {
+        if (isNaN(value)) return min;
+        return Math.min(max, Math.max(min, value));
+      }
+
+      function country() {
+        return countrySel.value;
+      }
+
+      function currencyCode() {
+        return RATES[country()].currency;
+      }
+
+      function fmtMoney(value) {
+        var dp = Math.abs(value) < 100 ? 2 : 0;
+        return new Intl.NumberFormat(RATES[country()].locale, {
+          style: 'currency',
+          currency: currencyCode(),
+          minimumFractionDigits: dp,
+          maximumFractionDigits: dp
+        }).format(value);
+      }
+
+      function fmtMoney2(value) {
+        return new Intl.NumberFormat(RATES[country()].locale, {
+          style: 'currency',
+          currency: currencyCode(),
+          minimumFractionDigits: 2,
+          maximumFractionDigits: 2
+        }).format(value);
+      }
+
+      function fmtPct(value) {
+        return (Math.round(value * 10) / 10) + '%';
+      }
+
+      function weightInGrams() {
+        var w = clamp(parseFloat(weightNum.value), 1, 100000);
+        var u = weightUnit.value;
+        if (u === 'kg') return w * 1000;
+        if (u === 'lb') return w * 453.592;
+        if (u === 'oz') return w * 28.3495;
+        return w;
+      }
+
+      function finalCost() {
+        if (costMode === 'final') {
+          return clamp(parseFloat(finalCostNum.value), 0, 10000000);
+        }
+        var p = clamp(parseFloat(productNum.value), 0, 10000000);
+        var k = clamp(parseFloat(packNum.value), 0, 100000);
+        var t = clamp(parseFloat(transportNum.value), 0, 100000);
+        return p + k + t;
+      }
+
+      function getCtx() {
+        var price = mode === 'profit'
+          ? clamp(parseFloat(priceNum.value), 1, 10000000)
+          : 0;
+        return {
+          price: price,
+          finalCost: finalCost(),
+          category: categorySel.value,
+          weightG: weightInGrams(),
+          zone: zoneSel.value,
+          rtoPct: clamp(parseFloat(rtoNum.value), 0, 50),
+          itc: itcCheck.checked,
+          shipCost: clamp(parseFloat(shipCostNum.value), 0, 100000),
+          shipCharged: clamp(parseFloat(shipChargedNum.value), 0, 100000)
+        };
+      }
+
+      function bandFee(bands, price) {
+        for (var i = 0; i < bands.length; i++) {
+          if (price <= bands[i][0]) return bands[i][1];
+        }
+        return bands[bands.length - 1][1];
+      }
+
+      function fbaFee(tiers, extraPerLb, weightLb) {
+        for (var i = 0; i < tiers.length; i++) {
+          if (weightLb <= tiers[i][0]) return tiers[i][1];
+        }
+        var last = tiers[tiers.length - 1];
+        return last[1] + extraPerLb * (weightLb - last[0]);
+      }
+
+      function shipIN(ship, zone, weightG) {
+        var s = ship[zone];
+        var slabs = Math.max(1, Math.ceil(weightG / 500));
+        return s.base + (slabs - 1) * s.per500;
+      }
+
+      function referralPct(p, category) {
+        var r = p.referral;
+        if (typeof r === 'number') return r;
+        return (r[category] !== undefined) ? r[category] : r['Other'];
+      }
+
+      /* Core fee engine: returns every line item for one platform at one price. */
+      function computePlatform(ck, pk, ctx) {
+        var c = RATES[ck];
+        var p = c.platforms[pk];
+        var price = ctx.price;
+        var referralFee = 0, referralNote = '';
+        var closingFee = 0, closingLabel = 'Closing / fixed fee';
+        var logistics = 0, logisticsNote = '';
+        var listingFee = 0, listingNote = '';
+
+        if (p.type === 'referral' || p.type === 'commission') {
+          var pct = referralPct(p, ctx.category);
+          if (ck === 'IN' && p.zeroBelow && price <= p.zeroBelow) pct = 0;
+          referralFee = price * pct / 100;
+          referralNote = pct + '% × ' + fmtMoney(price);
+          closingLabel = p.type === 'referral' ? 'Closing fee' : 'Fixed fee';
+          if (p.closingOverride != null) {
+            closingFee = p.closingOverride;
+          } else if (typeof p.closing === 'number') {
+            closingFee = p.closing;
+          } else if (p.closing) {
+            closingFee = bandFee(p.closing, price);
+          }
+          if (ck === 'IN') {
+            logistics = shipIN(p.ship, ctx.zone, ctx.weightG);
+            logisticsNote = ctx.zone + ' · ' + Math.round(ctx.weightG) + ' g';
+          } else if (p.fba) {
+            logistics = p.fbaOverride != null ? p.fbaOverride : fbaFee(p.fba, p.fbaExtraPerLb, ctx.weightG / 453.592);
+            logisticsNote = (ctx.weightG / 453.592).toFixed(2) + ' lb';
+          } else {
+            logistics = ctx.shipCost;
+            logisticsNote = 'courier cost you pay';
+          }
+        } else if (p.type === 'fvf') {
+          referralFee = p.fvfPct / 100 * (price + ctx.shipCharged);
+          referralNote = p.fvfPct + '% × ' + fmtMoney(price + ctx.shipCharged);
+          closingLabel = 'Per-order fee';
+          if (p.perOrder.flat != null) {
+            closingFee = p.perOrder.flat;
+          } else {
+            closingFee = price > 10 ? p.perOrder.over10 : p.perOrder.under10;
+          }
+          logistics = ctx.shipCost;
+          logisticsNote = 'courier cost you pay';
+        } else if (p.type === 'etsy') {
+          referralFee = p.txnPct / 100 * (price + ctx.shipCharged);
+          referralNote = p.txnPct + '% × ' + fmtMoney(price + ctx.shipCharged);
+          closingFee = p.payPct / 100 * (price + ctx.shipCharged) + p.payFixed;
+          closingLabel = 'Payment processing';
+          listingFee = p.listingFee;
+          listingNote = 'per listing';
+          logistics = ctx.shipCost;
+          logisticsNote = 'courier cost you pay';
+        }
+
+        var feesBeforeTax = referralFee + closingFee + logistics + listingFee;
+        var gstOnFees = ck === 'IN' ? feesBeforeTax * c.gst / 100 : 0;
+        var feesCost = feesBeforeTax + ((ck === 'IN' && !ctx.itc) ? gstOnFees : 0);
+        var rtoCost = ctx.rtoPct / 100 * logistics;
+        var profit = price - ctx.finalCost - feesCost - rtoCost;
+        var margin = price > 0 ? profit / price * 100 : 0;
+        var roi = ctx.finalCost > 0 ? profit / ctx.finalCost * 100 : 0;
+        var headline = price > 0 ? (price - ctx.finalCost) / price * 100 : 0;
+        var tcs = ck === 'IN' ? price * c.tcs / 100 : 0;
+        var tds = ck === 'IN' ? price * c.tds / 100 : 0;
+        var settlement = price - feesBeforeTax - gstOnFees - tcs - tds;
+
+        return {
+          key: pk,
+          name: p.name,
+          referralFee: referralFee, referralNote: referralNote,
+          closingFee: closingFee, closingLabel: closingLabel,
+          logistics: logistics, logisticsNote: logisticsNote,
+          listingFee: listingFee, listingNote: listingNote,
+          feesBeforeTax: feesBeforeTax,
+          gstOnFees: gstOnFees,
+          feesCost: feesCost,
+          rtoCost: rtoCost,
+          profit: profit,
+          margin: margin,
+          roi: roi,
+          headline: headline,
+          tcs: tcs, tds: tds,
+          settlement: settlement
+        };
+      }
+
+      /* Find the lowest price (whole currency units) where test(result, price) is true.
+         Step-by-step scan handles the Indian price-slab fee jumps correctly. */
+      function findPrice(ck, pk, ctxBase, test) {
+        var start = Math.max(1, Math.floor(ctxBase.finalCost));
+        var end = start + 50000;
+        for (var pr = start; pr <= end; pr++) {
+          var ctx = {
+            price: pr, finalCost: ctxBase.finalCost, category: ctxBase.category,
+            weightG: ctxBase.weightG, zone: ctxBase.zone, rtoPct: ctxBase.rtoPct,
+            itc: ctxBase.itc, shipCost: ctxBase.shipCost, shipCharged: ctxBase.shipCharged
+          };
+          var r = computePlatform(ck, pk, ctx);
+          if (test(r, pr)) return pr;
+        }
+        return null;
+      }
+
+      function renderPlatforms() {
+        var c = RATES[country()];
+        platformBox.innerHTML = '';
+        Object.keys(c.platforms).forEach(function (key) {
+          var label = document.createElement('label');
+          label.className = 'chip';
+          var input = document.createElement('input');
+          input.type = 'checkbox';
+          input.value = key;
+          input.checked = selectedPlatforms.indexOf(key) !== -1;
+          input.setAttribute('aria-label', c.platforms[key].name);
+          input.addEventListener('change', function () {
+            var checked = platformBox.querySelectorAll('input');
+            var chosen = [];
+            for (var i = 0; i < checked.length; i++) {
+              if (checked[i].checked) chosen.push(checked[i].value);
+            }
+            if (chosen.length > 3) {
+              input.checked = false;
+              platformHint.textContent = 'Compare up to 3 platforms at a time.';
+              return;
+            }
+            if (chosen.length === 0) {
+              input.checked = true;
+              platformHint.textContent = 'Pick at least 1 platform.';
+              return;
+            }
+            platformHint.textContent = '';
+            selectedPlatforms = chosen;
+            renderRatesEditor();
+            recalculate();
+          });
+          var span = document.createElement('span');
+          span.textContent = c.platforms[key].name;
+          label.appendChild(input);
+          label.appendChild(span);
+          platformBox.appendChild(label);
+        });
+      }
+
+      function renderRatesEditor() {
+        var ck = country();
+        var c = RATES[ck];
+        var html = '';
+        if (ck === 'IN') {
+          html += '<div class="input-group"><label class="input-label" for="rateGst">GST on marketplace fees (%)</label><div class="input-row"><input type="number" class="num-input" id="rateGst" min="0" max="40" step="0.1" value="' + c.gst + '"></div></div>';
+          html += '<div class="input-group"><label class="input-label" for="rateTcs">TCS withheld (%)</label><div class="input-row"><input type="number" class="num-input" id="rateTcs" min="0" max="5" step="0.1" value="' + c.tcs + '"></div></div>';
+        }
+        selectedPlatforms.forEach(function (pk) {
+          var p = c.platforms[pk];
+          var cat = categorySel.value;
+          var refPct = referralPct(p, cat);
+          html += '<div class="input-group"><label class="input-label" for="rateRef_' + pk + '">Referral / commission % — ' + p.name + ' (' + cat + ')</label><div class="input-row"><input type="number" class="num-input" id="rateRef_' + pk + '" min="0" max="50" step="0.1" value="' + refPct + '"></div></div>';
+          if (ck === 'IN' && p.closing) {
+            var ctx0 = getCtx();
+            var closeVal = p.closingOverride != null ? p.closingOverride : (typeof p.closing === 'number' ? p.closing : bandFee(p.closing, ctx0.price || 1));
+            html += '<div class="input-group"><label class="input-label" for="rateClose_' + pk + '">Closing / fixed fee — ' + p.name + ' (at current price)</label><div class="input-row"><input type="number" class="num-input" id="rateClose_' + pk + '" min="0" max="100000" step="1" value="' + closeVal + '"></div></div>';
+            var shipBase = p.ship[ctx0.zone].base;
+            html += '<div class="input-group"><label class="input-label" for="rateShip_' + pk + '">Shipping base — ' + p.name + ' (' + ctx0.zone + ', first 500 g)</label><div class="input-row"><input type="number" class="num-input" id="rateShip_' + pk + '" min="0" max="100000" step="1" value="' + shipBase + '"></div></div>';
+          }
+          if (ck !== 'IN' && p.fba) {
+            var fbaVal = p.fbaOverride != null ? p.fbaOverride : fbaFee(p.fba, p.fbaExtraPerLb, getCtx().weightG / 453.592);
+            html += '<div class="input-group"><label class="input-label" for="rateFba_' + pk + '">FBA fulfilment fee — ' + p.name + ' (at current weight)</label><div class="input-row"><input type="number" class="num-input" id="rateFba_' + pk + '" min="0" max="100000" step="0.01" value="' + fbaVal.toFixed(2) + '"></div></div>';
+          }
+        });
+        ratesEditor.innerHTML = html;
+        if (ck === 'IN') {
+          var gstEl = document.getElementById('rateGst');
+          var tcsEl = document.getElementById('rateTcs');
+          if (gstEl) gstEl.addEventListener('input', function () { RATES.IN.gst = clamp(parseFloat(gstEl.value), 0, 40); recalculate(); });
+          if (tcsEl) tcsEl.addEventListener('input', function () { RATES.IN.tcs = clamp(parseFloat(tcsEl.value), 0, 5); recalculate(); });
+        }
+        selectedPlatforms.forEach(function (pk) {
+          var p = RATES[ck].platforms[pk];
+          var refEl = document.getElementById('rateRef_' + pk);
+          if (refEl) refEl.addEventListener('input', function () {
+            var v = clamp(parseFloat(refEl.value), 0, 50);
+            if (typeof p.referral === 'number') p.referral = v;
+            else p.referral[categorySel.value] = v;
+            recalculate();
+          });
+          var closeEl = document.getElementById('rateClose_' + pk);
+          if (closeEl) closeEl.addEventListener('input', function () {
+            p.closingOverride = clamp(parseFloat(closeEl.value), 0, 100000);
+            recalculate();
+          });
+          var shipEl = document.getElementById('rateShip_' + pk);
+          if (shipEl) shipEl.addEventListener('input', function () {
+            p.ship[getCtx().zone].base = clamp(parseFloat(shipEl.value), 0, 100000);
+            recalculate();
+          });
+          var fbaEl = document.getElementById('rateFba_' + pk);
+          if (fbaEl) fbaEl.addEventListener('input', function () {
+            p.fbaOverride = clamp(parseFloat(fbaEl.value), 0, 100000);
+            recalculate();
+          });
+        });
+      }
+
+      function applyCountryDefaults() {
+        var d = DEFAULTS[country()];
+        productNum.value = d.product;
+        packNum.value = d.pack;
+        transportNum.value = d.transport;
+        finalCostNum.value = d.product + d.pack + d.transport;
+        priceNum.value = d.price;
+        weightNum.value = d.weight;
+        weightUnit.value = d.weightUnit;
+        zoneSel.value = d.zone;
+        rtoRange.value = d.rto;
+        rtoNum.value = d.rto;
+        rtoOut.textContent = d.rto + '%';
+        shipCostNum.value = d.shipCost;
+        shipChargedNum.value = d.shipCharged;
+        itcCheck.checked = false;
+        selectedPlatforms = d.platforms.slice();
+      }
+
+      function updateVisibility() {
+        var ck = country();
+        var needsShip = false;
+        selectedPlatforms.forEach(function (pk) {
+          if (RATES[ck].platforms[pk].shipCostInput) needsShip = true;
+        });
+        zoneRow.style.display = ck === 'IN' ? '' : 'none';
+        itcRow.style.display = ck === 'IN' ? '' : 'none';
+        shipRow.style.display = needsShip ? '' : 'none';
+      }
+
+      function renderBars(results) {
+        var html = '';
+        if (mode === 'profit') {
+          var maxProfit = 0;
+          results.forEach(function (r) { if (r.profit > maxProfit) maxProfit = r.profit; });
+          results.forEach(function (r) {
+            var w = maxProfit > 0 ? Math.max(0, r.profit / maxProfit * 100) : 0;
+            var cls = r.profit >= 0 ? 'bar-fill' : 'bar-fill neg';
+            html += '<div class="bar-row"><span class="bar-name">' + r.name + '</span><div class="bar-track"><div class="' + cls + '" style="width:' + w.toFixed(1) + '%"></div></div><span class="bar-val">' + fmtMoney(r.profit) + '</span></div>';
+          });
+        } else {
+          var maxPrice = 0;
+          results.forEach(function (r) { if (r.listingPrice && r.listingPrice > maxPrice) maxPrice = r.listingPrice; });
+          results.forEach(function (r) {
+            var w = maxPrice > 0 && r.listingPrice ? r.listingPrice / maxPrice * 100 : 0;
+            html += '<div class="bar-row"><span class="bar-name">' + r.name + '</span><div class="bar-track"><div class="bar-fill" style="width:' + w.toFixed(1) + '%"></div></div><span class="bar-val">' + (r.listingPrice ? fmtMoney(r.listingPrice) : '—') + '</span></div>';
+          });
+        }
+        profitBars.innerHTML = html;
+      }
+
+      function renderTable(results) {
+        var ck = country();
+        var bestIdx = -1;
+        if (mode === 'profit') {
+          var best = -Infinity;
+          results.forEach(function (r, i) { if (r.profit > best) { best = r.profit; bestIdx = i; } });
+        } else {
+          var low = Infinity;
+          results.forEach(function (r, i) { if (r.listingPrice && r.listingPrice < low) { low = r.listingPrice; bestIdx = i; } });
+        }
+        var head = '<tr><th></th>';
+        results.forEach(function (r, i) {
+          var badge = (i === bestIdx) ? ' <span class="regime-badge">' + (mode === 'profit' ? 'Best profit' : 'Lowest price') + '</span>' : '';
+          head += '<th>' + r.name + badge + '</th>';
+        });
+        head += '</tr>';
+        compareHead.innerHTML = head;
+
+        var rows = [];
+        function row(label, get, bold, green) {
+          var cells = '<td>' + label + '</td>';
+          results.forEach(function (r) {
+            var v = get(r);
+            cells += '<td class="' + (bold ? 'strong' : '') + (green && r.profit >= 0 ? ' green' : '') + '">' + v + '</td>';
+          });
+          rows.push('<tr>' + cells + '</tr>');
+        }
+
+        if (mode === 'profit') {
+          row('Listing price', function (r) { return fmtMoney(r.price); }, true, false);
+          row('Referral / commission', function (r) { return fmtMoney(r.referralFee) + '<br><span class="cell-note">' + r.referralNote + '</span>'; }, false, false);
+          row('Closing / fixed fee', function (r) { return fmtMoney(r.closingFee); }, false, false);
+          row('Logistics / shipping', function (r) { return fmtMoney(r.logistics) + '<br><span class="cell-note">' + r.logisticsNote + '</span>'; }, false, false);
+          row('Listing / per-order fee', function (r) { return r.listingFee > 0 ? fmtMoney(r.listingFee) : '—'; }, false, false);
+          if (ck === 'IN') {
+            row('GST on fees (18%)', function (r) { return fmtMoney(r.gstOnFees); }, false, false);
+          }
+          row('Total marketplace fees', function (r) { return fmtMoney(r.feesCost); }, true, false);
+          row('Returns / RTO cost', function (r) { return fmtMoney(r.rtoCost); }, false, false);
+          row('Net profit', function (r) { return fmtMoney(r.profit); }, true, true);
+          row('Real margin', function (r) { return fmtPct(r.margin); }, true, false);
+          row('Headline margin', function (r) { return fmtPct(r.headline); }, false, false);
+          row('ROI', function (r) { return fmtPct(r.roi); }, false, false);
+          row('Break-even price', function (r) { return r.breakEven ? fmtMoney(r.breakEven) : '—'; }, false, false);
+          row('Break-even ROAS', function (r) { return r.breakEvenRoas ? r.breakEvenRoas.toFixed(2) + 'x' : '—'; }, false, false);
+          row('Max CPA (ad spend / order)', function (r) { return r.profit > 0 ? fmtMoney(r.profit) : '—'; }, false, false);
+          row('Bank settlement', function (r) { return fmtMoney(r.settlement); }, false, false);
+        } else {
+          row('Listing price needed', function (r) { return r.listingPrice ? fmtMoney(r.listingPrice) : '—'; }, true, false);
+          row('Referral / commission', function (r) { return r.listingPrice ? fmtMoney(r.referralFee) + '<br><span class="cell-note">' + r.referralNote + '</span>' : '—'; }, false, false);
+          row('Closing / fixed fee', function (r) { return r.listingPrice ? fmtMoney(r.closingFee) : '—'; }, false, false);
+          row('Logistics / shipping', function (r) { return r.listingPrice ? fmtMoney(r.logistics) : '—'; }, false, false);
+          row('Listing / per-order fee', function (r) { return r.listingPrice ? (r.listingFee > 0 ? fmtMoney(r.listingFee) : '—') : '—'; }, false, false);
+          if (ck === 'IN') {
+            row('GST on fees (18%)', function (r) { return r.listingPrice ? fmtMoney(r.gstOnFees) : '—'; }, false, false);
+          }
+          row('Total marketplace fees', function (r) { return r.listingPrice ? fmtMoney(r.feesCost) : '—'; }, true, false);
+          row('Returns / RTO cost', function (r) { return r.listingPrice ? fmtMoney(r.rtoCost) : '—'; }, false, false);
+          row('Profit at that price', function (r) { return r.listingPrice ? fmtMoney(r.profit) : '—'; }, true, true);
+          row('Margin at that price', function (r) { return r.listingPrice ? fmtPct(r.margin) : '—'; }, true, false);
+        }
+        compareBody.innerHTML = rows.join('');
+      }
+
+      function recalculate() {
+        var ck = country();
+        var ctx = getCtx();
+        var fc = ctx.finalCost;
+        finalCostOut.textContent = fmtMoney(fc);
+        var price = ctx.price;
+        headlineOut.textContent = price > 0 ? fmtPct((price - fc) / price * 100) : '—';
+
+        var results = [];
+        selectedPlatforms.forEach(function (pk) {
+          if (mode === 'profit') {
+            var r = computePlatform(ck, pk, ctx);
+            r.price = price;
+            r.breakEven = findPrice(ck, pk, ctx, function (res) { return res.profit >= 0; });
+            r.breakEvenRoas = r.profit > 0 ? price / r.profit : null;
+            results.push(r);
+          } else {
+            var targetType = targetTypeSel.value;
+            var targetVal = clamp(parseFloat(targetNum.value), 0, 10000000);
+            var listingPrice = null;
+            if (targetType === 'profit') {
+              listingPrice = findPrice(ck, pk, ctx, function (res) { return res.profit >= targetVal; });
+            } else {
+              listingPrice = findPrice(ck, pk, ctx, function (res, pr) { return pr > 0 && res.profit / pr * 100 >= targetVal; });
+            }
+            if (listingPrice == null) {
+              results.push({ key: pk, name: RATES[ck].platforms[pk].name, listingPrice: null });
+            } else {
+              var ctx2 = {
+                price: listingPrice, finalCost: ctx.finalCost, category: ctx.category,
+                weightG: ctx.weightG, zone: ctx.zone, rtoPct: ctx.rtoPct,
+                itc: ctx.itc, shipCost: ctx.shipCost, shipCharged: ctx.shipCharged
+              };
+              var r2 = computePlatform(ck, pk, ctx2);
+              r2.price = listingPrice;
+              r2.listingPrice = listingPrice;
+              results.push(r2);
+            }
+          }
+        });
+
+        if (mode === 'profit') {
+          var best = null;
+          results.forEach(function (r) { if (!best || r.profit > best.profit) best = r; });
+          bestLabel.textContent = 'Best profit per order';
+          bestOut.textContent = best ? fmtMoney(best.profit) : '—';
+          bestSub.textContent = best ? ('on ' + best.name + ' at ' + fmtMoney(price)) : '';
+          compareNote.textContent = 'Bank settlement is the cash the marketplace pays you per kept order, after fees, GST on fees, TCS and TDS (India). TCS and TDS are recoverable taxes, not costs — so they are left out of the profit.';
+        } else {
+          var low = null;
+          results.forEach(function (r) { if (r.listingPrice && (!low || r.listingPrice < low.listingPrice)) low = r; });
+          bestLabel.textContent = 'Lowest listing price';
+          bestOut.textContent = low ? fmtMoney(low.listingPrice) : '—';
+          bestSub.textContent = low ? ('on ' + low.name + ' to hit your target') : 'Target not reachable at any price in range';
+          compareNote.textContent = 'Listing prices are found by testing prices one unit at a time from your product cost upwards, so Indian price-slab fee jumps are handled exactly.';
+        }
+
+        renderBars(results);
+        renderTable(results);
+      }
+
+      function buildSummaryText() {
+        var ck = country();
+        var ctx = getCtx();
+        var lines = [];
+        lines.push('E-commerce Profit — All Calculator 360');
+        lines.push('Country: ' + countrySel.options[countrySel.selectedIndex].text + ' | Category: ' + ctx.category + ' | Weight: ' + Math.round(ctx.weightG) + ' g');
+        lines.push('Final product cost: ' + fmtMoney(ctx.finalCost) + (costMode === 'breakdown' ? ' (product ' + fmtMoney(clamp(parseFloat(productNum.value), 0, 10000000)) + ' + packaging ' + fmtMoney(clamp(parseFloat(packNum.value), 0, 100000)) + ' + transport ' + fmtMoney(clamp(parseFloat(transportNum.value), 0, 100000)) + ')' : ' (entered directly)'));
+        if (mode === 'profit') {
+          lines.push('Selling price: ' + fmtMoney(ctx.price));
+          selectedPlatforms.forEach(function (pk) {
+            var r = computePlatform(ck, pk, ctx);
+            lines.push(r.name + ': profit ' + fmtMoney(r.profit) + ' (' + fmtPct(r.margin) + ' margin), fees ' + fmtMoney(r.feesCost) + ', break-even ' + fmtMoney(r.breakEven || 0));
+          });
+        } else {
+          lines.push('Target: ' + (targetTypeSel.value === 'profit' ? 'profit ' + fmtMoney(clamp(parseFloat(targetNum.value), 0, 10000000)) : 'margin ' + fmtPct(clamp(parseFloat(targetNum.value), 0, 100)) ) + ' per order');
+          selectedPlatforms.forEach(function (pk) {
+            var targetType = targetTypeSel.value;
+            var targetVal = clamp(parseFloat(targetNum.value), 0, 10000000);
+            var lp = targetType === 'profit'
+              ? findPrice(ck, pk, ctx, function (res) { return res.profit >= targetVal; })
+              : findPrice(ck, pk, ctx, function (res, pr) { return pr > 0 && res.profit / pr * 100 >= targetVal; });
+            lines.push(RATES[ck].platforms[pk].name + ': list at ' + (lp ? fmtMoney(lp) : 'not reachable'));
+          });
+        }
+        lines.push('Rates as of ' + RATES.date + ' — https://tauheed-khan-pathan.github.io/AllCalculator360/calculator/ecommerce-profit-calculator.html');
+        return lines.join('\n');
+      }
+
+      function copySummary() {
+        var text = buildSummaryText();
+        copyMsg.textContent = '';
+        function done() {
+          copyBtn.textContent = 'Copied!';
+          copyMsg.textContent = 'Summary copied to clipboard.';
+          setTimeout(function () { copyBtn.textContent = 'Copy summary'; copyMsg.textContent = ''; }, 2500);
+        }
+        if (navigator.clipboard && navigator.clipboard.writeText) {
+          navigator.clipboard.writeText(text).then(done, function () { fallbackCopy(text); done(); });
+        } else {
+          fallbackCopy(text);
+          done();
+        }
+      }
+
+      function fallbackCopy(text) {
+        try {
+          var ta = document.createElement('textarea');
+          ta.value = text;
+          document.body.appendChild(ta);
+          ta.select();
+          document.execCommand('copy');
+          document.body.removeChild(ta);
+        } catch (e) {}
+      }
+
+      function syncPair(rangeEl, numEl, min, max, onChange) {
+        rangeEl.addEventListener('input', function () {
+          numEl.value = rangeEl.value;
+          onChange();
+        });
+        numEl.addEventListener('input', function () {
+          var val = clamp(parseFloat(numEl.value), min, max);
+          rangeEl.value = val;
+          onChange();
+        });
+        numEl.addEventListener('change', function () {
+          var val = clamp(parseFloat(numEl.value), min, max);
+          numEl.value = val;
+          rangeEl.value = val;
+          onChange();
+        });
+      }
+
+      function syncNumber(numEl, min, max, onChange) {
+        numEl.addEventListener('input', onChange);
+        numEl.addEventListener('change', function () {
+          numEl.value = clamp(parseFloat(numEl.value), min, max);
+          onChange();
+        });
+      }
+
+      function setToggle(btnA, btnB, active) {
+        if (active === 'a') {
+          btnA.classList.add('active');
+          btnB.classList.remove('active');
+        } else {
+          btnB.classList.add('active');
+          btnA.classList.remove('active');
+        }
+      }
+
+      costModeBreakdown.addEventListener('click', function () {
+        costMode = 'breakdown';
+        setToggle(costModeBreakdown, costModeFinal, 'a');
+        costBreakdown.style.display = '';
+        finalCostRow.style.display = 'none';
+        recalculate();
+      });
+      costModeFinal.addEventListener('click', function () {
+        costMode = 'final';
+        setToggle(costModeBreakdown, costModeFinal, 'b');
+        costBreakdown.style.display = 'none';
+        finalCostRow.style.display = '';
+        finalCostNum.value = finalCost();
+        recalculate();
+      });
+
+      modeProfit.addEventListener('click', function () {
+        mode = 'profit';
+        setToggle(modeProfit, modeReverse, 'a');
+        priceRow.style.display = '';
+        targetRow.style.display = 'none';
+        recalculate();
+      });
+      modeReverse.addEventListener('click', function () {
+        mode = 'reverse';
+        setToggle(modeProfit, modeReverse, 'b');
+        priceRow.style.display = 'none';
+        targetRow.style.display = '';
+        recalculate();
+      });
+
+      targetTypeSel.addEventListener('change', function () {
+        if (targetTypeSel.value === 'profit') {
+          targetHint.textContent = 'The profit you want to keep on every order, after all fees.';
+          targetNum.value = 100;
+        } else {
+          targetHint.textContent = 'The net margin you want on every order, after all fees.';
+          targetNum.value = 20;
+        }
+        recalculate();
+      });
+
+      countrySel.addEventListener('change', function () {
+        applyCountryDefaults();
+        renderPlatforms();
+        updateVisibility();
+        renderRatesEditor();
+        recalculate();
+      });
+      categorySel.addEventListener('change', function () {
+        renderRatesEditor();
+        recalculate();
+      });
+      weightUnit.addEventListener('change', recalculate);
+      zoneSel.addEventListener('change', function () {
+        renderRatesEditor();
+        recalculate();
+      });
+
+      syncNumber(productNum, 0, 10000000, recalculate);
+      syncNumber(packNum, 0, 100000, recalculate);
+      syncNumber(transportNum, 0, 100000, recalculate);
+      syncNumber(finalCostNum, 0, 10000000, recalculate);
+      syncNumber(priceNum, 1, 10000000, recalculate);
+      syncNumber(targetNum, 0, 10000000, recalculate);
+      syncNumber(shipCostNum, 0, 100000, recalculate);
+      syncNumber(shipChargedNum, 0, 100000, recalculate);
+      syncNumber(weightNum, 1, 100000, recalculate);
+      syncPair(rtoRange, rtoNum, 0, 50, function () {
+        rtoOut.textContent = clamp(parseFloat(rtoNum.value), 0, 50) + '%';
+        recalculate();
+      });
+      itcCheck.addEventListener('change', recalculate);
+      copyBtn.addEventListener('click', copySummary);
+      resetRatesBtn.addEventListener('click', function () {
+        RATES = JSON.parse(JSON.stringify(RATES_ORIG));
+        ratesDate.textContent = RATES.date;
+        renderRatesEditor();
+        recalculate();
+      });
+
+      ratesDate.textContent = RATES.date;
+      renderPlatforms();
+      updateVisibility();
+      renderRatesEditor();
+      recalculate();
+    })();
+  </script>
+</body>
+</html>
