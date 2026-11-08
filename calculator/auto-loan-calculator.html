@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Auto Loan Calculator — Calculate Your Monthly Car Loan Payment | All Calculator 360</title>
+  <meta name="description" content="Calculate your monthly car loan payment — loan amount, sales tax, total interest and total cost — with a year-by-year amortisation schedule. Free, instant, private.">
+  <link rel="canonical" href="https://tauheed-khan-pathan.github.io/AllCalculator360/calculator/auto-loan-calculator.html">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Auto Loan Calculator — Calculate Your Monthly Car Loan Payment | All Calculator 360">
+  <meta property="og:description" content="Calculate your monthly car loan payment — loan amount, sales tax, total interest and total cost — with a year-by-year amortisation schedule. Free, instant, private.">
+  <meta property="og:url" content="https://tauheed-khan-pathan.github.io/AllCalculator360/calculator/auto-loan-calculator.html">
+  <meta property="og:site_name" content="All Calculator 360">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Auto Loan Calculator — Calculate Your Monthly Car Loan Payment | All Calculator 360">
+  <meta name="twitter:description" content="Calculate your monthly car loan payment — loan amount, sales tax, total interest and total cost — with a year-by-year amortisation schedule. Free, instant, private.">
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "All Calculator 360",
+  "alternateName": "AllCalculator360",
+  "url": "https://tauheed-khan-pathan.github.io/AllCalculator360/",
+  "description": "Free online calculators for finance, health, math and everyday life. EMI, SIP, FD, BMI and 200+ calculators — no sign-up, 100% private."
+}
+  </script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What does an auto loan monthly payment include?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Your monthly auto loan payment is the EMI on the amount you finance — it covers part of the loan principal and the interest charged on it. It does not include car insurance, fuel, maintenance or registration, which you pay separately. This calculator shows the EMI, plus the total interest and the total cost of the car, so you see the full picture."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How does sales tax affect my auto loan?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Sales tax is charged on the price after your trade-in: sales tax = (vehicle price − trade-in value) × tax rate ÷ 100. The tax is added to the amount you finance, so a higher tax rate means a bigger loan and a higher monthly payment. For the worked example below, 7% tax on $30,000 adds $2,100 to the loan."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the difference between a trade-in and a down payment?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A trade-in is the value of your old car, which the dealer credits against the new car's price — it also reduces the taxable amount, because sales tax is charged on the price after trade-in. A down payment is cash you pay upfront. Both reduce the loan amount, but only a trade-in reduces the sales tax."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does a bigger down payment lower my monthly payment?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. A bigger down payment reduces the loan amount, so both the monthly EMI and the total interest fall. On the worked example below, raising the down payment from $3,000 to $8,000 cuts the loan from $29,100 to $24,100 and the monthly payment from $576 to about $477."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How is the monthly auto loan payment calculated?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "With the EMI formula: EMI = P × r × (1 + r)^n ÷ ((1 + r)^n − 1), where P is the loan amount (vehicle price − trade-in − down payment + sales tax), r is the monthly interest rate (annual rate ÷ 12 ÷ 100) and n is the number of monthly payments. For the worked example below, P = $29,100, r = 0.07 ÷ 12 and n = 60, giving an EMI of $576 per month ($576.21 exact)."
+      }
+    }
+  ]
+}
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../styles.css">
+  <script>
+    (function () {
+      try {
+        if (localStorage.getItem('ac360-theme') === 'dark') {
+          document.documentElement.setAttribute('data-theme', 'dark');
+        }
+      } catch (e) {}
+    })();
+  </script>
+  <script src="../app.js" defer></script>
+</head>
+<body>
+  <header class="site-header"><div class="header-inner">
+<a class="brand" href="../index.html"><svg class="brand-logo" viewBox="0 0 40 40" fill="none" aria-hidden="true"><rect width="40" height="40" rx="10" fill="#2563eb"/><rect x="9" y="7" width="22" height="7" rx="2" fill="#ffffff"/><rect x="9" y="18" width="6" height="6" rx="1.5" fill="#ffffff"/><rect x="17" y="18" width="6" height="6" rx="1.5" fill="#ffffff"/><rect x="25" y="18" width="6" height="6" rx="1.5" fill="#ffffff"/><rect x="9" y="26" width="6" height="6" rx="1.5" fill="#ffffff"/><rect x="17" y="26" width="6" height="6" rx="1.5" fill="#ffffff"/><rect x="25" y="26" width="6" height="6" rx="1.5" fill="#ffffff"/></svg><span class="brand-name">All Calculator <span class="brand-360">360</span></span></a>
+<div class="header-search"><input id="headerSearch" type="search" placeholder="Search calculators…" aria-label="Search calculators"></div>
+<nav class="main-nav" aria-label="Categories"><a class="nav-link" href="../index.html#finance">Finance</a><a class="nav-link" href="../index.html#health">Health</a><a class="nav-link" href="../index.html#math">Math</a><a class="nav-link" href="../index.html#everyday">Everyday</a></nav>
+<button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">🌙</button>
+<button class="menu-toggle" id="menuToggle" aria-label="Menu">☰</button>
+</div><nav class="mobile-nav" id="mobileNav" aria-label="Mobile categories"><a class="nav-link" href="../index.html#finance">Finance</a><a class="nav-link" href="../index.html#health">Health</a><a class="nav-link" href="../index.html#math">Math</a><a class="nav-link" href="../index.html#everyday">Everyday</a></nav></header>
+
+  <main class="container">
+    <nav class="breadcrumb"><a href="../index.html">Home</a> / <a href="../index.html#finance">Finance</a> / Auto Loan Calculator</nav>
+
+    <div class="calc-head">
+      <h1>Auto Loan Calculator</h1>
+      <p>Work out your monthly car loan payment — including sales tax, trade-in and down payment — plus total interest, total cost and a year-by-year schedule.</p>
+    </div>
+
+    <div class="calc-layout">
+      <div class="calc-panel calc-inputs">
+        <h2>Car Loan Details</h2>
+
+        <div class="currency-row">
+          <label for="currency">Currency</label>
+          <select id="currency" class="currency-select">
+            <option value="USD" selected>USD ($) — US Dollar</option>
+            <option value="INR">INR (₹) — Indian Rupee</option>
+            <option value="EUR">EUR (€) — Euro</option>
+            <option value="GBP">GBP (£) — British Pound</option>
+          </select>
+        </div>
+
+        <div class="input-group">
+          <label class="input-label" for="priceRange">Vehicle Price <output id="priceOut" for="priceRange">$30,000</output></label>
+          <div class="input-row">
+            <input type="range" class="slider" id="priceRange" min="5000" max="500000" step="1000" value="30000" aria-label="Vehicle price">
+            <input type="number" class="num-input" id="priceNum" min="5000" max="500000" step="1000" value="30000" aria-label="Vehicle price value">
+          </div>
+          <p class="input-hint">Vehicle price between 5,000 and 500,000.</p>
+        </div>
+
+        <div class="input-group">
+          <label class="input-label" for="tradeNum">Trade-In Value</label>
+          <div class="input-row">
+            <input type="number" class="num-input" id="tradeNum" min="0" max="500000" step="100" value="0" aria-label="Trade-in value">
+          </div>
+          <p class="input-hint">The value of your old car — it reduces the amount you finance, and the sales tax too.</p>
+        </div>
+
+        <div class="input-group">
+          <label class="input-label" for="downNum">Down Payment</label>
+          <div class="input-row">
+            <input type="number" class="num-input" id="downNum" min="0" max="500000" step="100" value="3000" aria-label="Down payment">
+          </div>
+          <p class="input-hint">Cash you pay upfront — it reduces the amount you finance.</p>
+        </div>
+
+        <div class="input-group">
+          <label class="input-label" for="taxRange">Sales Tax Rate <output id="taxRateOut" for="taxRange">7%</output></label>
+          <div class="input-row">
+            <input type="range" class="slider" id="taxRange" min="0" max="15" step="0.1" value="7" aria-label="Sales tax rate">
+            <input type="number" class="num-input" id="taxNum" min="0" max="15" step="0.1" value="7" aria-label="Sales tax rate value">
+          </div>
+          <p class="input-hint">Sales tax is charged on the vehicle price after your trade-in.</p>
+        </div>
+
+        <div class="input-group">
+          <label class="input-label" for="termSelect">Loan Term</label>
+          <select id="termSelect" class="currency-select" aria-label="Loan term">
+            <option value="1">1 year</option>
+            <option value="2">2 years</option>
+            <option value="3">3 years</option>
+            <option value="4">4 years</option>
+            <option value="5" selected>5 years</option>
+            <option value="6">6 years</option>
+            <option value="7">7 years</option>
+          </select>
+        </div>
+
+        <div class="input-group">
+          <label class="input-label" for="rateRange">Annual Interest Rate <output id="rateOut" for="rateRange">7%</output></label>
+          <div class="input-row">
+            <input type="range" class="slider" id="rateRange" min="1" max="20" step="0.1" value="7" aria-label="Annual interest rate">
+            <input type="number" class="num-input" id="rateNum" min="1" max="20" step="0.1" value="7" aria-label="Annual interest rate value">
+          </div>
+        </div>
+      </div>
+
+      <div class="calc-panel calc-results">
+        <h2>Your Results</h2>
+
+        <p class="validation-msg" id="validationMsg" style="display:none">Loan amount must be greater than zero — increase the vehicle price or reduce trade-in / down payment.</p>
+
+        <div class="result-main">
+          <div class="result-label">Total Monthly Payment</div>
+          <div class="result-emi" id="totalOut">$0 <span>/ month</span></div>
+        </div>
+
+        <div class="result-breakdown">
+          <div class="break-row"><span class="k">Loan Amount</span><span class="v" id="loanOut">$0</span></div>
+          <div class="break-row"><span class="k">Monthly Payment</span><span class="v" id="emiOut">$0</span></div>
+          <div class="break-row"><span class="k">Sales Tax</span><span class="v" id="taxOut">$0</span></div>
+          <div class="break-row"><span class="k">Total Interest</span><span class="v" id="interestOut">$0</span></div>
+          <div class="break-row"><span class="k">Total Cost (everything you pay for the car)</span><span class="v green" id="totalCostOut">$0</span></div>
+        </div>
+
+        <div class="donut-wrap">
+          <svg id="donut" width="160" height="160" viewBox="0 0 160 160" role="img" aria-label="Loan amount vs total interest chart">
+            <circle class="donut-track" cx="80" cy="80" r="64" fill="none" stroke-width="24"></circle>
+            <g transform="rotate(-90 80 80)">
+              <circle id="donutLoan" cx="80" cy="80" r="64" fill="none" stroke="#2563eb" stroke-width="24" stroke-dasharray="402.12 402.12" stroke-dashoffset="0"></circle>
+              <circle id="donutInt" cx="80" cy="80" r="64" fill="none" stroke="#059669" stroke-width="24" stroke-dasharray="0 402.12" stroke-dashoffset="0"></circle>
+            </g>
+            <text id="donutPct" class="donut-pct" x="80" y="76" text-anchor="middle" font-size="20" font-weight="700">0%</text>
+            <text class="donut-sub" x="80" y="96" text-anchor="middle" font-size="12">Loan share</text>
+          </svg>
+          <div class="donut-legend">
+            <div class="legend-item" id="legendRowLoan"><span class="legend-dot" style="background:#2563eb"></span>Loan Amount <b id="legendLoan">$0</b></div>
+            <div class="legend-item" id="legendRowInt"><span class="legend-dot" style="background:#059669"></span>Total Interest <b id="legendInt">$0</b></div>
+          </div>
+        </div>
+
+        <h3 style="margin-top:24px">Yearly Amortisation Schedule</h3>
+        <table class="amort-table">
+          <thead>
+            <tr><th>Year</th><th>Payment</th><th>Principal</th><th>Interest</th><th>Balance</th></tr>
+          </thead>
+          <tbody id="amortBody"></tbody>
+        </table>
+        <button class="show-more-btn" id="amortToggle" type="button">Show all years</button>
+      </div>
+    </div>
+
+    <section class="content-section">
+      <h2>Auto Loan Formula</h2>
+      <div class="formula-box">
+        <p class="formula">Sales tax = (Vehicle Price − Trade-In) × tax rate ÷ 100</p>
+        <p class="formula">Loan amount = Vehicle Price − Trade-In − Down Payment + Sales Tax</p>
+        <p class="formula">EMI = P × r × (1 + r)<sup>n</sup> ÷ ((1 + r)<sup>n</sup> − 1)</p>
+        <p><strong>P</strong> = Loan amount &nbsp;•&nbsp; <strong>r</strong> = Monthly interest rate (annual rate ÷ 12 ÷ 100) &nbsp;•&nbsp; <strong>n</strong> = Number of monthly payments (loan term in months)</p>
+        <p>Total interest = EMI × n − Loan amount. Total cost = EMI × n + Down Payment + Trade-In — everything you pay for the car.</p>
+        <p><strong>Worked example:</strong> Vehicle price $30,000, trade-in $0, down payment $3,000, sales tax rate 7%, loan term 5 years at 7% per year. Sales tax = $30,000 × 7% = <strong>$2,100</strong>. Loan amount = $30,000 − $0 − $3,000 + $2,100 = <strong>$29,100</strong>. Monthly rate r = 0.07 ÷ 12 = 0.0058333, n = 60, EMI = 29,100 × 0.0058333 × (1.0058333)<sup>60</sup> ÷ ((1.0058333)<sup>60</sup> − 1) = <strong>$576 per month</strong> ($576.21 exact). Total interest = $576.21 × 60 − $29,100 = <strong>$5,473</strong>. Total cost = $576.21 × 60 + $3,000 + $0 = <strong>$37,573</strong>.</p>
+      </div>
+    </section>
+
+    <section class="content-section">
+      <h2>Frequently Asked Questions</h2>
+      <details class="faq-item">
+        <summary class="faq-q">What does an auto loan monthly payment include?</summary>
+        <div class="faq-a"><p>Your monthly auto loan payment is the EMI on the amount you finance — it covers part of the loan principal and the interest charged on it. It does not include car insurance, fuel, maintenance or registration, which you pay separately. This calculator shows the EMI, plus the total interest and the total cost of the car, so you see the full picture.</p></div>
+      </details>
+      <details class="faq-item">
+        <summary class="faq-q">How does sales tax affect my auto loan?</summary>
+        <div class="faq-a"><p>Sales tax is charged on the price after your trade-in: sales tax = (vehicle price − trade-in value) × tax rate ÷ 100. The tax is added to the amount you finance, so a higher tax rate means a bigger loan and a higher monthly payment. For the worked example below, 7% tax on $30,000 adds $2,100 to the loan.</p></div>
+      </details>
+      <details class="faq-item">
+        <summary class="faq-q">What is the difference between a trade-in and a down payment?</summary>
+        <div class="faq-a"><p>A trade-in is the value of your old car, which the dealer credits against the new car's price — it also reduces the taxable amount, because sales tax is charged on the price after trade-in. A down payment is cash you pay upfront. Both reduce the loan amount, but only a trade-in reduces the sales tax.</p></div>
+      </details>
+      <details class="faq-item">
+        <summary class="faq-q">Does a bigger down payment lower my monthly payment?</summary>
+        <div class="faq-a"><p>Yes. A bigger down payment reduces the loan amount, so both the monthly EMI and the total interest fall. On the worked example below, raising the down payment from $3,000 to $8,000 cuts the loan from $29,100 to $24,100 and the monthly payment from $576 to about $477.</p></div>
+      </details>
+      <details class="faq-item">
+        <summary class="faq-q">How is the monthly auto loan payment calculated?</summary>
+        <div class="faq-a"><p>With the EMI formula: EMI = P × r × (1 + r)^n ÷ ((1 + r)^n − 1), where P is the loan amount (vehicle price − trade-in − down payment + sales tax), r is the monthly interest rate (annual rate ÷ 12 ÷ 100) and n is the number of monthly payments. For the worked example below, P = $29,100, r = 0.07 ÷ 12 and n = 60, giving an EMI of $576 per month ($576.21 exact).</p></div>
+      </details>
+    </section>
+
+    <section class="content-section">
+      <h2>Related Calculators</h2>
+      <div class="related-grid">
+        <a class="calc-card" href="emi-calculator.html" data-name="EMI Calculator" data-desc="Calculate your monthly loan EMI with interest breakdown.">
+          <span class="calc-icon">💰</span>
+          <span class="calc-name">EMI Calculator</span>
+          <span class="calc-desc">Calculate your monthly loan EMI with interest breakdown.</span>
+        </a>
+        <a class="calc-card" href="mortgage-calculator.html" data-name="Mortgage Calculator" data-desc="Calculate your monthly home loan payment with tax and insurance.">
+          <span class="calc-icon">🏠</span>
+          <span class="calc-name">Mortgage Calculator</span>
+          <span class="calc-desc">Calculate your monthly home loan payment with tax and insurance.</span>
+        </a>
+        <a class="calc-card" href="compound-interest-calculator.html" data-name="Compound Interest Calculator" data-desc="See how compound interest grows your savings over time.">
+          <span class="calc-icon">💹</span>
+          <span class="calc-name">Compound Interest Calculator</span>
+          <span class="calc-desc">See how compound interest grows your savings over time.</span>
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer"><div class="container"><div class="footer-grid">
+<div class="footer-col"><div class="footer-brand"><svg width="32" height="32" viewBox="0 0 40 40" fill="none" aria-hidden="true"><rect width="40" height="40" rx="10" fill="#2563eb"/><rect x="9" y="7" width="22" height="7" rx="2" fill="#ffffff"/><rect x="9" y="18" width="6" height="6" rx="1.5" fill="#ffffff"/><rect x="17" y="18" width="6" height="6" rx="1.5" fill="#ffffff"/><rect x="25" y="18" width="6" height="6" rx="1.5" fill="#ffffff"/><rect x="9" y="26" width="6" height="6" rx="1.5" fill="#ffffff"/><rect x="17" y="26" width="6" height="6" rx="1.5" fill="#ffffff"/><rect x="25" y="26" width="6" height="6" rx="1.5" fill="#ffffff"/></svg><span>All Calculator 360</span></div><p>Every calculator, all in one place. Free, private, and accurate — calculations happen right in your browser.</p></div>
+<div class="footer-col"><h3>Categories</h3><ul><li><a href="../index.html#finance">Finance</a></li><li><a href="../index.html#health">Health</a></li><li><a href="../index.html#math">Math</a></li><li><a href="../index.html#everyday">Everyday</a></li></ul></div>
+<div class="footer-col"><h3>Popular Calculators</h3><ul><li><a href="emi-calculator.html">EMI Calculator</a></li><li><a href="sip-calculator.html">SIP Calculator</a></li><li><a href="fd-calculator.html">FD Calculator</a></li><li><a href="income-tax-calculator.html">Income Tax Calculator</a></li><li><a href="gst-calculator.html">GST Calculator</a></li><li><a href="bmi-calculator.html">BMI Calculator</a></li><li><a href="age-calculator.html">Age Calculator</a></li><li><a href="percentage-calculator.html">Percentage Calculator</a></li></ul></div>
+<div class="footer-col"><h3>Company</h3><ul><li><a href="../about.html">About</a></li><li><a href="../contact.html">Contact</a></li><li><a href="../privacy.html">Privacy Policy</a></li><li><a href="../terms.html">Terms</a></li></ul></div>
+</div><div class="footer-bottom"><p>© 2026 All Calculator 360. All rights reserved.</p></div></div></footer>
+
+  <script>
+    (function () {
+      'use strict';
+
+      var CIRCUMFERENCE = 402.12;
+
+      var currencyEl = document.getElementById('currency');
+      var priceRange = document.getElementById('priceRange');
+      var priceNum = document.getElementById('priceNum');
+      var priceOut = document.getElementById('priceOut');
+      var tradeNum = document.getElementById('tradeNum');
+      var downNum = document.getElementById('downNum');
+      var taxRange = document.getElementById('taxRange');
+      var taxNum = document.getElementById('taxNum');
+      var taxRateOut = document.getElementById('taxRateOut');
+      var termSelect = document.getElementById('termSelect');
+      var rateRange = document.getElementById('rateRange');
+      var rateNum = document.getElementById('rateNum');
+      var rateOut = document.getElementById('rateOut');
+      var validationMsg = document.getElementById('validationMsg');
+      var totalOut = document.getElementById('totalOut');
+      var loanOut = document.getElementById('loanOut');
+      var emiOut = document.getElementById('emiOut');
+      var taxOut = document.getElementById('taxOut');
+      var interestOut = document.getElementById('interestOut');
+      var totalCostOut = document.getElementById('totalCostOut');
+      var legendLoan = document.getElementById('legendLoan');
+      var legendInt = document.getElementById('legendInt');
+      var legendRowLoan = document.getElementById('legendRowLoan');
+      var legendRowInt = document.getElementById('legendRowInt');
+      var donutLoan = document.getElementById('donutLoan');
+      var donutInt = document.getElementById('donutInt');
+      var donutPct = document.getElementById('donutPct');
+      var amortBody = document.getElementById('amortBody');
+      var amortToggle = document.getElementById('amortToggle');
+
+      var amortExpanded = false;
+
+      function currencyCode() {
+        return currencyEl.value;
+      }
+
+      function fmtMoney(value) {
+        return new Intl.NumberFormat('en-US', {
+          style: 'currency',
+          currency: currencyCode(),
+          maximumFractionDigits: 0
+        }).format(value);
+      }
+
+      function clamp(value, min, max) {
+        if (isNaN(value)) return min;
+        return Math.min(max, Math.max(min, value));
+      }
+
+      function getPrice() {
+        return clamp(parseFloat(priceNum.value), 5000, 500000);
+      }
+
+      function getTrade() {
+        return clamp(parseFloat(tradeNum.value), 0, 500000);
+      }
+
+      function getDown() {
+        return clamp(parseFloat(downNum.value), 0, 500000);
+      }
+
+      function getTaxRate() {
+        return clamp(parseFloat(taxNum.value), 0, 15);
+      }
+
+      function getYears() {
+        return parseInt(termSelect.value, 10);
+      }
+
+      function getRate() {
+        return clamp(parseFloat(rateNum.value), 1, 20);
+      }
+
+      function calcEMI(P, annualRate, months) {
+        var r = annualRate / 12 / 100;
+        if (r === 0) return P / months;
+        var factor = Math.pow(1 + r, months);
+        return P * r * factor / (factor - 1);
+      }
+
+      function buildSchedule(P, annualRate, months, emi, yearlyPayment) {
+        var r = annualRate / 12 / 100;
+        var balance = P;
+        var years = Math.ceil(months / 12);
+        var rows = [];
+        for (var y = 1; y <= years; y++) {
+          var yearPrincipal = 0;
+          var yearInterest = 0;
+          var monthsInYear = Math.min(12, months - (y - 1) * 12);
+          for (var m = 0; m < monthsInYear; m++) {
+            var interestPart = balance * r;
+            var principalPart = emi - interestPart;
+            if (principalPart > balance) principalPart = balance;
+            balance -= principalPart;
+            yearPrincipal += principalPart;
+            yearInterest += interestPart;
+          }
+          if (y === years) balance = 0;
+          rows.push({
+            year: y,
+            payment: yearlyPayment,
+            principal: yearPrincipal,
+            interest: yearInterest,
+            balance: Math.max(0, balance)
+          });
+        }
+        return rows;
+      }
+
+      function renderSchedule(rows) {
+        var html = '';
+        rows.forEach(function (row, i) {
+          var hidden = (!amortExpanded && i >= 5) ? ' style="display:none"' : '';
+          html += '<tr' + hidden + '><td>' + row.year + '</td><td>' + fmtMoney(row.payment) + '</td><td>' + fmtMoney(row.principal) + '</td><td>' + fmtMoney(row.interest) + '</td><td>' + fmtMoney(row.balance) + '</td></tr>';
+        });
+        amortBody.innerHTML = html;
+        if (rows.length <= 5) {
+          amortToggle.style.display = 'none';
+        } else {
+          amortToggle.style.display = '';
+          amortToggle.textContent = amortExpanded ? 'Show less' : 'Show all years';
+        }
+      }
+
+      function setSlice(el, share, offsetShare) {
+        el.setAttribute('stroke-dasharray', (share * CIRCUMFERENCE).toFixed(2) + ' ' + CIRCUMFERENCE);
+        el.setAttribute('stroke-dashoffset', (-offsetShare * CIRCUMFERENCE).toFixed(2));
+      }
+
+      function recalculate() {
+        var price = getPrice();
+        var trade = getTrade();
+        var down = getDown();
+        var taxRate = getTaxRate();
+        var years = getYears();
+        var months = years * 12;
+        var annualRate = getRate();
+
+        var salesTax = (price - trade) * taxRate / 100;
+        var loan = price - trade - down + salesTax;
+
+        priceOut.textContent = fmtMoney(price);
+        taxRateOut.textContent = (Math.round(taxRate * 10) / 10) + '%';
+        rateOut.textContent = (Math.round(annualRate * 10) / 10) + '%';
+
+        if (loan <= 0) {
+          validationMsg.style.display = '';
+          totalOut.innerHTML = fmtMoney(0) + ' <span>/ month</span>';
+          loanOut.textContent = fmtMoney(0);
+          emiOut.textContent = fmtMoney(0);
+          taxOut.textContent = fmtMoney(salesTax);
+          interestOut.textContent = fmtMoney(0);
+          totalCostOut.textContent = fmtMoney(0);
+          legendLoan.textContent = fmtMoney(0);
+          legendInt.textContent = fmtMoney(0);
+          setSlice(donutLoan, 0, 0);
+          setSlice(donutInt, 0, 0);
+          donutPct.textContent = '0%';
+          legendRowLoan.style.display = 'none';
+          legendRowInt.style.display = 'none';
+          amortBody.innerHTML = '';
+          amortToggle.style.display = 'none';
+          return;
+        }
+
+        validationMsg.style.display = 'none';
+
+        var emi = calcEMI(loan, annualRate, months);
+        var totalInterest = emi * months - loan;
+        var totalCost = emi * months + down + trade;
+
+        totalOut.innerHTML = fmtMoney(emi) + ' <span>/ month</span>';
+        loanOut.textContent = fmtMoney(loan);
+        emiOut.textContent = fmtMoney(emi);
+        taxOut.textContent = fmtMoney(salesTax);
+        interestOut.textContent = fmtMoney(totalInterest);
+        totalCostOut.textContent = fmtMoney(totalCost);
+        legendLoan.textContent = fmtMoney(loan);
+        legendInt.textContent = fmtMoney(totalInterest);
+
+        var denom = loan + totalInterest;
+        var loanShare = denom > 0 ? loan / denom : 1;
+        var intShare = denom > 0 ? totalInterest / denom : 0;
+        setSlice(donutLoan, loanShare, 0);
+        setSlice(donutInt, intShare, loanShare);
+        donutPct.textContent = (loanShare * 100).toFixed(1) + '%';
+        legendRowLoan.style.display = loan > 0 ? '' : 'none';
+        legendRowInt.style.display = totalInterest > 0 ? '' : 'none';
+
+        renderSchedule(buildSchedule(loan, annualRate, months, emi, emi * 12));
+      }
+
+      function syncPair(rangeEl, numEl, min, max, onChange) {
+        rangeEl.addEventListener('input', function () {
+          numEl.value = rangeEl.value;
+          onChange();
+        });
+        numEl.addEventListener('input', function () {
+          var val = clamp(parseFloat(numEl.value), min, max);
+          rangeEl.value = val;
+          onChange();
+        });
+        numEl.addEventListener('change', function () {
+          var val = clamp(parseFloat(numEl.value), min, max);
+          numEl.value = val;
+          rangeEl.value = val;
+          onChange();
+        });
+      }
+
+      function syncNumber(numEl, min, max, onChange) {
+        numEl.addEventListener('input', onChange);
+        numEl.addEventListener('change', function () {
+          numEl.value = clamp(parseFloat(numEl.value), min, max);
+          onChange();
+        });
+      }
+
+      syncPair(priceRange, priceNum, 5000, 500000, recalculate);
+      syncPair(taxRange, taxNum, 0, 15, recalculate);
+      syncPair(rateRange, rateNum, 1, 20, recalculate);
+      syncNumber(tradeNum, 0, 500000, recalculate);
+      syncNumber(downNum, 0, 500000, recalculate);
+
+      termSelect.addEventListener('change', recalculate);
+      currencyEl.addEventListener('change', recalculate);
+
+      amortToggle.addEventListener('click', function () {
+        amortExpanded = !amortExpanded;
+        recalculate();
+      });
+
+      recalculate();
+    })();
+  </script>
+</body>
+</html>

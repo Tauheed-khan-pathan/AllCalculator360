@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Retirement Calculator — Plan Your Retirement Savings | All Calculator 360</title>
+  <meta name="description" content="Find out how much you will have at retirement. See your nest egg, inflation-adjusted value in today's money, total contributions and growth — free, instant, private.">
+  <link rel="canonical" href="https://tauheed-khan-pathan.github.io/AllCalculator360/calculator/retirement-calculator.html">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Retirement Calculator — Plan Your Retirement Savings | All Calculator 360">
+  <meta property="og:description" content="Find out how much you will have at retirement. See your nest egg, inflation-adjusted value in today's money, total contributions and growth — free, instant, private.">
+  <meta property="og:url" content="https://tauheed-khan-pathan.github.io/AllCalculator360/calculator/retirement-calculator.html">
+  <meta property="og:site_name" content="All Calculator 360">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Retirement Calculator — Plan Your Retirement Savings | All Calculator 360">
+  <meta name="twitter:description" content="Find out how much you will have at retirement. See your nest egg, inflation-adjusted value in today's money, total contributions and growth — free, instant, private.">
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "All Calculator 360",
+  "alternateName": "AllCalculator360",
+  "url": "https://tauheed-khan-pathan.github.io/AllCalculator360/",
+  "description": "Free online calculators for finance, health, math and everyday life. EMI, SIP, FD, BMI and 200+ calculators — no sign-up, 100% private."
+}
+  </script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How much should I save for retirement?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "There is no single number that fits everyone, because it depends on your spending, your retirement age and how long you expect retirement to last. A common starting point is to aim for a nest egg of 25 times your annual spending in retirement — so if you plan to spend $40,000 a year, that is $1,000,000. Try this calculator with different monthly contributions and retirement ages to see what it takes to reach your own target, and start with an amount you can sustain every month."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the 4% rule?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The 4% rule is a rough guideline that says you can withdraw 4% of your nest egg in the first year of retirement, then adjust that amount for inflation each year, and the money should last about 30 years. For example, a $1,000,000 nest egg would support about $40,000 of spending in the first year. It is a general rule of thumb, not a guarantee — actual results depend on market returns, inflation and how long you live."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How does inflation change the result?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Inflation shrinks what your money can buy. This calculator shows the inflation-adjusted value of your nest egg — what it would be worth in today's money — by dividing the future nest egg by (1 + inflation rate)^years. For example, $3,123,803 at retirement with 3% inflation over 35 years is worth $1,110,148 in today's money, because prices will have risen by a factor of 2.81 over that time. That is why the inflation-adjusted figure, not the headline nest egg, is the one to judge your plan by."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does starting early really matter?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes — starting early matters more than saving a large amount later, because compound growth does most of the work over long periods. In the worked example below, $1,000 a month from age 30 to 65 grows to $3,123,803, of which $2,653,803 is growth and only $470,000 is money actually paid in. Starting 10 years later, at 40, with the same $50,000 saved and the same $1,000 a month at 8% would leave you with only $1,324,375 at 65 — less than half — even though you paid in only $120,000 less. Time in the market beats timing the market."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What return rate should I assume?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Use a cautious, long-term average rather than the best years you have seen. Many planners use 7–8% a year for a diversified stock-heavy portfolio before inflation, or 4–5% after inflation, but returns are never guaranteed and vary a lot from year to year. Try this calculator at 5%, 8% and 10% to see how sensitive your plan is to the rate — and if you are close to retirement, assume a lower rate, because a market fall hurts more when you have less time to recover."
+      }
+    }
+  ]
+}
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../styles.css">
+  <script>
+    (function () {
+      try {
+        if (localStorage.getItem('ac360-theme') === 'dark') {
+          document.documentElement.setAttribute('data-theme', 'dark');
+        }
+      } catch (e) {}
+    })();
+  </script>
+  <script src="../app.js" defer></script>
+</head>
+<body>
+  <header class="site-header"><div class="header-inner">
+<a class="brand" href="../index.html"><svg class="brand-logo" viewBox="0 0 40 40" fill="none" aria-hidden="true"><rect width="40" height="40" rx="10" fill="#2563eb"/><rect x="9" y="7" width="22" height="7" rx="2" fill="#ffffff"/><rect x="9" y="18" width="6" height="6" rx="1.5" fill="#ffffff"/><rect x="17" y="18" width="6" height="6" rx="1.5" fill="#ffffff"/><rect x="25" y="18" width="6" height="6" rx="1.5" fill="#ffffff"/><rect x="9" y="26" width="6" height="6" rx="1.5" fill="#ffffff"/><rect x="17" y="26" width="6" height="6" rx="1.5" fill="#ffffff"/><rect x="25" y="26" width="6" height="6" rx="1.5" fill="#ffffff"/></svg><span class="brand-name">All Calculator <span class="brand-360">360</span></span></a>
+<div class="header-search"><input id="headerSearch" type="search" placeholder="Search calculators…" aria-label="Search calculators"></div>
+<nav class="main-nav" aria-label="Categories"><a class="nav-link" href="../index.html#finance">Finance</a><a class="nav-link" href="../index.html#health">Health</a><a class="nav-link" href="../index.html#math">Math</a><a class="nav-link" href="../index.html#everyday">Everyday</a></nav>
+<button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">🌙</button>
+<button class="menu-toggle" id="menuToggle" aria-label="Menu">☰</button>
+</div><nav class="mobile-nav" id="mobileNav" aria-label="Mobile categories"><a class="nav-link" href="../index.html#finance">Finance</a><a class="nav-link" href="../index.html#health">Health</a><a class="nav-link" href="../index.html#math">Math</a><a class="nav-link" href="../index.html#everyday">Everyday</a></nav></header>
+
+  <main class="container">
+    <nav class="breadcrumb"><a href="../index.html">Home</a> / <a href="../index.html#finance">Finance</a> / Retirement Calculator</nav>
+
+    <div class="calc-head">
+      <h1>Retirement Calculator</h1>
+      <p>See how much you will have when you retire — your nest egg, its value in today's money, total contributions and growth, year by year.</p>
+    </div>
+
+    <div class="calc-layout">
+      <div class="calc-panel calc-inputs">
+        <h2>Retirement Plan Details</h2>
+
+        <div class="currency-row">
+          <label for="currency">Currency</label>
+          <select id="currency" class="currency-select">
+            <option value="USD" selected>USD ($) — US Dollar</option>
+            <option value="INR">INR (₹) — Indian Rupee</option>
+            <option value="EUR">EUR (€) — Euro</option>
+            <option value="GBP">GBP (£) — British Pound</option>
+          </select>
+        </div>
+
+        <div class="input-group">
+          <label class="input-label" for="currentAgeRange">Current Age <output id="currentAgeOut" for="currentAgeRange">30 years</output></label>
+          <div class="input-row">
+            <input type="range" class="slider" id="currentAgeRange" min="18" max="70" step="1" value="30" aria-label="Current age">
+            <input type="number" class="num-input" id="currentAgeNum" min="18" max="70" step="1" value="30" aria-label="Current age value">
+          </div>
+          <p class="input-hint">Current age between 18 and 70.</p>
+        </div>
+
+        <div class="input-group">
+          <label class="input-label" for="retireAgeRange">Retirement Age <output id="retireAgeOut" for="retireAgeRange">65 years</output></label>
+          <div class="input-row">
+            <input type="range" class="slider" id="retireAgeRange" min="50" max="80" step="1" value="65" aria-label="Retirement age">
+            <input type="number" class="num-input" id="retireAgeNum" min="50" max="80" step="1" value="65" aria-label="Retirement age value">
+          </div>
+          <p class="input-hint">Retirement age between 50 and 80, and greater than your current age.</p>
+        </div>
+
+        <p class="input-error" id="ageError" style="display:none">Retirement age must be greater than your current age.</p>
+
+        <div class="input-group">
+          <label class="input-label" for="savingsRange">Current Savings <output id="savingsOut" for="savingsRange">$50,000</output></label>
+          <div class="input-row">
+            <input type="range" class="slider" id="savingsRange" min="0" max="10000000" step="1000" value="50000" aria-label="Current savings">
+            <input type="number" class="num-input" id="savingsNum" min="0" max="10000000" step="1000" value="50000" aria-label="Current savings value">
+          </div>
+          <p class="input-hint">Current savings between 0 and 10,000,000.</p>
+        </div>
+
+        <div class="input-group">
+          <label class="input-label" for="monthlyRange">Monthly Contribution <output id="monthlyOut" for="monthlyRange">$1,000</output></label>
+          <div class="input-row">
+            <input type="range" class="slider" id="monthlyRange" min="0" max="100000" step="100" value="1000" aria-label="Monthly contribution">
+            <input type="number" class="num-input" id="monthlyNum" min="0" max="100000" step="100" value="1000" aria-label="Monthly contribution value">
+          </div>
+          <p class="input-hint">Monthly contribution between 0 and 100,000.</p>
+        </div>
+
+        <div class="input-group">
+          <label class="input-label" for="returnRange">Annual Return Rate <output id="returnOut" for="returnRange">8%</output></label>
+          <div class="input-row">
+            <input type="range" class="slider" id="returnRange" min="1" max="15" step="0.1" value="8" aria-label="Annual return rate">
+            <input type="number" class="num-input" id="returnNum" min="1" max="15" step="0.1" value="8" aria-label="Annual return rate value">
+          </div>
+        </div>
+
+        <div class="input-group">
+          <label class="input-label" for="inflationRange">Annual Inflation Rate <output id="inflationOut" for="inflationRange">3%</output></label>
+          <div class="input-row">
+            <input type="range" class="slider" id="inflationRange" min="0" max="10" step="0.1" value="3" aria-label="Annual inflation rate">
+            <input type="number" class="num-input" id="inflationNum" min="0" max="10" step="0.1" value="3" aria-label="Annual inflation rate value">
+          </div>
+        </div>
+      </div>
+
+      <div class="calc-panel calc-results">
+        <h2>Your Results</h2>
+
+        <div class="result-main">
+          <div class="result-label">Nest Egg at Retirement</div>
+          <div class="result-emi" id="nestEggOut">$0 <span> total</span></div>
+        </div>
+
+        <div class="result-breakdown">
+          <div class="break-row"><span class="k">Years to Retirement</span><span class="v" id="yearsRow">35 years</span></div>
+          <div class="break-row"><span class="k">Current Savings</span><span class="v" id="savingsRow">$0</span></div>
+          <div class="break-row"><span class="k">Monthly Contributions</span><span class="v" id="contribRow">$0</span></div>
+          <div class="break-row"><span class="k">Total Contributions</span><span class="v" id="totalContribRow">$0</span></div>
+          <div class="break-row"><span class="k">Total Growth</span><span class="v" id="growthRow">$0</span></div>
+          <div class="break-row"><span class="k">Inflation-Adjusted Value (today's money)</span><span class="v green" id="adjustedRow">$0</span></div>
+        </div>
+
+        <div class="donut-wrap">
+          <svg id="donut" width="160" height="160" viewBox="0 0 160 160" role="img" aria-label="Current savings vs contributions vs growth chart">
+            <circle class="donut-track" cx="80" cy="80" r="64" fill="none" stroke-width="24"></circle>
+            <g transform="rotate(-90 80 80)">
+              <circle id="donutSavings" cx="80" cy="80" r="64" fill="none" stroke="#2563eb" stroke-width="24" stroke-dasharray="402.12 402.12" stroke-dashoffset="0"></circle>
+              <circle id="donutContrib" cx="80" cy="80" r="64" fill="none" stroke="#f59e0b" stroke-width="24" stroke-dasharray="0 402.12" stroke-dashoffset="0"></circle>
+              <circle id="donutGrowth" cx="80" cy="80" r="64" fill="none" stroke="#059669" stroke-width="24" stroke-dasharray="0 402.12" stroke-dashoffset="0"></circle>
+            </g>
+            <text id="donutPct" class="donut-pct" x="80" y="76" text-anchor="middle" font-size="20" font-weight="700">0%</text>
+            <text class="donut-sub" x="80" y="96" text-anchor="middle" font-size="12">Growth</text>
+          </svg>
+          <div class="donut-legend">
+            <div class="legend-item" id="legendRowSavings"><span class="legend-dot" style="background:#2563eb"></span>Current Savings <b id="legendSavings">$0</b></div>
+            <div class="legend-item" id="legendRowContrib"><span class="legend-dot" style="background:#f59e0b"></span>Contributions <b id="legendContrib">$0</b></div>
+            <div class="legend-item" id="legendRowGrowth"><span class="legend-dot" style="background:#059669"></span>Growth <b id="legendGrowth">$0</b></div>
+          </div>
+        </div>
+
+        <h3 style="margin-top:24px">Yearly Growth Table</h3>
+        <table class="amort-table">
+          <thead>
+            <tr><th>Year</th><th>Age</th><th>Contributions so far</th><th>Growth</th><th>Balance</th></tr>
+          </thead>
+          <tbody id="yearlyBody"></tbody>
+        </table>
+        <button class="show-more-btn" id="yearlyToggle" type="button">Show all years</button>
+      </div>
+    </div>
+
+    <section class="content-section">
+      <h2>Retirement Calculator Formula</h2>
+      <div class="formula-box">
+        <p class="formula">Years to retirement = retirement age − current age &nbsp;•&nbsp; Months = years × 12</p>
+        <p class="formula">g = 1 + (annual return rate ÷ 100 ÷ 12) &nbsp;•&nbsp; each month: balance = (balance + monthly contribution) × g</p>
+        <p><strong>Years</strong> = retirement age − current age &nbsp;•&nbsp; <strong>g</strong> = monthly growth factor &nbsp;•&nbsp; <strong>PMT</strong> = monthly contribution</p>
+        <p>This calculator simulates month by month, using the same method as the Compound Interest Calculator. The monthly contribution is added at the <strong>start</strong> of each month, then the whole balance is multiplied by the monthly growth factor g — this is the annuity-due basis, so each contribution earns growth for that full month. The nest egg at retirement is the simulated future value at the end of the last month.</p>
+        <p class="formula">Total contributions = current savings + (monthly contribution × months)</p>
+        <p class="formula">Total growth = nest egg − total contributions</p>
+        <p class="formula">Inflation-adjusted value = nest egg ÷ (1 + inflation rate ÷ 100)<sup>years</sup></p>
+        <p>The inflation-adjusted value is the nest egg expressed in today's money: it divides the future amount by how much prices will have risen over the years to retirement.</p>
+        <p><strong>Worked example:</strong> Age 30 to 65 is 35 years (420 months), current savings $50,000, monthly contribution $1,000, annual return 8%, inflation 3%: g = 1 + 0.08 ÷ 12 = 1.006667. Simulating month by month, the nest egg at retirement is <strong>$3,123,803</strong>. Total contributions = $50,000 + $1,000 × 420 = <strong>$470,000</strong>; total growth = $3,123,803 − $470,000 = <strong>$2,653,803</strong>. Inflation-adjusted value = $3,123,803 ÷ (1.03)<sup>35</sup> = $3,123,803 ÷ 2.8139 = <strong>$1,110,148</strong> in today's money. After the first year the balance is $66,683, and after 5 years it is $148,459.</p>
+      </div>
+    </section>
+
+    <section class="content-section">
+      <h2>Frequently Asked Questions</h2>
+      <details class="faq-item">
+        <summary class="faq-q">How much should I save for retirement?</summary>
+        <div class="faq-a"><p>There is no single number that fits everyone, because it depends on your spending, your retirement age and how long you expect retirement to last. A common starting point is to aim for a nest egg of 25 times your annual spending in retirement — so if you plan to spend $40,000 a year, that is $1,000,000. Try this calculator with different monthly contributions and retirement ages to see what it takes to reach your own target, and start with an amount you can sustain every month.</p></div>
+      </details>
+      <details class="faq-item">
+        <summary class="faq-q">What is the 4% rule?</summary>
+        <div class="faq-a"><p>The 4% rule is a rough guideline that says you can withdraw 4% of your nest egg in the first year of retirement, then adjust that amount for inflation each year, and the money should last about 30 years. For example, a $1,000,000 nest egg would support about $40,000 of spending in the first year. It is a general rule of thumb, not a guarantee — actual results depend on market returns, inflation and how long you live.</p></div>
+      </details>
+      <details class="faq-item">
+        <summary class="faq-q">How does inflation change the result?</summary>
+        <div class="faq-a"><p>Inflation shrinks what your money can buy. This calculator shows the inflation-adjusted value of your nest egg — what it would be worth in today's money — by dividing the future nest egg by (1 + inflation rate)^years. For example, $3,123,803 at retirement with 3% inflation over 35 years is worth $1,110,148 in today's money, because prices will have risen by a factor of 2.81 over that time. That is why the inflation-adjusted figure, not the headline nest egg, is the one to judge your plan by.</p></div>
+      </details>
+      <details class="faq-item">
+        <summary class="faq-q">Does starting early really matter?</summary>
+        <div class="faq-a"><p>Yes — starting early matters more than saving a large amount later, because compound growth does most of the work over long periods. In the worked example below, $1,000 a month from age 30 to 65 grows to $3,123,803, of which $2,653,803 is growth and only $470,000 is money actually paid in. Starting 10 years later, at 40, with the same $50,000 saved and the same $1,000 a month at 8% would leave you with only $1,324,375 at 65 — less than half — even though you paid in only $120,000 less. Time in the market beats timing the market.</p></div>
+      </details>
+      <details class="faq-item">
+        <summary class="faq-q">What return rate should I assume?</summary>
+        <div class="faq-a"><p>Use a cautious, long-term average rather than the best years you have seen. Many planners use 7–8% a year for a diversified stock-heavy portfolio before inflation, or 4–5% after inflation, but returns are never guaranteed and vary a lot from year to year. Try this calculator at 5%, 8% and 10% to see how sensitive your plan is to the rate — and if you are close to retirement, assume a lower rate, because a market fall hurts more when you have less time to recover.</p></div>
+      </details>
+    </section>
+
+    <section class="content-section">
+      <h2>Related Calculators</h2>
+      <div class="related-grid">
+        <a class="calc-card" href="compound-interest-calculator.html" data-name="Compound Interest Calculator" data-desc="See how compound interest grows your savings over time.">
+          <span class="calc-icon">💹</span>
+          <span class="calc-name">Compound Interest Calculator</span>
+          <span class="calc-desc">See how compound interest grows your savings over time.</span>
+        </a>
+        <a class="calc-card" href="sip-calculator.html" data-name="SIP Calculator" data-desc="Grow your wealth with monthly SIP investments.">
+          <span class="calc-icon">📈</span>
+          <span class="calc-name">SIP Calculator</span>
+          <span class="calc-desc">Grow your wealth with monthly SIP investments.</span>
+        </a>
+        <a class="calc-card" href="fd-calculator.html" data-name="FD Calculator" data-desc="See how your fixed deposit grows over time.">
+          <span class="calc-icon">🏦</span>
+          <span class="calc-name">FD Calculator</span>
+          <span class="calc-desc">See how your fixed deposit grows over time.</span>
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer"><div class="container"><div class="footer-grid">
+<div class="footer-col"><div class="footer-brand"><svg width="32" height="32" viewBox="0 0 40 40" fill="none" aria-hidden="true"><rect width="40" height="40" rx="10" fill="#2563eb"/><rect x="9" y="7" width="22" height="7" rx="2" fill="#ffffff"/><rect x="9" y="18" width="6" height="6" rx="1.5" fill="#ffffff"/><rect x="17" y="18" width="6" height="6" rx="1.5" fill="#ffffff"/><rect x="25" y="18" width="6" height="6" rx="1.5" fill="#ffffff"/><rect x="9" y="26" width="6" height="6" rx="1.5" fill="#ffffff"/><rect x="17" y="26" width="6" height="6" rx="1.5" fill="#ffffff"/><rect x="25" y="26" width="6" height="6" rx="1.5" fill="#ffffff"/></svg><span>All Calculator 360</span></div><p>Every calculator, all in one place. Free, private, and accurate — calculations happen right in your browser.</p></div>
+<div class="footer-col"><h3>Categories</h3><ul><li><a href="../index.html#finance">Finance</a></li><li><a href="../index.html#health">Health</a></li><li><a href="../index.html#math">Math</a></li><li><a href="../index.html#everyday">Everyday</a></li></ul></div>
+<div class="footer-col"><h3>Popular Calculators</h3><ul><li><a href="emi-calculator.html">EMI Calculator</a></li><li><a href="sip-calculator.html">SIP Calculator</a></li><li><a href="fd-calculator.html">FD Calculator</a></li><li><a href="income-tax-calculator.html">Income Tax Calculator</a></li><li><a href="gst-calculator.html">GST Calculator</a></li><li><a href="bmi-calculator.html">BMI Calculator</a></li><li><a href="age-calculator.html">Age Calculator</a></li><li><a href="percentage-calculator.html">Percentage Calculator</a></li></ul></div>
+<div class="footer-col"><h3>Company</h3><ul><li><a href="../about.html">About</a></li><li><a href="../contact.html">Contact</a></li><li><a href="../privacy.html">Privacy Policy</a></li><li><a href="../terms.html">Terms</a></li></ul></div>
+</div><div class="footer-bottom"><p>© 2026 All Calculator 360. All rights reserved.</p></div></div></footer>
+
+  <script>
+    (function () {
+      'use strict';
+
+      var CIRCUMFERENCE = 402.12;
+      var SYMBOLS = { USD: '$', INR: '₹', EUR: '€', GBP: '£' };
+
+      var currencyEl = document.getElementById('currency');
+      var currentAgeRange = document.getElementById('currentAgeRange');
+      var currentAgeNum = document.getElementById('currentAgeNum');
+      var currentAgeOut = document.getElementById('currentAgeOut');
+      var retireAgeRange = document.getElementById('retireAgeRange');
+      var retireAgeNum = document.getElementById('retireAgeNum');
+      var retireAgeOut = document.getElementById('retireAgeOut');
+      var ageError = document.getElementById('ageError');
+      var savingsRange = document.getElementById('savingsRange');
+      var savingsNum = document.getElementById('savingsNum');
+      var savingsOut = document.getElementById('savingsOut');
+      var monthlyRange = document.getElementById('monthlyRange');
+      var monthlyNum = document.getElementById('monthlyNum');
+      var monthlyOut = document.getElementById('monthlyOut');
+      var returnRange = document.getElementById('returnRange');
+      var returnNum = document.getElementById('returnNum');
+      var returnOut = document.getElementById('returnOut');
+      var inflationRange = document.getElementById('inflationRange');
+      var inflationNum = document.getElementById('inflationNum');
+      var inflationOut = document.getElementById('inflationOut');
+      var nestEggOut = document.getElementById('nestEggOut');
+      var yearsRow = document.getElementById('yearsRow');
+      var savingsRow = document.getElementById('savingsRow');
+      var contribRow = document.getElementById('contribRow');
+      var totalContribRow = document.getElementById('totalContribRow');
+      var growthRow = document.getElementById('growthRow');
+      var adjustedRow = document.getElementById('adjustedRow');
+      var legendSavings = document.getElementById('legendSavings');
+      var legendContrib = document.getElementById('legendContrib');
+      var legendGrowth = document.getElementById('legendGrowth');
+      var legendRowSavings = document.getElementById('legendRowSavings');
+      var legendRowContrib = document.getElementById('legendRowContrib');
+      var legendRowGrowth = document.getElementById('legendRowGrowth');
+      var donutSavings = document.getElementById('donutSavings');
+      var donutContrib = document.getElementById('donutContrib');
+      var donutGrowth = document.getElementById('donutGrowth');
+      var donutPct = document.getElementById('donutPct');
+      var yearlyBody = document.getElementById('yearlyBody');
+      var yearlyToggle = document.getElementById('yearlyToggle');
+
+      var yearlyExpanded = false;
+
+      function currencyCode() {
+        return currencyEl.value;
+      }
+
+      function fmtMoney(value) {
+        return new Intl.NumberFormat('en-US', {
+          style: 'currency',
+          currency: currencyCode(),
+          maximumFractionDigits: 0
+        }).format(value);
+      }
+
+      function clamp(value, min, max) {
+        if (isNaN(value)) return min;
+        return Math.min(max, Math.max(min, value));
+      }
+
+      function getCurrentAge() {
+        return clamp(parseFloat(currentAgeNum.value), 18, 70);
+      }
+
+      function getRetireAge() {
+        return clamp(parseFloat(retireAgeNum.value), 50, 80);
+      }
+
+      function getSavings() {
+        return clamp(parseFloat(savingsNum.value), 0, 10000000);
+      }
+
+      function getMonthly() {
+        return clamp(parseFloat(monthlyNum.value), 0, 100000);
+      }
+
+      function getReturnRate() {
+        return clamp(parseFloat(returnNum.value), 1, 15);
+      }
+
+      function getInflation() {
+        return clamp(parseFloat(inflationNum.value), 0, 10);
+      }
+
+      // Month-by-month simulation (same method as the Compound Interest
+      // Calculator): each month the contribution is added at the START of
+      // the month, then the balance is multiplied by the monthly growth
+      // factor g = 1 + annual return / 100 / 12 (annuity-due).
+      function simulate(P, PMT, annualRate, years, currentAge) {
+        var g = 1 + annualRate / 100 / 12;
+        var balance = P;
+        var rows = [];
+        for (var y = 1; y <= years; y++) {
+          var start = balance;
+          for (var m = 0; m < 12; m++) {
+            balance = (balance + PMT) * g;
+          }
+          var contribSoFar = P + PMT * 12 * y;
+          rows.push({
+            year: y,
+            age: currentAge + y,
+            contributions: contribSoFar,
+            growth: balance - start - PMT * 12,
+            end: balance
+          });
+        }
+        return { fv: balance, rows: rows };
+      }
+
+      function renderYearly(rows) {
+        var html = '';
+        rows.forEach(function (row, i) {
+          var hidden = (!yearlyExpanded && i >= 5) ? ' style="display:none"' : '';
+          html += '<tr' + hidden + '><td>' + row.year + '</td><td>' + row.age + '</td><td>' + fmtMoney(row.contributions) + '</td><td>' + fmtMoney(row.growth) + '</td><td>' + fmtMoney(row.end) + '</td></tr>';
+        });
+        yearlyBody.innerHTML = html;
+        if (rows.length <= 5) {
+          yearlyToggle.style.display = 'none';
+        } else {
+          yearlyToggle.style.display = '';
+          yearlyToggle.textContent = yearlyExpanded ? 'Show less' : 'Show all years';
+        }
+      }
+
+      function setDonut(el, share, offsetShare) {
+        el.setAttribute('stroke-dasharray', (share * CIRCUMFERENCE).toFixed(2) + ' ' + CIRCUMFERENCE);
+        el.setAttribute('stroke-dashoffset', (-offsetShare * CIRCUMFERENCE).toFixed(2));
+      }
+
+      function showInvalid() {
+        ageError.style.display = '';
+        nestEggOut.innerHTML = '— <span> total</span>';
+        yearsRow.textContent = '—';
+        savingsRow.textContent = '—';
+        contribRow.textContent = '—';
+        totalContribRow.textContent = '—';
+        growthRow.textContent = '—';
+        adjustedRow.textContent = '—';
+        legendSavings.textContent = '—';
+        legendContrib.textContent = '—';
+        legendGrowth.textContent = '—';
+        setDonut(donutSavings, 0, 0);
+        setDonut(donutContrib, 0, 0);
+        setDonut(donutGrowth, 0, 0);
+        donutPct.textContent = '0%';
+        yearlyBody.innerHTML = '';
+        yearlyToggle.style.display = 'none';
+      }
+
+      function recalculate() {
+        var currentAge = getCurrentAge();
+        var retireAge = getRetireAge();
+        var savings = getSavings();
+        var monthly = getMonthly();
+        var annualRate = getReturnRate();
+        var inflation = getInflation();
+
+        currentAgeOut.textContent = currentAge + ' years';
+        retireAgeOut.textContent = retireAge + ' years';
+        savingsOut.textContent = fmtMoney(savings);
+        monthlyOut.textContent = fmtMoney(monthly);
+        returnOut.textContent = (Math.round(annualRate * 10) / 10) + '%';
+        inflationOut.textContent = (Math.round(inflation * 10) / 10) + '%';
+
+        if (retireAge <= currentAge) {
+          showInvalid();
+          return;
+        }
+        ageError.style.display = 'none';
+
+        var years = retireAge - currentAge;
+        var months = years * 12;
+        var result = simulate(savings, monthly, annualRate, years, currentAge);
+        var fv = result.fv;
+        var monthlyTotal = monthly * months;
+        var totalContrib = savings + monthlyTotal;
+        var growth = fv - totalContrib;
+        var adjusted = fv / Math.pow(1 + inflation / 100, years);
+
+        nestEggOut.innerHTML = fmtMoney(fv) + ' <span> total</span>';
+        yearsRow.textContent = years + (years === 1 ? ' year' : ' years');
+        savingsRow.textContent = fmtMoney(savings);
+        contribRow.textContent = fmtMoney(monthlyTotal);
+        totalContribRow.textContent = fmtMoney(totalContrib);
+        growthRow.textContent = fmtMoney(growth);
+        adjustedRow.textContent = fmtMoney(adjusted);
+        legendSavings.textContent = fmtMoney(savings);
+        legendContrib.textContent = fmtMoney(monthlyTotal);
+        legendGrowth.textContent = fmtMoney(growth);
+
+        var savingsShare = fv > 0 ? savings / fv : 0;
+        var contribShare = fv > 0 ? monthlyTotal / fv : 0;
+        var growthShare = fv > 0 ? growth / fv : 0;
+        setDonut(donutSavings, savingsShare, 0);
+        setDonut(donutContrib, contribShare, savingsShare);
+        setDonut(donutGrowth, growthShare, savingsShare + contribShare);
+        donutPct.textContent = (growthShare * 100).toFixed(1) + '%';
+        legendRowSavings.style.display = savings > 0 ? '' : 'none';
+        legendRowContrib.style.display = monthlyTotal > 0 ? '' : 'none';
+        legendRowGrowth.style.display = growth > 0 ? '' : 'none';
+
+        renderYearly(result.rows);
+      }
+
+      function syncPair(rangeEl, numEl, min, max, onChange) {
+        rangeEl.addEventListener('input', function () {
+          numEl.value = rangeEl.value;
+          onChange();
+        });
+        numEl.addEventListener('input', function () {
+          var val = clamp(parseFloat(numEl.value), min, max);
+          rangeEl.value = val;
+          onChange();
+        });
+        numEl.addEventListener('change', function () {
+          var val = clamp(parseFloat(numEl.value), min, max);
+          numEl.value = val;
+          rangeEl.value = val;
+          onChange();
+        });
+      }
+
+      syncPair(currentAgeRange, currentAgeNum, 18, 70, recalculate);
+      syncPair(retireAgeRange, retireAgeNum, 50, 80, recalculate);
+      syncPair(savingsRange, savingsNum, 0, 10000000, recalculate);
+      syncPair(monthlyRange, monthlyNum, 0, 100000, recalculate);
+      syncPair(returnRange, returnNum, 1, 15, recalculate);
+      syncPair(inflationRange, inflationNum, 0, 10, recalculate);
+
+      currencyEl.addEventListener('change', recalculate);
+
+      yearlyToggle.addEventListener('click', function () {
+        yearlyExpanded = !yearlyExpanded;
+        recalculate();
+      });
+
+      recalculate();
+    })();
+  </script>
+</body>
+</html>
