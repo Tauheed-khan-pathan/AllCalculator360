@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mortgage Calculator — Calculate Monthly Home Loan Payment | All Calculator 360</title>
+  <meta name="description" content="Calculate your monthly mortgage payment — principal & interest, property tax, home insurance and PMI — with total interest, total cost and a year-by-year amortisation schedule. Free, instant, private.">
+  <link rel="canonical" href="https://tauheed-khan-pathan.github.io/AllCalculator360/calculator/mortgage-calculator.html">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Mortgage Calculator — Calculate Monthly Home Loan Payment | All Calculator 360">
+  <meta property="og:description" content="Calculate your monthly mortgage payment — principal & interest, property tax, home insurance and PMI — with total interest, total cost and a year-by-year amortisation schedule. Free, instant, private.">
+  <meta property="og:url" content="https://tauheed-khan-pathan.github.io/AllCalculator360/calculator/mortgage-calculator.html">
+  <meta property="og:site_name" content="All Calculator 360">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Mortgage Calculator — Calculate Monthly Home Loan Payment | All Calculator 360">
+  <meta name="twitter:description" content="Calculate your monthly mortgage payment — principal & interest, property tax, home insurance and PMI — with total interest, total cost and a year-by-year amortisation schedule. Free, instant, private.">
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "All Calculator 360",
+  "alternateName": "AllCalculator360",
+  "url": "https://tauheed-khan-pathan.github.io/AllCalculator360/",
+  "description": "Free online calculators for finance, health, math and everyday life. EMI, SIP, FD, BMI and 200+ calculators — no sign-up, 100% private."
+}
+  </script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is a mortgage payment made of?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A monthly mortgage payment usually has four parts: principal and interest (P&I), property tax, home insurance, and PMI if your down payment is under 20%. This calculator adds all four, so you see the full monthly cost — not just the loan payment."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How is the principal & interest part calculated?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "With the EMI formula: P&I = P × r × (1 + r)^n ÷ ((1 + r)^n − 1), where P is the loan amount (home price minus down payment), r is the monthly interest rate (annual rate ÷ 12 ÷ 100) and n is the number of monthly payments. Property tax, home insurance and PMI are then added as simple monthly amounts: annual amount ÷ 12."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is PMI and when do I pay it?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "PMI (private mortgage insurance) protects the lender if you stop paying. Lenders usually charge it when your down payment is under 20% of the home price. It typically costs 0.3%–1.5% of the loan amount per year, and you can usually ask to remove it once you have 20% equity in the home."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does a bigger down payment lower my monthly payment?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, in two ways: it reduces the loan amount, so principal and interest fall, and a down payment of 20% or more usually removes PMI entirely. On a $400,000 home at 6.5% for 30 years, raising the down payment from 10% to 20% cuts the principal & interest part by about $253 a month."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is the total cost the same as the total interest?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. Total interest covers only the interest charged on the loan amount. Total cost adds everything you pay over the loan term: principal and interest, plus property tax, home insurance and PMI. For the worked example below, total interest is $408,142 but the total cost is $926,142."
+      }
+    }
+  ]
+}
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../styles.css">
+  <script>
+    (function () {
+      try {
+        if (localStorage.getItem('ac360-theme') === 'dark') {
+          document.documentElement.setAttribute('data-theme', 'dark');
+        }
+      } catch (e) {}
+    })();
+  </script>
+  <script src="../app.js" defer></script>
+</head>
+<body>
+  <header class="site-header"><div class="header-inner">
+<a class="brand" href="../index.html"><svg class="brand-logo" viewBox="0 0 40 40" fill="none" aria-hidden="true"><rect width="40" height="40" rx="10" fill="#2563eb"/><rect x="9" y="7" width="22" height="7" rx="2" fill="#ffffff"/><rect x="9" y="18" width="6" height="6" rx="1.5" fill="#ffffff"/><rect x="17" y="18" width="6" height="6" rx="1.5" fill="#ffffff"/><rect x="25" y="18" width="6" height="6" rx="1.5" fill="#ffffff"/><rect x="9" y="26" width="6" height="6" rx="1.5" fill="#ffffff"/><rect x="17" y="26" width="6" height="6" rx="1.5" fill="#ffffff"/><rect x="25" y="26" width="6" height="6" rx="1.5" fill="#ffffff"/></svg><span class="brand-name">All Calculator <span class="brand-360">360</span></span></a>
+<div class="header-search"><input id="headerSearch" type="search" placeholder="Search calculators…" aria-label="Search calculators"></div>
+<nav class="main-nav" aria-label="Categories"><a class="nav-link" href="../index.html#finance">Finance</a><a class="nav-link" href="../index.html#health">Health</a><a class="nav-link" href="../index.html#math">Math</a><a class="nav-link" href="../index.html#everyday">Everyday</a></nav>
+<button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">🌙</button>
+<button class="menu-toggle" id="menuToggle" aria-label="Menu">☰</button>
+</div><nav class="mobile-nav" id="mobileNav" aria-label="Mobile categories"><a class="nav-link" href="../index.html#finance">Finance</a><a class="nav-link" href="../index.html#health">Health</a><a class="nav-link" href="../index.html#math">Math</a><a class="nav-link" href="../index.html#everyday">Everyday</a></nav></header>
+
+  <main class="container">
+    <nav class="breadcrumb"><a href="../index.html">Home</a> / <a href="../index.html#finance">Finance</a> / Mortgage Calculator</nav>
+
+    <div class="calc-head">
+      <h1>Mortgage Calculator</h1>
+      <p>Work out your true monthly mortgage payment — principal &amp; interest, property tax, home insurance and PMI — plus total interest, total cost and a year-by-year schedule.</p>
+    </div>
+
+    <div class="calc-layout">
+      <div class="calc-panel calc-inputs">
+        <h2>Home Loan Details</h2>
+
+        <div class="currency-row">
+          <label for="currency">Currency</label>
+          <select id="currency" class="currency-select">
+            <option value="USD" selected>USD ($) — US Dollar</option>
+            <option value="INR">INR (₹) — Indian Rupee</option>
+            <option value="EUR">EUR (€) — Euro</option>
+            <option value="GBP">GBP (£) — British Pound</option>
+          </select>
+        </div>
+
+        <div class="input-group">
+          <label class="input-label" for="priceRange">Home Price <output id="priceOut" for="priceRange">$400,000</output></label>
+          <div class="input-row">
+            <input type="range" class="slider" id="priceRange" min="50000" max="5000000" step="1000" value="400000" aria-label="Home price">
+            <input type="number" class="num-input" id="priceNum" min="50000" max="5000000" step="1000" value="400000" aria-label="Home price value">
+          </div>
+          <p class="input-hint">Home price between 50,000 and 5,000,000.</p>
+        </div>
+
+        <div class="input-group">
+          <label class="input-label" for="downRange">Down Payment <output id="downOut" for="downRange">20% ($80,000)</output></label>
+          <div class="input-row">
+            <input type="range" class="slider" id="downRange" min="0" max="50" step="1" value="20" aria-label="Down payment percentage">
+            <input type="number" class="num-input" id="downNum" min="0" max="50" step="1" value="20" aria-label="Down payment percentage value">
+          </div>
+          <p class="input-hint">Down payment as a percentage of the home price.</p>
+        </div>
+
+        <div class="input-group">
+          <label class="input-label" for="termSelect">Loan Term</label>
+          <select id="termSelect" class="currency-select" aria-label="Loan term">
+            <option value="10">10 years</option>
+            <option value="15">15 years</option>
+            <option value="20">20 years</option>
+            <option value="30" selected>30 years</option>
+          </select>
+        </div>
+
+        <div class="input-group">
+          <label class="input-label" for="rateRange">Annual Interest Rate <output id="rateOut" for="rateRange">6.5%</output></label>
+          <div class="input-row">
+            <input type="range" class="slider" id="rateRange" min="1" max="15" step="0.1" value="6.5" aria-label="Annual interest rate">
+            <input type="number" class="num-input" id="rateNum" min="1" max="15" step="0.1" value="6.5" aria-label="Annual interest rate value">
+          </div>
+        </div>
+
+        <div class="input-group">
+          <label class="input-label" for="taxNum">Annual Property Tax</label>
+          <div class="input-row">
+            <input type="number" class="num-input" id="taxNum" min="0" max="100000" step="100" value="4800" aria-label="Annual property tax">
+          </div>
+        </div>
+
+        <div class="input-group">
+          <label class="input-label" for="insNum">Annual Home Insurance</label>
+          <div class="input-row">
+            <input type="number" class="num-input" id="insNum" min="0" max="100000" step="100" value="1800" aria-label="Annual home insurance">
+          </div>
+        </div>
+
+        <div class="input-group">
+          <label class="input-label" for="pmiNum">PMI Rate (annual %)</label>
+          <div class="input-row">
+            <input type="number" class="num-input" id="pmiNum" min="0" max="5" step="0.1" value="0" aria-label="PMI rate per year">
+          </div>
+          <p class="input-hint">PMI usually applies when your down payment is under 20%.</p>
+        </div>
+      </div>
+
+      <div class="calc-panel calc-results">
+        <h2>Your Results</h2>
+
+        <div class="result-main">
+          <div class="result-label">Total Monthly Payment</div>
+          <div class="result-emi" id="totalOut">$0 <span>/ month</span></div>
+        </div>
+
+        <div class="result-breakdown">
+          <div class="break-row"><span class="k">Principal &amp; Interest</span><span class="v" id="piOut">$0</span></div>
+          <div class="break-row"><span class="k">Property Tax / month</span><span class="v" id="taxOut">$0</span></div>
+          <div class="break-row"><span class="k">Home Insurance / month</span><span class="v" id="insOut">$0</span></div>
+          <div class="break-row"><span class="k">PMI / month</span><span class="v" id="pmiOut">$0</span></div>
+          <div class="break-row"><span class="k">Loan Amount</span><span class="v" id="loanOut">$0</span></div>
+          <div class="break-row"><span class="k">Total Interest (P&amp;I only)</span><span class="v" id="interestOut">$0</span></div>
+          <div class="break-row"><span class="k">Total Cost (all payments over the term)</span><span class="v green" id="totalCostOut">$0</span></div>
+        </div>
+
+        <div class="donut-wrap">
+          <svg id="donut" width="160" height="160" viewBox="0 0 160 160" role="img" aria-label="Monthly payment breakdown chart">
+            <circle class="donut-track" cx="80" cy="80" r="64" fill="none" stroke-width="24"></circle>
+            <g transform="rotate(-90 80 80)">
+              <circle id="donutPI" cx="80" cy="80" r="64" fill="none" stroke="#2563eb" stroke-width="24" stroke-dasharray="402.12 402.12" stroke-dashoffset="0"></circle>
+              <circle id="donutTax" cx="80" cy="80" r="64" fill="none" stroke="#059669" stroke-width="24" stroke-dasharray="0 402.12" stroke-dashoffset="0"></circle>
+              <circle id="donutIns" cx="80" cy="80" r="64" fill="none" stroke="#f59e0b" stroke-width="24" stroke-dasharray="0 402.12" stroke-dashoffset="0"></circle>
+              <circle id="donutPMI" cx="80" cy="80" r="64" fill="none" stroke="#dc2626" stroke-width="24" stroke-dasharray="0 402.12" stroke-dashoffset="0"></circle>
+            </g>
+            <text id="donutPct" class="donut-pct" x="80" y="76" text-anchor="middle" font-size="20" font-weight="700">0%</text>
+            <text class="donut-sub" x="80" y="96" text-anchor="middle" font-size="12">P&amp;I share</text>
+          </svg>
+          <div class="donut-legend">
+            <div class="legend-item" id="legendRowPI"><span class="legend-dot" style="background:#2563eb"></span>Principal &amp; Interest <b id="legendPI">$0</b></div>
+            <div class="legend-item" id="legendRowTax"><span class="legend-dot" style="background:#059669"></span>Property Tax <b id="legendTax">$0</b></div>
+            <div class="legend-item" id="legendRowIns"><span class="legend-dot" style="background:#f59e0b"></span>Home Insurance <b id="legendIns">$0</b></div>
+            <div class="legend-item" id="legendRowPMI"><span class="legend-dot" style="background:#dc2626"></span>PMI <b id="legendPMI">$0</b></div>
+          </div>
+        </div>
+
+        <h3 style="margin-top:24px">Yearly Amortisation Schedule</h3>
+        <table class="amort-table">
+          <thead>
+            <tr><th>Year</th><th>Payment</th><th>Principal</th><th>Interest</th><th>Balance</th></tr>
+          </thead>
+          <tbody id="amortBody"></tbody>
+        </table>
+        <button class="show-more-btn" id="amortToggle" type="button">Show all years</button>
+      </div>
+    </div>
+
+    <section class="content-section">
+      <h2>Mortgage Formula</h2>
+      <div class="formula-box">
+        <p class="formula">P&amp;I = P × r × (1 + r)<sup>n</sup> ÷ ((1 + r)<sup>n</sup> − 1)</p>
+        <p class="formula" style="font-size:16px">Total monthly payment = P&amp;I + (annual property tax ÷ 12) + (annual home insurance ÷ 12) + (loan amount × PMI rate ÷ 100 ÷ 12)</p>
+        <p><strong>P</strong> = Loan amount (home price − down payment) &nbsp;•&nbsp; <strong>r</strong> = Monthly interest rate (annual rate ÷ 12 ÷ 100) &nbsp;•&nbsp; <strong>n</strong> = Number of monthly payments (loan term in months)</p>
+        <p><strong>Worked example:</strong> Home price $400,000, down payment 20% = $80,000, so the loan amount P = $320,000. Annual rate 6.5% for 30 years (360 months): r = 0.065 ÷ 12 = 0.0054167, n = 360, P&amp;I = 320,000 × 0.0054167 × (1.0054167)<sup>360</sup> ÷ ((1.0054167)<sup>360</sup> − 1) = <strong>$2,023 per month</strong> ($2,022.62 exact). Add property tax $4,800 ÷ 12 = $400, home insurance $1,800 ÷ 12 = $150 and PMI $0: $2,022.62 + $400 + $150 + $0 = <strong>$2,573 per month</strong> ($2,572.62 exact). Total interest = $2,022.62 × 360 − $320,000 = <strong>$408,142</strong>. Total cost over 30 years = $2,572.62 × 360 = <strong>$926,142</strong>.</p>
+      </div>
+    </section>
+
+    <section class="content-section">
+      <h2>Frequently Asked Questions</h2>
+      <details class="faq-item">
+        <summary class="faq-q">What is a mortgage payment made of?</summary>
+        <div class="faq-a"><p>A monthly mortgage payment usually has four parts: principal and interest (P&I), property tax, home insurance, and PMI if your down payment is under 20%. This calculator adds all four, so you see the full monthly cost — not just the loan payment.</p></div>
+      </details>
+      <details class="faq-item">
+        <summary class="faq-q">How is the principal & interest part calculated?</summary>
+        <div class="faq-a"><p>With the EMI formula: P&I = P × r × (1 + r)^n ÷ ((1 + r)^n − 1), where P is the loan amount (home price minus down payment), r is the monthly interest rate (annual rate ÷ 12 ÷ 100) and n is the number of monthly payments. Property tax, home insurance and PMI are then added as simple monthly amounts: annual amount ÷ 12.</p></div>
+      </details>
+      <details class="faq-item">
+        <summary class="faq-q">What is PMI and when do I pay it?</summary>
+        <div class="faq-a"><p>PMI (private mortgage insurance) protects the lender if you stop paying. Lenders usually charge it when your down payment is under 20% of the home price. It typically costs 0.3%–1.5% of the loan amount per year, and you can usually ask to remove it once you have 20% equity in the home.</p></div>
+      </details>
+      <details class="faq-item">
+        <summary class="faq-q">Does a bigger down payment lower my monthly payment?</summary>
+        <div class="faq-a"><p>Yes, in two ways: it reduces the loan amount, so principal and interest fall, and a down payment of 20% or more usually removes PMI entirely. On a $400,000 home at 6.5% for 30 years, raising the down payment from 10% to 20% cuts the principal & interest part by about $253 a month.</p></div>
+      </details>
+      <details class="faq-item">
+        <summary class="faq-q">Is the total cost the same as the total interest?</summary>
+        <div class="faq-a"><p>No. Total interest covers only the interest charged on the loan amount. Total cost adds everything you pay over the loan term: principal and interest, plus property tax, home insurance and PMI. For the worked example below, total interest is $408,142 but the total cost is $926,142.</p></div>
+      </details>
+    </section>
+
+    <section class="content-section">
+      <h2>Related Calculators</h2>
+      <div class="related-grid">
+        <a class="calc-card" href="emi-calculator.html" data-name="EMI Calculator" data-desc="Calculate your monthly loan EMI with interest breakdown.">
+          <span class="calc-icon">💰</span>
+          <span class="calc-name">EMI Calculator</span>
+          <span class="calc-desc">Calculate your monthly loan EMI with interest breakdown.</span>
+        </a>
+        <a class="calc-card" href="compound-interest-calculator.html" data-name="Compound Interest Calculator" data-desc="See how compound interest grows your savings over time.">
+          <span class="calc-icon">💹</span>
+          <span class="calc-name">Compound Interest Calculator</span>
+          <span class="calc-desc">See how compound interest grows your savings over time.</span>
+        </a>
+        <a class="calc-card" href="fd-calculator.html" data-name="FD Calculator" data-desc="See how your fixed deposit grows over time.">
+          <span class="calc-icon">🏦</span>
+          <span class="calc-name">FD Calculator</span>
+          <span class="calc-desc">See how your fixed deposit grows over time.</span>
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer"><div class="container"><div class="footer-grid">
+<div class="footer-col"><div class="footer-brand"><svg width="32" height="32" viewBox="0 0 40 40" fill="none" aria-hidden="true"><rect width="40" height="40" rx="10" fill="#2563eb"/><rect x="9" y="7" width="22" height="7" rx="2" fill="#ffffff"/><rect x="9" y="18" width="6" height="6" rx="1.5" fill="#ffffff"/><rect x="17" y="18" width="6" height="6" rx="1.5" fill="#ffffff"/><rect x="25" y="18" width="6" height="6" rx="1.5" fill="#ffffff"/><rect x="9" y="26" width="6" height="6" rx="1.5" fill="#ffffff"/><rect x="17" y="26" width="6" height="6" rx="1.5" fill="#ffffff"/><rect x="25" y="26" width="6" height="6" rx="1.5" fill="#ffffff"/></svg><span>All Calculator 360</span></div><p>Every calculator, all in one place. Free, private, and accurate — calculations happen right in your browser.</p></div>
+<div class="footer-col"><h3>Categories</h3><ul><li><a href="../index.html#finance">Finance</a></li><li><a href="../index.html#health">Health</a></li><li><a href="../index.html#math">Math</a></li><li><a href="../index.html#everyday">Everyday</a></li></ul></div>
+<div class="footer-col"><h3>Popular Calculators</h3><ul><li><a href="emi-calculator.html">EMI Calculator</a></li><li><a href="sip-calculator.html">SIP Calculator</a></li><li><a href="fd-calculator.html">FD Calculator</a></li><li><a href="income-tax-calculator.html">Income Tax Calculator</a></li><li><a href="gst-calculator.html">GST Calculator</a></li><li><a href="bmi-calculator.html">BMI Calculator</a></li><li><a href="age-calculator.html">Age Calculator</a></li><li><a href="percentage-calculator.html">Percentage Calculator</a></li></ul></div>
+<div class="footer-col"><h3>Company</h3><ul><li><a href="../about.html">About</a></li><li><a href="../contact.html">Contact</a></li><li><a href="../privacy.html">Privacy Policy</a></li><li><a href="../terms.html">Terms</a></li></ul></div>
+</div><div class="footer-bottom"><p>© 2026 All Calculator 360. All rights reserved.</p></div></div></footer>
+
+  <script>
+    (function () {
+      'use strict';
+
+      var CIRCUMFERENCE = 402.12;
+
+      var currencyEl = document.getElementById('currency');
+      var priceRange = document.getElementById('priceRange');
+      var priceNum = document.getElementById('priceNum');
+      var priceOut = document.getElementById('priceOut');
+      var downRange = document.getElementById('downRange');
+      var downNum = document.getElementById('downNum');
+      var downOut = document.getElementById('downOut');
+      var termSelect = document.getElementById('termSelect');
+      var rateRange = document.getElementById('rateRange');
+      var rateNum = document.getElementById('rateNum');
+      var rateOut = document.getElementById('rateOut');
+      var taxNum = document.getElementById('taxNum');
+      var insNum = document.getElementById('insNum');
+      var pmiNum = document.getElementById('pmiNum');
+      var totalOut = document.getElementById('totalOut');
+      var piOut = document.getElementById('piOut');
+      var taxOut = document.getElementById('taxOut');
+      var insOut = document.getElementById('insOut');
+      var pmiOut = document.getElementById('pmiOut');
+      var loanOut = document.getElementById('loanOut');
+      var interestOut = document.getElementById('interestOut');
+      var totalCostOut = document.getElementById('totalCostOut');
+      var legendPI = document.getElementById('legendPI');
+      var legendTax = document.getElementById('legendTax');
+      var legendIns = document.getElementById('legendIns');
+      var legendPMI = document.getElementById('legendPMI');
+      var legendRowPI = document.getElementById('legendRowPI');
+      var legendRowTax = document.getElementById('legendRowTax');
+      var legendRowIns = document.getElementById('legendRowIns');
+      var legendRowPMI = document.getElementById('legendRowPMI');
+      var donutPI = document.getElementById('donutPI');
+      var donutTax = document.getElementById('donutTax');
+      var donutIns = document.getElementById('donutIns');
+      var donutPMI = document.getElementById('donutPMI');
+      var donutPct = document.getElementById('donutPct');
+      var amortBody = document.getElementById('amortBody');
+      var amortToggle = document.getElementById('amortToggle');
+
+      var amortExpanded = false;
+
+      function currencyCode() {
+        return currencyEl.value;
+      }
+
+      function fmtMoney(value) {
+        return new Intl.NumberFormat('en-US', {
+          style: 'currency',
+          currency: currencyCode(),
+          maximumFractionDigits: 0
+        }).format(value);
+      }
+
+      function clamp(value, min, max) {
+        if (isNaN(value)) return min;
+        return Math.min(max, Math.max(min, value));
+      }
+
+      function getPrice() {
+        return clamp(parseFloat(priceNum.value), 50000, 5000000);
+      }
+
+      function getDownPct() {
+        return clamp(parseFloat(downNum.value), 0, 50);
+      }
+
+      function getYears() {
+        return parseInt(termSelect.value, 10);
+      }
+
+      function getRate() {
+        return clamp(parseFloat(rateNum.value), 1, 15);
+      }
+
+      function getTax() {
+        return clamp(parseFloat(taxNum.value), 0, 100000);
+      }
+
+      function getIns() {
+        return clamp(parseFloat(insNum.value), 0, 100000);
+      }
+
+      function getPMI() {
+        return clamp(parseFloat(pmiNum.value), 0, 5);
+      }
+
+      function calcPI(P, annualRate, months) {
+        var r = annualRate / 12 / 100;
+        if (r === 0) return P / months;
+        var factor = Math.pow(1 + r, months);
+        return P * r * factor / (factor - 1);
+      }
+
+      function buildSchedule(P, annualRate, months, pi, yearlyPayment) {
+        var r = annualRate / 12 / 100;
+        var balance = P;
+        var years = Math.ceil(months / 12);
+        var rows = [];
+        for (var y = 1; y <= years; y++) {
+          var yearPrincipal = 0;
+          var yearInterest = 0;
+          var monthsInYear = Math.min(12, months - (y - 1) * 12);
+          for (var m = 0; m < monthsInYear; m++) {
+            var interestPart = balance * r;
+            var principalPart = pi - interestPart;
+            if (principalPart > balance) principalPart = balance;
+            balance -= principalPart;
+            yearPrincipal += principalPart;
+            yearInterest += interestPart;
+          }
+          if (y === years) balance = 0;
+          rows.push({
+            year: y,
+            payment: yearlyPayment,
+            principal: yearPrincipal,
+            interest: yearInterest,
+            balance: Math.max(0, balance)
+          });
+        }
+        return rows;
+      }
+
+      function renderSchedule(rows) {
+        var html = '';
+        rows.forEach(function (row, i) {
+          var hidden = (!amortExpanded && i >= 5) ? ' style="display:none"' : '';
+          html += '<tr' + hidden + '><td>' + row.year + '</td><td>' + fmtMoney(row.payment) + '</td><td>' + fmtMoney(row.principal) + '</td><td>' + fmtMoney(row.interest) + '</td><td>' + fmtMoney(row.balance) + '</td></tr>';
+        });
+        amortBody.innerHTML = html;
+        if (rows.length <= 5) {
+          amortToggle.style.display = 'none';
+        } else {
+          amortToggle.style.display = '';
+          amortToggle.textContent = amortExpanded ? 'Show less' : 'Show all years';
+        }
+      }
+
+      function setSlice(el, share, offsetShare) {
+        el.setAttribute('stroke-dasharray', (share * CIRCUMFERENCE).toFixed(2) + ' ' + CIRCUMFERENCE);
+        el.setAttribute('stroke-dashoffset', (-offsetShare * CIRCUMFERENCE).toFixed(2));
+      }
+
+      function recalculate() {
+        var price = getPrice();
+        var downPct = getDownPct();
+        var downAmt = price * downPct / 100;
+        var loan = price - downAmt;
+        var years = getYears();
+        var months = years * 12;
+        var annualRate = getRate();
+        var taxAnnual = getTax();
+        var insAnnual = getIns();
+        var pmiRate = getPMI();
+
+        var pi = calcPI(loan, annualRate, months);
+        var taxMonthly = taxAnnual / 12;
+        var insMonthly = insAnnual / 12;
+        var pmiMonthly = loan * pmiRate / 100 / 12;
+        var totalMonthly = pi + taxMonthly + insMonthly + pmiMonthly;
+        var totalInterest = pi * months - loan;
+        var totalCost = totalMonthly * months;
+
+        priceOut.textContent = fmtMoney(price);
+        downOut.textContent = (Math.round(downPct * 10) / 10) + '% (' + fmtMoney(downAmt) + ')';
+        rateOut.textContent = (Math.round(annualRate * 10) / 10) + '%';
+
+        totalOut.innerHTML = fmtMoney(totalMonthly) + ' <span>/ month</span>';
+        piOut.textContent = fmtMoney(pi);
+        taxOut.textContent = fmtMoney(taxMonthly);
+        insOut.textContent = fmtMoney(insMonthly);
+        pmiOut.textContent = fmtMoney(pmiMonthly);
+        loanOut.textContent = fmtMoney(loan);
+        interestOut.textContent = fmtMoney(totalInterest);
+        totalCostOut.textContent = fmtMoney(totalCost);
+        legendPI.textContent = fmtMoney(pi);
+        legendTax.textContent = fmtMoney(taxMonthly);
+        legendIns.textContent = fmtMoney(insMonthly);
+        legendPMI.textContent = fmtMoney(pmiMonthly);
+
+        var piShare = totalMonthly > 0 ? pi / totalMonthly : 1;
+        var taxShare = totalMonthly > 0 ? taxMonthly / totalMonthly : 0;
+        var insShare = totalMonthly > 0 ? insMonthly / totalMonthly : 0;
+        var pmiShare = totalMonthly > 0 ? pmiMonthly / totalMonthly : 0;
+        setSlice(donutPI, piShare, 0);
+        setSlice(donutTax, taxShare, piShare);
+        setSlice(donutIns, insShare, piShare + taxShare);
+        setSlice(donutPMI, pmiShare, piShare + taxShare + insShare);
+        donutPct.textContent = (piShare * 100).toFixed(1) + '%';
+        legendRowPI.style.display = pi > 0 ? '' : 'none';
+        legendRowTax.style.display = taxMonthly > 0 ? '' : 'none';
+        legendRowIns.style.display = insMonthly > 0 ? '' : 'none';
+        legendRowPMI.style.display = pmiMonthly > 0 ? '' : 'none';
+
+        renderSchedule(buildSchedule(loan, annualRate, months, pi, totalMonthly * 12));
+      }
+
+      function syncPair(rangeEl, numEl, min, max, onChange) {
+        rangeEl.addEventListener('input', function () {
+          numEl.value = rangeEl.value;
+          onChange();
+        });
+        numEl.addEventListener('input', function () {
+          var val = clamp(parseFloat(numEl.value), min, max);
+          rangeEl.value = val;
+          onChange();
+        });
+        numEl.addEventListener('change', function () {
+          var val = clamp(parseFloat(numEl.value), min, max);
+          numEl.value = val;
+          rangeEl.value = val;
+          onChange();
+        });
+      }
+
+      function syncNumber(numEl, min, max, onChange) {
+        numEl.addEventListener('input', onChange);
+        numEl.addEventListener('change', function () {
+          numEl.value = clamp(parseFloat(numEl.value), min, max);
+          onChange();
+        });
+      }
+
+      syncPair(priceRange, priceNum, 50000, 5000000, recalculate);
+      syncPair(downRange, downNum, 0, 50, recalculate);
+      syncPair(rateRange, rateNum, 1, 15, recalculate);
+      syncNumber(taxNum, 0, 100000, recalculate);
+      syncNumber(insNum, 0, 100000, recalculate);
+      syncNumber(pmiNum, 0, 5, recalculate);
+
+      termSelect.addEventListener('change', recalculate);
+      currencyEl.addEventListener('change', recalculate);
+
+      amortToggle.addEventListener('click', function () {
+        amortExpanded = !amortExpanded;
+        recalculate();
+      });
+
+      recalculate();
+    })();
+  </script>
+</body>
+</html>
