@@ -425,3 +425,49 @@ No swaps: all six are on Calculator.net's most-used lists and corroborated as st
 - node --check PASS on all 6 inline scripts; link audit 0 missing targets (all 6 pages + index.html).
 - Titles 55–58 rendered chars (Time 62 / Hours 60 raw — the raw `&amp;` entity; rendered 58/56), metas 151–160, zero duplicate titles/metas site-wide; FAQ visible == JSON-LD on all 6 pages; GA4 G-PZHLCGYJ5D exactly 2× + favicon icon exactly 1× (byte-identical to grade-calculator.html) on every new page; header/footer md5-identical to grade-calculator.html on all 6 pages; canonicals correct; og:image + Twitter large card on all 6; no lorem/TODO/"Coming soon"; worked-example figures match computed values.
 - styles.css / app.js untouched (no additive CSS needed — all 6 are form-based tools).
+
+## Modules 31–36 — DONE (pushed + live verified, 10 Nov 2026 ~02:00 IST)
+
+**Push:** one push, 9 files, 286,099 bytes, commit `ef38d7f2b02e9fadbf4e49cb20ba01a79fa458ab`. Remote head before push was `09c19991` (Tauheed's own og-image.jpg upload + rename from his phone) — newer than the sync record's `fc2fb8e0`, but the only difference was og-image.jpg, which is not in this push; remote index.html/sitemap.xml/BUILD-LOG.md all matched the `fc2fb8e0` sync base and all 6 new pages were confirmed absent remotely. No conflicts. Sync record updated (11 entries). Approval card tapped promptly.
+
+**Live verification (cache-busting URLs, after ~4 min wait):** homepage + all 6 new pages HTTP 200; GA ×2 and icon ×1 on every page; new titles live; worked-example figures present (Time 4h 15m, Hours 7.5, SD 2.1381, Quadratic −1+2i, Slope 0.5, Roman MMXXVI); sitemap 41 URLs with all 6 new pages; homepage contains all 6 new links + "36 calculators". (One live-check needle miss on Quadratic was my check string, not the page — the live page contains "-1 + 2i" / "-1 - 2i" as written.)
+
+**Note:** this DONE paragraph was appended locally after the push (same pattern as Modules 20–25 and 26–30), so the live BUILD-LOG.md lags by this paragraph until the next push.
+
+## Modules 37–41 (Currency Converter, Salary, Investment, Body Fat, VAT) — 10 Nov 2026
+
+**Status: BUILT + VERIFIED locally. Push pending (see below).**
+
+**STRATEGY CHANGE (Tauheed, 10 Nov 2026 ~02:03 IST): quality over quantity. NO obscure or rarely-used calculators. The old ~200-calculator target is dropped — only the most-used / most-searched calculators go on this site. "Kam or best calculator honge."**
+
+**Usage evidence (coordinator research, 10 Nov 2026):** Currency Converter — among the most-searched calculator queries worldwide, on every major site's popular shelf (Premium Converters lists currency among tools opened first). Salary Calculator — UK Calculator lists Salary among its most-used tools; "salary/paycheck calculator" is a huge search term. Investment Calculator — standard finance-shelf item on RoughTools, Calcyo, iCalculators, Calculators.im, CalculatorApp. Body Fat Calculator — standard health item on all of the above (US Navy method). VAT Calculator — UK Calculator most-used list; standard on all major sites. **No swaps** — all 5 confirmed against Calculator.net's most-used lists + web search across the major calculator sites.
+
+## Files (8 changed: 5 new + index + sitemap + BUILD-LOG)
+- `calculator/currency-converter.html` (NEW, 32,448 bytes) — Currency Converter: amount slider+number; From/To selects (USD, INR, EUR, GBP, AED, SAR, JPY, AUD, CAD) with swap button; editable rate table (1 USD = INR 88.70, EUR 0.86, GBP 0.75, AED 3.67, SAR 3.75, JPY 154.00, AUD 1.54, CAD 1.40) + reset, labelled "Rates as of 10 Nov 2026", FAQ states plainly the static page cannot fetch live rates; results: big converted amount, rate used, reverse rate + "Amount in Every Currency" table (first 5 + Show all). No donut (none fits a conversion).
+- `calculator/salary-calculator.html` (NEW, 32,096 bytes) — Salary Calculator: currency selector (USD/INR/EUR/GBP, default USD); gross pay + frequency (annual/monthly/weekly/daily/hourly); hours/week (40) + weeks/year (52); tax/deduction % slider (0–50%); big annual gross + take-home vs deductions donut + 5-row pay table (Annual/Monthly/Weekly/Daily/Hourly × Gross/Take-home).
+- `calculator/investment-calculator.html` (NEW, 33,083 bytes) — Investment Calculator: currency selector; initial investment (default $5,000); monthly contribution (default $300); return % (default 10%); years (default 15); month-by-month simulation, same annuity-due method as Compound Interest page; big future value + invested + returns; theme-aware donut; yearly growth table (first 5 + "Show all years").
+- `calculator/body-fat-calculator.html` (NEW, 41,033 bytes) — Body Fat Calculator (US Navy method): gender toggle; height/neck/waist (+hip female) with cm/inches toggle; weight input for fat/lean mass; big body fat % + category (Essential/Athletes/Fitness/Average/Obese) + fat mass + lean mass; FAQ notes tape-measure estimate, not DEXA, not medical advice.
+- `calculator/vat-calculator.html` (NEW, 32,818 bytes) — VAT Calculator: currency selector (USD/INR/EUR/GBP, default GBP — VAT's home market); Add/Remove VAT toggle; amount slider+number (£1–£1,000,000, default £100); rate select 0%/5%/20% default/custom (0–100%); big net/VAT/gross + theme-aware donut (net vs VAT) + comparison table at 0%/5%/20%/25%; country-rates note (UK 20%/5%/0%; EU 19–27%).
+- `index.html` (modified) — 5 new cards: Finance +Currency Converter (💱), +Salary (💼), +Investment (🌱), +VAT (💷) = 20 cards; Health +Body Fat (📏) = 4 cards. All 8 "36 calculators" occurrences → "41 calculators" (meta, OG, Twitter, WebSite JSON-LD, FAQ JSON-LD ×2, visible FAQ ×2). Popular strip unchanged (8 cards).
+- `sitemap.xml` (modified) — 5 new URLs added (lastmod 2026-11-10). Now 46 URLs, parses as well-formed XML.
+
+## Math verification (workers' DOM-stub harnesses on the shipped JS, spot-checked by coordinator)
+- Currency Converter (53/53 incl. Salary harness): $100 → **₹8,870** (88.70); €100 → **$116.28**; £50 → **€57.33**; ¥10,000 → **$64.94**; edited INR rate 90 → ₹9,000; swap INR→USD $1.13; reset restores 88.70.
+- Salary (53/53 incl. Currency harness): $60,000/yr → **$5,000.00/mo, $1,153.85/wk, $230.77/day, $28.85/hr**; 20% deduction → take-home **$48,000/yr, $4,000/mo**; hourly $30 → $62,400/yr; ₹10,00,000 → ₹83,333.33/mo.
+- Investment (45/45): defaults ($5,000 + $300/mo @ 10% / 15y) → FV **$147,647**, invested $59,000, returns $88,647; SIP cross-check $0 + $10,000/mo @ 12% / 10y → **$2,323,391** exact; CI cross-check $10,000 + $500/mo @ 8% / 10y → **$114,279** exact.
+- Body Fat (45/45 incl. Investment harness): Male 178cm/neck 40/waist 85 → **14.9% (Fitness)**, fat 11.9 kg / lean 68.1 kg at 80 kg; Female 165cm/neck 35/waist 75/hip 95 → **25.9% (Average)**, fat 16.8 kg / lean 48.2 kg at 65 kg; independent formula re-derivation matches (14.8579% / 25.8920%).
+- VAT (43/43): £100 net @ 20% → **VAT £20, gross £120**; £120 gross @ 20% → **net £100, VAT £20**; £200 net @ 5% → **VAT £10, gross £210**; £119 gross @ 20% → net £99.17, VAT £19.83 (sums exactly).
+
+## Other verification (coordinator, independent)
+- node --check: all 5 inline scripts PASS.
+- Header/footer md5-identical to grade-calculator.html on all 5 pages (verified by coordinator).
+- GA4 G-PZHLCGYJ5D exactly 2× per page, no GTM; favicon icon exactly 1× per page, byte-identical to index.html (676 bytes).
+- SEO ultra-best standard on all 5: titles 52–57 chars (keyword-first, " | All Calculator 360"), metas 150–158, exact-keyword H1, How-to/Formula/Example H2s, 6 FAQs with visible text == FAQPage JSON-LD, BreadcrumbList + WebApplication JSON-LD, og:image + Twitter large card, canonical = own absolute URL, 2–4 in-body internal links; zero duplicate titles/metas site-wide (to be confirmed in coordinator cross-check).
+- Link audit: 0 missing targets on all 5 pages + index.html.
+- No lorem / TODO / XXX anywhere. styles.css + app.js untouched in this batch.
+
+## PUSH — exact file list (8 files, ~290 KB total, well under the 5 MB limit)
+- calculator/currency-converter.html, calculator/salary-calculator.html, calculator/investment-calculator.html, calculator/body-fat-calculator.html, calculator/vat-calculator.html, index.html, sitemap.xml, BUILD-LOG.md
+- Suggested message: "Modules 37-41: Currency Converter, Salary, Investment, Body Fat, VAT + homepage/sitemap (41 calculators live)"
+- After push: live-verify all 5 new pages (HTTP 200, titles, math spot-check on defaults), homepage links + "41 calculators", sitemap; wait + re-check on any fresh 404 (Pages deployment lag).
+- Site will have 41 live calculators after this push.

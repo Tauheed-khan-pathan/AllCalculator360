@@ -1,0 +1,534 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Crect width='40' height='40' rx='10' fill='%232563eb'/%3E%3Crect x='9' y='7' width='22' height='7' rx='2' fill='%23ffffff'/%3E%3Crect x='9' y='18' width='6' height='6' rx='1.5' fill='%23ffffff'/%3E%3Crect x='17' y='18' width='6' height='6' rx='1.5' fill='%23ffffff'/%3E%3Crect x='25' y='18' width='6' height='6' rx='1.5' fill='%23ffffff'/%3E%3Crect x='9' y='26' width='6' height='6' rx='1.5' fill='%23ffffff'/%3E%3Crect x='17' y='26' width='6' height='6' rx='1.5' fill='%23ffffff'/%3E%3Crect x='25' y='26' width='6' height='6' rx='1.5' fill='%23ffffff'/%3E%3C/svg%3E">
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-PZHLCGYJ5D"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-PZHLCGYJ5D');
+</script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Investment Calculator — Future Value | All Calculator 360</title>
+  <meta name="description" content="See how your investments grow with an initial amount and monthly contributions. Instant future value, total invested, returns and yearly growth table.">
+  <link rel="canonical" href="https://tauheed-khan-pathan.github.io/AllCalculator360/calculator/investment-calculator.html">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Investment Calculator — Future Value | All Calculator 360">
+  <meta property="og:description" content="See how your investments grow with an initial amount and monthly contributions. Instant future value, total invested, returns and yearly growth table.">
+  <meta property="og:url" content="https://tauheed-khan-pathan.github.io/AllCalculator360/calculator/investment-calculator.html">
+  <meta property="og:site_name" content="All Calculator 360">
+  <meta property="og:image" content="https://tauheed-khan-pathan.github.io/AllCalculator360/og-image.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Investment Calculator — Future Value | All Calculator 360">
+  <meta name="twitter:description" content="See how your investments grow with an initial amount and monthly contributions. Instant future value, total invested, returns and yearly growth table.">
+  <meta name="twitter:image" content="https://tauheed-khan-pathan.github.io/AllCalculator360/og-image.jpg">
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "All Calculator 360",
+  "alternateName": "AllCalculator360",
+  "url": "https://tauheed-khan-pathan.github.io/AllCalculator360/",
+  "description": "Free online calculators for finance, health, math and everyday life. EMI, SIP, FD, BMI and 200+ calculators — no sign-up, 100% private."
+}
+  </script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is an investment calculator?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "An investment calculator estimates how much your money could grow over time. You enter an initial investment, a monthly contribution, an expected annual return and a number of years, and it shows the future value of your investment, how much you put in, and how much of the final value is growth."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How is the future value calculated?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "This calculator simulates month by month. Each month your contribution is added at the start of the month, then the balance is multiplied by the monthly growth factor g = 1 + r ÷ 12, where r is the annual return as a decimal. For monthly compounding this matches the closed-form A = P(1+i)^N + PMT × [((1+i)^N − 1) ÷ i] × (1+i), with i = r ÷ 12 and N = 12 × years."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the difference between this and a SIP calculator?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "They use the same maths, but they answer different questions. A SIP calculator is for monthly-only investing in a market-linked fund, with no initial lump sum. This calculator combines an initial investment with monthly contributions, so use it when you are investing a lump sum and topping it up every month."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the difference between this and a compound interest calculator?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Very little in the maths — both grow a lump sum plus monthly contributions by monthly compounding. The difference is the framing: the Compound Interest Calculator is built around a fixed interest rate on a deposit, while this calculator is built around an expected investment return, with the focus on future value, total invested and total returns."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What return rate should I use?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Use a rate that matches the kind of investment you are modelling, and remember it is an assumption, not a promise. Broad stock-market index funds have returned around 10% a year on average over long periods in the US, and around 12% in India, but any single 15-year period can be higher or lower. Try a lower rate too, to see how much the result changes."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Are the returns shown here guaranteed?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. The future value is an estimate based on the return rate you enter, and real investments go up and down. Markets can fall for years at a time, and no calculator can predict them. Use the result as a plan, not a promise, and check your local tax rules on investment gains."
+      }
+    }
+  ]
+}
+  </script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://tauheed-khan-pathan.github.io/AllCalculator360/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Finance",
+      "item": "https://tauheed-khan-pathan.github.io/AllCalculator360/index.html#finance"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Investment Calculator",
+      "item": "https://tauheed-khan-pathan.github.io/AllCalculator360/calculator/investment-calculator.html"
+    }
+  ]
+}
+  </script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "Investment Calculator",
+  "applicationCategory": "FinanceApplication",
+  "operatingSystem": "Any",
+  "url": "https://tauheed-khan-pathan.github.io/AllCalculator360/calculator/investment-calculator.html",
+  "offers": {
+    "@type": "Offer",
+    "price": 0,
+    "priceCurrency": "USD"
+  }
+}
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../styles.css">
+  <script>
+    (function () {
+      try {
+        if (localStorage.getItem('ac360-theme') === 'dark') {
+          document.documentElement.setAttribute('data-theme', 'dark');
+        }
+      } catch (e) {}
+    })();
+  </script>
+  <script src="../app.js" defer></script>
+</head>
+<body>
+  <header class="site-header"><div class="header-inner">
+<a class="brand" href="../index.html"><svg class="brand-logo" viewBox="0 0 40 40" fill="none" aria-hidden="true"><rect width="40" height="40" rx="10" fill="#2563eb"/><rect x="9" y="7" width="22" height="7" rx="2" fill="#ffffff"/><rect x="9" y="18" width="6" height="6" rx="1.5" fill="#ffffff"/><rect x="17" y="18" width="6" height="6" rx="1.5" fill="#ffffff"/><rect x="25" y="18" width="6" height="6" rx="1.5" fill="#ffffff"/><rect x="9" y="26" width="6" height="6" rx="1.5" fill="#ffffff"/><rect x="17" y="26" width="6" height="6" rx="1.5" fill="#ffffff"/><rect x="25" y="26" width="6" height="6" rx="1.5" fill="#ffffff"/></svg><span class="brand-name">All Calculator <span class="brand-360">360</span></span></a>
+<div class="header-search"><input id="headerSearch" type="search" placeholder="Search calculators…" aria-label="Search calculators"></div>
+<nav class="main-nav" aria-label="Categories"><a class="nav-link" href="../index.html#finance">Finance</a><a class="nav-link" href="../index.html#health">Health</a><a class="nav-link" href="../index.html#math">Math</a><a class="nav-link" href="../index.html#everyday">Everyday</a></nav>
+<button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">🌙</button>
+<button class="menu-toggle" id="menuToggle" aria-label="Menu">☰</button>
+</div><nav class="mobile-nav" id="mobileNav" aria-label="Mobile categories"><a class="nav-link" href="../index.html#finance">Finance</a><a class="nav-link" href="../index.html#health">Health</a><a class="nav-link" href="../index.html#math">Math</a><a class="nav-link" href="../index.html#everyday">Everyday</a></nav></header>
+
+  <main class="container">
+    <nav class="breadcrumb"><a href="../index.html">Home</a> / <a href="../index.html#finance">Finance</a> / Investment Calculator</nav>
+
+    <div class="calc-head">
+      <h1>Investment Calculator</h1>
+      <p>See how your investments grow over time &mdash; future value, total invested, returns and a year-by-year growth table.</p>
+    </div>
+
+    <div class="calc-layout">
+      <div class="calc-panel calc-inputs">
+        <h2>Investment Details</h2>
+
+        <div class="currency-row">
+          <label for="currency">Currency</label>
+          <select id="currency" class="currency-select">
+            <option value="USD" selected>USD ($) &mdash; US Dollar</option>
+            <option value="INR">INR (&#8377;) &mdash; Indian Rupee</option>
+            <option value="EUR">EUR (&euro;) &mdash; Euro</option>
+            <option value="GBP">GBP (&pound;) &mdash; British Pound</option>
+          </select>
+        </div>
+
+        <div class="input-group">
+          <label class="input-label" for="initialRange">Initial Investment <output id="initialOut" for="initialRange">$5,000</output></label>
+          <div class="input-row">
+            <input type="range" class="slider" id="initialRange" min="0" max="10000000" step="100" value="5000" aria-label="Initial investment">
+            <input type="number" class="num-input" id="initialNum" min="0" max="10000000" step="100" value="5000" aria-label="Initial investment value">
+          </div>
+          <p class="input-hint">The lump sum you invest at the start.</p>
+        </div>
+
+        <div class="input-group">
+          <label class="input-label" for="monthlyRange">Monthly Contribution <output id="monthlyOut" for="monthlyRange">$300</output></label>
+          <div class="input-row">
+            <input type="range" class="slider" id="monthlyRange" min="0" max="100000" step="50" value="300" aria-label="Monthly contribution">
+            <input type="number" class="num-input" id="monthlyNum" min="0" max="100000" step="50" value="300" aria-label="Monthly contribution value">
+          </div>
+          <p class="input-hint">The amount you add every month.</p>
+        </div>
+
+        <div class="input-group">
+          <label class="input-label" for="rateRange">Expected Annual Return <output id="rateOut" for="rateRange">10%</output></label>
+          <div class="input-row">
+            <input type="range" class="slider" id="rateRange" min="0.1" max="30" step="0.1" value="10" aria-label="Expected annual return">
+            <input type="number" class="num-input" id="rateNum" min="0.1" max="30" step="0.1" value="10" aria-label="Expected annual return value">
+          </div>
+          <p class="input-hint">Your expected average return per year. This is an assumption, not a guarantee.</p>
+        </div>
+
+        <div class="input-group">
+          <label class="input-label" for="yearsRange">Number of Years <output id="yearsOut" for="yearsRange">15 years</output></label>
+          <div class="input-row">
+            <input type="range" class="slider" id="yearsRange" min="1" max="50" step="1" value="15" aria-label="Number of years">
+            <input type="number" class="num-input" id="yearsNum" min="1" max="50" step="1" value="15" aria-label="Number of years value">
+          </div>
+        </div>
+      </div>
+
+      <div class="calc-panel calc-results">
+        <h2>Your Results</h2>
+
+        <div class="result-main">
+          <div class="result-label">Future Value</div>
+          <div class="result-emi" id="valueOut">$0 <span> total</span></div>
+        </div>
+
+        <div class="result-breakdown">
+          <div class="break-row"><span class="k">Initial Investment</span><span class="v" id="initialRow">$0</span></div>
+          <div class="break-row"><span class="k">Monthly Contributions</span><span class="v" id="contribRow">$0</span></div>
+          <div class="break-row"><span class="k">Total Invested</span><span class="v" id="totalInvestedRow">$0</span></div>
+          <div class="break-row"><span class="k">Total Returns</span><span class="v" id="returnsRow">$0</span></div>
+          <div class="break-row"><span class="k">Future Value</span><span class="v green" id="totalValueRow">$0</span></div>
+        </div>
+
+        <div class="donut-wrap">
+          <svg id="donut" width="160" height="160" viewBox="0 0 160 160" role="img" aria-label="Invested vs returns chart">
+            <circle class="donut-track" cx="80" cy="80" r="64" fill="none" stroke-width="24"></circle>
+            <g transform="rotate(-90 80 80)">
+              <circle id="donutInvested" cx="80" cy="80" r="64" fill="none" stroke="#2563eb" stroke-width="24" stroke-dasharray="402.12 402.12" stroke-dashoffset="0"></circle>
+              <circle id="donutReturns" cx="80" cy="80" r="64" fill="none" stroke="#059669" stroke-width="24" stroke-dasharray="0 402.12" stroke-dashoffset="0"></circle>
+            </g>
+            <text id="donutPct" class="donut-pct" x="80" y="76" text-anchor="middle" font-size="20" font-weight="700">0%</text>
+            <text class="donut-sub" x="80" y="96" text-anchor="middle" font-size="12">Returns</text>
+          </svg>
+          <div class="donut-legend">
+            <div class="legend-item"><span class="legend-dot" style="background:#2563eb"></span>Invested <b id="legendInvested">$0</b></div>
+            <div class="legend-item"><span class="legend-dot" style="background:#059669"></span>Returns <b id="legendReturns">$0</b></div>
+          </div>
+        </div>
+
+        <h3 style="margin-top:24px">Yearly Growth Table</h3>
+        <table class="amort-table">
+          <thead>
+            <tr><th>Year</th><th>Starting Balance</th><th>Contributions</th><th>Returns</th><th>Ending Balance</th></tr>
+          </thead>
+          <tbody id="yearlyBody"></tbody>
+        </table>
+        <button class="show-more-btn" id="yearlyToggle" type="button">Show all years</button>
+      </div>
+    </div>
+
+    <section class="content-section">
+      <h2>How to Calculate Investment Growth</h2>
+      <p>An investment grows in two ways: the money you put in, and the returns that money earns. In the first year the returns are small, because only your initial investment and a few monthly contributions are working for you. But every year the balance is bigger, so the same return rate produces more money &mdash; and the contributions you add each month start earning returns of their own. That is why time matters more than the rate in the early years, and why starting early beats saving more later: the growth curve bends upwards the longer it runs.</p>
+      <p>Monthly contributions make the effect much stronger, because every contribution starts earning returns in the month it goes in &mdash; this calculator adds them at the start of each month, the same annuity-due basis the <a href="sip-calculator.html">SIP Calculator</a> uses for monthly-only investing. If you are investing a lump sum with no monthly top-ups, the <a href="compound-interest-calculator.html">Compound Interest Calculator</a> shows the same growth as a fixed-rate deposit, and the <a href="retirement-calculator.html">Retirement Calculator</a> extends this idea to a full career of saving, with inflation taken into account.</p>
+    </section>
+
+    <section class="content-section">
+      <h2>Investment Calculator Formula</h2>
+      <div class="formula-box">
+        <p class="formula">g = 1 + r &divide; 12 &nbsp;&bull;&nbsp; each month: balance = (balance + PMT) &times; g</p>
+        <p class="formula">A = P(1 + i)<sup>N</sup> + PMT &times; [((1 + i)<sup>N</sup> &minus; 1) &divide; i] &times; (1 + i)</p>
+        <p><strong>P</strong> = Initial investment &nbsp;&bull;&nbsp; <strong>PMT</strong> = Monthly contribution &nbsp;&bull;&nbsp; <strong>r</strong> = Expected annual return &divide; 100 &nbsp;&bull;&nbsp; <strong>i</strong> = r &divide; 12 (monthly return) &nbsp;&bull;&nbsp; <strong>N</strong> = 12 &times; years (number of months)</p>
+        <p>This calculator simulates month by month. The monthly contribution is added at the <strong>start</strong> of each month, then the whole balance is multiplied by the monthly growth factor g. Because contributions go in at the start of the month, they earn returns for that full month &mdash; the same annuity-due basis as the SIP Calculator.</p>
+        <p>For monthly compounding, the simulation above is exactly equal to this closed form, where <strong>i</strong> = r &divide; 12 (monthly return) and <strong>N</strong> = 12 &times; years (number of months).</p>
+      </div>
+    </section>
+
+    <section class="content-section">
+      <h2>Investment Calculator Example</h2>
+      <div class="formula-box">
+        <p><strong>Worked example:</strong> Initial investment 5,000, monthly contribution 300, expected annual return 10%, 15 years: i = 0.10 &divide; 12 = 0.008333, N = 180, (1.008333)<sup>180</sup> = 4.4539, A = 5,000 &times; 4.4539 + 300 &times; [(4.4539 &minus; 1) &divide; 0.008333] &times; 1.008333 = 22,270 + 125,377 = <strong>147,647</strong>. Total invested = 5,000 + 300 &times; 180 = 59,000; total returns = 147,647 &minus; 59,000 = 88,647. After the first year the balance is 9,325, and after 5 years it is 31,651.</p>
+        <p>The same method cross-checks exactly against the <a href="sip-calculator.html">SIP Calculator</a> &mdash; 0 initial + 10,000 a month at 12% for 10 years gives 2,323,391 &mdash; and against the <a href="compound-interest-calculator.html">Compound Interest Calculator</a> &mdash; 10,000 + 500 a month at 8% for 10 years gives 114,279.</p>
+      </div>
+    </section>
+
+    <section class="content-section">
+      <h2>How to Use the Investment Calculator</h2>
+      <ol>
+        <li>Choose your currency and enter your initial investment.</li>
+        <li>Enter your monthly contribution and expected annual return.</li>
+        <li>Set the number of years you plan to stay invested.</li>
+        <li>Your future value, total invested and total returns appear instantly, with a year-by-year growth table below.</li>
+      </ol>
+    </section>
+
+    <section class="content-section">
+      <h2>Frequently Asked Questions</h2>
+      <details class="faq-item">
+        <summary class="faq-q">What is an investment calculator?</summary>
+        <div class="faq-a"><p>An investment calculator estimates how much your money could grow over time. You enter an initial investment, a monthly contribution, an expected annual return and a number of years, and it shows the future value of your investment, how much you put in, and how much of the final value is growth.</p></div>
+      </details>
+      <details class="faq-item">
+        <summary class="faq-q">How is the future value calculated?</summary>
+        <div class="faq-a"><p>This calculator simulates month by month. Each month your contribution is added at the start of the month, then the balance is multiplied by the monthly growth factor g = 1 + r ÷ 12, where r is the annual return as a decimal. For monthly compounding this matches the closed-form A = P(1+i)^N + PMT × [((1+i)^N − 1) ÷ i] × (1+i), with i = r ÷ 12 and N = 12 × years.</p></div>
+      </details>
+      <details class="faq-item">
+        <summary class="faq-q">What is the difference between this and a SIP calculator?</summary>
+        <div class="faq-a"><p>They use the same maths, but they answer different questions. A SIP calculator is for monthly-only investing in a market-linked fund, with no initial lump sum. This calculator combines an initial investment with monthly contributions, so use it when you are investing a lump sum and topping it up every month.</p></div>
+      </details>
+      <details class="faq-item">
+        <summary class="faq-q">What is the difference between this and a compound interest calculator?</summary>
+        <div class="faq-a"><p>Very little in the maths — both grow a lump sum plus monthly contributions by monthly compounding. The difference is the framing: the Compound Interest Calculator is built around a fixed interest rate on a deposit, while this calculator is built around an expected investment return, with the focus on future value, total invested and total returns.</p></div>
+      </details>
+      <details class="faq-item">
+        <summary class="faq-q">What return rate should I use?</summary>
+        <div class="faq-a"><p>Use a rate that matches the kind of investment you are modelling, and remember it is an assumption, not a promise. Broad stock-market index funds have returned around 10% a year on average over long periods in the US, and around 12% in India, but any single 15-year period can be higher or lower. Try a lower rate too, to see how much the result changes.</p></div>
+      </details>
+      <details class="faq-item">
+        <summary class="faq-q">Are the returns shown here guaranteed?</summary>
+        <div class="faq-a"><p>No. The future value is an estimate based on the return rate you enter, and real investments go up and down. Markets can fall for years at a time, and no calculator can predict them. Use the result as a plan, not a promise, and check your local tax rules on investment gains.</p></div>
+      </details>
+    </section>
+
+    <section class="content-section">
+      <h2>Related Calculators</h2>
+      <div class="related-grid">
+        <a class="calc-card" href="sip-calculator.html" data-name="SIP Calculator" data-desc="Grow your wealth with monthly SIP investments.">
+          <span class="calc-icon">&#128200;</span>
+          <span class="calc-name">SIP Calculator</span>
+          <span class="calc-desc">Grow your wealth with monthly SIP investments.</span>
+        </a>
+        <a class="calc-card" href="compound-interest-calculator.html" data-name="Compound Interest Calculator" data-desc="See how your money grows with compound interest.">
+          <span class="calc-icon">&#128176;</span>
+          <span class="calc-name">Compound Interest Calculator</span>
+          <span class="calc-desc">See how your money grows with compound interest.</span>
+        </a>
+        <a class="calc-card" href="retirement-calculator.html" data-name="Retirement Calculator" data-desc="Plan your retirement savings and see your nest egg.">
+          <span class="calc-icon">&#127919;</span>
+          <span class="calc-name">Retirement Calculator</span>
+          <span class="calc-desc">Plan your retirement savings and see your nest egg.</span>
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer"><div class="container"><div class="footer-grid">
+<div class="footer-col"><div class="footer-brand"><svg width="32" height="32" viewBox="0 0 40 40" fill="none" aria-hidden="true"><rect width="40" height="40" rx="10" fill="#2563eb"/><rect x="9" y="7" width="22" height="7" rx="2" fill="#ffffff"/><rect x="9" y="18" width="6" height="6" rx="1.5" fill="#ffffff"/><rect x="17" y="18" width="6" height="6" rx="1.5" fill="#ffffff"/><rect x="25" y="18" width="6" height="6" rx="1.5" fill="#ffffff"/><rect x="9" y="26" width="6" height="6" rx="1.5" fill="#ffffff"/><rect x="17" y="26" width="6" height="6" rx="1.5" fill="#ffffff"/><rect x="25" y="26" width="6" height="6" rx="1.5" fill="#ffffff"/></svg><span>All Calculator 360</span></div><p>Every calculator, all in one place. Free, private, and accurate — calculations happen right in your browser.</p></div>
+<div class="footer-col"><h3>Categories</h3><ul><li><a href="../index.html#finance">Finance</a></li><li><a href="../index.html#health">Health</a></li><li><a href="../index.html#math">Math</a></li><li><a href="../index.html#everyday">Everyday</a></li></ul></div>
+<div class="footer-col"><h3>Popular Calculators</h3><ul><li><a href="emi-calculator.html">EMI Calculator</a></li><li><a href="sip-calculator.html">SIP Calculator</a></li><li><a href="fd-calculator.html">FD Calculator</a></li><li><a href="income-tax-calculator.html">Income Tax Calculator</a></li><li><a href="gst-calculator.html">GST Calculator</a></li><li><a href="bmi-calculator.html">BMI Calculator</a></li><li><a href="age-calculator.html">Age Calculator</a></li><li><a href="percentage-calculator.html">Percentage Calculator</a></li></ul></div>
+<div class="footer-col"><h3>Company</h3><ul><li><a href="../about.html">About</a></li><li><a href="../contact.html">Contact</a></li><li><a href="../privacy.html">Privacy Policy</a></li><li><a href="../terms.html">Terms</a></li></ul></div>
+</div><div class="footer-bottom"><p>© 2026 All Calculator 360. All rights reserved.</p></div></div></footer>
+
+  <script>
+    (function () {
+      'use strict';
+
+      var CIRCUMFERENCE = 402.12;
+
+      var currencyEl = document.getElementById('currency');
+      var initialRange = document.getElementById('initialRange');
+      var initialNum = document.getElementById('initialNum');
+      var initialOut = document.getElementById('initialOut');
+      var monthlyRange = document.getElementById('monthlyRange');
+      var monthlyNum = document.getElementById('monthlyNum');
+      var monthlyOut = document.getElementById('monthlyOut');
+      var rateRange = document.getElementById('rateRange');
+      var rateNum = document.getElementById('rateNum');
+      var rateOut = document.getElementById('rateOut');
+      var yearsRange = document.getElementById('yearsRange');
+      var yearsNum = document.getElementById('yearsNum');
+      var yearsOut = document.getElementById('yearsOut');
+      var valueOut = document.getElementById('valueOut');
+      var initialRow = document.getElementById('initialRow');
+      var contribRow = document.getElementById('contribRow');
+      var totalInvestedRow = document.getElementById('totalInvestedRow');
+      var returnsRow = document.getElementById('returnsRow');
+      var totalValueRow = document.getElementById('totalValueRow');
+      var legendInvested = document.getElementById('legendInvested');
+      var legendReturns = document.getElementById('legendReturns');
+      var donutInvested = document.getElementById('donutInvested');
+      var donutReturns = document.getElementById('donutReturns');
+      var donutPct = document.getElementById('donutPct');
+      var yearlyBody = document.getElementById('yearlyBody');
+      var yearlyToggle = document.getElementById('yearlyToggle');
+
+      var yearlyExpanded = false;
+
+      function currencyCode() {
+        return currencyEl.value;
+      }
+
+      function fmtMoney(value) {
+        return new Intl.NumberFormat('en-US', {
+          style: 'currency',
+          currency: currencyCode(),
+          maximumFractionDigits: 0
+        }).format(value);
+      }
+
+      function clamp(value, min, max) {
+        if (isNaN(value)) return min;
+        return Math.min(max, Math.max(min, value));
+      }
+
+      function getInitial() {
+        return clamp(parseFloat(initialNum.value), 0, 10000000);
+      }
+
+      function getMonthly() {
+        return clamp(parseFloat(monthlyNum.value), 0, 100000);
+      }
+
+      function getRate() {
+        return clamp(parseFloat(rateNum.value), 0.1, 30);
+      }
+
+      function getYears() {
+        return clamp(parseFloat(yearsNum.value), 1, 50);
+      }
+
+      // Month-by-month simulation: each month the contribution is added at the
+      // START of the month, then the balance is multiplied by the monthly
+      // growth factor g = 1 + r/12. Yearly rows come from this same run.
+      // Identical method to the Compound Interest page (monthly compounding).
+      function simulate(P, PMT, annualRate, years) {
+        var g = 1 + annualRate / 100 / 12;
+        var balance = P;
+        var rows = [];
+        for (var y = 1; y <= years; y++) {
+          var start = balance;
+          var contributions = 0;
+          for (var m = 0; m < 12; m++) {
+            balance = (balance + PMT) * g;
+            contributions += PMT;
+          }
+          rows.push({
+            year: y,
+            start: start,
+            contributions: contributions,
+            returns: balance - start - contributions,
+            end: balance
+          });
+        }
+        return { fv: balance, rows: rows };
+      }
+
+      function renderYearly(rows) {
+        var html = '';
+        rows.forEach(function (row, i) {
+          var hidden = (!yearlyExpanded && i >= 5) ? ' style="display:none"' : '';
+          html += '<tr' + hidden + '><td>' + row.year + '</td><td>' + fmtMoney(row.start) + '</td><td>' + fmtMoney(row.contributions) + '</td><td>' + fmtMoney(row.returns) + '</td><td>' + fmtMoney(row.end) + '</td></tr>';
+        });
+        yearlyBody.innerHTML = html;
+        if (rows.length <= 5) {
+          yearlyToggle.style.display = 'none';
+        } else {
+          yearlyToggle.style.display = '';
+          yearlyToggle.textContent = yearlyExpanded ? 'Show less' : 'Show all years';
+        }
+      }
+
+      function setDonut(el, share, offsetShare) {
+        el.setAttribute('stroke-dasharray', (share * CIRCUMFERENCE).toFixed(2) + ' ' + CIRCUMFERENCE);
+        el.setAttribute('stroke-dashoffset', (-offsetShare * CIRCUMFERENCE).toFixed(2));
+      }
+
+      function recalculate() {
+        var P = getInitial();
+        var PMT = getMonthly();
+        var annualRate = getRate();
+        var years = getYears();
+        var result = simulate(P, PMT, annualRate, years);
+        var fv = result.fv;
+        var monthlyTotal = PMT * 12 * years;
+        var totalInvested = P + monthlyTotal;
+        var returns = fv - totalInvested;
+
+        initialOut.textContent = fmtMoney(P);
+        monthlyOut.textContent = fmtMoney(PMT);
+        rateOut.textContent = (Math.round(annualRate * 10) / 10) + '%';
+        yearsOut.textContent = years + (years === 1 ? ' year' : ' years');
+
+        valueOut.innerHTML = fmtMoney(fv) + ' <span> total</span>';
+        initialRow.textContent = fmtMoney(P);
+        contribRow.textContent = fmtMoney(monthlyTotal);
+        totalInvestedRow.textContent = fmtMoney(totalInvested);
+        returnsRow.textContent = fmtMoney(returns);
+        totalValueRow.textContent = fmtMoney(fv);
+        legendInvested.textContent = fmtMoney(totalInvested);
+        legendReturns.textContent = fmtMoney(returns);
+
+        var investedShare = fv > 0 ? totalInvested / fv : 0;
+        var returnsShare = fv > 0 ? returns / fv : 0;
+        setDonut(donutInvested, investedShare, 0);
+        setDonut(donutReturns, returnsShare, investedShare);
+        donutPct.textContent = (returnsShare * 100).toFixed(1) + '%';
+
+        renderYearly(result.rows);
+      }
+
+      function syncPair(rangeEl, numEl, min, max, onChange) {
+        rangeEl.addEventListener('input', function () {
+          numEl.value = rangeEl.value;
+          onChange();
+        });
+        numEl.addEventListener('input', function () {
+          var val = clamp(parseFloat(numEl.value), min, max);
+          rangeEl.value = val;
+          onChange();
+        });
+        numEl.addEventListener('change', function () {
+          var val = clamp(parseFloat(numEl.value), min, max);
+          numEl.value = val;
+          rangeEl.value = val;
+          onChange();
+        });
+      }
+
+      syncPair(initialRange, initialNum, 0, 10000000, recalculate);
+      syncPair(monthlyRange, monthlyNum, 0, 100000, recalculate);
+      syncPair(rateRange, rateNum, 0.1, 30, recalculate);
+      syncPair(yearsRange, yearsNum, 1, 50, recalculate);
+
+      currencyEl.addEventListener('change', recalculate);
+
+      yearlyToggle.addEventListener('click', function () {
+        yearlyExpanded = !yearlyExpanded;
+        recalculate();
+      });
+
+      recalculate();
+    })();
+  </script>
+</body>
+</html>
