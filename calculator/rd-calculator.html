@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-PZHLCGYJ5D"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-PZHLCGYJ5D');
+</script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RD Calculator — Calculate Recurring Deposit Maturity Value | All Calculator 360</title>
+  <meta name="description" content="See how your Recurring Deposit grows. Calculate RD maturity value, total deposits and interest earned — free, instant, private.">
+  <link rel="canonical" href="https://tauheed-khan-pathan.github.io/AllCalculator360/calculator/rd-calculator.html">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="RD Calculator — Calculate Recurring Deposit Maturity Value | All Calculator 360">
+  <meta property="og:description" content="See how your Recurring Deposit grows. Calculate RD maturity value, total deposits and interest earned — free, instant, private.">
+  <meta property="og:url" content="https://tauheed-khan-pathan.github.io/AllCalculator360/calculator/rd-calculator.html">
+  <meta property="og:site_name" content="All Calculator 360">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="RD Calculator — Calculate Recurring Deposit Maturity Value | All Calculator 360">
+  <meta name="twitter:description" content="See how your Recurring Deposit grows. Calculate RD maturity value, total deposits and interest earned — free, instant, private.">
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "All Calculator 360",
+  "alternateName": "AllCalculator360",
+  "url": "https://tauheed-khan-pathan.github.io/AllCalculator360/",
+  "description": "Free online calculators for finance, health, math and everyday life. EMI, SIP, FD, BMI and 200+ calculators — no sign-up, 100% private."
+}
+  </script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is an RD?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A Recurring Deposit (RD) is a savings account offered by banks and post offices where you deposit a fixed amount every month for a chosen tenure, and the bank pays you interest on it. At maturity you get back all your deposits plus the interest earned. Unlike a Fixed Deposit (FD), where you deposit one lump sum at the start, an RD lets you save in small monthly instalments — it suits people with a regular monthly income who want to build a lump sum over time."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How is RD interest calculated?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "RD interest is calculated with quarterly compounding. The annual rate is divided into a quarterly rate (i = annual rate ÷ 4), and each monthly deposit earns interest from the month it is deposited. This calculator simulates it month by month: the monthly rate is im = (1 + r ÷ 4)^(1/3) − 1, your deposit is added at the start of each month, and the balance is then multiplied by (1 + im). That is exactly the same as the standard RD formula M = P × [((1 + i)^n − 1) ÷ (1 − (1 + i)^(−1/3))], where P is the monthly deposit, i is the quarterly rate and n is the number of quarters."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the minimum and maximum tenure of an RD?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Most banks allow RD tenures from 6 months to 10 years. The most common choices are 1, 2, 3 and 5 years. Longer tenures usually earn a slightly higher rate, and senior citizens typically get an extra 0.50% interest. This calculator covers tenures from 1 to 10 years."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I withdraw my RD before maturity?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, but banks charge a premature withdrawal penalty — usually 0.50% to 1% less than the rate that applies to the period your money actually stayed deposited, and some banks also charge a small penalty on the interest already paid. You get back your deposits plus the reduced interest. Some banks also allow a loan against your RD instead of closing it, which can work out cheaper than breaking the deposit."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is the interest on an RD taxable?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. The interest earned on an RD is added to your income and taxed at your income-tax slab rate — there is no special tax rate for RD interest, and unlike some small-savings schemes there is no tax deduction on the deposits. Banks also deduct TDS (tax deducted at source) at 10% if the interest from all your deposits with that bank exceeds ₹40,000 in a financial year (₹50,000 for senior citizens). You can submit Form 15G or 15H to avoid TDS if your total income is below the taxable limit."
+      }
+    }
+  ]
+}
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../styles.css">
+  <script>
+    (function () {
+      try {
+        if (localStorage.getItem('ac360-theme') === 'dark') {
+          document.documentElement.setAttribute('data-theme', 'dark');
+        }
+      } catch (e) {}
+    })();
+  </script>
+  <script src="../app.js" defer></script>
+</head>
+<body>
+  <header class="site-header"><div class="header-inner">
+<a class="brand" href="../index.html"><svg class="brand-logo" viewBox="0 0 40 40" fill="none" aria-hidden="true"><rect width="40" height="40" rx="10" fill="#2563eb"/><rect x="9" y="7" width="22" height="7" rx="2" fill="#ffffff"/><rect x="9" y="18" width="6" height="6" rx="1.5" fill="#ffffff"/><rect x="17" y="18" width="6" height="6" rx="1.5" fill="#ffffff"/><rect x="25" y="18" width="6" height="6" rx="1.5" fill="#ffffff"/><rect x="9" y="26" width="6" height="6" rx="1.5" fill="#ffffff"/><rect x="17" y="26" width="6" height="6" rx="1.5" fill="#ffffff"/><rect x="25" y="26" width="6" height="6" rx="1.5" fill="#ffffff"/></svg><span class="brand-name">All Calculator <span class="brand-360">360</span></span></a>
+<div class="header-search"><input id="headerSearch" type="search" placeholder="Search calculators…" aria-label="Search calculators"></div>
+<nav class="main-nav" aria-label="Categories"><a class="nav-link" href="../index.html#finance">Finance</a><a class="nav-link" href="../index.html#health">Health</a><a class="nav-link" href="../index.html#math">Math</a><a class="nav-link" href="../index.html#everyday">Everyday</a></nav>
+<button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">🌙</button>
+<button class="menu-toggle" id="menuToggle" aria-label="Menu">☰</button>
+</div><nav class="mobile-nav" id="mobileNav" aria-label="Mobile categories"><a class="nav-link" href="../index.html#finance">Finance</a><a class="nav-link" href="../index.html#health">Health</a><a class="nav-link" href="../index.html#math">Math</a><a class="nav-link" href="../index.html#everyday">Everyday</a></nav></header>
+
+  <main class="container">
+    <nav class="breadcrumb"><a href="../index.html">Home</a> / <a href="../index.html#finance">Finance</a> / RD Calculator</nav>
+
+    <div class="calc-head">
+      <h1>RD Calculator</h1>
+      <p>See how your Recurring Deposit grows — your maturity value, total deposits and interest earned, year by year.</p>
+    </div>
+
+    <div class="calc-layout">
+      <div class="calc-panel calc-inputs">
+        <h2>Recurring Deposit Details</h2>
+
+        <div class="input-group">
+          <label class="input-label" for="depositRange">Monthly Deposit <output id="depositOut" for="depositRange">₹5,000</output></label>
+          <div class="input-row">
+            <input type="range" class="slider" id="depositRange" min="100" max="100000" step="100" value="5000" aria-label="Monthly deposit">
+            <input type="number" class="num-input" id="depositNum" min="100" max="100000" step="100" value="5000" aria-label="Monthly deposit value">
+          </div>
+          <p class="input-hint">Monthly deposit between ₹100 and ₹1,00,000.</p>
+        </div>
+
+        <div class="input-group">
+          <label class="input-label" for="rateRange">Interest Rate <output id="rateOut" for="rateRange">6.5%</output></label>
+          <div class="input-row">
+            <input type="range" class="slider" id="rateRange" min="1" max="12" step="0.1" value="6.5" aria-label="Interest rate">
+            <input type="number" class="num-input" id="rateNum" min="1" max="12" step="0.1" value="6.5" aria-label="Interest rate value">
+          </div>
+          <p class="input-hint">Annual interest rate between 1% and 12%.</p>
+        </div>
+
+        <div class="input-group">
+          <label class="input-label" for="tenureRange">Tenure <output id="tenureOut" for="tenureRange">5 years</output></label>
+          <div class="input-row">
+            <input type="range" class="slider" id="tenureRange" min="1" max="10" step="1" value="5" aria-label="Tenure in years">
+            <input type="number" class="num-input" id="tenureNum" min="1" max="10" step="1" value="5" aria-label="Tenure in years value">
+          </div>
+          <p class="input-hint">RD tenures run from 6 months to 10 years; this calculator covers 1 to 10 years.</p>
+        </div>
+      </div>
+
+      <div class="calc-panel calc-results">
+        <h2>Your Results</h2>
+
+        <div class="result-main">
+          <div class="result-label">Maturity Value</div>
+          <div class="result-emi" id="maturityOut">₹0 <span> total</span></div>
+        </div>
+
+        <div class="result-breakdown">
+          <div class="break-row"><span class="k">Tenure</span><span class="v" id="tenureRow">5 years</span></div>
+          <div class="break-row"><span class="k">Total Deposits</span><span class="v" id="depositsRow">₹0</span></div>
+          <div class="break-row"><span class="k">Interest Earned</span><span class="v green" id="interestRow">₹0</span></div>
+        </div>
+
+        <div class="donut-wrap">
+          <svg id="donut" width="160" height="160" viewBox="0 0 160 160" role="img" aria-label="Total deposits vs interest earned chart">
+            <circle class="donut-track" cx="80" cy="80" r="64" fill="none" stroke-width="24"></circle>
+            <g transform="rotate(-90 80 80)">
+              <circle id="donutDeposits" cx="80" cy="80" r="64" fill="none" stroke="#2563eb" stroke-width="24" stroke-dasharray="402.12 402.12" stroke-dashoffset="0"></circle>
+              <circle id="donutInterest" cx="80" cy="80" r="64" fill="none" stroke="#059669" stroke-width="24" stroke-dasharray="0 402.12" stroke-dashoffset="0"></circle>
+            </g>
+            <text id="donutPct" class="donut-pct" x="80" y="76" text-anchor="middle" font-size="20" font-weight="700">0%</text>
+            <text class="donut-sub" x="80" y="96" text-anchor="middle" font-size="12">Interest</text>
+          </svg>
+          <div class="donut-legend">
+            <div class="legend-item" id="legendRowDeposits"><span class="legend-dot" style="background:#2563eb"></span>Total Deposits <b id="legendDeposits">₹0</b></div>
+            <div class="legend-item" id="legendRowInterest"><span class="legend-dot" style="background:#059669"></span>Interest Earned <b id="legendInterest">₹0</b></div>
+          </div>
+        </div>
+
+        <h3 style="margin-top:24px">Yearly Growth Table</h3>
+        <table class="amort-table">
+          <thead>
+            <tr><th>Year</th><th>Deposits so far</th><th>Interest</th><th>Balance</th></tr>
+          </thead>
+          <tbody id="yearlyBody"></tbody>
+        </table>
+        <button class="show-more-btn" id="yearlyToggle" type="button">Show all years</button>
+      </div>
+    </div>
+
+    <section class="content-section">
+      <h2>RD Calculator Formula</h2>
+      <div class="formula-box">
+        <p class="formula">i = annual interest rate ÷ 100 ÷ 4 (quarterly rate) &nbsp;•&nbsp; n = tenure in years × 4 (quarters) &nbsp;•&nbsp; im = (1 + i)<sup>1/3</sup> − 1 (monthly rate)</p>
+        <p class="formula">Each month: balance = (balance + monthly deposit) × (1 + im)</p>
+        <p>RD interest is compounded quarterly. The annual rate is split into a quarterly rate i, and the monthly rate im is the cube root of (1 + i) minus 1 — so three monthly steps compound to exactly one quarter. Your deposit is added at the <strong>start</strong> of each month, then the whole balance is multiplied by (1 + im), so every deposit earns interest from the month it is paid in.</p>
+        <p class="formula">Maturity value M = P × [((1 + i)<sup>n</sup> − 1) ÷ (1 − (1 + i)<sup>−1/3</sup>)]</p>
+        <p><strong>P</strong> = monthly deposit &nbsp;•&nbsp; <strong>i</strong> = quarterly rate &nbsp;•&nbsp; <strong>n</strong> = number of quarters. The month-by-month simulation and this closed form give exactly the same result.</p>
+        <p class="formula">Total deposits = monthly deposit × months</p>
+        <p class="formula">Interest earned = maturity value − total deposits</p>
+        <p><strong>Worked example:</strong> ₹5,000 a month at 6.5% for 5 years (60 months): i = 6.5 ÷ 100 ÷ 4 = 0.01625, im = (1.01625)<sup>1/3</sup> − 1 = 0.005388. Simulating month by month, the maturity value is <strong>₹3,54,954</strong>. Total deposits = ₹5,000 × 60 = <strong>₹3,00,000</strong>; interest earned = ₹3,54,954 − ₹3,00,000 = <strong>₹54,954</strong>. After the first year the balance is ₹62,143, and after 3 years it is ₹1,99,122.</p>
+        <p><strong>Second example:</strong> ₹10,000 a month at 7% for 3 years (36 months) grows to a maturity value of <strong>₹4,01,373</strong> — total deposits ₹3,60,000 and interest earned <strong>₹41,373</strong>. After the first year the balance is ₹1,24,621.</p>
+      </div>
+    </section>
+
+    <section class="content-section">
+      <h2>Frequently Asked Questions</h2>
+      <details class="faq-item">
+        <summary class="faq-q">What is an RD?</summary>
+        <div class="faq-a"><p>A Recurring Deposit (RD) is a savings account offered by banks and post offices where you deposit a fixed amount every month for a chosen tenure, and the bank pays you interest on it. At maturity you get back all your deposits plus the interest earned. Unlike a Fixed Deposit (FD), where you deposit one lump sum at the start, an RD lets you save in small monthly instalments — it suits people with a regular monthly income who want to build a lump sum over time.</p></div>
+      </details>
+      <details class="faq-item">
+        <summary class="faq-q">How is RD interest calculated?</summary>
+        <div class="faq-a"><p>RD interest is calculated with quarterly compounding. The annual rate is divided into a quarterly rate (i = annual rate ÷ 4), and each monthly deposit earns interest from the month it is deposited. This calculator simulates it month by month: the monthly rate is im = (1 + r ÷ 4)^(1/3) − 1, your deposit is added at the start of each month, and the balance is then multiplied by (1 + im). That is exactly the same as the standard RD formula M = P × [((1 + i)^n − 1) ÷ (1 − (1 + i)^(−1/3))], where P is the monthly deposit, i is the quarterly rate and n is the number of quarters.</p></div>
+      </details>
+      <details class="faq-item">
+        <summary class="faq-q">What is the minimum and maximum tenure of an RD?</summary>
+        <div class="faq-a"><p>Most banks allow RD tenures from 6 months to 10 years. The most common choices are 1, 2, 3 and 5 years. Longer tenures usually earn a slightly higher rate, and senior citizens typically get an extra 0.50% interest. This calculator covers tenures from 1 to 10 years.</p></div>
+      </details>
+      <details class="faq-item">
+        <summary class="faq-q">Can I withdraw my RD before maturity?</summary>
+        <div class="faq-a"><p>Yes, but banks charge a premature withdrawal penalty — usually 0.50% to 1% less than the rate that applies to the period your money actually stayed deposited, and some banks also charge a small penalty on the interest already paid. You get back your deposits plus the reduced interest. Some banks also allow a loan against your RD instead of closing it, which can work out cheaper than breaking the deposit.</p></div>
+      </details>
+      <details class="faq-item">
+        <summary class="faq-q">Is the interest on an RD taxable?</summary>
+        <div class="faq-a"><p>Yes. The interest earned on an RD is added to your income and taxed at your income-tax slab rate — there is no special tax rate for RD interest, and unlike some small-savings schemes there is no tax deduction on the deposits. Banks also deduct TDS (tax deducted at source) at 10% if the interest from all your deposits with that bank exceeds ₹40,000 in a financial year (₹50,000 for senior citizens). You can submit Form 15G or 15H to avoid TDS if your total income is below the taxable limit.</p></div>
+      </details>
+    </section>
+
+    <section class="content-section">
+      <h2>Related Calculators</h2>
+      <div class="related-grid">
+        <a class="calc-card" href="fd-calculator.html" data-name="FD Calculator" data-desc="See how your fixed deposit grows over time.">
+          <span class="calc-icon">🏦</span>
+          <span class="calc-name">FD Calculator</span>
+          <span class="calc-desc">See how your fixed deposit grows over time.</span>
+        </a>
+        <a class="calc-card" href="ppf-calculator.html" data-name="PPF Calculator" data-desc="Plan your Public Provident Fund savings and maturity value.">
+          <span class="calc-icon">🏛️</span>
+          <span class="calc-name">PPF Calculator</span>
+          <span class="calc-desc">Plan your Public Provident Fund savings and maturity value.</span>
+        </a>
+        <a class="calc-card" href="sip-calculator.html" data-name="SIP Calculator" data-desc="Grow your wealth with monthly SIP investments.">
+          <span class="calc-icon">📈</span>
+          <span class="calc-name">SIP Calculator</span>
+          <span class="calc-desc">Grow your wealth with monthly SIP investments.</span>
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer"><div class="container"><div class="footer-grid">
+<div class="footer-col"><div class="footer-brand"><svg width="32" height="32" viewBox="0 0 40 40" fill="none" aria-hidden="true"><rect width="40" height="40" rx="10" fill="#2563eb"/><rect x="9" y="7" width="22" height="7" rx="2" fill="#ffffff"/><rect x="9" y="18" width="6" height="6" rx="1.5" fill="#ffffff"/><rect x="17" y="18" width="6" height="6" rx="1.5" fill="#ffffff"/><rect x="25" y="18" width="6" height="6" rx="1.5" fill="#ffffff"/><rect x="9" y="26" width="6" height="6" rx="1.5" fill="#ffffff"/><rect x="17" y="26" width="6" height="6" rx="1.5" fill="#ffffff"/><rect x="25" y="26" width="6" height="6" rx="1.5" fill="#ffffff"/></svg><span>All Calculator 360</span></div><p>Every calculator, all in one place. Free, private, and accurate — calculations happen right in your browser.</p></div>
+<div class="footer-col"><h3>Categories</h3><ul><li><a href="../index.html#finance">Finance</a></li><li><a href="../index.html#health">Health</a></li><li><a href="../index.html#math">Math</a></li><li><a href="../index.html#everyday">Everyday</a></li></ul></div>
+<div class="footer-col"><h3>Popular Calculators</h3><ul><li><a href="emi-calculator.html">EMI Calculator</a></li><li><a href="sip-calculator.html">SIP Calculator</a></li><li><a href="fd-calculator.html">FD Calculator</a></li><li><a href="income-tax-calculator.html">Income Tax Calculator</a></li><li><a href="gst-calculator.html">GST Calculator</a></li><li><a href="bmi-calculator.html">BMI Calculator</a></li><li><a href="age-calculator.html">Age Calculator</a></li><li><a href="percentage-calculator.html">Percentage Calculator</a></li></ul></div>
+<div class="footer-col"><h3>Company</h3><ul><li><a href="../about.html">About</a></li><li><a href="../contact.html">Contact</a></li><li><a href="../privacy.html">Privacy Policy</a></li><li><a href="../terms.html">Terms</a></li></ul></div>
+</div><div class="footer-bottom"><p>© 2026 All Calculator 360. All rights reserved.</p></div></div></footer>
+
+  <script>
+    (function () {
+      'use strict';
+
+      var CIRCUMFERENCE = 402.12;
+
+      var depositRange = document.getElementById('depositRange');
+      var depositNum = document.getElementById('depositNum');
+      var depositOut = document.getElementById('depositOut');
+      var rateRange = document.getElementById('rateRange');
+      var rateNum = document.getElementById('rateNum');
+      var rateOut = document.getElementById('rateOut');
+      var tenureRange = document.getElementById('tenureRange');
+      var tenureNum = document.getElementById('tenureNum');
+      var tenureOut = document.getElementById('tenureOut');
+      var maturityOut = document.getElementById('maturityOut');
+      var tenureRow = document.getElementById('tenureRow');
+      var depositsRow = document.getElementById('depositsRow');
+      var interestRow = document.getElementById('interestRow');
+      var legendDeposits = document.getElementById('legendDeposits');
+      var legendInterest = document.getElementById('legendInterest');
+      var legendRowDeposits = document.getElementById('legendRowDeposits');
+      var legendRowInterest = document.getElementById('legendRowInterest');
+      var donutDeposits = document.getElementById('donutDeposits');
+      var donutInterest = document.getElementById('donutInterest');
+      var donutPct = document.getElementById('donutPct');
+      var yearlyBody = document.getElementById('yearlyBody');
+      var yearlyToggle = document.getElementById('yearlyToggle');
+
+      var yearlyExpanded = false;
+
+      function fmtMoney(value) {
+        return new Intl.NumberFormat('en-IN', {
+          style: 'currency',
+          currency: 'INR',
+          maximumFractionDigits: 0
+        }).format(value);
+      }
+
+      function clamp(value, min, max) {
+        if (isNaN(value)) return min;
+        return Math.min(max, Math.max(min, value));
+      }
+
+      function getDeposit() {
+        return clamp(parseFloat(depositNum.value), 100, 100000);
+      }
+
+      function getRate() {
+        return clamp(parseFloat(rateNum.value), 1, 12);
+      }
+
+      function getTenure() {
+        return clamp(parseFloat(tenureNum.value), 1, 10);
+      }
+
+      // Month-by-month simulation with quarterly compounding: the monthly
+      // rate is im = (1 + r/4)^(1/3) - 1, so three monthly steps compound
+      // to exactly one quarter. The deposit is added at the START of each
+      // month, then the balance is multiplied by (1 + im) (annuity-due).
+      // This exactly equals the standard RD closed form
+      // M = P * [((1+i)^n - 1) / (1 - (1+i)^(-1/3))], i = r/4, n = quarters.
+      function simulate(P, annualRate, years) {
+        var im = Math.pow(1 + annualRate / 100 / 4, 1 / 3) - 1;
+        var balance = 0;
+        var rows = [];
+        for (var y = 1; y <= years; y++) {
+          var start = balance;
+          for (var m = 0; m < 12; m++) {
+            balance = (balance + P) * (1 + im);
+          }
+          var depositsSoFar = P * 12 * y;
+          rows.push({
+            year: y,
+            deposits: depositsSoFar,
+            interest: balance - start - P * 12,
+            end: balance
+          });
+        }
+        return { fv: balance, rows: rows };
+      }
+
+      function renderYearly(rows) {
+        var html = '';
+        rows.forEach(function (row, i) {
+          var hidden = (!yearlyExpanded && i >= 5) ? ' style="display:none"' : '';
+          html += '<tr' + hidden + '><td>' + row.year + '</td><td>' + fmtMoney(row.deposits) + '</td><td>' + fmtMoney(row.interest) + '</td><td>' + fmtMoney(row.end) + '</td></tr>';
+        });
+        yearlyBody.innerHTML = html;
+        if (rows.length <= 5) {
+          yearlyToggle.style.display = 'none';
+        } else {
+          yearlyToggle.style.display = '';
+          yearlyToggle.textContent = yearlyExpanded ? 'Show less' : 'Show all years';
+        }
+      }
+
+      function setDonut(el, share, offsetShare) {
+        el.setAttribute('stroke-dasharray', (share * CIRCUMFERENCE).toFixed(2) + ' ' + CIRCUMFERENCE);
+        el.setAttribute('stroke-dashoffset', (-offsetShare * CIRCUMFERENCE).toFixed(2));
+      }
+
+      function recalculate() {
+        var deposit = getDeposit();
+        var annualRate = getRate();
+        var years = getTenure();
+        var months = years * 12;
+
+        depositOut.textContent = fmtMoney(deposit);
+        rateOut.textContent = (Math.round(annualRate * 10) / 10) + '%';
+        tenureOut.textContent = years + (years === 1 ? ' year' : ' years');
+
+        var result = simulate(deposit, annualRate, years);
+        var fv = result.fv;
+        var totalDeposits = deposit * months;
+        var interest = fv - totalDeposits;
+
+        maturityOut.innerHTML = fmtMoney(fv) + ' <span> total</span>';
+        tenureRow.textContent = years + (years === 1 ? ' year' : ' years');
+        depositsRow.textContent = fmtMoney(totalDeposits);
+        interestRow.textContent = fmtMoney(interest);
+        legendDeposits.textContent = fmtMoney(totalDeposits);
+        legendInterest.textContent = fmtMoney(interest);
+
+        var depositsShare = fv > 0 ? totalDeposits / fv : 0;
+        var interestShare = fv > 0 ? interest / fv : 0;
+        setDonut(donutDeposits, depositsShare, 0);
+        setDonut(donutInterest, interestShare, depositsShare);
+        donutPct.textContent = (interestShare * 100).toFixed(1) + '%';
+        legendRowDeposits.style.display = totalDeposits > 0 ? '' : 'none';
+        legendRowInterest.style.display = interest > 0 ? '' : 'none';
+
+        renderYearly(result.rows);
+      }
+
+      function syncPair(rangeEl, numEl, min, max, onChange) {
+        rangeEl.addEventListener('input', function () {
+          numEl.value = rangeEl.value;
+          onChange();
+        });
+        numEl.addEventListener('input', function () {
+          var val = clamp(parseFloat(numEl.value), min, max);
+          rangeEl.value = val;
+          onChange();
+        });
+        numEl.addEventListener('change', function () {
+          var val = clamp(parseFloat(numEl.value), min, max);
+          numEl.value = val;
+          rangeEl.value = val;
+          onChange();
+        });
+      }
+
+      syncPair(depositRange, depositNum, 100, 100000, recalculate);
+      syncPair(rateRange, rateNum, 1, 12, recalculate);
+      syncPair(tenureRange, tenureNum, 1, 10, recalculate);
+
+      yearlyToggle.addEventListener('click', function () {
+        yearlyExpanded = !yearlyExpanded;
+        recalculate();
+      });
+
+      recalculate();
+    })();
+  </script>
+</body>
+</html>

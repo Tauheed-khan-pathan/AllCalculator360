@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-PZHLCGYJ5D"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-PZHLCGYJ5D');
+</script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tip Calculator &mdash; Calculate Tip &amp; Split the Bill | All Calculator 360</title>
+  <meta name="description" content="Work out the tip, the total bill and each person&#39;s share. Instant, free and private &mdash; split the bill fairly in seconds.">
+  <link rel="canonical" href="https://tauheed-khan-pathan.github.io/AllCalculator360/calculator/tip-calculator.html">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Tip Calculator &mdash; Calculate Tip &amp; Split the Bill | All Calculator 360">
+  <meta property="og:description" content="Work out the tip, the total bill and each person&#39;s share. Instant, free and private &mdash; split the bill fairly in seconds.">
+  <meta property="og:url" content="https://tauheed-khan-pathan.github.io/AllCalculator360/calculator/tip-calculator.html">
+  <meta property="og:site_name" content="All Calculator 360">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Tip Calculator &mdash; Calculate Tip &amp; Split the Bill | All Calculator 360">
+  <meta name="twitter:description" content="Work out the tip, the total bill and each person&#39;s share. Instant, free and private &mdash; split the bill fairly in seconds.">
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "All Calculator 360",
+  "alternateName": "AllCalculator360",
+  "url": "https://tauheed-khan-pathan.github.io/AllCalculator360/",
+  "description": "Free online calculators for finance, health, math and everyday life. EMI, SIP, FD, BMI and 200+ calculators &mdash; no sign-up, 100% private."
+}
+  </script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How much should I tip?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "15–20% is standard in the US, and 10% is common in many other countries. Tipping customs vary a lot by country and by the type of service, so check local customs before you tip — in some places, such as Japan, tipping is not expected at all."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Should I tip on the total including tax?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Usually, tip on the pre-tax amount — that is, the bill before sales tax or VAT is added. Tipping on the total including tax means you tip on the tax too, which most people avoid."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I split a bill fairly?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The simplest fair way is to divide the total evenly between everyone at the table — this calculator does exactly that. If people ordered very different things, split by what each person ordered instead: add up each person's items, work out the tip on each share, and pay your own share."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do I tip for takeaway or delivery?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A small tip for delivery is customary, because the driver brings the food to your door. Tipping for takeaway is optional — there is no table service — but many people leave a small amount if the order was large or ready quickly."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What if the service was bad?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A small tip, or speaking to the manager about what went wrong, beats leaving nothing without a word. Leaving no tip at all says nothing about what was wrong, while a word with the manager gives the restaurant a chance to fix it."
+      }
+    }
+  ]
+}
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../styles.css">
+  <script>
+    (function () {
+      try {
+        if (localStorage.getItem('ac360-theme') === 'dark') {
+          document.documentElement.setAttribute('data-theme', 'dark');
+        }
+      } catch (e) {}
+    })();
+  </script>
+  <script src="../app.js" defer></script>
+</head>
+<body>
+  <header class="site-header"><div class="header-inner">
+<a class="brand" href="../index.html"><svg class="brand-logo" viewBox="0 0 40 40" fill="none" aria-hidden="true"><rect width="40" height="40" rx="10" fill="#2563eb"/><rect x="9" y="7" width="22" height="7" rx="2" fill="#ffffff"/><rect x="9" y="18" width="6" height="6" rx="1.5" fill="#ffffff"/><rect x="17" y="18" width="6" height="6" rx="1.5" fill="#ffffff"/><rect x="25" y="18" width="6" height="6" rx="1.5" fill="#ffffff"/><rect x="9" y="26" width="6" height="6" rx="1.5" fill="#ffffff"/><rect x="17" y="26" width="6" height="6" rx="1.5" fill="#ffffff"/><rect x="25" y="26" width="6" height="6" rx="1.5" fill="#ffffff"/></svg><span class="brand-name">All Calculator <span class="brand-360">360</span></span></a>
+<div class="header-search"><input id="headerSearch" type="search" placeholder="Search calculators…" aria-label="Search calculators"></div>
+<nav class="main-nav" aria-label="Categories"><a class="nav-link" href="../index.html#finance">Finance</a><a class="nav-link" href="../index.html#health">Health</a><a class="nav-link" href="../index.html#math">Math</a><a class="nav-link" href="../index.html#everyday">Everyday</a></nav>
+<button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">🌙</button>
+<button class="menu-toggle" id="menuToggle" aria-label="Menu">☰</button>
+</div><nav class="mobile-nav" id="mobileNav" aria-label="Mobile categories"><a class="nav-link" href="../index.html#finance">Finance</a><a class="nav-link" href="../index.html#health">Health</a><a class="nav-link" href="../index.html#math">Math</a><a class="nav-link" href="../index.html#everyday">Everyday</a></nav></header>
+
+  <main class="container">
+    <nav class="breadcrumb"><a href="../index.html">Home</a> / <a href="../index.html#everyday">Everyday</a> / Tip Calculator</nav>
+
+    <div class="calc-head">
+      <h1>Tip Calculator</h1>
+      <p>Work out the tip, the total bill and each person&#39;s share &mdash; split the bill fairly in seconds.</p>
+    </div>
+
+    <div class="calc-layout">
+      <div class="calc-panel calc-inputs">
+        <h2>Bill Details</h2>
+
+        <div class="currency-row">
+          <label for="currency">Currency</label>
+          <select id="currency" class="currency-select">
+            <option value="USD" selected>USD ($) &mdash; US Dollar</option>
+            <option value="INR">INR (&8377;) &mdash; Indian Rupee</option>
+            <option value="EUR">EUR (&8364;) &mdash; Euro</option>
+            <option value="GBP">GBP (&163;) &mdash; British Pound</option>
+          </select>
+        </div>
+
+        <div class="input-group">
+          <label class="input-label" for="billRange">Bill Amount <output id="billOut" for="billRange">$100.00</output></label>
+          <div class="input-row">
+            <input type="range" class="slider" id="billRange" min="1" max="100000" step="1" value="100" aria-label="Bill amount">
+            <input type="number" class="num-input" id="billNum" min="0" max="100000" step="0.01" value="100" aria-label="Bill amount value">
+          </div>
+          <p class="input-hint">Bill amount between 1 and 100,000.</p>
+        </div>
+
+        <div class="input-group">
+          <label class="input-label" for="tipRange">Tip % <output id="tipOut" for="tipRange">15%</output></label>
+          <div class="input-row">
+            <input type="range" class="slider" id="tipRange" min="0" max="30" step="1" value="15" aria-label="Tip percentage">
+            <input type="number" class="num-input" id="tipNum" min="0" max="30" step="1" value="15" aria-label="Tip percentage value">
+          </div>
+          <p class="input-hint">Tip between 0% and 30% &mdash; 15&ndash;20% is standard in the US.</p>
+        </div>
+
+        <div class="input-group">
+          <label class="input-label" for="splitRange">Split Among <output id="splitOut" for="splitRange">2 people</output></label>
+          <div class="input-row">
+            <input type="range" class="slider" id="splitRange" min="1" max="20" step="1" value="2" aria-label="Number of people to split among">
+            <input type="number" class="num-input" id="splitNum" min="1" max="20" step="1" value="2" aria-label="Number of people value">
+          </div>
+          <p class="input-hint">Split the bill between 1 and 20 people.</p>
+        </div>
+      </div>
+
+      <div class="calc-panel calc-results">
+        <h2>Your Results</h2>
+
+        <div class="result-main">
+          <div class="result-label">Total Bill</div>
+          <div class="result-emi" id="totalOut">$0.00 <span> total</span></div>
+        </div>
+
+        <div class="result-breakdown">
+          <div class="break-row"><span class="k">Bill Amount</span><span class="v" id="billRow">$0.00</span></div>
+          <div class="break-row"><span class="k">Tip Amount</span><span class="v" id="tipRow">$0.00</span></div>
+          <div class="break-row"><span class="k">Total</span><span class="v" id="totalRow">$0.00</span></div>
+          <div class="break-row"><span class="k">Split Among</span><span class="v" id="splitRow">2 people</span></div>
+          <div class="break-row"><span class="k">Per-Person Share</span><span class="v green" id="perPersonRow">$0.00</span></div>
+          <div class="break-row"><span class="k">Tip Per Person</span><span class="v" id="tipPerPersonRow">$0.00</span></div>
+        </div>
+
+        <div class="donut-wrap">
+          <svg id="donut" width="160" height="160" viewBox="0 0 160 160" role="img" aria-label="Bill amount vs tip chart">
+            <circle class="donut-track" cx="80" cy="80" r="64" fill="none" stroke-width="24"></circle>
+            <g transform="rotate(-90 80 80)">
+              <circle id="donutBill" cx="80" cy="80" r="64" fill="none" stroke="#2563eb" stroke-width="24" stroke-dasharray="402.12 402.12" stroke-dashoffset="0"></circle>
+              <circle id="donutTip" cx="80" cy="80" r="64" fill="none" stroke="#059669" stroke-width="24" stroke-dasharray="0 402.12" stroke-dashoffset="0"></circle>
+            </g>
+            <text id="donutPct" class="donut-pct" x="80" y="76" text-anchor="middle" font-size="20" font-weight="700">15%</text>
+            <text class="donut-sub" x="80" y="96" text-anchor="middle" font-size="12">Tip</text>
+          </svg>
+          <div class="donut-legend">
+            <div class="legend-item" id="legendRowBill"><span class="legend-dot" style="background:#2563eb"></span>Bill Amount <b id="legendBill">$0.00</b></div>
+            <div class="legend-item" id="legendRowTip"><span class="legend-dot" style="background:#059669"></span>Tip <b id="legendTip">$0.00</b></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <section class="content-section">
+      <h2>Tip Calculator Formula</h2>
+      <div class="formula-box">
+        <p class="formula">Tip = bill amount &times; tip % &divide; 100</p>
+        <p class="formula">Total = bill amount + tip</p>
+        <p class="formula">Per-person share = total &divide; number of people &nbsp;&bull;&nbsp; Tip per person = tip &divide; number of people</p>
+        <p><strong>Tip</strong> is the amount you add on top of the bill for service. <strong>Total</strong> is what the table pays altogether, and dividing it by the number of people gives each person&#39;s fair share. All money amounts on this page are shown to 2 decimal places, so cents are never lost.</p>
+        <p><strong>Worked example:</strong> A $100 bill with a 15% tip, split between 2 people: tip = $100 &times; 15 &divide; 100 = <strong>$15.00</strong>; total = $100 + $15.00 = <strong>$115.00</strong>; each person pays $115.00 &divide; 2 = <strong>$57.50</strong>, of which <strong>$7.50</strong> is tip ($15.00 &divide; 2).</p>
+        <p><strong>Second example:</strong> An $85.50 bill with a 20% tip, split between 3 people: tip = $85.50 &times; 20 &divide; 100 = <strong>$17.10</strong>; total = $85.50 + $17.10 = <strong>$102.60</strong>; each person pays $102.60 &divide; 3 = <strong>$34.20</strong>, of which <strong>$5.70</strong> is tip ($17.10 &divide; 3).</p>
+      </div>
+    </section>
+
+    <section class="content-section">
+      <h2>Frequently Asked Questions</h2>
+      <details class="faq-item">
+        <summary class="faq-q">How much should I tip?</summary>
+        <div class="faq-a"><p>15–20% is standard in the US, and 10% is common in many other countries. Tipping customs vary a lot by country and by the type of service, so check local customs before you tip — in some places, such as Japan, tipping is not expected at all.</p></div>
+      </details>
+      <details class="faq-item">
+        <summary class="faq-q">Should I tip on the total including tax?</summary>
+        <div class="faq-a"><p>Usually, tip on the pre-tax amount — that is, the bill before sales tax or VAT is added. Tipping on the total including tax means you tip on the tax too, which most people avoid.</p></div>
+      </details>
+      <details class="faq-item">
+        <summary class="faq-q">How do I split a bill fairly?</summary>
+        <div class="faq-a"><p>The simplest fair way is to divide the total evenly between everyone at the table — this calculator does exactly that. If people ordered very different things, split by what each person ordered instead: add up each person's items, work out the tip on each share, and pay your own share.</p></div>
+      </details>
+      <details class="faq-item">
+        <summary class="faq-q">Do I tip for takeaway or delivery?</summary>
+        <div class="faq-a"><p>A small tip for delivery is customary, because the driver brings the food to your door. Tipping for takeaway is optional — there is no table service — but many people leave a small amount if the order was large or ready quickly.</p></div>
+      </details>
+      <details class="faq-item">
+        <summary class="faq-q">What if the service was bad?</summary>
+        <div class="faq-a"><p>A small tip, or speaking to the manager about what went wrong, beats leaving nothing without a word. Leaving no tip at all says nothing about what was wrong, while a word with the manager gives the restaurant a chance to fix it.</p></div>
+      </details>
+
+    </section>
+
+    <section class="content-section">
+      <h2>Related Calculators</h2>
+      <div class="related-grid">
+        <a class="calc-card" href="percentage-calculator.html" data-name="Percentage Calculator" data-desc="Work out percentages, percentage increase and decrease.">
+          <span class="calc-icon">%</span>
+          <span class="calc-name">Percentage Calculator</span>
+          <span class="calc-desc">Work out percentages, percentage increase and decrease.</span>
+        </a>
+        <a class="calc-card" href="discount-calculator.html" data-name="Discount Calculator" data-desc="Find the sale price, discount amount and what you save.">
+          <span class="calc-icon">🏷️</span>
+          <span class="calc-name">Discount Calculator</span>
+          <span class="calc-desc">Find the sale price, discount amount and what you save.</span>
+        </a>
+        <a class="calc-card" href="gst-calculator.html" data-name="GST Calculator" data-desc="Add or remove GST and split it into CGST and SGST.">
+          <span class="calc-icon">🧾</span>
+          <span class="calc-name">GST Calculator</span>
+          <span class="calc-desc">Add or remove GST and split it into CGST and SGST.</span>
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer"><div class="container"><div class="footer-grid">
+<div class="footer-col"><div class="footer-brand"><svg width="32" height="32" viewBox="0 0 40 40" fill="none" aria-hidden="true"><rect width="40" height="40" rx="10" fill="#2563eb"/><rect x="9" y="7" width="22" height="7" rx="2" fill="#ffffff"/><rect x="9" y="18" width="6" height="6" rx="1.5" fill="#ffffff"/><rect x="17" y="18" width="6" height="6" rx="1.5" fill="#ffffff"/><rect x="25" y="18" width="6" height="6" rx="1.5" fill="#ffffff"/><rect x="9" y="26" width="6" height="6" rx="1.5" fill="#ffffff"/><rect x="17" y="26" width="6" height="6" rx="1.5" fill="#ffffff"/><rect x="25" y="26" width="6" height="6" rx="1.5" fill="#ffffff"/></svg><span>All Calculator 360</span></div><p>Every calculator, all in one place. Free, private, and accurate — calculations happen right in your browser.</p></div>
+<div class="footer-col"><h3>Categories</h3><ul><li><a href="../index.html#finance">Finance</a></li><li><a href="../index.html#health">Health</a></li><li><a href="../index.html#math">Math</a></li><li><a href="../index.html#everyday">Everyday</a></li></ul></div>
+<div class="footer-col"><h3>Popular Calculators</h3><ul><li><a href="emi-calculator.html">EMI Calculator</a></li><li><a href="sip-calculator.html">SIP Calculator</a></li><li><a href="fd-calculator.html">FD Calculator</a></li><li><a href="income-tax-calculator.html">Income Tax Calculator</a></li><li><a href="gst-calculator.html">GST Calculator</a></li><li><a href="bmi-calculator.html">BMI Calculator</a></li><li><a href="age-calculator.html">Age Calculator</a></li><li><a href="percentage-calculator.html">Percentage Calculator</a></li></ul></div>
+<div class="footer-col"><h3>Company</h3><ul><li><a href="../about.html">About</a></li><li><a href="../contact.html">Contact</a></li><li><a href="../privacy.html">Privacy Policy</a></li><li><a href="../terms.html">Terms</a></li></ul></div>
+</div><div class="footer-bottom"><p>© 2026 All Calculator 360. All rights reserved.</p></div></div></footer>
+
+  <script>
+    (function () {
+      'use strict';
+
+      var CIRCUMFERENCE = 402.12;
+      var SYMBOLS = { USD: '$', INR: '\u20B9', EUR: '\u20AC', GBP: '\u00A3' };
+
+      var currencyEl = document.getElementById('currency');
+      var billRange = document.getElementById('billRange');
+      var billNum = document.getElementById('billNum');
+      var billOut = document.getElementById('billOut');
+      var tipRange = document.getElementById('tipRange');
+      var tipNum = document.getElementById('tipNum');
+      var tipOut = document.getElementById('tipOut');
+      var splitRange = document.getElementById('splitRange');
+      var splitNum = document.getElementById('splitNum');
+      var splitOut = document.getElementById('splitOut');
+      var totalOut = document.getElementById('totalOut');
+      var billRow = document.getElementById('billRow');
+      var tipRow = document.getElementById('tipRow');
+      var totalRow = document.getElementById('totalRow');
+      var splitRow = document.getElementById('splitRow');
+      var perPersonRow = document.getElementById('perPersonRow');
+      var tipPerPersonRow = document.getElementById('tipPerPersonRow');
+      var legendBill = document.getElementById('legendBill');
+      var legendTip = document.getElementById('legendTip');
+      var legendRowBill = document.getElementById('legendRowBill');
+      var legendRowTip = document.getElementById('legendRowTip');
+      var donutBill = document.getElementById('donutBill');
+      var donutTip = document.getElementById('donutTip');
+      var donutPct = document.getElementById('donutPct');
+
+      function currencyCode() {
+        return currencyEl.value;
+      }
+
+      // Tip maths needs cents, so every money amount on this page is shown
+      // with exactly 2 decimal places, whatever its size.
+      function fmtMoney(value) {
+        return new Intl.NumberFormat('en-US', {
+          style: 'currency',
+          currency: currencyCode(),
+          minimumFractionDigits: 2,
+          maximumFractionDigits: 2
+        }).format(value);
+      }
+
+      function clamp(value, min, max) {
+        if (isNaN(value)) return min;
+        return Math.min(max, Math.max(min, value));
+      }
+
+      function getBill() {
+        return clamp(parseFloat(billNum.value), 0, 100000);
+      }
+
+      function getTipPct() {
+        return clamp(parseFloat(tipNum.value), 0, 30);
+      }
+
+      function getSplit() {
+        return clamp(parseInt(splitNum.value, 10), 1, 20);
+      }
+
+      // Pure maths, kept separate so it can be tested on its own:
+      // tip = bill x tip% / 100; total = bill + tip;
+      // per-person total = total / people; tip per person = tip / people.
+      function computeTip(bill, tipPct, people) {
+        var tip = bill * tipPct / 100;
+        var total = bill + tip;
+        return {
+          bill: bill,
+          tip: tip,
+          total: total,
+          people: people,
+          perPerson: total / people,
+          tipPerPerson: tip / people
+        };
+      }
+
+      function setDonut(el, share, offsetShare) {
+        el.setAttribute('stroke-dasharray', (share * CIRCUMFERENCE).toFixed(2) + ' ' + CIRCUMFERENCE);
+        el.setAttribute('stroke-dashoffset', (-offsetShare * CIRCUMFERENCE).toFixed(2));
+      }
+
+      function recalculate() {
+        var bill = getBill();
+        var tipPct = getTipPct();
+        var people = getSplit();
+        var r = computeTip(bill, tipPct, people);
+
+        billOut.textContent = fmtMoney(bill);
+        tipOut.textContent = (Math.round(tipPct * 10) / 10) + '%';
+        splitOut.textContent = people + (people === 1 ? ' person' : ' people');
+
+        totalOut.innerHTML = fmtMoney(r.total) + ' <span> total</span>';
+        billRow.textContent = fmtMoney(r.bill);
+        tipRow.textContent = fmtMoney(r.tip);
+        totalRow.textContent = fmtMoney(r.total);
+        splitRow.textContent = people + (people === 1 ? ' person' : ' people');
+        perPersonRow.textContent = fmtMoney(r.perPerson);
+        tipPerPersonRow.textContent = fmtMoney(r.tipPerPerson);
+        legendBill.textContent = fmtMoney(r.bill);
+        legendTip.textContent = fmtMoney(r.tip);
+
+        var billShare = r.total > 0 ? r.bill / r.total : 0;
+        var tipShare = r.total > 0 ? r.tip / r.total : 0;
+        setDonut(donutBill, billShare, 0);
+        setDonut(donutTip, tipShare, billShare);
+        donutPct.textContent = (Math.round(tipPct * 10) / 10) + '%';
+        legendRowBill.style.display = r.bill > 0 ? '' : 'none';
+        legendRowTip.style.display = r.tip > 0 ? '' : 'none';
+      }
+
+      function syncPair(rangeEl, numEl, min, max, onChange) {
+        rangeEl.addEventListener('input', function () {
+          numEl.value = rangeEl.value;
+          onChange();
+        });
+        numEl.addEventListener('input', function () {
+          var val = clamp(parseFloat(numEl.value), min, max);
+          rangeEl.value = val;
+          onChange();
+        });
+        numEl.addEventListener('change', function () {
+          var val = clamp(parseFloat(numEl.value), min, max);
+          numEl.value = val;
+          rangeEl.value = val;
+          onChange();
+        });
+      }
+
+      syncPair(billRange, billNum, 0, 100000, recalculate);
+      syncPair(tipRange, tipNum, 0, 30, recalculate);
+      syncPair(splitRange, splitNum, 1, 20, recalculate);
+
+      currencyEl.addEventListener('change', recalculate);
+
+      recalculate();
+    })();
+  </script>
+</body>
+</html>

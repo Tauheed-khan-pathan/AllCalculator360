@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-PZHLCGYJ5D"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-PZHLCGYJ5D');
+</script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Discount Calculator — Calculate Sale Price &amp; Savings | All Calculator 360</title>
+  <meta name="description" content="Find the sale price, amount saved, or the original price before a discount. Instant, free and private.">
+  <link rel="canonical" href="https://tauheed-khan-pathan.github.io/AllCalculator360/calculator/discount-calculator.html">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Discount Calculator — Calculate Sale Price &amp; Savings | All Calculator 360">
+  <meta property="og:description" content="Find the sale price, amount saved, or the original price before a discount. Instant, free and private.">
+  <meta property="og:url" content="https://tauheed-khan-pathan.github.io/AllCalculator360/calculator/discount-calculator.html">
+  <meta property="og:site_name" content="All Calculator 360">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Discount Calculator — Calculate Sale Price &amp; Savings | All Calculator 360">
+  <meta name="twitter:description" content="Find the sale price, amount saved, or the original price before a discount. Instant, free and private.">
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "All Calculator 360",
+  "alternateName": "AllCalculator360",
+  "url": "https://tauheed-khan-pathan.github.io/AllCalculator360/",
+  "description": "Free online calculators for finance, health, math and everyday life. EMI, SIP, FD, BMI and 200+ calculators — no sign-up, 100% private."
+}
+  </script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How do I calculate a discount?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Multiply the original price by (1 − discount percentage ÷ 100). For example, a $100 item at 25% off costs $100 × (1 − 25 ÷ 100) = $100 × 0.75 = $75, so you save $25."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I find the original price from a sale price?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Divide the sale price by (1 − discount percentage ÷ 100). For example, if an item costs $75 after a 25% discount, the original price was $75 ÷ (1 − 25 ÷ 100) = $75 ÷ 0.75 = $100, so you saved $25."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What does \"25% off\" mean?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "It means you pay 75% of the original price and save 25%. On a $100 item, 25% off means you pay $75 and save $25."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How are taxes handled on a discounted price?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Tax is usually charged on the discounted price, after the discount is applied — so you pay tax on the sale price, not on the original price. The exact rule depends on where you live, so check your local tax rules if you are unsure."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I stack two discounts?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No — two discounts do not simply add up. A 20% discount followed by a 10% discount is not 30% off; the second discount applies to the already-discounted price, so you pay 80% × 90% = 72% of the original price, which is 28% off the original."
+      }
+    }
+  ]
+}
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../styles.css">
+  <script>
+    (function () {
+      try {
+        if (localStorage.getItem('ac360-theme') === 'dark') {
+          document.documentElement.setAttribute('data-theme', 'dark');
+        }
+      } catch (e) {}
+    })();
+  </script>
+  <script src="../app.js" defer></script>
+</head>
+<body>
+  <header class="site-header"><div class="header-inner">
+<a class="brand" href="../index.html"><svg class="brand-logo" viewBox="0 0 40 40" fill="none" aria-hidden="true"><rect width="40" height="40" rx="10" fill="#2563eb"/><rect x="9" y="7" width="22" height="7" rx="2" fill="#ffffff"/><rect x="9" y="18" width="6" height="6" rx="1.5" fill="#ffffff"/><rect x="17" y="18" width="6" height="6" rx="1.5" fill="#ffffff"/><rect x="25" y="18" width="6" height="6" rx="1.5" fill="#ffffff"/><rect x="9" y="26" width="6" height="6" rx="1.5" fill="#ffffff"/><rect x="17" y="26" width="6" height="6" rx="1.5" fill="#ffffff"/><rect x="25" y="26" width="6" height="6" rx="1.5" fill="#ffffff"/></svg><span class="brand-name">All Calculator <span class="brand-360">360</span></span></a>
+<div class="header-search"><input id="headerSearch" type="search" placeholder="Search calculators…" aria-label="Search calculators"></div>
+<nav class="main-nav" aria-label="Categories"><a class="nav-link" href="../index.html#finance">Finance</a><a class="nav-link" href="../index.html#health">Health</a><a class="nav-link" href="../index.html#math">Math</a><a class="nav-link" href="../index.html#everyday">Everyday</a></nav>
+<button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">🌙</button>
+<button class="menu-toggle" id="menuToggle" aria-label="Menu">☰</button>
+</div><nav class="mobile-nav" id="mobileNav" aria-label="Mobile categories"><a class="nav-link" href="../index.html#finance">Finance</a><a class="nav-link" href="../index.html#health">Health</a><a class="nav-link" href="../index.html#math">Math</a><a class="nav-link" href="../index.html#everyday">Everyday</a></nav></header>
+
+  <main class="container">
+    <nav class="breadcrumb"><a href="../index.html">Home</a> / <a href="../index.html#everyday">Everyday</a> / Discount Calculator</nav>
+
+    <div class="calc-head">
+      <h1>Discount Calculator</h1>
+      <p>Find the sale price after a discount, the original price before it, or the discount percentage — instantly, free and private.</p>
+    </div>
+
+    <div class="calc-layout">
+      <div class="calc-panel calc-inputs">
+        <h2>Sale price after discount</h2>
+
+        <div class="currency-row">
+          <label for="currency">Currency</label>
+          <select id="currency" class="currency-select">
+            <option value="USD" selected>USD ($) — US Dollar</option>
+            <option value="INR">INR (₹) — Indian Rupee</option>
+            <option value="EUR">EUR (€) — Euro</option>
+            <option value="GBP">GBP (£) — British Pound</option>
+          </select>
+        </div>
+
+        <div class="input-group">
+          <label class="input-label" for="priceANum">Original Price</label>
+          <div class="input-row">
+            <input type="number" class="num-input" id="priceANum" min="0" max="10000000" step="any" value="100" aria-label="Original price" style="flex:1">
+          </div>
+          <p class="input-hint">The price before any discount.</p>
+        </div>
+
+        <div class="input-group">
+          <label class="input-label" for="discARange">Discount <output id="discAOut" for="discARange">25%</output></label>
+          <div class="input-row">
+            <input type="range" class="slider" id="discARange" min="0" max="90" step="0.5" value="25" aria-label="Discount percentage">
+            <input type="number" class="num-input" id="discANum" min="0" max="100" step="any" value="25" aria-label="Discount percentage value">
+          </div>
+          <p class="input-hint">Discount between 0% and 90%.</p>
+        </div>
+      </div>
+
+      <div class="calc-panel calc-results">
+        <h2>Result</h2>
+
+        <div class="result-main">
+          <div class="result-label" id="labelA">Final price after 25% off</div>
+          <div class="result-emi" id="resA">$75.00</div>
+        </div>
+
+        <div class="result-breakdown">
+          <div class="break-row"><span class="k">Original Price</span><span class="v" id="breakAPrice">$100</span></div>
+          <div class="break-row"><span class="k">Discount</span><span class="v" id="breakADisc">25%</span></div>
+          <div class="break-row"><span class="k">Amount Saved</span><span class="v green" id="breakASaved">$25.00</span></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="calc-layout" style="margin-top:24px">
+      <div class="calc-panel calc-inputs">
+        <h2>Original price before discount</h2>
+
+        <div class="input-group">
+          <label class="input-label" for="priceBNum">Discounted Price</label>
+          <div class="input-row">
+            <input type="number" class="num-input" id="priceBNum" min="0" max="10000000" step="any" value="75" aria-label="Discounted price" style="flex:1">
+          </div>
+          <p class="input-hint">The price you actually pay, after the discount.</p>
+        </div>
+
+        <div class="input-group">
+          <label class="input-label" for="discBRange">Discount <output id="discBOut" for="discBRange">25%</output></label>
+          <div class="input-row">
+            <input type="range" class="slider" id="discBRange" min="0" max="90" step="0.5" value="25" aria-label="Discount percentage">
+            <input type="number" class="num-input" id="discBNum" min="0" max="100" step="any" value="25" aria-label="Discount percentage value">
+          </div>
+          <p class="input-hint">Discount between 0% and 90%.</p>
+        </div>
+
+        <p class="input-error" id="errorB" style="display:none">Discount cannot be 100% for this calculation.</p>
+      </div>
+
+      <div class="calc-panel calc-results">
+        <h2>Result</h2>
+
+        <div class="result-main">
+          <div class="result-label" id="labelB">Original price before 25% off</div>
+          <div class="result-emi" id="resB">$100</div>
+        </div>
+
+        <div class="result-breakdown">
+          <div class="break-row"><span class="k">Discounted Price</span><span class="v" id="breakBPrice">$75.00</span></div>
+          <div class="break-row"><span class="k">Discount</span><span class="v" id="breakBDisc">25%</span></div>
+          <div class="break-row"><span class="k">Amount Saved</span><span class="v green" id="breakBSaved">$25.00</span></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="calc-layout" style="margin-top:24px">
+      <div class="calc-panel calc-inputs">
+        <h2>What is the discount %?</h2>
+
+        <div class="input-group">
+          <label class="input-label" for="origCNum">Original Price</label>
+          <div class="input-row">
+            <input type="number" class="num-input" id="origCNum" min="0" max="10000000" step="any" value="100" aria-label="Original price" style="flex:1">
+          </div>
+          <p class="input-hint">The price before the discount.</p>
+        </div>
+
+        <div class="input-group">
+          <label class="input-label" for="finalCNum">Final Price</label>
+          <div class="input-row">
+            <input type="number" class="num-input" id="finalCNum" min="0" max="10000000" step="any" value="75" aria-label="Final price" style="flex:1">
+          </div>
+          <p class="input-hint">The price after the discount.</p>
+        </div>
+
+        <p class="input-error" id="errorC" style="display:none">Enter an original price greater than zero.</p>
+      </div>
+
+      <div class="calc-panel calc-results">
+        <h2>Result</h2>
+
+        <div class="result-main">
+          <div class="result-label" id="labelC">Discount on $100 marked down to $75</div>
+          <div class="result-emi" id="resC">25%</div>
+        </div>
+
+        <div class="result-breakdown">
+          <div class="break-row"><span class="k">Original Price</span><span class="v" id="breakCOrig">$100</span></div>
+          <div class="break-row"><span class="k">Final Price</span><span class="v" id="breakCFinal">$75.00</span></div>
+          <div class="break-row"><span class="k">Amount Saved</span><span class="v green" id="breakCSaved">$25.00</span></div>
+        </div>
+      </div>
+    </div>
+
+    <section class="content-section">
+      <h2>Discount Calculator Formula</h2>
+      <div class="formula-box">
+        <p class="formula">Final price = original price × (1 − discount% ÷ 100)</p>
+        <p class="formula">Amount saved = original price − final price</p>
+        <p><strong>Worked example:</strong> A $100 item at 25% off costs $100 × (1 − 25 ÷ 100) = $100 × 0.75 = <strong>$75</strong>, and you save $100 − $75 = <strong>$25</strong>.</p>
+        <p class="formula" style="margin-top:16px">Original price = discounted price ÷ (1 − discount% ÷ 100)</p>
+        <p><strong>Worked example:</strong> An item costs $75 after a 25% discount, so the original price was $75 ÷ (1 − 25 ÷ 100) = $75 ÷ 0.75 = <strong>$100</strong>, and you saved $100 − $75 = <strong>$25</strong>.</p>
+        <p class="formula" style="margin-top:16px">Discount % = (original price − final price) ÷ original price × 100</p>
+        <p><strong>Worked example:</strong> A $100 item marked down to $75 is discounted by ($100 − $75) ÷ $100 × 100 = <strong>25% off</strong>.</p>
+        <p style="margin-top:16px">Discounts do not add up when stacked: a 20% discount followed by 10% off is not 30% off. The second discount applies to the already-discounted price, so you pay 80% × 90% = 72% of the original price — that is 28% off in total.</p>
+      </div>
+    </section>
+
+    <section class="content-section">
+      <h2>Frequently Asked Questions</h2>
+      <details class="faq-item">
+        <summary class="faq-q">How do I calculate a discount?</summary>
+        <div class="faq-a"><p>Multiply the original price by (1 − discount percentage ÷ 100). For example, a $100 item at 25% off costs $100 × (1 − 25 ÷ 100) = $100 × 0.75 = $75, so you save $25.</p></div>
+      </details>
+      <details class="faq-item">
+        <summary class="faq-q">How do I find the original price from a sale price?</summary>
+        <div class="faq-a"><p>Divide the sale price by (1 − discount percentage ÷ 100). For example, if an item costs $75 after a 25% discount, the original price was $75 ÷ (1 − 25 ÷ 100) = $75 ÷ 0.75 = $100, so you saved $25.</p></div>
+      </details>
+      <details class="faq-item">
+        <summary class="faq-q">What does "25% off" mean?</summary>
+        <div class="faq-a"><p>It means you pay 75% of the original price and save 25%. On a $100 item, 25% off means you pay $75 and save $25.</p></div>
+      </details>
+      <details class="faq-item">
+        <summary class="faq-q">How are taxes handled on a discounted price?</summary>
+        <div class="faq-a"><p>Tax is usually charged on the discounted price, after the discount is applied — so you pay tax on the sale price, not on the original price. The exact rule depends on where you live, so check your local tax rules if you are unsure.</p></div>
+      </details>
+      <details class="faq-item">
+        <summary class="faq-q">Can I stack two discounts?</summary>
+        <div class="faq-a"><p>No — two discounts do not simply add up. A 20% discount followed by a 10% discount is not 30% off; the second discount applies to the already-discounted price, so you pay 80% × 90% = 72% of the original price, which is 28% off the original.</p></div>
+      </details>
+    </section>
+
+    <section class="content-section">
+      <h2>Related Calculators</h2>
+      <div class="related-grid">
+        <a class="calc-card" href="percentage-calculator.html" data-name="Percentage Calculator" data-desc="Work out percentages fast — what is X% of Y, X is what percent of Y, and percentage increase or decrease.">
+          <span class="calc-icon">%</span>
+          <span class="calc-name">Percentage Calculator</span>
+          <span class="calc-desc">Work out percentages fast — what is X% of Y, X is what percent of Y, and percentage increase or decrease.</span>
+        </a>
+        <a class="calc-card" href="gst-calculator.html" data-name="GST Calculator" data-desc="Calculate GST instantly — add GST to a price or remove GST from an inclusive price, with CGST and SGST split.">
+          <span class="calc-icon">🧾</span>
+          <span class="calc-name">GST Calculator</span>
+          <span class="calc-desc">Calculate GST instantly — add GST to a price or remove GST from an inclusive price, with CGST and SGST split.</span>
+        </a>
+        <a class="calc-card" href="ecommerce-profit-calculator.html" data-name="E-commerce Profit Calculator" data-desc="Compare selling profit across Amazon, Flipkart, Meesho, eBay, Etsy and Walmart — marketplace fees, GST, returns and break-even price, side by side.">
+          <span class="calc-icon">🛒</span>
+          <span class="calc-name">E-commerce Profit Calculator</span>
+          <span class="calc-desc">Compare selling profit across Amazon, Flipkart, Meesho, eBay, Etsy and Walmart — marketplace fees, GST, returns and break-even price, side by side.</span>
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer"><div class="container"><div class="footer-grid">
+<div class="footer-col"><div class="footer-brand"><svg width="32" height="32" viewBox="0 0 40 40" fill="none" aria-hidden="true"><rect width="40" height="40" rx="10" fill="#2563eb"/><rect x="9" y="7" width="22" height="7" rx="2" fill="#ffffff"/><rect x="9" y="18" width="6" height="6" rx="1.5" fill="#ffffff"/><rect x="17" y="18" width="6" height="6" rx="1.5" fill="#ffffff"/><rect x="25" y="18" width="6" height="6" rx="1.5" fill="#ffffff"/><rect x="9" y="26" width="6" height="6" rx="1.5" fill="#ffffff"/><rect x="17" y="26" width="6" height="6" rx="1.5" fill="#ffffff"/><rect x="25" y="26" width="6" height="6" rx="1.5" fill="#ffffff"/></svg><span>All Calculator 360</span></div><p>Every calculator, all in one place. Free, private, and accurate — calculations happen right in your browser.</p></div>
+<div class="footer-col"><h3>Categories</h3><ul><li><a href="../index.html#finance">Finance</a></li><li><a href="../index.html#health">Health</a></li><li><a href="../index.html#math">Math</a></li><li><a href="../index.html#everyday">Everyday</a></li></ul></div>
+<div class="footer-col"><h3>Popular Calculators</h3><ul><li><a href="emi-calculator.html">EMI Calculator</a></li><li><a href="sip-calculator.html">SIP Calculator</a></li><li><a href="fd-calculator.html">FD Calculator</a></li><li><a href="income-tax-calculator.html">Income Tax Calculator</a></li><li><a href="gst-calculator.html">GST Calculator</a></li><li><a href="bmi-calculator.html">BMI Calculator</a></li><li><a href="age-calculator.html">Age Calculator</a></li><li><a href="percentage-calculator.html">Percentage Calculator</a></li></ul></div>
+<div class="footer-col"><h3>Company</h3><ul><li><a href="../about.html">About</a></li><li><a href="../contact.html">Contact</a></li><li><a href="../privacy.html">Privacy Policy</a></li><li><a href="../terms.html">Terms</a></li></ul></div>
+</div><div class="footer-bottom"><p>© 2026 All Calculator 360. All rights reserved.</p></div></div></footer>
+
+  <script>
+    (function () {
+      'use strict';
+
+      var SYMBOLS = { USD: '$', INR: '₹', EUR: '€', GBP: '£' };
+
+      var currencyEl = document.getElementById('currency');
+
+      // --- Tool A: Sale price after discount ---
+      var priceANum = document.getElementById('priceANum');
+      var discARange = document.getElementById('discARange');
+      var discANum = document.getElementById('discANum');
+      var discAOut = document.getElementById('discAOut');
+      var labelA = document.getElementById('labelA');
+      var resA = document.getElementById('resA');
+      var breakAPrice = document.getElementById('breakAPrice');
+      var breakADisc = document.getElementById('breakADisc');
+      var breakASaved = document.getElementById('breakASaved');
+
+      // --- Tool B: Original price before discount ---
+      var priceBNum = document.getElementById('priceBNum');
+      var discBRange = document.getElementById('discBRange');
+      var discBNum = document.getElementById('discBNum');
+      var discBOut = document.getElementById('discBOut');
+      var errorB = document.getElementById('errorB');
+      var labelB = document.getElementById('labelB');
+      var resB = document.getElementById('resB');
+      var breakBPrice = document.getElementById('breakBPrice');
+      var breakBDisc = document.getElementById('breakBDisc');
+      var breakBSaved = document.getElementById('breakBSaved');
+
+      // --- Tool C: What is the discount %? ---
+      var origCNum = document.getElementById('origCNum');
+      var finalCNum = document.getElementById('finalCNum');
+      var errorC = document.getElementById('errorC');
+      var labelC = document.getElementById('labelC');
+      var resC = document.getElementById('resC');
+      var breakCOrig = document.getElementById('breakCOrig');
+      var breakCFinal = document.getElementById('breakCFinal');
+      var breakCSaved = document.getElementById('breakCSaved');
+
+      function currencyCode() {
+        return currencyEl.value;
+      }
+
+      // Money below 100 shows 2 decimals; whole units at/above 100
+      // (same rule as the E-commerce Profit Calculator).
+      function fmtMoney(value) {
+        var dp = Math.abs(value) < 100 ? 2 : 0;
+        return new Intl.NumberFormat('en-US', {
+          style: 'currency',
+          currency: currencyCode(),
+          minimumFractionDigits: dp,
+          maximumFractionDigits: dp
+        }).format(value);
+      }
+
+      function fmtPct(value) {
+        var rounded = Math.round(value * 100) / 100;
+        return rounded.toLocaleString('en-US', { maximumFractionDigits: 2 }) + '%';
+      }
+
+      function readNum(el) {
+        var v = parseFloat(el.value);
+        return isNaN(v) ? null : v;
+      }
+
+      function clampNum(value, min, max) {
+        if (isNaN(value)) return min;
+        return Math.min(max, Math.max(min, value));
+      }
+
+      function recalcA() {
+        var price = readNum(priceANum);
+        var disc = readNum(discANum);
+        if (price === null || disc === null) {
+          labelA.textContent = 'Enter both values.';
+          resA.textContent = '\u2014';
+          return;
+        }
+        price = Math.max(0, price);
+        disc = clampNum(disc, 0, 100);
+        var final = price * (1 - disc / 100);
+        var saved = price - final;
+        discAOut.textContent = fmtPct(disc);
+        labelA.textContent = 'Final price after ' + fmtPct(disc) + ' off';
+        resA.textContent = fmtMoney(final);
+        breakAPrice.textContent = fmtMoney(price);
+        breakADisc.textContent = fmtPct(disc);
+        breakASaved.textContent = fmtMoney(saved);
+      }
+
+      function recalcB() {
+        var price = readNum(priceBNum);
+        var disc = readNum(discBNum);
+        if (price === null || disc === null) {
+          errorB.style.display = 'none';
+          labelB.textContent = 'Enter both values.';
+          resB.textContent = '\u2014';
+          return;
+        }
+        price = Math.max(0, price);
+        disc = clampNum(disc, 0, 100);
+        if (disc >= 100) {
+          errorB.style.display = '';
+          labelB.textContent = 'Discount cannot be 100% for this calculation.';
+          resB.textContent = '\u2014';
+          breakBPrice.textContent = fmtMoney(price);
+          breakBDisc.textContent = fmtPct(disc);
+          breakBSaved.textContent = '\u2014';
+          return;
+        }
+        errorB.style.display = 'none';
+        var original = price / (1 - disc / 100);
+        var saved = original - price;
+        discBOut.textContent = fmtPct(disc);
+        labelB.textContent = 'Original price before ' + fmtPct(disc) + ' off';
+        resB.textContent = fmtMoney(original);
+        breakBPrice.textContent = fmtMoney(price);
+        breakBDisc.textContent = fmtPct(disc);
+        breakBSaved.textContent = fmtMoney(saved);
+      }
+
+      function recalcC() {
+        var orig = readNum(origCNum);
+        var fin = readNum(finalCNum);
+        if (orig === null || fin === null) {
+          errorC.style.display = 'none';
+          labelC.textContent = 'Enter both values.';
+          resC.textContent = '\u2014';
+          return;
+        }
+        orig = Math.max(0, orig);
+        fin = Math.max(0, fin);
+        if (orig === 0) {
+          errorC.style.display = '';
+          labelC.textContent = 'Enter an original price greater than zero.';
+          resC.textContent = '\u2014';
+          breakCOrig.textContent = fmtMoney(orig);
+          breakCFinal.textContent = fmtMoney(fin);
+          breakCSaved.textContent = '\u2014';
+          return;
+        }
+        errorC.style.display = 'none';
+        var disc = (orig - fin) / orig * 100;
+        var saved = orig - fin;
+        if (disc < 0) {
+          labelC.textContent = 'Price increase of ' + fmtPct(Math.abs(disc)) + ' — not a discount';
+        } else {
+          labelC.textContent = 'Discount on ' + fmtMoney(orig) + ' marked down to ' + fmtMoney(fin);
+        }
+        resC.textContent = fmtPct(disc);
+        breakCOrig.textContent = fmtMoney(orig);
+        breakCFinal.textContent = fmtMoney(fin);
+        breakCSaved.textContent = fmtMoney(saved);
+      }
+
+      function recalcAll() {
+        recalcA();
+        recalcB();
+        recalcC();
+      }
+
+      // Slider 0–90, number input 0–100 (so 100 can be typed in Tool B
+      // and trigger its validation instead of being silently clamped).
+      function syncDiscountPair(rangeEl, numEl, outEl, onChange) {
+        rangeEl.addEventListener('input', function () {
+          numEl.value = rangeEl.value;
+          onChange();
+        });
+        numEl.addEventListener('input', function () {
+          var val = parseFloat(numEl.value);
+          if (!isNaN(val)) rangeEl.value = Math.min(90, Math.max(0, val));
+          onChange();
+        });
+        numEl.addEventListener('change', function () {
+          var val = clampNum(parseFloat(numEl.value), 0, 100);
+          numEl.value = val;
+          rangeEl.value = Math.min(90, val);
+          onChange();
+        });
+      }
+
+      function bindPriceInput(el, onChange) {
+        el.addEventListener('input', onChange);
+        el.addEventListener('change', function () {
+          var val = parseFloat(el.value);
+          if (isNaN(val) || val < 0) el.value = 0;
+          onChange();
+        });
+      }
+
+      syncDiscountPair(discARange, discANum, discAOut, recalcA);
+      syncDiscountPair(discBRange, discBNum, discBOut, recalcB);
+      bindPriceInput(priceANum, recalcA);
+      bindPriceInput(priceBNum, recalcB);
+      bindPriceInput(origCNum, recalcC);
+      bindPriceInput(finalCNum, recalcC);
+
+      currencyEl.addEventListener('change', recalcAll);
+
+      recalcAll();
+    })();
+  </script>
+</body>
+</html>
