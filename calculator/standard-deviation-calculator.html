@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Crect width='40' height='40' rx='10' fill='%232563eb'/%3E%3Crect x='9' y='7' width='22' height='7' rx='2' fill='%23ffffff'/%3E%3Crect x='9' y='18' width='6' height='6' rx='1.5' fill='%23ffffff'/%3E%3Crect x='17' y='18' width='6' height='6' rx='1.5' fill='%23ffffff'/%3E%3Crect x='25' y='18' width='6' height='6' rx='1.5' fill='%23ffffff'/%3E%3Crect x='9' y='26' width='6' height='6' rx='1.5' fill='%23ffffff'/%3E%3Crect x='17' y='26' width='6' height='6' rx='1.5' fill='%23ffffff'/%3E%3Crect x='25' y='26' width='6' height='6' rx='1.5' fill='%23ffffff'/%3E%3C/svg%3E">
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-PZHLCGYJ5D"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-PZHLCGYJ5D');
+</script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Standard Deviation Calculator — Mean | All Calculator 360</title>
+  <meta name="description" content="Calculate population and sample standard deviation, variance and mean from any list of numbers. Paste your data and see every step instantly — free and private.">
+  <link rel="canonical" href="https://tauheed-khan-pathan.github.io/AllCalculator360/calculator/standard-deviation-calculator.html">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Standard Deviation Calculator — Mean | All Calculator 360">
+  <meta property="og:description" content="Calculate population and sample standard deviation, variance and mean from any list of numbers. Paste your data and see every step instantly — free and private.">
+  <meta property="og:url" content="https://tauheed-khan-pathan.github.io/AllCalculator360/calculator/standard-deviation-calculator.html">
+  <meta property="og:site_name" content="All Calculator 360">
+  <meta property="og:image" content="https://tauheed-khan-pathan.github.io/AllCalculator360/og-image.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Standard Deviation Calculator — Mean | All Calculator 360">
+  <meta name="twitter:description" content="Calculate population and sample standard deviation, variance and mean from any list of numbers. Paste your data and see every step instantly — free and private.">
+  <meta name="twitter:image" content="https://tauheed-khan-pathan.github.io/AllCalculator360/og-image.jpg">
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "All Calculator 360",
+  "alternateName": "AllCalculator360",
+  "url": "https://tauheed-khan-pathan.github.io/AllCalculator360/",
+  "description": "Free online calculators for finance, health, math and everyday life. EMI, SIP, FD, BMI and 200+ calculators &mdash; no sign-up, 100% private."
+}
+  </script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is standard deviation?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Standard deviation is a measure of how spread out a set of numbers is around its mean. A small standard deviation means the numbers are close to the mean, while a large one means they are spread far apart. For example, the numbers 2, 4, 4, 4, 5, 5, 7, 9 have a mean of 5 and a population standard deviation of 2."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the difference between population and sample standard deviation?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Population standard deviation divides the sum of squared deviations by N, the number of values, and is used when your data is the whole population. Sample standard deviation divides by n - 1 instead, and is used when your data is only a sample taken from a larger population. For 2, 4, 4, 4, 5, 5, 7, 9 the population standard deviation is 2 and the sample standard deviation is about 2.1381."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I calculate standard deviation by hand?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "First find the mean, then subtract the mean from each value, square each result, add the squares together, and divide by the number of values (or by n - 1 for a sample). Finally, take the square root. For 2, 4, 4, 4, 5, 5, 7, 9 the mean is 5, the squared deviations add to 32, 32 / 8 = 4, and the square root of 4 is 2, so the population standard deviation is 2."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why is sample standard deviation divided by n - 1?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Dividing by n - 1 instead of n corrects for the fact that a sample tends to underestimate how spread out the full population is. This correction is called Bessel's correction. It matters most for small samples: for 10, 20, 30 the population standard deviation is about 8.165, but the sample standard deviation is 10."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is variance?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Variance is the square of the standard deviation: it is the average of the squared deviations from the mean. For 2, 4, 4, 4, 5, 5, 7, 9 the population variance is 4 and the sample variance is about 4.571. Variance is in squared units, while standard deviation is in the same units as your data, which is why standard deviation is easier to interpret."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can standard deviation be negative?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. Standard deviation is the square root of a sum of squared numbers, and squares are never negative, so it is always zero or positive. It is zero only when every value in the set is the same — for example, 5, 5, 5 has a standard deviation of 0."
+      }
+    }
+  ]
+}
+  </script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://tauheed-khan-pathan.github.io/AllCalculator360/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Math",
+      "item": "https://tauheed-khan-pathan.github.io/AllCalculator360/index.html#math"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Standard Deviation Calculator",
+      "item": "https://tauheed-khan-pathan.github.io/AllCalculator360/calculator/standard-deviation-calculator.html"
+    }
+  ]
+}
+  </script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "Standard Deviation Calculator",
+  "applicationCategory": "EducationalApplication",
+  "operatingSystem": "Any",
+  "url": "https://tauheed-khan-pathan.github.io/AllCalculator360/calculator/standard-deviation-calculator.html",
+  "offers": {
+    "@type": "Offer",
+    "price": 0,
+    "priceCurrency": "USD"
+  }
+}
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../styles.css">
+  <script>
+    (function () {
+      try {
+        if (localStorage.getItem('ac360-theme') === 'dark') {
+          document.documentElement.setAttribute('data-theme', 'dark');
+        }
+      } catch (e) {}
+    })();
+  </script>
+  <script src="../app.js" defer></script>
+</head>
+<body>
+  <header class="site-header"><div class="header-inner">
+<a class="brand" href="../index.html"><svg class="brand-logo" viewBox="0 0 40 40" fill="none" aria-hidden="true"><rect width="40" height="40" rx="10" fill="#2563eb"/><rect x="9" y="7" width="22" height="7" rx="2" fill="#ffffff"/><rect x="9" y="18" width="6" height="6" rx="1.5" fill="#ffffff"/><rect x="17" y="18" width="6" height="6" rx="1.5" fill="#ffffff"/><rect x="25" y="18" width="6" height="6" rx="1.5" fill="#ffffff"/><rect x="9" y="26" width="6" height="6" rx="1.5" fill="#ffffff"/><rect x="17" y="26" width="6" height="6" rx="1.5" fill="#ffffff"/><rect x="25" y="26" width="6" height="6" rx="1.5" fill="#ffffff"/></svg><span class="brand-name">All Calculator <span class="brand-360">360</span></span></a>
+<div class="header-search"><input id="headerSearch" type="search" placeholder="Search calculators…" aria-label="Search calculators"></div>
+<nav class="main-nav" aria-label="Categories"><a class="nav-link" href="../index.html#finance">Finance</a><a class="nav-link" href="../index.html#health">Health</a><a class="nav-link" href="../index.html#math">Math</a><a class="nav-link" href="../index.html#everyday">Everyday</a></nav>
+<button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">🌙</button>
+<button class="menu-toggle" id="menuToggle" aria-label="Menu">☰</button>
+</div><nav class="mobile-nav" id="mobileNav" aria-label="Mobile categories"><a class="nav-link" href="../index.html#finance">Finance</a><a class="nav-link" href="../index.html#health">Health</a><a class="nav-link" href="../index.html#math">Math</a><a class="nav-link" href="../index.html#everyday">Everyday</a></nav></header>
+  <main class="container">
+    <nav class="breadcrumb"><a href="../index.html">Home</a> / <a href="../index.html#math">Math</a> / Standard Deviation Calculator</nav>
+
+    <div class="calc-head">
+      <h1>Standard Deviation Calculator</h1>
+      <p>Find the population and sample standard deviation, variance and mean of any set of numbers &mdash; instantly, free and private.</p>
+    </div>
+
+    <div class="calc-layout">
+      <div class="calc-panel calc-inputs">
+        <h2>Your Numbers</h2>
+
+        <div class="input-group">
+          <label class="input-label" for="dataInput">Numbers</label>
+          <textarea id="dataInput" rows="4" aria-label="Numbers separated by commas, spaces or new lines" style="width:100%;box-sizing:border-box;padding:10px 12px;border:1px solid var(--border, #e5e7eb);border-radius:10px;font:inherit;resize:vertical">2, 4, 4, 4, 5, 5, 7, 9</textarea>
+          <p class="input-hint">Separate numbers with commas, spaces or new lines. At least 2 numbers are needed for the sample standard deviation.</p>
+        </div>
+
+        <div class="input-group">
+          <label class="input-label">Data type</label>
+          <div class="tenure-toggle" role="group" aria-label="Population or sample">
+            <button type="button" class="toggle-btn active" id="popBtn">Population</button>
+            <button type="button" class="toggle-btn" id="sampleBtn">Sample</button>
+          </div>
+          <p class="input-hint">Choose Population if your numbers are the whole set, or Sample if they are only part of a larger set.</p>
+        </div>
+
+        <button type="button" class="show-more-btn" id="exampleBtn" style="margin-top:4px">Try the worked example</button>
+        <p class="input-error" id="dataWarn" style="display:none">Enter at least 2 valid numbers.</p>
+      </div>
+
+      <div class="calc-panel calc-results">
+        <h2>Result</h2>
+
+        <div class="result-main">
+          <div class="result-label" id="mainLabel">Population Standard Deviation</div>
+          <div class="result-emi" id="sdOut">2</div>
+        </div>
+
+        <div class="result-breakdown">
+          <div class="break-row"><span class="k">Count (n)</span><span class="v" id="countRow">8</span></div>
+          <div class="break-row"><span class="k">Sum</span><span class="v" id="sumRow">40</span></div>
+          <div class="break-row"><span class="k">Mean</span><span class="v" id="meanRow">5</span></div>
+          <div class="break-row"><span class="k">Population SD (&sigma;)</span><span class="v" id="popSdRow">2</span></div>
+          <div class="break-row"><span class="k">Sample SD (s)</span><span class="v" id="sampleSdRow">2.1381</span></div>
+          <div class="break-row"><span class="k">Population Variance (&sigma;&sup2;)</span><span class="v" id="popVarRow">4</span></div>
+          <div class="break-row"><span class="k">Sample Variance (s&sup2;)</span><span class="v" id="sampleVarRow">4.5714</span></div>
+          <div class="break-row"><span class="k">Minimum</span><span class="v" id="minRow">2</span></div>
+          <div class="break-row"><span class="k">Maximum</span><span class="v" id="maxRow">9</span></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="calc-layout" style="margin-top:24px">
+      <div class="calc-panel" style="grid-column:1/-1">
+        <h2>Step-by-Step Breakdown</h2>
+        <p class="input-hint">Each value, its deviation from the mean, and the squared deviation. The squared deviations add up to <span id="sqSumLabel">32</span>.</p>
+        <div id="breakdownTable"></div>
+        <button type="button" class="show-more-btn" id="showAllBtn" style="margin-top:12px;display:none">Show all rows</button>
+      </div>
+    </div>
+
+    <section class="content-section">
+      <h2>How to Calculate Standard Deviation</h2>
+      <p>To calculate standard deviation by hand, first find the mean of your numbers, then work out how far each number sits from that mean. Subtract the mean from each value, square each result so that negative and positive deviations do not cancel out, add all the squared deviations together, and divide by the number of values (for a population) or by one less than the number of values (for a sample). The last step is to take the square root, which brings the answer back into the same units as your original numbers.</p>
+      <p>The mean itself is simply the sum of the numbers divided by how many there are — the <a href="average-calculator.html">Average Calculator</a> finds it for you if you only need the mean, median and mode. Standard deviation then tells you how tightly the numbers cluster around that mean: a small value means most numbers sit close to the mean, and a large value means they are widely spread.</p>
+    </section>
+
+    <section class="content-section">
+      <h2>Standard Deviation Formula</h2>
+      <div class="formula-box">
+        <p class="formula">Population SD (&sigma;) = &radic;(&Sigma;(x &minus; &mu;)&sup2; &divide; N)</p>
+        <p class="formula" style="margin-top:16px">Sample SD (s) = &radic;(&Sigma;(x &minus; x&#772;)&sup2; &divide; (n &minus; 1))</p>
+        <p class="formula" style="margin-top:16px">Variance = &Sigma;(x &minus; mean)&sup2; &divide; N (population) or &divide; (n &minus; 1) (sample)</p>
+      </div>
+      <p>Here x is each value, &mu; (or x&#772;) is the mean, N is the number of values in the whole population, and n is the number of values in a sample. Variance is the same calculation without the final square root, so standard deviation is simply the square root of the variance.</p>
+    </section>
+
+    <section class="content-section">
+      <h2>Standard Deviation Example</h2>
+      <p><strong>Worked example:</strong> Take the numbers 2, 4, 4, 4, 5, 5, 7, 9. The sum is 40 and there are 8 values, so the mean is 40 &divide; 8 = <strong>5</strong>. The deviations from the mean are &minus;3, &minus;1, &minus;1, &minus;1, 0, 0, 2, 4, and squaring them gives 9, 1, 1, 1, 0, 0, 4, 16, which add up to <strong>32</strong>. Population variance is 32 &divide; 8 = <strong>4</strong>, so population SD is &radic;4 = <strong>2</strong>. Sample variance is 32 &divide; 7 = <strong>4.5714</strong>, so sample SD is &radic;4.5714 = <strong>2.1381</strong>.</p>
+      <p><strong>Worked example:</strong> Take the numbers 10, 20, 30. The mean is 60 &divide; 3 = <strong>20</strong>. The squared deviations are 100, 0 and 100, which add up to <strong>200</strong>. Population variance is 200 &divide; 3 = <strong>66.6667</strong>, so population SD is &radic;66.6667 = <strong>8.165</strong>. Sample variance is 200 &divide; 2 = <strong>100</strong>, so sample SD is &radic;100 = <strong>10</strong>.</p>
+    </section>
+
+    <section class="content-section">
+      <h2>How to Use the Standard Deviation Calculator</h2>
+      <p>Paste your numbers, pick Population or Sample, and every result updates at once.</p>
+      <ol>
+        <li>Paste or type your numbers in the box, separated by commas, spaces or new lines.</li>
+        <li>Choose Population if the numbers are the whole set, or Sample if they are part of a larger set.</li>
+        <li>Read the standard deviation at the top, with the variance, mean, sum, minimum and maximum below it.</li>
+        <li>Check the step-by-step breakdown to see each value's deviation and squared deviation. For quick percentage or fraction work on the same data, try the <a href="percentage-calculator.html">Percentage Calculator</a> or the <a href="fraction-calculator.html">Fraction Calculator</a>.</li>
+      </ol>
+    </section>
+
+    <section class="content-section">
+      <h2>Frequently Asked Questions</h2>
+      <details class="faq-item">
+        <summary class="faq-q">What is standard deviation?</summary>
+        <div class="faq-a"><p>Standard deviation is a measure of how spread out a set of numbers is around its mean. A small standard deviation means the numbers are close to the mean, while a large one means they are spread far apart. For example, the numbers 2, 4, 4, 4, 5, 5, 7, 9 have a mean of 5 and a population standard deviation of 2.</p></div>
+      </details>
+      <details class="faq-item">
+        <summary class="faq-q">What is the difference between population and sample standard deviation?</summary>
+        <div class="faq-a"><p>Population standard deviation divides the sum of squared deviations by N, the number of values, and is used when your data is the whole population. Sample standard deviation divides by n - 1 instead, and is used when your data is only a sample taken from a larger population. For 2, 4, 4, 4, 5, 5, 7, 9 the population standard deviation is 2 and the sample standard deviation is about 2.1381.</p></div>
+      </details>
+      <details class="faq-item">
+        <summary class="faq-q">How do I calculate standard deviation by hand?</summary>
+        <div class="faq-a"><p>First find the mean, then subtract the mean from each value, square each result, add the squares together, and divide by the number of values (or by n - 1 for a sample). Finally, take the square root. For 2, 4, 4, 4, 5, 5, 7, 9 the mean is 5, the squared deviations add to 32, 32 / 8 = 4, and the square root of 4 is 2, so the population standard deviation is 2.</p></div>
+      </details>
+      <details class="faq-item">
+        <summary class="faq-q">Why is sample standard deviation divided by n - 1?</summary>
+        <div class="faq-a"><p>Dividing by n - 1 instead of n corrects for the fact that a sample tends to underestimate how spread out the full population is. This correction is called Bessel's correction. It matters most for small samples: for 10, 20, 30 the population standard deviation is about 8.165, but the sample standard deviation is 10.</p></div>
+      </details>
+      <details class="faq-item">
+        <summary class="faq-q">What is variance?</summary>
+        <div class="faq-a"><p>Variance is the square of the standard deviation: it is the average of the squared deviations from the mean. For 2, 4, 4, 4, 5, 5, 7, 9 the population variance is 4 and the sample variance is about 4.571. Variance is in squared units, while standard deviation is in the same units as your data, which is why standard deviation is easier to interpret.</p></div>
+      </details>
+      <details class="faq-item">
+        <summary class="faq-q">Can standard deviation be negative?</summary>
+        <div class="faq-a"><p>No. Standard deviation is the square root of a sum of squared numbers, and squares are never negative, so it is always zero or positive. It is zero only when every value in the set is the same — for example, 5, 5, 5 has a standard deviation of 0.</p></div>
+      </details>
+    </section>
+
+    <section class="content-section">
+      <h2>Related Calculators</h2>
+      <div class="related-grid">
+        <a class="calc-card" href="average-calculator.html" data-name="Average Calculator" data-desc="Find the mean, median and mode of any set of numbers.">
+          <span class="calc-icon">🧮</span>
+          <span class="calc-name">Average Calculator</span>
+          <span class="calc-desc">Find the mean, median and mode of any set of numbers.</span>
+        </a>
+        <a class="calc-card" href="percentage-calculator.html" data-name="Percentage Calculator" data-desc="Work out percentages, increases, decreases and tips in seconds.">
+          <span class="calc-icon">📊</span>
+          <span class="calc-name">Percentage Calculator</span>
+          <span class="calc-desc">Work out percentages, increases, decreases and tips in seconds.</span>
+        </a>
+        <a class="calc-card" href="fraction-calculator.html" data-name="Fraction Calculator" data-desc="Add, subtract, multiply and divide fractions with step-by-step results.">
+          <span class="calc-icon">🔢</span>
+          <span class="calc-name">Fraction Calculator</span>
+          <span class="calc-desc">Add, subtract, multiply and divide fractions with step-by-step results.</span>
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer"><div class="container"><div class="footer-grid">
+<div class="footer-col"><div class="footer-brand"><svg width="32" height="32" viewBox="0 0 40 40" fill="none" aria-hidden="true"><rect width="40" height="40" rx="10" fill="#2563eb"/><rect x="9" y="7" width="22" height="7" rx="2" fill="#ffffff"/><rect x="9" y="18" width="6" height="6" rx="1.5" fill="#ffffff"/><rect x="17" y="18" width="6" height="6" rx="1.5" fill="#ffffff"/><rect x="25" y="18" width="6" height="6" rx="1.5" fill="#ffffff"/><rect x="9" y="26" width="6" height="6" rx="1.5" fill="#ffffff"/><rect x="17" y="26" width="6" height="6" rx="1.5" fill="#ffffff"/><rect x="25" y="26" width="6" height="6" rx="1.5" fill="#ffffff"/></svg><span>All Calculator 360</span></div><p>Every calculator, all in one place. Free, private, and accurate — calculations happen right in your browser.</p></div>
+<div class="footer-col"><h3>Categories</h3><ul><li><a href="../index.html#finance">Finance</a></li><li><a href="../index.html#health">Health</a></li><li><a href="../index.html#math">Math</a></li><li><a href="../index.html#everyday">Everyday</a></li></ul></div>
+<div class="footer-col"><h3>Popular Calculators</h3><ul><li><a href="emi-calculator.html">EMI Calculator</a></li><li><a href="sip-calculator.html">SIP Calculator</a></li><li><a href="fd-calculator.html">FD Calculator</a></li><li><a href="income-tax-calculator.html">Income Tax Calculator</a></li><li><a href="gst-calculator.html">GST Calculator</a></li><li><a href="bmi-calculator.html">BMI Calculator</a></li><li><a href="age-calculator.html">Age Calculator</a></li><li><a href="percentage-calculator.html">Percentage Calculator</a></li></ul></div>
+<div class="footer-col"><h3>Company</h3><ul><li><a href="../about.html">About</a></li><li><a href="../contact.html">Contact</a></li><li><a href="../privacy.html">Privacy Policy</a></li><li><a href="../terms.html">Terms</a></li></ul></div>
+</div><div class="footer-bottom"><p>© 2026 All Calculator 360. All rights reserved.</p></div></div></footer>
+  <script>
+    (function () {
+      'use strict';
+
+      var dataInput = document.getElementById('dataInput');
+      var popBtn = document.getElementById('popBtn');
+      var sampleBtn = document.getElementById('sampleBtn');
+      var exampleBtn = document.getElementById('exampleBtn');
+      var dataWarn = document.getElementById('dataWarn');
+      var mainLabel = document.getElementById('mainLabel');
+      var sdOut = document.getElementById('sdOut');
+      var countRow = document.getElementById('countRow');
+      var sumRow = document.getElementById('sumRow');
+      var meanRow = document.getElementById('meanRow');
+      var popSdRow = document.getElementById('popSdRow');
+      var sampleSdRow = document.getElementById('sampleSdRow');
+      var popVarRow = document.getElementById('popVarRow');
+      var sampleVarRow = document.getElementById('sampleVarRow');
+      var minRow = document.getElementById('minRow');
+      var maxRow = document.getElementById('maxRow');
+      var sqSumLabel = document.getElementById('sqSumLabel');
+      var breakdownTable = document.getElementById('breakdownTable');
+      var showAllBtn = document.getElementById('showAllBtn');
+
+      var isSample = false;
+      var showAll = false;
+
+      // Pure maths, kept separate so they can be tested on their own:
+      // mean = sum / n; popVar = sum((x - mean)^2) / n; sampleVar = sum((x - mean)^2) / (n - 1).
+      function parseNumbers(text) {
+        return text.split(/[\s,;]+/).map(function (s) { return parseFloat(s); })
+          .filter(function (v) { return !isNaN(v); });
+      }
+
+      function computeSD(values) {
+        var n = values.length;
+        var sum = 0;
+        var i;
+        for (i = 0; i < n; i++) sum += values[i];
+        var mean = n > 0 ? sum / n : null;
+        var sqSum = 0;
+        var rows = [];
+        var min = n > 0 ? values[0] : null;
+        var max = n > 0 ? values[0] : null;
+        for (i = 0; i < n; i++) {
+          var dev = values[i] - mean;
+          var sq = dev * dev;
+          sqSum += sq;
+          rows.push({ x: values[i], dev: dev, sq: sq });
+          if (values[i] < min) min = values[i];
+          if (values[i] > max) max = values[i];
+        }
+        var popVar = n > 0 ? sqSum / n : null;
+        var sampleVar = n > 1 ? sqSum / (n - 1) : null;
+        return {
+          n: n, sum: sum, mean: mean, sqSum: sqSum, rows: rows,
+          popVar: popVar, popSD: popVar === null ? null : Math.sqrt(popVar),
+          sampleVar: sampleVar, sampleSD: sampleVar === null ? null : Math.sqrt(sampleVar),
+          min: min, max: max
+        };
+      }
+
+      function fmt(value) {
+        if (value === null || value === undefined || isNaN(value)) return '\u2014';
+        var r = Math.round(value * 10000) / 10000;
+        return r.toLocaleString('en-US', { maximumFractionDigits: 4 });
+      }
+
+      function renderTable(r) {
+        var visible = showAll ? r.rows : r.rows.slice(0, 5);
+        var html = '<div class="result-breakdown">' +
+          '<div class="break-row"><span class="k"><strong>Value (x)</strong></span><span class="v"><strong>Deviation (x &minus; mean)</strong></span><span class="v"><strong>Squared deviation</strong></span></div>';
+        visible.forEach(function (row) {
+          html += '<div class="break-row"><span class="k">' + fmt(row.x) + '</span><span class="v">' + fmt(row.dev) + '</span><span class="v">' + fmt(row.sq) + '</span></div>';
+        });
+        html += '</div>';
+        breakdownTable.innerHTML = html;
+        if (r.rows.length > 5) {
+          showAllBtn.style.display = '';
+          showAllBtn.textContent = showAll ? 'Show fewer rows' : 'Show all ' + r.rows.length + ' rows';
+        } else {
+          showAllBtn.style.display = 'none';
+        }
+      }
+
+      function recalc() {
+        var values = parseNumbers(dataInput.value);
+        if (values.length < 1) {
+          dataWarn.style.display = '';
+          sdOut.textContent = '\u2014';
+          countRow.textContent = '0';
+          sumRow.textContent = '\u2014';
+          meanRow.textContent = '\u2014';
+          popSdRow.textContent = '\u2014';
+          sampleSdRow.textContent = '\u2014';
+          popVarRow.textContent = '\u2014';
+          sampleVarRow.textContent = '\u2014';
+          minRow.textContent = '\u2014';
+          maxRow.textContent = '\u2014';
+          sqSumLabel.textContent = '\u2014';
+          breakdownTable.innerHTML = '';
+          showAllBtn.style.display = 'none';
+          return;
+        }
+        dataWarn.style.display = values.length < 2 && isSample ? '' : 'none';
+        var r = computeSD(values);
+        mainLabel.textContent = isSample ? 'Sample Standard Deviation' : 'Population Standard Deviation';
+        sdOut.textContent = fmt(isSample ? r.sampleSD : r.popSD);
+        countRow.textContent = String(r.n);
+        sumRow.textContent = fmt(r.sum);
+        meanRow.textContent = fmt(r.mean);
+        popSdRow.textContent = fmt(r.popSD);
+        sampleSdRow.textContent = fmt(r.sampleSD);
+        popVarRow.textContent = fmt(r.popVar);
+        sampleVarRow.textContent = fmt(r.sampleVar);
+        minRow.textContent = fmt(r.min);
+        maxRow.textContent = fmt(r.max);
+        sqSumLabel.textContent = fmt(r.sqSum);
+        renderTable(r);
+      }
+
+      dataInput.addEventListener('input', recalc);
+      popBtn.addEventListener('click', function () {
+        isSample = false;
+        popBtn.classList.add('active');
+        sampleBtn.classList.remove('active');
+        recalc();
+      });
+      sampleBtn.addEventListener('click', function () {
+        isSample = true;
+        sampleBtn.classList.add('active');
+        popBtn.classList.remove('active');
+        recalc();
+      });
+      exampleBtn.addEventListener('click', function () {
+        dataInput.value = '2, 4, 4, 4, 5, 5, 7, 9';
+        isSample = false;
+        popBtn.classList.add('active');
+        sampleBtn.classList.remove('active');
+        showAll = false;
+        recalc();
+      });
+      showAllBtn.addEventListener('click', function () {
+        showAll = !showAll;
+        recalc();
+      });
+
+      recalc();
+    })();
+  </script>
+</body>
+</html>
