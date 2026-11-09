@@ -15,17 +15,19 @@
 </script>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Sales Tax Calculator &mdash; Add or Remove Sales Tax | All Calculator 360</title>
-  <meta name="description" content="Add sales tax to a price or back it out of a total. Enter your local tax rate &mdash; no built-in state table &mdash; free, instant, private.">
+  <title>Sales Tax Calculator — Add or Remove | All Calculator 360</title>
+  <meta name="description" content="Add sales tax to any price or back it out of a total in seconds. Enter your own local rate — no sign-up needed. Calculate your total now, free and instant.">
   <link rel="canonical" href="https://tauheed-khan-pathan.github.io/AllCalculator360/calculator/sales-tax-calculator.html">
   <meta property="og:type" content="website">
-  <meta property="og:title" content="Sales Tax Calculator &mdash; Add or Remove Sales Tax | All Calculator 360">
-  <meta property="og:description" content="Add sales tax to a price or back it out of a total. Enter your local tax rate &mdash; no built-in state table &mdash; free, instant, private.">
+  <meta property="og:title" content="Sales Tax Calculator — Add or Remove | All Calculator 360">
+  <meta property="og:description" content="Add sales tax to any price or back it out of a total in seconds. Enter your own local rate — no sign-up needed. Calculate your total now, free and instant.">
   <meta property="og:url" content="https://tauheed-khan-pathan.github.io/AllCalculator360/calculator/sales-tax-calculator.html">
   <meta property="og:site_name" content="All Calculator 360">
-  <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="Sales Tax Calculator &mdash; Add or Remove Sales Tax | All Calculator 360">
-  <meta name="twitter:description" content="Add sales tax to a price or back it out of a total. Enter your local tax rate &mdash; no built-in state table &mdash; free, instant, private.">
+  <meta property="og:image" content="https://tauheed-khan-pathan.github.io/AllCalculator360/og-image.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Sales Tax Calculator — Add or Remove | All Calculator 360">
+  <meta name="twitter:description" content="Add sales tax to any price or back it out of a total in seconds. Enter your own local rate — no sign-up needed. Calculate your total now, free and instant.">
+  <meta name="twitter:image" content="https://tauheed-khan-pathan.github.io/AllCalculator360/og-image.jpg">
   <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -80,8 +82,57 @@
         "@type": "Answer",
         "text": "Divide the total price by (1 + tax rate ÷ 100) to get the pre-tax price, then subtract that from the total to get the tax amount. For example, a $108 total at 8% tax gives a pre-tax price of $108 ÷ 1.08 = $100.00, so the tax included was $108 − $100 = $8.00. The second tool on this page does exactly this calculation for you."
       }
+    },
+    {
+      "@type": "Question",
+      "name": "Is sales tax the same in every state?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. Sales tax rates differ by state and by city or county within a state. Five states have no statewide sales tax at all, while others add local taxes on top of the state rate, taking the combined rate above 10% in some places. Always check the rate where the purchase happens and enter that rate here."
+      }
     }
   ]
+}
+  </script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://tauheed-khan-pathan.github.io/AllCalculator360/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Finance",
+      "item": "https://tauheed-khan-pathan.github.io/AllCalculator360/index.html#finance"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Sales Tax Calculator",
+      "item": "https://tauheed-khan-pathan.github.io/AllCalculator360/calculator/sales-tax-calculator.html"
+    }
+  ]
+}
+  </script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "Sales Tax Calculator",
+  "applicationCategory": "FinanceApplication",
+  "operatingSystem": "Any",
+  "url": "https://tauheed-khan-pathan.github.io/AllCalculator360/calculator/sales-tax-calculator.html",
+  "offers": {
+    "@type": "Offer",
+    "price": 0,
+    "priceCurrency": "USD"
+  }
 }
   </script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -207,17 +258,37 @@
     </div>
 
     <section class="content-section">
+      <h2>How to Calculate Sales Tax</h2>
+      <p>Sales tax is added on top of the price at the checkout, so the price on the shelf is not the price you pay. To find the tax, multiply the pre-tax price by the tax rate and divide by 100, then add it to the price. The reverse job is just as common: when a total already includes tax, divide it by one plus the rate to recover the pre-tax price.</p>
+      <p>There is no single US sales tax rate — it varies by state and city, from zero to over 10% once local taxes are included, and this calculator has no built-in state table, so always enter your own local rate. For tax that works the other way round, with tax built into the price and split into parts, use the <a href="gst-calculator.html">GST Calculator</a>, and for a price cut rather than a tax, the <a href="discount-calculator.html">Discount Calculator</a>.</p>
+    </section>
+    <section class="content-section">
       <h2>Sales Tax Calculator Formula</h2>
       <div class="formula-box">
         <p class="formula">Tax amount = price before tax &times; tax rate &divide; 100</p>
         <p class="formula">Total price = price before tax + tax amount</p>
-        <p><strong>Worked example:</strong> A $100 item at 8% sales tax: tax = $100 &times; 8 &divide; 100 = <strong>$8.00</strong>; total = $100 + $8.00 = <strong>$108.00</strong>.</p>
         <p class="formula" style="margin-top:16px">Price before tax = price including tax &divide; (1 + tax rate &divide; 100)</p>
         <p class="formula">Tax amount = price including tax &minus; price before tax</p>
-        <p><strong>Worked example:</strong> A $108 total at 8% sales tax: price before tax = $108 &divide; (1 + 8 &divide; 100) = $108 &divide; 1.08 = <strong>$100.00</strong>; tax = $108.00 &minus; $100.00 = <strong>$8.00</strong>.</p>
-        <p><strong>Third example:</strong> A $59.99 item at 6.25% sales tax: tax = $59.99 &times; 6.25 &divide; 100 = <strong>$3.75</strong>; total = $59.99 + $3.75 = <strong>$63.74</strong>.</p>
         <p style="margin-top:16px">This calculator has no built-in state table: US sales tax varies by state, from 0% to over 10% once local taxes are included, so enter your own local rate. Five states (Alaska, Delaware, Montana, New Hampshire and Oregon) have no statewide sales tax.</p>
       </div>
+    </section>
+    <section class="content-section">
+      <h2>Sales Tax Example</h2>
+      <p>The worked examples below apply both formulas above — adding tax, removing tax, and a rate with cents.</p>
+      <div class="formula-box">
+        <p><strong>Worked example:</strong> A $100 item at 8% sales tax: tax = $100 &times; 8 &divide; 100 = <strong>$8.00</strong>; total = $100 + $8.00 = <strong>$108.00</strong>.</p>
+        <p><strong>Worked example:</strong> A $108 total at 8% sales tax: price before tax = $108 &divide; (1 + 8 &divide; 100) = $108 &divide; 1.08 = <strong>$100.00</strong>; tax = $108.00 &minus; $100.00 = <strong>$8.00</strong>.</p>
+        <p><strong>Third example:</strong> A $59.99 item at 6.25% sales tax: tax = $59.99 &times; 6.25 &divide; 100 = <strong>$3.75</strong>; total = $59.99 + $3.75 = <strong>$63.74</strong>.</p>
+      </div>
+    </section>
+    <section class="content-section">
+      <h2>How to Use the Sales Tax Calculator</h2>
+      <ol>
+        <li>To add tax, enter the price before tax and your local tax rate, then read the tax amount and the total.</li>
+        <li>To remove tax, use the reverse tool: enter the total that already includes tax and the rate.</li>
+        <li>Read the price before tax and the tax amount hidden inside the total.</li>
+        <li>Double-check your local rate — state and city taxes combine, and the total can be higher than the state rate alone.</li>
+      </ol>
     </section>
 
     <section class="content-section">
@@ -241,6 +312,10 @@
       <details class="faq-item">
         <summary class="faq-q">How do I back out tax from a total?</summary>
         <div class="faq-a"><p>Divide the total price by (1 + tax rate ÷ 100) to get the pre-tax price, then subtract that from the total to get the tax amount. For example, a $108 total at 8% tax gives a pre-tax price of $108 ÷ 1.08 = $100.00, so the tax included was $108 − $100 = $8.00. The second tool on this page does exactly this calculation for you.</p></div>
+      </details>
+      <details class="faq-item">
+        <summary class="faq-q">Is sales tax the same in every state?</summary>
+        <div class="faq-a"><p>No. Sales tax rates differ by state and by city or county within a state. Five states have no statewide sales tax at all, while others add local taxes on top of the state rate, taking the combined rate above 10% in some places. Always check the rate where the purchase happens and enter that rate here.</p></div>
       </details>
 
     </section>
