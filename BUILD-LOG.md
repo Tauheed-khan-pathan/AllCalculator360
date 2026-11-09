@@ -371,3 +371,35 @@ No swaps: all five are on Calculator.net's most-used lists (GPA, Loan and Sales 
 - Scientific: sin(30°)=**0.5**, cos(60°)=**0.5**, log₁₀(100)=**2**, ln(e)=**1**, 2^10=**1024**, √(144)=**12**, 5!=**120**, 3²+4²=**25**, sin(π/2 rad)=**1**, asin(1)=**90°**, 200×50%=**100**; error cases clean (1/0, log(0), ln(−1), 5.5!, √(−4), asin(2), "2+", "((2)" → all throw → friendly "Error", no NaN/Infinity).
 - Workers' own harnesses also passed on all 5 pages (GPA/Grade 19 assertions; Loan/Sales Tax 43 checks; Scientific 48/48).
 - Other verification: node --check on all 5 inline scripts PASS; header md5 identical across all 5 new pages vs tip-calculator.html (15340477c2f29cf45cc62cc2e15cc22b); footer md5 identical (3595e31c67c251809fbd2b821246bf68); FAQ body text == JSON-LD answers on all 5 new pages (5/5 each); worked-example figures present on all 5 pages and matching computed values; GA4 snippet on all 5 new pages (exactly 2 occurrences of G-PZHLCGYJ5D each, no GTM — the "googletagmanager" string is the standard gtag.js loader URL only); favicon `<link rel="icon">` exactly 1× per page, byte-identical to index.html line 23 (676 bytes); link audit 0 missing targets across all 5 new pages + index.html; no lorem / TODO / XXX / "Coming soon".
+
+## Modules 26–30 — DONE (pushed + live verified, 9 Nov 2026 ~23:20 IST)
+- **Push: APPROVED and LANDED, commit 82fb866f38896e0981cdcc617782ff27e0993191** (9 files, 255,203 bytes — one push, well under the 5 MB limit). Remote head before push was 5eb9e186 (favicon fix) — no divergence: remote index.html == local minus the 5 new cards, remote sitemap == local minus the 5 new URLs, remote styles.css == local minus the 16-line `.sci-*` block, all 5 new pages confirmed absent remotely before the push. Sync record updated (5 entries). Approval card tapped promptly (~3 min).
+- **Live verification (cache-busting URLs, after ~4 min wait):** homepage + all 5 new pages HTTP 200 (GPA, Scientific, Loan, Sales Tax, Grade); worked-example figures present on all 5 live pages (GPA 3.36; Scientific keypad present; Loan 836.44 + "Show all years"; Sales Tax 108.00; Grade 92.5 + 84.5); GA4 ID G-PZHLCGYJ5D present ×2 on all 5 new live pages; favicon icon link ×1 on all 5; sitemap HTTP 200 with all 5 new URLs (35 total); homepage contains all 5 new links (Finance 16 cards, Math 4 cards, Everyday 7 cards, Popular strip still 8). **Site now has 30 live calculators.**
+- Next (when ordered): domain purchase (allcalculator360.com — Tauheed buys it himself), Search Console for the new domain, AdSense, next calculator modules.
+
+## Ultra-Best On-Page SEO — all 31 pages (9 Nov 2026, Tauheed's order ~23:27 IST)
+
+**Goal:** every page treated as its own website — rank for "All Calculator 360" AND for each calculator's own name (EMI Calculator, GST Calculator, …). Work done by 3 worker batches (10 pages each) + coordinator (homepage, og-image, audit, verification, push).
+
+**Audit first (SEO-AUDIT.md):** 29/30 calculator titles 61–95 chars (over 60); 6 metas >160 chars, 18 <150 (shortest 53); ALL pages missing og:image, BreadcrumbList, WebApplication; 10 pages thin (<300 explanatory words); NO page had "How to use" steps; no duplicate titles/metas; all JSON-LD valid. Homepage meta falsely claimed "200+ calculators" (site has 30).
+
+**Per calculator page (all 30):**
+- Title: primary keyword FIRST, 51–59 chars, unique, " | All Calculator 360" at the end.
+- Meta: unique, 150–160 chars, keyword + benefit + CTA.
+- H1: exactly the primary keyword (India-specific pages: "GST Calculator India", "Income Tax Calculator India", "PPF Calculator India", "RD Calculator India", "NPS Calculator India").
+- H2s: "How to Calculate X", "X Formula", "X Example" (worked example moved verbatim — figures byte-identical), "How to Use the X Calculator" (4 steps), FAQs, Related Calculators. Scientific adapted to its keypad (Functions / Examples).
+- Explanatory text: every page now ≥486 words (audit method + how-to), all 10 thin pages fixed.
+- FAQ: 6 questions per page (was 5 on most); visible FAQ text == FAQPage JSON-LD exactly. One pre-existing EMI FAQ mismatch fixed (visible answer aligned to the fuller JSON-LD text).
+- JSON-LD: FAQPage kept; BreadcrumbList (Home > Category > Page) + WebApplication added (FinanceApplication / HealthApplication / UtilitiesApplication / EducationalApplication / BusinessApplication; operatingSystem Any; free Offer USD 0).
+- OG/Twitter: og:title = new title, og:description = new meta, og:image + twitter:image = og-image.jpg, twitter:card summary_large_image. Canonical verified = own absolute URL.
+- Internal links: 2–4 natural in-body links per page to related calculators.
+
+**Homepage:** title "All Calculator 360 — Free Online Calculators" (44 chars, brand-first by design); meta 159 chars, "200+" claim fixed → "30 calculators"; H1 with brand + "Free Online Calculators"; og:image + twitter large card; 5 FAQs added (visible + matching FAQPage JSON-LD).
+
+**og-image.jpg (NEW, 1200×630, 76 KB):** branded navy/blue with calculator glyph + "All Calculator 360 / Free Online Calculators". Created with PIL, verified visually. NOTE: it is a BINARY file — the push-files tool takes text only, so it is staged locally and must be uploaded via github.com in the browser (same as the Naat Lyrics favicon). Until it lands, og:image URLs will 404 — harmless for ranking, but social previews will fall back.
+
+**Verification (coordinator, cross-batch):** all JSON-LD blocks parse; titles 51–59 / metas 150–160 on all 30 calculator pages, zero duplicates site-wide; FAQ visible == JSON-LD on all 31 pages; GA4 G-PZHLCGYJ5D exactly 2× + favicon icon exactly 1× on every page; header/footer md5 unchanged vs pre-SEO baseline on all pages; canonicals correct; link audit 0 missing targets; no thin pages left.
+
+**Sitemap:** lastmod 2026-11-09 on the 31 changed URLs (homepage + 30 calculators); utility pages (about/contact/privacy/terms) stay 2026-11-08. robots.txt unchanged (Allow: / + sitemap line).
+
+**Honest note:** on-page SEO is now as strong as it can be, but ranking #1 for generic terms like "EMI calculator" also needs time, indexing and authority — no one can guarantee a #1 spot. The site now has the best possible foundation for it.
