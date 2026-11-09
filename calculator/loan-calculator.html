@@ -15,17 +15,19 @@
 </script>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Loan Calculator &mdash; Calculate Your Loan EMI &amp; Total Interest | All Calculator 360</title>
-  <meta name="description" content="Calculate your monthly loan payment, total interest and total payment for any loan. See a year-by-year amortisation schedule &mdash; free, instant, private.">
+  <title>Loan Calculator — Monthly Payment | All Calculator 360</title>
+  <meta name="description" content="Calculate your monthly loan payment, total interest and total payment for any loan. See a year-by-year amortisation schedule — free, instant, private. Try it!">
   <link rel="canonical" href="https://tauheed-khan-pathan.github.io/AllCalculator360/calculator/loan-calculator.html">
   <meta property="og:type" content="website">
-  <meta property="og:title" content="Loan Calculator &mdash; Calculate Your Loan EMI &amp; Total Interest | All Calculator 360">
-  <meta property="og:description" content="Calculate your monthly loan payment, total interest and total payment for any loan. See a year-by-year amortisation schedule &mdash; free, instant, private.">
+  <meta property="og:title" content="Loan Calculator — Monthly Payment | All Calculator 360">
+  <meta property="og:description" content="Calculate your monthly loan payment, total interest and total payment for any loan. See a year-by-year amortisation schedule — free, instant, private. Try it!">
   <meta property="og:url" content="https://tauheed-khan-pathan.github.io/AllCalculator360/calculator/loan-calculator.html">
   <meta property="og:site_name" content="All Calculator 360">
-  <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="Loan Calculator &mdash; Calculate Your Loan EMI &amp; Total Interest | All Calculator 360">
-  <meta name="twitter:description" content="Calculate your monthly loan payment, total interest and total payment for any loan. See a year-by-year amortisation schedule &mdash; free, instant, private.">
+  <meta property="og:image" content="https://tauheed-khan-pathan.github.io/AllCalculator360/og-image.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Loan Calculator — Monthly Payment | All Calculator 360">
+  <meta name="twitter:description" content="Calculate your monthly loan payment, total interest and total payment for any loan. See a year-by-year amortisation schedule — free, instant, private. Try it!">
+  <meta name="twitter:image" content="https://tauheed-khan-pathan.github.io/AllCalculator360/og-image.jpg">
   <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -80,8 +82,57 @@
         "@type": "Answer",
         "text": "Amortisation is the schedule showing how each monthly payment is split between interest and principal over the life of the loan. Early payments are mostly interest, because the balance is at its highest; as the balance falls, more of each payment goes towards principal. The yearly table on this page shows that split, and the final balance is $0 when the loan is fully repaid."
       }
+    },
+    {
+      "@type": "Question",
+      "name": "Does this loan calculator include fees?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. The calculator covers the loan amount, interest rate and tenure only, and shows the monthly payment, total interest and total payment on that basis. Processing fees, insurance, GST on charges and prepayment penalties are not included, so ask your lender for the full cost before you sign."
+      }
     }
   ]
+}
+  </script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://tauheed-khan-pathan.github.io/AllCalculator360/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Finance",
+      "item": "https://tauheed-khan-pathan.github.io/AllCalculator360/index.html#finance"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Loan Calculator",
+      "item": "https://tauheed-khan-pathan.github.io/AllCalculator360/calculator/loan-calculator.html"
+    }
+  ]
+}
+  </script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "Loan Calculator",
+  "applicationCategory": "FinanceApplication",
+  "operatingSystem": "Any",
+  "url": "https://tauheed-khan-pathan.github.io/AllCalculator360/calculator/loan-calculator.html",
+  "offers": {
+    "@type": "Offer",
+    "price": 0,
+    "priceCurrency": "USD"
+  }
 }
   </script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -200,18 +251,44 @@
     </div>
 
     <section class="content-section">
-      <h2>Loan Calculator Formula</h2>
+      <h2>How to Calculate Loan</h2>
+      <p>To calculate a loan payment by hand, first turn the annual interest rate into a monthly rate by dividing it by 12 and then by 100, and turn the tenure from years into months. Those two numbers — the monthly rate r and the number of months n — go into the formula below with the loan amount P. The formula gives the fixed monthly payment that repays the whole loan, interest included, by the end of the tenure.</p>
+      <p>Each monthly payment is split into interest on the balance still owed and principal that reduces that balance. Because the balance is highest at the start, early payments are mostly interest; as the balance falls, more of each payment goes towards principal, which is why the amortisation schedule shows interest falling and principal rising year by year. The same calculation powers the <a href="emi-calculator.html">EMI Calculator</a> for Indian loans, and the <a href="mortgage-calculator.html">Mortgage Calculator</a> adds property tax and insurance for home loans.</p>
+    </section>
+
+    <section class="content-section">
+      <h2>Loan Formula</h2>
       <div class="formula-box">
         <p class="formula">EMI = P &times; r &times; (1 + r)<sup>n</sup> &divide; ((1 + r)<sup>n</sup> &minus; 1)</p>
         <p><strong>P</strong> = Loan amount (principal) &nbsp;&bull;&nbsp; <strong>r</strong> = Monthly interest rate (annual rate &divide; 12 &divide; 100) &nbsp;&bull;&nbsp; <strong>n</strong> = Number of monthly instalments (tenure in months)</p>
         <p class="formula">Total payment = EMI &times; n</p>
         <p class="formula">Total interest = total payment &minus; loan amount</p>
         <p>Each monthly payment has two parts: interest on the outstanding balance, and principal that reduces the balance. Early payments are mostly interest; as the balance falls, more of each payment goes towards principal. That is why the amortisation schedule above shows interest falling and principal rising year by year.</p>
-        <p><strong>Worked example:</strong> A $100,000 loan at 8% annual interest for 20 years (240 months): r = 0.08 &divide; 12 = 0.006667, n = 240, monthly payment = 100,000 &times; 0.006667 &times; (1.006667)<sup>240</sup> &divide; ((1.006667)<sup>240</sup> &minus; 1) = <strong>$836.44 per month</strong>. Total payment = $836.44 &times; 240 = <strong>$200,746</strong> ($200,745.62 exact); total interest = $200,745.62 &minus; $100,000 = <strong>$100,746</strong> ($100,745.62 exact).</p>
-        <p><strong>Second example:</strong> A $10,000 loan at 6% annual interest for 5 years (60 months): monthly payment = <strong>$193.33 per month</strong>. Total payment = $193.33 &times; 60 = <strong>$11,600</strong>; total interest = $11,600 &minus; $10,000 = <strong>$1,600</strong>.</p>
+        
+        
         <p>Note: this calculation does not include processing fees, insurance or taxes — see the FAQ below.</p>
       </div>
     </section>
+
+    <section class="content-section">
+      <h2>Loan Example</h2>
+      <p>Here are two worked examples — a long-term loan and a smaller five-year loan.</p>
+      <p><strong>Worked example:</strong> A $100,000 loan at 8% annual interest for 20 years (240 months): r = 0.08 &divide; 12 = 0.006667, n = 240, monthly payment = 100,000 &times; 0.006667 &times; (1.006667)<sup>240</sup> &divide; ((1.006667)<sup>240</sup> &minus; 1) = <strong>$836.44 per month</strong>. Total payment = $836.44 &times; 240 = <strong>$200,746</strong> ($200,745.62 exact); total interest = $200,745.62 &minus; $100,000 = <strong>$100,746</strong> ($100,745.62 exact).</p>
+      <p><strong>Second example:</strong> A $10,000 loan at 6% annual interest for 5 years (60 months): monthly payment = <strong>$193.33 per month</strong>. Total payment = $193.33 &times; 60 = <strong>$11,600</strong>; total interest = $11,600 &minus; $10,000 = <strong>$1,600</strong>.</p>
+    </section>
+
+    <section class="content-section">
+      <h2>How to Use the Loan Calculator</h2>
+      <p>Enter three numbers above and the calculator shows your monthly payment, total interest, total payment and a year-by-year schedule.</p>
+      <ol>
+        <li>Enter the loan amount, the annual interest rate and the tenure in the Loan Details box.</li>
+        <li>Read your monthly payment, total interest and total payment in Your Results.</li>
+        <li>Check the year-by-year schedule to see how the interest and principal split changes over time.</li>
+        <li>Try a shorter tenure or a lower rate to see how much interest you save. For a car loan, the <a href="auto-loan-calculator.html">Auto Loan Calculator</a> adds sales tax and fees; for a personal loan, try the <a href="personal-loan-calculator.html">Personal Loan Calculator</a>.</li>
+      </ol>
+    </section>
+
+
 
     <section class="content-section">
       <h2>Frequently Asked Questions</h2>
@@ -236,6 +313,10 @@
         <div class="faq-a"><p>Amortisation is the schedule showing how each monthly payment is split between interest and principal over the life of the loan. Early payments are mostly interest, because the balance is at its highest; as the balance falls, more of each payment goes towards principal. The yearly table on this page shows that split, and the final balance is $0 when the loan is fully repaid.</p></div>
       </details>
 
+      <details class="faq-item">
+        <summary class="faq-q">Does this loan calculator include fees?</summary>
+        <div class="faq-a"><p>No. The calculator covers the loan amount, interest rate and tenure only, and shows the monthly payment, total interest and total payment on that basis. Processing fees, insurance, GST on charges and prepayment penalties are not included, so ask your lender for the full cost before you sign.</p></div>
+      </details>
     </section>
 
     <section class="content-section">
