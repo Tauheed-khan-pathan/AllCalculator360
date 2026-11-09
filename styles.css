@@ -403,3 +403,19 @@ select.currency-select {
 .cell-note { display: block; font-size: 12px; color: var(--muted); font-weight: 400; }
 .rates-details { margin-top: 16px; border-top: 1px solid var(--border); padding-top: 12px; }
 @media (max-width: 480px) { .bar-row { grid-template-columns: 84px 1fr auto; } }
+
+/* ---------- Module 27: Scientific Calculator ---------- */
+.sci-display { background: var(--surface-2); border: 1px solid var(--border); border-radius: var(--radius-input); padding: 14px 16px; margin-bottom: 12px; text-align: right; overflow-x: auto; }
+.sci-mode-row { display: flex; justify-content: space-between; gap: 8px; font-size: 12px; color: var(--muted); font-weight: 600; }
+.sci-expr { font-size: 26px; font-weight: 700; color: var(--text-strong); min-height: 36px; word-break: break-all; font-variant-numeric: tabular-nums; }
+.sci-result { font-size: 20px; font-weight: 600; color: var(--primary); min-height: 28px; word-break: break-all; font-variant-numeric: tabular-nums; }
+.sci-result.error { color: #dc2626; }
+.sci-keys { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 8px; }
+.sci-key { min-height: 48px; min-width: 0; padding: 8px 4px; font-size: 17px; font-weight: 600; font-family: var(--font); color: var(--text-strong); background: var(--surface); border: 1px solid var(--border); border-radius: 12px; cursor: pointer; }
+.sci-key:hover { background: var(--surface-2); }
+.sci-key:active { background: var(--primary-light); }
+.sci-key.fn { background: var(--surface-2); color: var(--primary); font-size: 15px; }
+.sci-key.util { background: var(--surface-2); }
+.sci-key.eq { grid-column: 1 / -1; background: var(--primary); border-color: var(--primary); color: #ffffff; font-size: 20px; }
+.sci-key.eq:hover { background: var(--primary-dark); }
+@media (max-width: 480px) { .sci-key { font-size: 15px; } .sci-key.fn { font-size: 13px; } .sci-expr { font-size: 22px; } }

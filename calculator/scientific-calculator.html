@@ -1,0 +1,652 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Crect width='40' height='40' rx='10' fill='%232563eb'/%3E%3Crect x='9' y='7' width='22' height='7' rx='2' fill='%23ffffff'/%3E%3Crect x='9' y='18' width='6' height='6' rx='1.5' fill='%23ffffff'/%3E%3Crect x='17' y='18' width='6' height='6' rx='1.5' fill='%23ffffff'/%3E%3Crect x='25' y='18' width='6' height='6' rx='1.5' fill='%23ffffff'/%3E%3Crect x='9' y='26' width='6' height='6' rx='1.5' fill='%23ffffff'/%3E%3Crect x='17' y='26' width='6' height='6' rx='1.5' fill='%23ffffff'/%3E%3Crect x='25' y='26' width='6' height='6' rx='1.5' fill='%23ffffff'/%3E%3C/svg%3E">
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-PZHLCGYJ5D"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-PZHLCGYJ5D');
+</script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Scientific Calculator &mdash; Sin, Cos, Tan, Log &amp; Powers | All Calculator 360</title>
+  <meta name="description" content="Free scientific calculator with sin, cos, tan, log, ln, powers, roots, factorials and π — with a full keypad and keyboard support. Instant, free and private.">
+  <link rel="canonical" href="https://tauheed-khan-pathan.github.io/AllCalculator360/calculator/scientific-calculator.html">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Scientific Calculator &mdash; Sin, Cos, Tan, Log &amp; Powers | All Calculator 360">
+  <meta property="og:description" content="Free scientific calculator with sin, cos, tan, log, ln, powers, roots, factorials and π — with a full keypad and keyboard support. Instant, free and private.">
+  <meta property="og:url" content="https://tauheed-khan-pathan.github.io/AllCalculator360/calculator/scientific-calculator.html">
+  <meta property="og:site_name" content="All Calculator 360">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Scientific Calculator &mdash; Sin, Cos, Tan, Log &amp; Powers | All Calculator 360">
+  <meta name="twitter:description" content="Free scientific calculator with sin, cos, tan, log, ln, powers, roots, factorials and π — with a full keypad and keyboard support. Instant, free and private.">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "All Calculator 360",
+  "alternateName": "AllCalculator360",
+  "url": "https://tauheed-khan-pathan.github.io/AllCalculator360/",
+  "description": "Free online calculators for finance, health, math and everyday life. EMI, SIP, FD, BMI and 200+ calculators &mdash; no sign-up, 100% private."
+}
+  </script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Degrees vs radians — which should I use?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Use degrees for most school and everyday maths — angles in triangles, bearings and geometry are usually given in degrees. Use radians for calculus, physics and most programming, where angles are measured in radians. This calculator starts in degrees; tap the DEG/RAD button to switch, and the current mode is shown above the keypad."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the difference between log and ln?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "log is the base-10 logarithm, so log(100) = 2 because 10² = 100. ln is the natural logarithm, base e (about 2.71828), so ln(e) = 1. Use log for decibels, pH and orders of magnitude, and ln for growth, decay and calculus."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I use ANS?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "ANS recalls the last answer this calculator produced. After a calculation, tap ANS to insert that value into a new expression — for example, after working out 2^10 = 1024, tap ANS, then + 1, then = to get 1025. The keyboard shortcut is the A key."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why does 1 ÷ 0 show an error?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Division by zero has no defined answer in mathematics, so the calculator shows Error instead of guessing. The same happens for log(0), ln of a negative number, the square root of a negative number, and factorials of negative or non-whole numbers — clear the error with C and try a valid input."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Which keyboard keys work?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Digits 0–9, the decimal point, + − * / (or × ÷), ^ for powers, % , ! for factorial, parentheses, Enter or = to calculate, Backspace to delete, and Escape to clear. Press A for ANS, D to switch between degrees and radians, and P for π."
+      }
+    }
+  ]
+}
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../styles.css">
+  <script>
+    (function () {
+      try {
+        if (localStorage.getItem('ac360-theme') === 'dark') {
+          document.documentElement.setAttribute('data-theme', 'dark');
+        }
+      } catch (e) {}
+    })();
+  </script>
+  <script src="../app.js" defer></script>
+</head>
+<body>
+  <header class="site-header"><div class="header-inner">
+<a class="brand" href="../index.html"><svg class="brand-logo" viewBox="0 0 40 40" fill="none" aria-hidden="true"><rect width="40" height="40" rx="10" fill="#2563eb"/><rect x="9" y="7" width="22" height="7" rx="2" fill="#ffffff"/><rect x="9" y="18" width="6" height="6" rx="1.5" fill="#ffffff"/><rect x="17" y="18" width="6" height="6" rx="1.5" fill="#ffffff"/><rect x="25" y="18" width="6" height="6" rx="1.5" fill="#ffffff"/><rect x="9" y="26" width="6" height="6" rx="1.5" fill="#ffffff"/><rect x="17" y="26" width="6" height="6" rx="1.5" fill="#ffffff"/><rect x="25" y="26" width="6" height="6" rx="1.5" fill="#ffffff"/></svg><span class="brand-name">All Calculator <span class="brand-360">360</span></span></a>
+<div class="header-search"><input id="headerSearch" type="search" placeholder="Search calculators…" aria-label="Search calculators"></div>
+<nav class="main-nav" aria-label="Categories"><a class="nav-link" href="../index.html#finance">Finance</a><a class="nav-link" href="../index.html#health">Health</a><a class="nav-link" href="../index.html#math">Math</a><a class="nav-link" href="../index.html#everyday">Everyday</a></nav>
+<button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">🌙</button>
+<button class="menu-toggle" id="menuToggle" aria-label="Menu">☰</button>
+</div><nav class="mobile-nav" id="mobileNav" aria-label="Mobile categories"><a class="nav-link" href="../index.html#finance">Finance</a><a class="nav-link" href="../index.html#health">Health</a><a class="nav-link" href="../index.html#math">Math</a><a class="nav-link" href="../index.html#everyday">Everyday</a></nav></header>
+
+  <main class="container">
+    <nav class="breadcrumb"><a href="../index.html">Home</a> / <a href="../index.html#math">Math</a> / Scientific Calculator</nav>
+
+    <div class="calc-head">
+      <h1>Scientific Calculator</h1>
+      <p>Sin, cos, tan, logarithms, powers, roots and factorials &mdash; with a full keypad and keyboard support, free and private.</p>
+    </div>
+
+    <div class="calc-layout">
+      <div class="calc-panel calc-inputs">
+        <h2>Calculator</h2>
+
+        <div class="sci-display" role="status" aria-live="polite">
+          <div class="sci-mode-row"><span>Angle mode: <span id="sciMode">Degrees</span></span><span>Tap DEG/RAD to switch</span></div>
+          <div class="sci-expr" id="sciExpr">0</div>
+          <div class="sci-result" id="sciResult"></div>
+        </div>
+
+        <div class="sci-keys">
+          <button type="button" class="sci-key fn util" id="sciModeBtn" data-act="mode" aria-label="Toggle degrees and radians">DEG</button>
+          <button type="button" class="sci-key" data-ins="(" aria-label="Open parenthesis">(</button>
+          <button type="button" class="sci-key" data-ins=")" aria-label="Close parenthesis">)</button>
+          <button type="button" class="sci-key util" data-act="clear" aria-label="Clear">C</button>
+          <button type="button" class="sci-key util" data-act="back" aria-label="Backspace">⌫</button>
+          <button type="button" class="sci-key fn" data-ins="sin(" aria-label="Sine">sin</button>
+          <button type="button" class="sci-key fn" data-ins="cos(" aria-label="Cosine">cos</button>
+          <button type="button" class="sci-key fn" data-ins="tan(" aria-label="Tangent">tan</button>
+          <button type="button" class="sci-key fn" data-ins="asin(" aria-label="Inverse sine">asin</button>
+          <button type="button" class="sci-key fn" data-ins="acos(" aria-label="Inverse cosine">acos</button>
+          <button type="button" class="sci-key fn" data-ins="atan(" aria-label="Inverse tangent">atan</button>
+          <button type="button" class="sci-key fn" data-ins="log(" aria-label="Base-10 logarithm">log</button>
+          <button type="button" class="sci-key fn" data-ins="ln(" aria-label="Natural logarithm">ln</button>
+          <button type="button" class="sci-key fn" data-ins="sqrt(" aria-label="Square root">√</button>
+          <button type="button" class="sci-key fn" data-ins="cbrt(" aria-label="Cube root">∛</button>
+          <button type="button" class="sci-key fn" data-ins="^2" aria-label="X squared">x²</button>
+          <button type="button" class="sci-key fn" data-ins="^3" aria-label="X cubed">x³</button>
+          <button type="button" class="sci-key fn" data-ins="^" aria-label="X to the power y">x^y</button>
+          <button type="button" class="sci-key fn" data-ins="1/(" aria-label="One over x">1/x</button>
+          <button type="button" class="sci-key fn" data-ins="!" aria-label="Factorial">x!</button>
+          <button type="button" class="sci-key" data-ins="7" aria-label="Seven">7</button>
+          <button type="button" class="sci-key" data-ins="8" aria-label="Eight">8</button>
+          <button type="button" class="sci-key" data-ins="9" aria-label="Nine">9</button>
+          <button type="button" class="sci-key" data-ins="/" aria-label="Divide">÷</button>
+          <button type="button" class="sci-key" data-ins="%" aria-label="Percent">%</button>
+          <button type="button" class="sci-key" data-ins="4" aria-label="Four">4</button>
+          <button type="button" class="sci-key" data-ins="5" aria-label="Five">5</button>
+          <button type="button" class="sci-key" data-ins="6" aria-label="Six">6</button>
+          <button type="button" class="sci-key" data-ins="*" aria-label="Multiply">×</button>
+          <button type="button" class="sci-key" data-ins="π" aria-label="Pi">π</button>
+          <button type="button" class="sci-key" data-ins="1" aria-label="One">1</button>
+          <button type="button" class="sci-key" data-ins="2" aria-label="Two">2</button>
+          <button type="button" class="sci-key" data-ins="3" aria-label="Three">3</button>
+          <button type="button" class="sci-key" data-ins="-" aria-label="Minus">−</button>
+          <button type="button" class="sci-key" data-ins="e" aria-label="Euler's number">e</button>
+          <button type="button" class="sci-key" data-act="sign" aria-label="Plus minus">±</button>
+          <button type="button" class="sci-key" data-ins="0" aria-label="Zero">0</button>
+          <button type="button" class="sci-key" data-ins="." aria-label="Decimal point">.</button>
+          <button type="button" class="sci-key fn" data-act="ans" aria-label="Last answer">ANS</button>
+          <button type="button" class="sci-key" data-ins="+" aria-label="Plus">+</button>
+          <button type="button" class="sci-key eq" data-act="equals" aria-label="Equals">=</button>
+        </div>
+        <p class="input-hint">Tip: type on your keyboard too &mdash; digits, + &minus; * /, ^, %, !, parentheses, Enter to calculate, Backspace to delete, Esc to clear.</p>
+      </div>
+
+      <div class="calc-panel calc-results">
+        <h2>Quick Reference</h2>
+
+        <div class="result-breakdown">
+          <div class="break-row"><span class="k">Trigonometry</span><span class="v">sin, cos, tan + asin, acos, atan (degrees by default)</span></div>
+          <div class="break-row"><span class="k">Logarithms</span><span class="v">log = base 10, ln = base e</span></div>
+          <div class="break-row"><span class="k">Powers &amp; roots</span><span class="v">x&sup2;, x&sup3;, x^y, &radic;, &#8731;</span></div>
+          <div class="break-row"><span class="k">Factorial</span><span class="v">x! &mdash; whole numbers 0 to 170</span></div>
+          <div class="break-row"><span class="k">Constants</span><span class="v">&pi;, e and ANS (your last answer)</span></div>
+          <div class="break-row"><span class="k">Keyboard</span><span class="v">Digits, Enter, Backspace, Esc, A, D, P</span></div>
+        </div>
+
+        <p class="input-hint">Every calculation happens in your browser &mdash; nothing you type leaves your device.</p>
+      </div>
+    </div>
+
+    <section class="content-section">
+      <h2>Scientific Calculator Formula</h2>
+      <div class="formula-box">
+        <p class="formula">sin(&theta;) &mdash; sine of an angle &nbsp;&bull;&nbsp; cos(&theta;) &mdash; cosine &nbsp;&bull;&nbsp; tan(&theta;) &mdash; tangent</p>
+        <p class="formula">log<sub>10</sub>(x) &mdash; base-10 logarithm &nbsp;&bull;&nbsp; ln(x) &mdash; natural logarithm, base e</p>
+        <p class="formula">x^y &mdash; x to the power y &nbsp;&bull;&nbsp; &radic;(x) &mdash; square root &nbsp;&bull;&nbsp; x! = 1 &times; 2 &times; &hellip; &times; x</p>
+        <p>Trigonometric functions follow the angle mode shown above the keypad: in degrees mode, sin(30&deg;) = 0.5, and in radians mode the same button expects the angle in radians. Inverse functions (asin, acos, atan) return the angle in the current mode. Percentages work as you expect on a handheld calculator: 50% is 0.5, so 200 &times; 50% = 100.</p>
+        <p><strong>Worked examples</strong> (degrees mode): sin(30&deg;) = <strong>0.5</strong>; cos(60&deg;) = <strong>0.5</strong>; log<sub>10</sub>(100) = <strong>2</strong>; ln(e) = <strong>1</strong>; 2^10 = <strong>1024</strong>; &radic;(144) = <strong>12</strong>; 5! = <strong>120</strong>; 3&sup2; + 4&sup2; = <strong>25</strong>.</p>
+      </div>
+    </section>
+
+    <section class="content-section">
+      <h2>Frequently Asked Questions</h2>
+      <details class="faq-item">
+        <summary class="faq-q">Degrees vs radians — which should I use?</summary>
+        <div class="faq-a"><p>Use degrees for most school and everyday maths — angles in triangles, bearings and geometry are usually given in degrees. Use radians for calculus, physics and most programming, where angles are measured in radians. This calculator starts in degrees; tap the DEG/RAD button to switch, and the current mode is shown above the keypad.</p></div>
+      </details>
+      <details class="faq-item">
+        <summary class="faq-q">What is the difference between log and ln?</summary>
+        <div class="faq-a"><p>log is the base-10 logarithm, so log(100) = 2 because 10² = 100. ln is the natural logarithm, base e (about 2.71828), so ln(e) = 1. Use log for decibels, pH and orders of magnitude, and ln for growth, decay and calculus.</p></div>
+      </details>
+      <details class="faq-item">
+        <summary class="faq-q">How do I use ANS?</summary>
+        <div class="faq-a"><p>ANS recalls the last answer this calculator produced. After a calculation, tap ANS to insert that value into a new expression — for example, after working out 2^10 = 1024, tap ANS, then + 1, then = to get 1025. The keyboard shortcut is the A key.</p></div>
+      </details>
+      <details class="faq-item">
+        <summary class="faq-q">Why does 1 ÷ 0 show an error?</summary>
+        <div class="faq-a"><p>Division by zero has no defined answer in mathematics, so the calculator shows Error instead of guessing. The same happens for log(0), ln of a negative number, the square root of a negative number, and factorials of negative or non-whole numbers — clear the error with C and try a valid input.</p></div>
+      </details>
+      <details class="faq-item">
+        <summary class="faq-q">Which keyboard keys work?</summary>
+        <div class="faq-a"><p>Digits 0–9, the decimal point, + − * / (or × ÷), ^ for powers, % , ! for factorial, parentheses, Enter or = to calculate, Backspace to delete, and Escape to clear. Press A for ANS, D to switch between degrees and radians, and P for π.</p></div>
+      </details>
+
+    </section>
+
+    <section class="content-section">
+      <h2>Related Calculators</h2>
+      <div class="related-grid">
+        <a class="calc-card" href="fraction-calculator.html" data-name="Fraction Calculator" data-desc="Add, subtract, multiply and divide fractions with step-by-step results.">
+          <span class="calc-icon">&#128290;</span>
+          <span class="calc-name">Fraction Calculator</span>
+          <span class="calc-desc">Add, subtract, multiply and divide fractions with step-by-step results.</span>
+        </a>
+        <a class="calc-card" href="percentage-calculator.html" data-name="Percentage Calculator" data-desc="Work out percentages, increases, decreases and tips in seconds.">
+          <span class="calc-icon">&#128202;</span>
+          <span class="calc-name">Percentage Calculator</span>
+          <span class="calc-desc">Work out percentages, increases, decreases and tips in seconds.</span>
+        </a>
+        <a class="calc-card" href="unit-converter.html" data-name="Unit Converter" data-desc="Convert length, weight, temperature, volume and more instantly.">
+          <span class="calc-icon">&#128260;</span>
+          <span class="calc-name">Unit Converter</span>
+          <span class="calc-desc">Convert length, weight, temperature, volume and more instantly.</span>
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer"><div class="container"><div class="footer-grid">
+<div class="footer-col"><div class="footer-brand"><svg width="32" height="32" viewBox="0 0 40 40" fill="none" aria-hidden="true"><rect width="40" height="40" rx="10" fill="#2563eb"/><rect x="9" y="7" width="22" height="7" rx="2" fill="#ffffff"/><rect x="9" y="18" width="6" height="6" rx="1.5" fill="#ffffff"/><rect x="17" y="18" width="6" height="6" rx="1.5" fill="#ffffff"/><rect x="25" y="18" width="6" height="6" rx="1.5" fill="#ffffff"/><rect x="9" y="26" width="6" height="6" rx="1.5" fill="#ffffff"/><rect x="17" y="26" width="6" height="6" rx="1.5" fill="#ffffff"/><rect x="25" y="26" width="6" height="6" rx="1.5" fill="#ffffff"/></svg><span>All Calculator 360</span></div><p>Every calculator, all in one place. Free, private, and accurate — calculations happen right in your browser.</p></div>
+<div class="footer-col"><h3>Categories</h3><ul><li><a href="../index.html#finance">Finance</a></li><li><a href="../index.html#health">Health</a></li><li><a href="../index.html#math">Math</a></li><li><a href="../index.html#everyday">Everyday</a></li></ul></div>
+<div class="footer-col"><h3>Popular Calculators</h3><ul><li><a href="emi-calculator.html">EMI Calculator</a></li><li><a href="sip-calculator.html">SIP Calculator</a></li><li><a href="fd-calculator.html">FD Calculator</a></li><li><a href="income-tax-calculator.html">Income Tax Calculator</a></li><li><a href="gst-calculator.html">GST Calculator</a></li><li><a href="bmi-calculator.html">BMI Calculator</a></li><li><a href="age-calculator.html">Age Calculator</a></li><li><a href="percentage-calculator.html">Percentage Calculator</a></li></ul></div>
+<div class="footer-col"><h3>Company</h3><ul><li><a href="../about.html">About</a></li><li><a href="../contact.html">Contact</a></li><li><a href="../privacy.html">Privacy Policy</a></li><li><a href="../terms.html">Terms</a></li></ul></div>
+</div><div class="footer-bottom"><p>© 2026 All Calculator 360. All rights reserved.</p></div></div></footer>
+
+  <script>
+    (function () {
+      'use strict';
+
+      var exprEl = document.getElementById('sciExpr');
+      var resultEl = document.getElementById('sciResult');
+      var modeEl = document.getElementById('sciMode');
+      var modeBtn = document.getElementById('sciModeBtn');
+
+      var expr = '';
+      var lastAnswer = null;
+      var justEvaluated = false;
+      var errored = false;
+      var degrees = true;
+
+      var FNAMES = ['sin', 'cos', 'tan', 'asin', 'acos', 'atan', 'log', 'ln', 'sqrt', 'cbrt'];
+
+      function isDigit(ch) { return ch >= '0' && ch <= '9'; }
+
+      function factorial(n) {
+        if (n < 0 || Math.floor(n) !== n || n > 170) { throw new Error('bad factorial'); }
+        var r = 1;
+        for (var i = 2; i <= n; i++) { r *= i; }
+        return r;
+      }
+
+      function applyFunction(name, x) {
+        var a;
+        switch (name) {
+          case 'sin': return Math.sin(degrees ? x * Math.PI / 180 : x);
+          case 'cos': return Math.cos(degrees ? x * Math.PI / 180 : x);
+          case 'tan':
+            a = degrees ? x * Math.PI / 180 : x;
+            if (Math.abs(Math.cos(a)) < 1e-14) { throw new Error('tan undefined'); }
+            return Math.tan(a);
+          case 'asin':
+            if (x < -1 || x > 1) { throw new Error('asin domain'); }
+            a = Math.asin(x);
+            return degrees ? a * 180 / Math.PI : a;
+          case 'acos':
+            if (x < -1 || x > 1) { throw new Error('acos domain'); }
+            a = Math.acos(x);
+            return degrees ? a * 180 / Math.PI : a;
+          case 'atan':
+            a = Math.atan(x);
+            return degrees ? a * 180 / Math.PI : a;
+          case 'log':
+            if (x <= 0) { throw new Error('log domain'); }
+            return Math.log10(x);
+          case 'ln':
+            if (x <= 0) { throw new Error('ln domain'); }
+            return Math.log(x);
+          case 'sqrt':
+            if (x < 0) { throw new Error('sqrt domain'); }
+            return Math.sqrt(x);
+          case 'cbrt':
+            return Math.cbrt(x);
+        }
+        throw new Error('unknown function');
+      }
+
+      // Tokenizer: numbers, function names, constants, operators, parens.
+      // A '-' is unary when it starts the expression or follows '(',
+      // a function name, or another (non-postfix) operator.
+      function tokenize(s) {
+        var tokens = [];
+        var i = 0;
+        var prev = null;
+        function push(t) { tokens.push(t); prev = t; }
+        while (i < s.length) {
+          var ch = s[i];
+          if (ch === ' ') { i++; continue; }
+          if (isDigit(ch) || ch === '.') {
+            var j = i;
+            var dots = 0;
+            while (j < s.length && (isDigit(s[j]) || s[j] === '.')) {
+              if (s[j] === '.') { dots++; }
+              j++;
+            }
+            var numStr = s.slice(i, j);
+            if (dots > 1 || numStr === '.') { throw new Error('bad number'); }
+            push({ t: 'num', v: parseFloat(numStr) });
+            i = j;
+            continue;
+          }
+          if (ch >= 'a' && ch <= 'z') {
+            var k = i;
+            while (k < s.length && s[k] >= 'a' && s[k] <= 'z') { k++; }
+            var word = s.slice(i, k);
+            if (FNAMES.indexOf(word) !== -1) { push({ t: 'fn', v: word }); }
+            else if (word === 'e') { push({ t: 'num', v: Math.E }); }
+            else if (word === 'pi') { push({ t: 'num', v: Math.PI }); }
+            else { throw new Error('unknown name'); }
+            i = k;
+            continue;
+          }
+          if (ch === '\u03c0') { push({ t: 'num', v: Math.PI }); i++; continue; }
+          if (ch === '(') { push({ t: 'lp' }); i++; continue; }
+          if (ch === ')') { push({ t: 'rp' }); i++; continue; }
+          if (ch === '+' || ch === '*' || ch === '/' || ch === '^' || ch === '%' || ch === '!') {
+            push({ t: 'op', v: ch }); i++; continue;
+          }
+          if (ch === '-') {
+            var unary = !prev || prev.t === 'lp' || prev.t === 'fn' ||
+              (prev.t === 'op' && prev.v !== '!' && prev.v !== '%');
+            push({ t: 'op', v: unary ? 'u-' : '-' });
+            i++; continue;
+          }
+          throw new Error('bad character');
+        }
+        return tokens;
+      }
+
+      // Insert '*' where multiplication is implied: 2(3), 2pi, )sin(, 5!2, 50%2.
+      function insertImplicitMul(tokens) {
+        var out = [];
+        for (var i = 0; i < tokens.length; i++) {
+          var cur = tokens[i];
+          if (out.length) {
+            var p = out[out.length - 1];
+            var pEnds = p.t === 'num' || p.t === 'rp' ||
+              (p.t === 'op' && (p.v === '!' || p.v === '%'));
+            var cStarts = cur.t === 'num' || cur.t === 'lp' || cur.t === 'fn';
+            if (pEnds && cStarts) { out.push({ t: 'op', v: '*' }); }
+          }
+          out.push(cur);
+        }
+        return out;
+      }
+
+      // Shunting-yard: ! and % are postfix and go straight to output.
+      // Precedence: ! % (5) > ^ (4, right) > unary - (3, right) > * / (2) > + - (1).
+      var PREC = { 'u-': 3, '^': 4, '*': 2, '/': 2, '+': 1, '-': 1 };
+      var RIGHT = { 'u-': true, '^': true };
+
+      function toRPN(tokens) {
+        var out = [];
+        var stack = [];
+        for (var i = 0; i < tokens.length; i++) {
+          var tk = tokens[i];
+          if (tk.t === 'num') { out.push(tk); }
+          else if (tk.t === 'fn') { stack.push(tk); }
+          else if (tk.t === 'op' && (tk.v === '!' || tk.v === '%')) { out.push(tk); }
+          else if (tk.t === 'op') {
+            while (stack.length) {
+              var top = stack[stack.length - 1];
+              if (top.t === 'fn') { out.push(stack.pop()); continue; }
+              if (top.t === 'op' &&
+                  (PREC[top.v] > PREC[tk.v] ||
+                   (PREC[top.v] === PREC[tk.v] && !RIGHT[tk.v]))) {
+                out.push(stack.pop());
+              } else { break; }
+            }
+            stack.push(tk);
+          }
+          else if (tk.t === 'lp') { stack.push(tk); }
+          else if (tk.t === 'rp') {
+            var found = false;
+            while (stack.length) {
+              var t2 = stack.pop();
+              if (t2.t === 'lp') { found = true; break; }
+              out.push(t2);
+            }
+            if (!found) { throw new Error('mismatched parens'); }
+            if (stack.length && stack[stack.length - 1].t === 'fn') { out.push(stack.pop()); }
+          }
+        }
+        while (stack.length) {
+          var t3 = stack.pop();
+          if (t3.t === 'lp') { throw new Error('mismatched parens'); }
+          out.push(t3);
+        }
+        return out;
+      }
+
+      function evalRPN(rpn) {
+        var st = [];
+        for (var i = 0; i < rpn.length; i++) {
+          var tk = rpn[i];
+          if (tk.t === 'num') { st.push(tk.v); continue; }
+          if (tk.t === 'fn') {
+            if (!st.length) { throw new Error('missing argument'); }
+            var fv = applyFunction(tk.v, st.pop());
+            if (!isFinite(fv)) { throw new Error('not finite'); }
+            st.push(fv);
+            continue;
+          }
+          if (tk.t === 'op') {
+            if (tk.v === '!') {
+              if (!st.length) { throw new Error('missing argument'); }
+              st.push(factorial(st.pop()));
+              continue;
+            }
+            if (tk.v === '%') {
+              if (!st.length) { throw new Error('missing argument'); }
+              st.push(st.pop() / 100);
+              continue;
+            }
+            if (tk.v === 'u-') {
+              if (!st.length) { throw new Error('missing argument'); }
+              st.push(-st.pop());
+              continue;
+            }
+            if (st.length < 2) { throw new Error('missing operand'); }
+            var b = st.pop();
+            var c = st.pop();
+            var res;
+            if (tk.v === '+') { res = c + b; }
+            else if (tk.v === '-') { res = c - b; }
+            else if (tk.v === '*') { res = c * b; }
+            else if (tk.v === '/') {
+              if (b === 0) { throw new Error('divide by zero'); }
+              res = c / b;
+            } else if (tk.v === '^') {
+              if (c === 0 && b < 0) { throw new Error('zero to negative power'); }
+              res = Math.pow(c, b);
+            }
+            if (typeof res !== 'number' || !isFinite(res)) { throw new Error('not finite'); }
+            st.push(res);
+          }
+        }
+        if (st.length !== 1) { throw new Error('bad expression'); }
+        return st[0];
+      }
+
+      function evaluateExpression(s) {
+        if (!s || !s.trim()) { throw new Error('empty'); }
+        return evalRPN(toRPN(insertImplicitMul(tokenize(s))));
+      }
+
+      // 12 significant digits kills float dust (sin 30deg -> 0.5, not 0.4999...).
+      function formatResult(v) {
+        if (typeof v !== 'number' || !isFinite(v)) { throw new Error('not finite'); }
+        if (v === 0) { return '0'; }
+        var rounded = parseFloat(v.toPrecision(12));
+        if (!isFinite(rounded)) { throw new Error('not finite'); }
+        return String(rounded);
+      }
+
+      function displayExpr() {
+        if (!expr) { return '0'; }
+        return expr
+          .replace(/sqrt/g, '\u221a')
+          .replace(/cbrt/g, '\u221b')
+          .replace(/\*/g, '\u00d7')
+          .replace(/\//g, '\u00f7')
+          .replace(/-/g, '\u2212');
+      }
+
+      function render() {
+        exprEl.textContent = displayExpr();
+        if (justEvaluated) {
+          resultEl.textContent = lastAnswer === null ? '' : '= ' + formatResult(lastAnswer);
+          resultEl.classList.remove('error');
+        } else if (!errored) {
+          try {
+            resultEl.textContent = '= ' + formatResult(evaluateExpression(expr));
+            resultEl.classList.remove('error');
+          } catch (e) {
+            resultEl.textContent = '';
+            resultEl.classList.remove('error');
+          }
+        }
+        modeEl.textContent = degrees ? 'Degrees' : 'Radians';
+        modeBtn.textContent = degrees ? 'DEG' : 'RAD';
+      }
+
+      function insert(text) {
+        if (errored) { expr = ''; errored = false; justEvaluated = false; }
+        else if (justEvaluated) {
+          var startsNew = /^[0-9.(\u03c0a-z]/.test(text);
+          if (startsNew) { expr = ''; }
+          else if (lastAnswer !== null) { expr = formatResult(lastAnswer); }
+          justEvaluated = false;
+        }
+        expr += text;
+        render();
+      }
+
+      function clearAll() {
+        expr = '';
+        justEvaluated = false;
+        errored = false;
+        render();
+      }
+
+      function backspace() {
+        if (errored) { expr = ''; errored = false; }
+        justEvaluated = false;
+        var m = /(sin|cos|tan|asin|acos|atan|log|ln|sqrt|cbrt)\($/.exec(expr);
+        expr = m ? expr.slice(0, -m[0].length) : expr.slice(0, -1);
+        render();
+      }
+
+      function calculate() {
+        try {
+          var v = evaluateExpression(expr);
+          lastAnswer = v;
+          justEvaluated = true;
+          errored = false;
+          resultEl.textContent = '= ' + formatResult(v);
+          resultEl.classList.remove('error');
+        } catch (e) {
+          errored = true;
+          justEvaluated = false;
+          resultEl.textContent = 'Error';
+          resultEl.classList.add('error');
+        }
+      }
+
+      function toggleSign() {
+        if (errored) { expr = ''; errored = false; }
+        justEvaluated = false;
+        var m = /(\d+\.?\d*|\.\d+)$/.exec(expr);
+        if (m) {
+          var start = m.index;
+          if (start > 0 && expr[start - 1] === '-') {
+            var before = start >= 2 ? expr[start - 2] : '';
+            if (start === 1 || before === '(' || '+-*/^'.indexOf(before) !== -1) {
+              expr = expr.slice(0, start - 1) + expr.slice(start);
+              render();
+              return;
+            }
+          }
+          expr = expr.slice(0, start) + '-' + expr.slice(start);
+        } else if (!expr) {
+          expr = '-';
+        }
+        render();
+      }
+
+      function toggleMode() {
+        degrees = !degrees;
+        render();
+      }
+
+      function ansInsert() {
+        if (lastAnswer === null) { return; }
+        insert(formatResult(lastAnswer));
+      }
+
+      var keys = document.querySelectorAll('.sci-key');
+      for (var i = 0; i < keys.length; i++) {
+        keys[i].addEventListener('click', function () {
+          var ins = this.getAttribute('data-ins');
+          var act = this.getAttribute('data-act');
+          if (act === 'clear') { clearAll(); }
+          else if (act === 'back') { backspace(); }
+          else if (act === 'equals') { calculate(); }
+          else if (act === 'mode') { toggleMode(); }
+          else if (act === 'sign') { toggleSign(); }
+          else if (act === 'ans') { ansInsert(); }
+          else if (ins) { insert(ins); }
+        });
+      }
+
+      document.addEventListener('keydown', function (e) {
+        if (e.metaKey || e.ctrlKey || e.altKey) { return; }
+        var t = e.target;
+        if (t && (t.tagName === 'INPUT' || t.tagName === 'TEXTAREA' || t.tagName === 'SELECT')) { return; }
+        var k = e.key;
+        if ((k >= '0' && k <= '9') || k === '.') { insert(k); }
+        else if (k === '+') { insert('+'); }
+        else if (k === '-') { insert('-'); }
+        else if (k === '*') { insert('*'); }
+        else if (k === '/') { insert('/'); e.preventDefault(); }
+        else if (k === '^') { insert('^'); }
+        else if (k === '%') { insert('%'); }
+        else if (k === '!') { insert('!'); }
+        else if (k === '(') { insert('('); }
+        else if (k === ')') { insert(')'); }
+        else if (k === 'Enter' || k === '=') { calculate(); e.preventDefault(); }
+        else if (k === 'Backspace') { backspace(); e.preventDefault(); }
+        else if (k === 'Escape') { clearAll(); }
+        else if (k === 'a' || k === 'A') { ansInsert(); }
+        else if (k === 'd' || k === 'D') { toggleMode(); }
+        else if (k === 'p' || k === 'P') { insert('\u03c0'); }
+        else if (k === 'e' || k === 'E') { insert('e'); }
+      });
+
+      // Test hook for the node harness (not part of the UI).
+      if (typeof window !== 'undefined') {
+        window.__sci = {
+          evaluate: function (s, deg) {
+            var saved = degrees;
+            degrees = !!deg;
+            try { return evaluateExpression(s); } finally { degrees = saved; }
+          },
+          format: formatResult
+        };
+      }
+
+      render();
+    })();
+  </script>
+</body>
+</html>
