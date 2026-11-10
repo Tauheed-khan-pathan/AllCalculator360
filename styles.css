@@ -103,9 +103,9 @@ main { min-height: 60vh; }
   height: var(--header-h);
   display: flex; align-items: center; gap: 16px;
 }
-.brand { display: flex; align-items: center; gap: 10px; flex-shrink: 0; }
+.brand { display: flex; align-items: center; gap: 10px; flex-shrink: 0; min-height: 44px; }
 .brand:hover { text-decoration: none; }
-.brand-logo { width: 36px; height: 36px; flex-shrink: 0; }
+.brand-logo { width: 40px; height: 40px; flex-shrink: 0; }
 .brand-name { font-size: 19px; font-weight: 800; color: var(--text-strong); letter-spacing: -0.02em; white-space: nowrap; }
 .brand-360 { color: var(--primary); }
 .header-search { flex: 1; max-width: 420px; margin: 0 auto; }
@@ -229,6 +229,7 @@ main { min-height: 60vh; }
 .calc-panel {
   background: var(--surface); border: 1px solid var(--border);
   border-radius: var(--radius-card); box-shadow: var(--shadow); padding: 24px;
+  min-width: 0; /* UI-UX audit F1 — grid items must shrink below content min-width */
 }
 .calc-panel h2 { font-size: 18px; margin-bottom: 20px; }
 .input-group { margin-bottom: 24px; }
@@ -247,6 +248,20 @@ input.num-input {
   font-variant-numeric: tabular-nums; outline: none;
 }
 input.num-input:focus { border-color: var(--primary); box-shadow: 0 0 0 3px var(--primary-light); }
+
+/* UI-UX audit F4 — the num-input box styling only matched <input>; the two
+   <select class="num-input"> elements (Time #opSel, GPA .course-grade)
+   rendered at native ~21px height. */
+select.num-input {
+  width: 100%; height: 44px; padding: 0 12px;
+  border: 1px solid var(--border); border-radius: var(--radius-input);
+  background: var(--surface); color: var(--text-strong);
+  font-variant-numeric: tabular-nums; outline: none; cursor: pointer;
+}
+select.num-input:focus { border-color: var(--primary); box-shadow: 0 0 0 3px var(--primary-light); }
+
+/* UI-UX audit F2 — year-by-year tables scroll inside their card on mobile. */
+.table-wrap { overflow-x: auto; -webkit-overflow-scrolling: touch; }
 .input-hint { font-size: 13px; color: var(--muted); margin: 6px 0 0; }
 .currency-row { display: flex; align-items: center; gap: 12px; margin-bottom: 24px; }
 .currency-row label { font-weight: 600; color: var(--text-strong); font-size: 15px; }
@@ -352,7 +367,7 @@ select.currency-select {
 .regime-card { border: 1px solid var(--border); border-radius: 12px; padding: 16px; background: var(--surface-2); }
 .regime-card.winner { border: 2px solid var(--success); background: var(--surface); }
 .regime-card h3 { display: flex; align-items: center; justify-content: space-between; gap: 8px; font-size: 16px; margin-bottom: 8px; }
-.regime-badge { font-size: 11px; font-weight: 700; color: #ffffff; background: var(--success); border-radius: 999px; padding: 3px 8px; white-space: nowrap; }
+.regime-badge { font-size: 12px; font-weight: 700; color: #ffffff; background: var(--success); border-radius: 999px; padding: 3px 8px; white-space: nowrap; }
 .regime-card .result-breakdown { padding: 0; }
 @media (max-width: 768px) { .regime-grid { grid-template-columns: 1fr; } }
 
@@ -373,6 +388,14 @@ select.currency-select {
   .result-emi { font-size: 34px; }
   .footer-grid { grid-template-columns: 1fr; gap: 24px; padding: 32px 0 24px; }
   input.num-input { width: 110px; }
+  /* UI-UX audit F5 — the 360px-only wrap rule left a 361–~500px gap where
+     3-input rows (Time h/m/s) ran off-screen. */
+  .input-row { flex-wrap: wrap; }
+  /* UI-UX audit F3 — selects size to their longest option; on mobile they must
+     shrink to the panel instead of forcing the page wider. */
+  .currency-row { flex-wrap: wrap; }
+  .currency-row select.currency-select { flex: 1 1 120px; min-width: 0; }
+  .input-group > select.currency-select { width: 100%; max-width: 100%; }
 }
 @media (max-width: 360px) {
   .brand-name { font-size: 17px; }

@@ -215,7 +215,7 @@
         </div>
 
         <h3 style="margin-top:8px">Exchange Rates &mdash; 1 USD =</h3>
-        <table class="amort-table">
+        <div class="table-wrap"><table class="amort-table">
           <thead>
             <tr><th>Currency</th><th style="text-align:right">Rate</th></tr>
           </thead>
@@ -230,7 +230,7 @@
           <tr><td>Australian Dollar (AUD)</td><td style="text-align:right"><input type="number" class="num-input rate-input" id="rate-AUD" min="0" step="any" value="1.54" aria-label="Exchange rate for AUD" style="width:120px;text-align:right"></td></tr>
           <tr><td>Canadian Dollar (CAD)</td><td style="text-align:right"><input type="number" class="num-input rate-input" id="rate-CAD" min="0" step="any" value="1.40" aria-label="Exchange rate for CAD" style="width:120px;text-align:right"></td></tr>
           </tbody>
-        </table>
+        </table></div>
         <button type="button" class="show-more-btn" id="resetRatesBtn" style="margin-top:12px">Reset rates to 10 Nov 2026 values</button>
         <p class="input-hint">These rates are editable estimates, dated 10 Nov 2026. Check today&rsquo;s rate from your bank or a currency website and type it in &mdash; every conversion updates instantly.</p>
       </div>
@@ -251,12 +251,12 @@
         </div>
 
         <h3 style="margin-top:24px">Amount in Every Currency</h3>
-        <table class="amort-table">
+        <div class="table-wrap"><table class="amort-table">
           <thead>
             <tr><th>Currency</th><th style="text-align:right">Amount</th></tr>
           </thead>
           <tbody id="allCurrBody"></tbody>
-        </table>
+        </table></div>
         <button type="button" class="show-more-btn" id="allCurrToggle" style="margin-top:12px">Show all currencies</button>
       </div>
     </div>
